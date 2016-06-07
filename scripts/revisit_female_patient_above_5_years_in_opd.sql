@@ -24,5 +24,5 @@ and
 		where 
 			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) > 5 
 		and 
-			gender = 'M'
+			gender = 'F'
 	);
