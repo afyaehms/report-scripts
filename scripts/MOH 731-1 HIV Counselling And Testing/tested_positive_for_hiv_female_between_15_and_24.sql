@@ -11,4 +11,4 @@ AND p.birthdate IS NOT NULL
 AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) >=15
 AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) <=24
 AND gender = 'F'
-AND o.date_created BETWEEN '2016-01-01' AND '2016-06-30'
+AND o.date_created BETWEEN '2016-06-01' AND '2016-06-30'

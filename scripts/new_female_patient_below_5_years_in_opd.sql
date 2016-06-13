@@ -16,4 +16,6 @@ AND
 			birthdate IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) < 5 
 		AND 
 			gender = 'F'
-	);
+	)
+AND
+	created_on BETWEEN '2016-06-01' AND '2016-06-30';

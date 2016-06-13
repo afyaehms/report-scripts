@@ -9,4 +9,4 @@ ON p.person_id=o.person_id
 WHERE (concept_id=3110 OR concept_id=100126141)
 AND value_text LIKE 'POSITIVE'
 
-AND o.date_created BETWEEN '2016-01-01' AND '2016-06-30'
+AND o.date_created BETWEEN '2016-06-01' AND '2016-06-30'
