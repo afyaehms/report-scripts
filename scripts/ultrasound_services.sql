@@ -8,4 +8,6 @@ where
 	discontinued = 1 
 and 
 	concept_id in 
-		(select answer_concept from concept_answer where concept_id = 2393);
+		(select answer_concept from concept_answer where concept_id = 2393)
+AND
+	created_on BETWEEN '2016-06-01' AND '2016-06-30';

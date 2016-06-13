@@ -10,4 +10,4 @@ AND value_text LIKE 'POSITIVE'
 AND p.birthdate IS NOT NULL 
 AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) <15
 AND gender = 'M'
-AND o.date_created BETWEEN '2016-01-01' AND '2016-06-30'
+AND o.date_created BETWEEN '2016-06-01' AND '2016-06-30'
