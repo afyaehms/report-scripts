@@ -1,4 +1,6 @@
---get count, if this was a retest for HIV within the selected period
+--get count, the first time someone was tested for HIV within the selected period
+--substitute the dates with date placeholders
+
 SELECT COUNT(*)
 FROM obs o
 
@@ -13,4 +15,4 @@ ORDER BY MIN(obs_id)
 
 WHERE (concept_id=3110 OR concept_id=100126141)
 AND date_created BETWEEN '2016-03-01' AND '2016-03-31'
-AND ob.first_time_idnt<>o.obs_id
+AND ob.first_time_idnt=o.obs_id
