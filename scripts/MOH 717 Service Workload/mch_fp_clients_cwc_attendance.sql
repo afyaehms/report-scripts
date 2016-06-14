@@ -1,6 +1,6 @@
 --get count of new clients registered to a program (ANC/PNC/CWC)
 --substitute the dates with date placeholders
-
+--concepts 5704 and 5123 represent MCH Triage and MCH Clinic respectively
 
 
 --this bracket return all new subscriptions/enrollment to a program
@@ -28,13 +28,13 @@ FROM(
 	FROM (
 		SELECT patient_id, DATE(created_on) visit_date
 		FROM opd_patient_queue_log
-		WHERE opd_concept_id=5113
+		WHERE opd_concept_id=5704
 
 		UNION ALL
 
 		SELECT patient_id, DATE(created_on)
 		FROM triage_patient_queue_log
-		WHERE triage_concept_id=4001
+		WHERE triage_concept_id=5123
 	) AS v
 
 	GROUP BY v.patient_id, v.visit_date
@@ -61,7 +61,7 @@ FROM (
 
 	UNION ALL
 
-	SELECT 0, COUNT(*)
+	SELECT COUNT(*)
 	FROM(
 		SELECT v.patient_id, v.visit_date, (
 			SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
@@ -74,13 +74,13 @@ FROM (
 		FROM (
 			SELECT patient_id, DATE(created_on) visit_date
 			FROM opd_patient_queue_log
-			WHERE opd_concept_id=5113
+			WHERE opd_concept_id=5704
 
 			UNION ALL
 
 			SELECT patient_id, DATE(created_on)
 			FROM triage_patient_queue_log
-			WHERE triage_concept_id=4001
+			WHERE triage_concept_id=5123
 		) AS v
 
 		GROUP BY v.patient_id, v.visit_date
@@ -91,5 +91,5 @@ FROM (
 		SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
 		FROM patient_program
 	)
-	AND pv.visit_date BETWEEN '2016-01-01' AND '2016-06-30'
+	AND pv.visit_date BETWEEN '2016-01-01' AND '2016-06-30';
 ) unions;
