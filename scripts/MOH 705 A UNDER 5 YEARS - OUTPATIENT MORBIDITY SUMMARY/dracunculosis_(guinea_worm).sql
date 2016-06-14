@@ -1,3 +1,4 @@
+-- Get count of dracunculosis new cases
 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
 FROM person p
 INNER JOIN obs o ON o.person_id = p.person_id
