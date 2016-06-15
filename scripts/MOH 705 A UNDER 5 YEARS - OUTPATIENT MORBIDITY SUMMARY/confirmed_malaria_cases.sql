@@ -5,7 +5,8 @@ INNER JOIN obs o ON o.person_id = p.person_id
 WHERE
 p.voided = 0
 AND o.voided = 0
-AND o.concept_id=5109
+AND
+  (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,
