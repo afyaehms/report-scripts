@@ -1,0 +1,3 @@
+--get count of ANC clients given exercise
+--substitute the dates with date placeholders
+--1 is the program_id for ANC
