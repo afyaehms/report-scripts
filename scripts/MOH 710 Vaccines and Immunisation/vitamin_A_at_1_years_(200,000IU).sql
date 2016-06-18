@@ -12,4 +12,4 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE  pws.concept_id = 100126165
 AND start_date BETWEEN '2016-01-01' AND '2016-06-30'
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1.5
+AND (DATEDIFF(CURDATE(),birthdate) / 365) < 1.5
