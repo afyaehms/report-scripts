@@ -30,19 +30,19 @@
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="HIV1stTest" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 731-1 testing-for-hiv-repeat>
+					#INCLUDE <testing-for-hiv-first>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="HIV2ndTest" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 731-1 testing-for-hiv-repeat.sql>
+					#INCLUDE <testing-for-hiv-repeat.sql>
              </annotation>
              </dataValueTemplate>
 		 
 		 
 		 <dataValueTemplate dataElement="TTHIVTest" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 731-1 testing-for-hiv-total.sql>
+					#INCLUDE <testing-for-hiv-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -84,38 +84,38 @@
 
 			<dataValueTemplate dataElement="MaleUnder15" disaggregation="OzshuDqmXQI">
              <annotation>
-                		#INCLUDE <MOH 731-1 tested-positive-for-hiv-male-below-15-years.sql>
+                		#INCLUDE <tested-positive-for-hiv-male-below-15-years.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="FemaleUnder15" disaggregation="OzshuDqmXQI">
              <annotation>
-                		#INCLUDE <MOH 731-1 tested-positive-for-hiv-female-below-15-years.sql>
+                		#INCLUDE <tested-positive-for-hiv-female-below-15-years.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 
 			 <dataValueTemplate dataElement="Male15to24" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <MOH 731-1 tested-positive-for-hiv-male-between-15-and-24.sql>
+				#INCLUDE <tested-positive-for-hiv-male-between-15-and-24.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="Female15to24" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <MOH 731-1 tested-positive-for-hiv-female-between-15-and-24.sql>
+				 #INCLUDE <tested-positive-for-hiv-female-between-15-and-24.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MaleAbove25" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <MOH 731-1 tested-positive-for-hiv-male-25-years-and-older.sql>
+				 #INCLUDE <tested-positive-for-hiv-male-25-years-and-older.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="FemaleAbove25" disaggregation="OzshuDqmXQI">
              <annotation>
-                		#INCLUDE <MOH 731-1 tested-positive-for-hiv-female-25-years-and-older.sql>
+                		#INCLUDE <tested-positive-for-hiv-female-25-years-and-older.sql>
              </annotation>
              </dataValueTemplate>
 			

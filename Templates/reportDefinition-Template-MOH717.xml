@@ -12,12 +12,16 @@
 		 <dataElement uid="F6AwnxbwiK2" code="OPDYoungerMale" name="Revisit OPD Attendance less than 5yrs Male"  type="int"/>
 		 <dataElement uid="Ha96SBKI06u" code="OPDYoungerFeMale" name="Revisit OPD Attendance <5yrs Female" type="int"/>
 		 <dataElement uid="x13zGZKuxzs" code="OPDCasualty" name="Revisit OPD Casualty attendance"   type="int"/>
-		 <dataElement uid="EsfvxFcltV0" code="CWCAtt" name="CWC Attendance" type="int"/>
-		 <dataElement uid="uTQOSp7rx5h" code="ANCAtt" name="ANC Attendance" type="int"/>
-		 <dataElement uid="QStt76mU06X" code="PNCAtt" name="PNC Attendance" type="int"/>
-		 <dataElement uid="SyUQl638r5P" code="FPAtt" name="FP Attendance" type="int"/>
+		 <dataElement uid="EsfvxFcltV0" code="CWCAttNew" name="New CWC Attendance" type="int"/>
+		  <dataElement uid="EsfvxFcltV0" code="CWCAttNRevisit" name="Revisit CWC Attendance" type="int"/>
+		 <dataElement uid="uTQOSp7rx5h" code="ANCAttNew" name="New ANC Attendance" type="int"/>
+		 <dataElement uid="uTQOSp7rx5h" code="ANCAttRevisit" name="Revisit ANC Attendance" type="int"/>
+		 <dataElement uid="QStt76mU06X" code="PNCAttNew" name="New PNC Attendance" type="int"/>
+		 <dataElement uid="QStt76mU06X" code="PNCAttRevisit" name="Revisit PNC Attendance" type="int"/>
+		 <dataElement uid="SyUQl638r5P" code="FPAttNew" name="New FP Attendance" type="int"/>
+		 <dataElement uid="SyUQl638r5P" code="FPAttRevisit" name="Revisit FP Attendance" type="int"/>
 		 <dataElement uid="Lf9boBQjhn9" code="MEDoneExceptP3" name="Medical Examinations done except P3" type="int"/>
-                 <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (incl. P3, compensation, insurance)" type="int"/>
+         <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (incl. P3, compensation, insurance)" type="int"/>
 		 <dataElement uid="yNeFQlrPflq" code="OPDDressingDone" name="OPD Dressing Done" type="int"/>
 		 <dataElement uid="jQBxaAGqV08" code="OPDStitchRemoval" name="OPD Removal of Stitches" type="int"/>
 		 <dataElement uid="GuqtqOUKwch" code="OPDInjections" name="OPD Injections Given" type="int"/>
@@ -46,89 +50,113 @@
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="NewOPDOlderMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH717 new_male_patient_above_5_years_in_opd.sql>
+					#INCLUDE <new-male-patient-above-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RevisitOPDOlderMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 717 revisit_male_patient_above_5_years_in_opd.sql>
+					#INCLUDE <revisit-male-patient-above-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="NewOPDOlderFeMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 717 new_female_patient_above_5_years_in_opd.sql>
+					#INCLUDE <new-female-patient-above-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RevisitOPDOlderFeMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 717  revisit_female_patient_above_5_years_in_opd.sql>
+					#INCLUDE <revisit-female-patient-above-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 		 
 		 
 		 <dataValueTemplate dataElement="NewOPDYoungerMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 717 new_male_patient_below_5_years_in_opd.sql>
+					#INCLUDE <new-female-patient-below-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RevisitOPDYoungerMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 717 revisit_male_patient_below_5_years_in_opd.sql>
+					#INCLUDE <revisit-male-patient-below-5-years-in-opd.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="NewOPDYoungerFeMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					 #INCLUDE <MOH 717 new_female_patient_below_5_years_in_opd.sql>
+					 #INCLUDE <new-female-patient-below-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 
 			 <dataValueTemplate dataElement="RevisitOPDYoungerFeMale" disaggregation="OzshuDqmXQI">
              <annotation>
-					 #INCLUDE <MOH 717 revisit_female_patient_below_5_years_in_opd.sql>
+					 #INCLUDE <revisit-female-patient-below-5-years-in-opd.sql>
              </annotation>
              </dataValueTemplate>
 			 
              <dataValueTemplate dataElement="NewOPDCasualty" disaggregation="OzshuDqmXQI">
              <annotation>
-            				#INCLUDE <MOH 717 new_opd_casualty_attendance.sql>
+            				#INCLUDE <new-opd-casualty-attendance.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RevisitOPDCasualty" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <MOH 717 revisit_opd_casualty_attendance.sql>
+					#INCLUDE <revisit-opd-casualty-attendance.sql>
              </annotation>
              </dataValueTemplate>
 
-			<dataValueTemplate dataElement="CWCAtt" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="CWCAttNew" disaggregation="OzshuDqmXQI">
              <annotation>
-                		#INCLUDE <MOH 717 mch_fp_clients_cwc_attendance.sql>
+                		#INCLUDE <mch-fp-clients-cwc-attendance-new-clients.sql>
+             </annotation>
+             </dataValueTemplate>	
+			 
+			 <dataValueTemplate dataElement="CWCAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+                		#INCLUDE <mch-fp-clients-cwc-attendance-revisits.sql>
              </annotation>
              </dataValueTemplate>	
 
-			<dataValueTemplate dataElement="ANCAtt" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="ANCAttNew" disaggregation="OzshuDqmXQI">
              <annotation>
-		              	#INCLUDE <MOH 717 mch_fp_clients_anc_attendance.sql>
+		              	#INCLUDE <mch-fp-clients-anc-attendance-new-clients.sql>
              </annotation>
-             </dataValueTemplate>				 
-			 
-			 <dataValueTemplate dataElement="PNCAtt" disaggregation="OzshuDqmXQI">
+             </dataValueTemplate>	
+
+			<dataValueTemplate dataElement="ANCAttRevisit" disaggregation="OzshuDqmXQI">
              <annotation>
-                		#INCLUDE <MOH 717 mch_fp_clients_pnc_attendance.sql>
+		              	#INCLUDE <mch-fp-clients-anc-attendance-revisits.sql>
+             </annotation>
+             </dataValueTemplate>			 
+			 
+			 <dataValueTemplate dataElement="PNCAttNew" disaggregation="OzshuDqmXQI">
+             <annotation>
+                		#INCLUDE <mch-fp-clients-pnc-attendance-new-clients.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PNCAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+                		#INCLUDE <mch-fp-clients-pnc-attendance-revisits.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 
-			 <dataValueTemplate dataElement="FPAtt" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="FPAttNew" disaggregation="OzshuDqmXQI">
              <annotation>
-			  	#INCLUDE <MOH 717 mch_fp_clients_fp_attendance.sql>
+			  	#INCLUDE <mch-fp-clients-fp-attendance-new-clients.sql>
              </annotation>
-             </dataValueTemplate>				 
+             </dataValueTemplate>	
+			 
+			  <dataValueTemplate dataElement="FPAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+			  	#INCLUDE <mch-fp-clients-fp-attendance-revisits.sql>
+             </annotation>
+             </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MEDoneExceptP3" disaggregation="OzshuDqmXQI">
              <annotation>
