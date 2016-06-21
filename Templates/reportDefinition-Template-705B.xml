@@ -83,51 +83,51 @@
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="DH" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <diarrhea-cases.sql>
+					#INCLUDE <diarrhea-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="TB" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <tuberculosis-cases.sql>
+					#INCLUDE <tuberculosis-cases-over-5.sql>
 		             </annotation>
              </dataValueTemplate>
 		 
 		 
 		 <dataValueTemplate dataElement="BDH" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <dysentery-cases.sql>
+					#INCLUDE <dysentery-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="CH" disaggregation="OzshuDqmXQI">
              <annotation>
-					 #INCLUDE <cholera-cases-pending.sql>
+					 #INCLUDE <cholera-cases-pending-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
              <dataValueTemplate dataElement="MM" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <meningococcal-meningitis-cases.sql>
+                			#INCLUDE <meningococcal-meningitis-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="OM" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <other-meningitis-cases.sql
+                			#INCLUDE <other-meningitis-cases-over-5.sql>
 >
              </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="NT" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <neonatal-tetanus-cases.sql
+                			#INCLUDE <neonatal-tetanus-cases-over-5.sql>
 >
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="PM" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <poliomyelitis-cases.sql>
+                			#INCLUDE <poliomyelitis-cases-over-5.sql>
 >
              </annotation>
              </dataValueTemplate>
@@ -135,79 +135,79 @@
 			 
 			 <dataValueTemplate dataElement="CP" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <chicken-pox-cases.sql>
+					#INCLUDE <chicken-pox-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="ME" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <measles-cases.sql>
+				 	#INCLUDE <measles-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="HP" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <hepatitis-cases.sql>
+				 	#INCLUDE <hepatitis-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="MU" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <mumps-cases.sql>
+                			#INCLUDE <mumps-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 
 			 <dataValueTemplate dataElement="FV" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <fever-cases.sql>
+					#INCLUDE <fever-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="SM" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <suspected-malaria-cases-pending.sql>
+				 	#INCLUDE <suspected-malaria-cases-pending-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="CM" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <confirmed-malaria-cases.sql>
+					#INCLUDE <confirmed-malaria-cases-over-5.sql>
 	     </annotation>
              </dataValueTemplate> 
 			  <dataValueTemplate dataElement="UTI" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <urinary-tract-infection-cases.sql>
+					#INCLUDE <urinary-tract-infection-cases-over-5.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TF" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <typhoid-fever-cases.sql>
+				 	#INCLUDE <typhoid-fever-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="BiL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <bilharzia-cases.sql>
+				 	#INCLUDE <bilharzia-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="IW" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <intestinal-worms-cases.sql>
+				 	#INCLUDE <intestinal-worms-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MaL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <malnutrition-cases.sql>
+				 	#INCLUDE <malnutrition-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="AnM" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <aneamia-cases.sql>
+				 	#INCLUDE <aneamia-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -224,13 +224,13 @@
              </dataValueTemplate>
 			 <dataValueTemplate dataElement="OEC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <other-eye-conditions-cases.sql>
+				 	#INCLUDE <other-eye-conditions-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="EIC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <ear-infections-conditions-cases.sql>
+				 	#INCLUDE <ear-infections-conditions-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -248,67 +248,67 @@
 	
 			<dataValueTemplate dataElement="AT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <asthma-cases.sql>
+				 	#INCLUDE <asthma-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="TOS" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <tonsolitis-cases.sql>
+				 	#INCLUDE <tonsolitis-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="PNE" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <pneumonia-cases.sql>
+				 	#INCLUDE <pneumonia-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="ODORS" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <other-disorder-of-respiratory-system.sql>
+				 	#INCLUDE <other-disorder-of-respiratory-system-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="MD" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <mental-disorders-cases.sql>
+				 	#INCLUDE <mental-disorders-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="DD" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <dental-disorders-cases.sql>
+				 	#INCLUDE <dental-disorders-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="JI" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <jiggers-infestation-cases-pending.sql>
+					#INCLUDE <jiggers-infestation-cases-pending-over-5.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="DOTS" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <diseases-of-the-skin-cases.sql>
+					#INCLUDE <diseases-of-the-skin-cases-over-5.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="CAS" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <chromosomal-abnormality-case.sql>
+					#INCLUDE <chromosomal-abnormality-case-over-5.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="CA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <congenital-anomalies-cases.sql>
+				 	#INCLUDE <congenital-anomalies-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="POS" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <poisoning-cases-pending.sql>
+				 	#INCLUDE <poisoning-cases-pending-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 <dataValueTemplate dataElement="RTI" disaggregation="OzshuDqmXQI">
@@ -331,35 +331,35 @@
 			 
 			 <dataValueTemplate dataElement="BN" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <burns-cases.sql>
+				 	#INCLUDE <burns-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="SB" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <snake-bite-cases.sql>
+					#INCLUDE <snake-bite-cases-over-5.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="DB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <dog-bites-cases.sql>
+				 	#INCLUDE <dog-bites-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			   <dataValueTemplate dataElement="OB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <other-bites-cases.sql>
+				 	#INCLUDE <other-bites-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			  <dataValueTemplate dataElement="DIA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <diabetes-cases.sql>
+				 	#INCLUDE <diabetes-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="EPI" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <epilepsy-cases.sql>
+					#INCLUDE <epilepsy-cases-over-5.sql>
 	     </annotation>
              </dataValueTemplate>
 			 
@@ -382,73 +382,73 @@
 			 
 			 <dataValueTemplate dataElement="RIC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <rickets-cases.sql>
+				 	#INCLUDE <rickets-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="CC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <cardiovascular-conditions-cases.sql>
+				 	#INCLUDE <cardiovascular-conditions-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VRI" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <violent-related-injuries.sql> 
+				 	#INCLUDE <violent-related-injuries-over-5.sql> 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="CePa" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <cerebral-palsy-cases.sql>   
+				 	#INCLUDE <cerebral-palsy-cases-over-5.sql>   
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="AUT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <autism-cases.sql>
+				 	#INCLUDE <autism-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OCNSC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <other-central-nervous-system-conditions.sql>
+				 	#INCLUDE <other-central-nervous-system-conditions-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TRY" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <tryponosomiasis-cases.sql>
+				 	#INCLUDE <tryponosomiasis-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="KL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <kalazar-leishmaniaisis-cases.sql> 
+				 	#INCLUDE <kalazar-leishmaniaisis-cases-over-5.sql> 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="DGW" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <dracunculosis-guinea-worm.sql>
+				 	#INCLUDE <dracunculosis-guinea-worm-over-5.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="YW" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <yellow-fever-cases.sql> 
+				 	#INCLUDE <yellow-fever-cases-over-5.sql> 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VHF" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <viral-haemorrhagic-fever-cases.sql> 
+				 	#INCLUDE <viral-haemorrhagic-fever-cases-over-5.sql> 
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="PLG" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <plague-cases.sql> 
+				 	#INCLUDE <plague-cases-over-5.sql> 
              </annotation>
              </dataValueTemplate>
 			 

@@ -233,15 +233,7 @@ AND birthdate IS NOT NULL
 AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 
-			<dataValueTemplate dataElement="IPVover1year" disaggregation="OzshuDqmXQI">
-             <annotation>
-             </dataValueTemplate>
-
-			<dataValueTemplate dataElement="IPVunder1yr" disaggregation="OzshuDqmXQI">
-             <annotation>
-             </dataValueTemplate>			 
-
-			<dataValueTemplate dataElement="DPTHepHiB1over1yr" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="DPTHepHiB1over1yr" disaggregation="OzshuDqmXQI">
              <annotation>
 
 SELECT COUNT(*)

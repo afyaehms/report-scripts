@@ -94,7 +94,7 @@ AND
   (o.concept_id = 5109  OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (962,1003,1004,1215,1678,4029,4421,5018,148023)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -116,7 +116,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (572,1010,1163,1213,1245,1470,1525,1527,1707,1708,
     1752,2345,3860,4059,4060,4061,4148,4298,4316,4425,4592,152306,160156)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -139,7 +139,7 @@ AND
   (o.concept_id=5109  OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (138868,1013,1081,2450,1003,3667,1668,5202)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -158,7 +158,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN ()
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -179,7 +179,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1714,1518)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -190,14 +190,45 @@ AND p.person_id NOT IN (
 
 			<dataValueTemplate dataElement="OM" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <other-meningitis-cases.sql
+SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+FROM person p
+INNER JOIN obs o ON o.person_id = p.person_id
+WHERE 
+p.voided = 0
+AND o.voided = 0
+AND
+  (o.concept_id=5109 OR o.concept_id = 2304)
+AND
+DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+AND o.value_coded IN (1019,1167,1179,1723,3670,5233,5499,115835)
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
+AND p.person_id NOT IN (
+  SELECT person_id FROM obs 
+  WHERE concept_id = 5109 
+  AND value_coded IN (1019,1167,1179,1723,3670,5233,5499,115835)
+  AND DATE(obs_datetime) &lt; :startOfPeriod)
 >
              </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="NT" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <neonatal-tetanus-cases.sql
+SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+FROM person p
+INNER JOIN obs o ON o.person_id = p.person_id
+WHERE 
+p.voided = 0
+AND o.voided = 0
+AND
+  (o.concept_id=5109 OR o.concept_id = 2304)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+AND o.value_coded IN (124954,1519)
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
+AND p.person_id NOT IN (
+  SELECT person_id FROM obs 
+  WHERE concept_id = 5109 
+  AND value_coded IN (124954,1519)
+  AND DATE(obs_datetime) &lt; :startOfPeriod)
 >
              </annotation>
              </dataValueTemplate>				 
@@ -214,7 +245,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1195,5258,160195)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -237,7 +268,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1146,892)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -258,7 +289,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1020,1744,4458,5529,134561)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -281,7 +312,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (1005,1006,1007,1008,1505,1506,1746,1747,1748,2524,2525,
     2526,2527,2528,2587,2590,2604,2617,4436,145131,160143)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -304,7 +335,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1021)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -329,7 +360,7 @@ DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (1018,1047,1056,1065,1152,1202,1666,1724,1743,1753,1666,1711,
     3668,3671,4035,4289,1152,1056,4289,4576,4577,113228,113230,127990)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs
   WHERE concept_id = 5109
@@ -352,7 +383,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (160149,160151,160153)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -375,7 +406,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,
     4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -398,7 +429,7 @@ AND
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (1017,2522,4069,4292,4297,4337,4443,111633,111636,139502,111633)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -420,7 +451,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1666,1056)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -441,7 +472,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1104,117152)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -462,7 +493,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1104,117152)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -483,7 +514,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1022,1846,4333,160180,160205)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -502,7 +533,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -536,7 +567,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (1038,1421,1425,2471,4049,4125,4139,4457,4528,4872,4910,112198,
     119222,160172)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -562,7 +593,7 @@ AND o.value_coded IN
   (1137,1345,1493,1820,1822,1823,2116,4113,4115,4119,4122,4152,
     4154,4155,4156,4157,4160,4266,4295,4320,4343,4345,4402,4563,
     4917,4918,4919,4920,4563,119240)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -599,7 +630,7 @@ AND
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (999,1000,1281,1926,4067,4081,4272,4463,4464,121372,121375)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -622,7 +653,7 @@ AND
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (602,1034,1193,1216,1618,2438,2490,1216,4153,4238,4248,149496)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -646,7 +677,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,1113,4503,
     5194,5200,5500,114100)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -669,7 +700,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1168,3671,1857,4400,4440,160204)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -690,7 +721,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (2044,1845,3659,3660,4586,134337,160200)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -712,7 +743,7 @@ AND
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -734,7 +765,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN ({{jiggers_infection_concept_id}})
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -756,7 +787,7 @@ AND
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (1155,1825,1828,1934,1138,4949,137293,150555,512,160161,137293)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -778,7 +809,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4575)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -799,7 +830,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1025,1201)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -820,7 +851,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN ({{poisoning_concept_id}})
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -896,7 +927,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4011)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -914,7 +945,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1393)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -932,7 +963,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1068)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -949,7 +980,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1069,1241,1261,2498,4448)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -966,7 +997,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1100,1413,1414,1846,2107,2537,119481,142473)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -984,7 +1015,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1064,1928,4404,1064,4579,155)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1055,7 +1086,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1194)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1073,7 +1104,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4593,1755)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1091,7 +1122,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1452)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1109,7 +1140,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1157)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1127,7 +1158,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4574)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1145,7 +1176,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4518,119112,4558,1160)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1163,7 +1194,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4550,4551,4553)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1181,7 +1212,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (3666,4548,3664)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1199,7 +1230,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (3653,4578)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1218,7 +1249,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1018)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1236,7 +1267,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (4289,1724,4577,3671,3668)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
@@ -1254,7 +1285,7 @@ AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1709)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5 
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 

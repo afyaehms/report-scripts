@@ -143,19 +143,7 @@
              </annotation>
              </dataValueTemplate>
 
-			<dataValueTemplate dataElement="IPVover1year" disaggregation="OzshuDqmXQI">
-             <annotation>
-                			#INCLUDE <child-immunization-ipv-over-1-year.sql>
-             </annotation>
-             </dataValueTemplate>
-
-			<dataValueTemplate dataElement="IPVunder1yr" disaggregation="OzshuDqmXQI">
-             <annotation>
-                			#INCLUDE <child-immunization-ipv-under-1-year.sql>
-             </annotation>
-             </dataValueTemplate>			 
-
-			<dataValueTemplate dataElement="DPTHepHiB1over1yr" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="DPTHepHiB1over1yr" disaggregation="OzshuDqmXQI">
              <annotation>
             	   			#INCLUDE <child-immunization-dpt-hep-hib1-over-1-year.sql>
 	    </annotation>

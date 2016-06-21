@@ -113,14 +113,14 @@
 
 			<dataValueTemplate dataElement="OM" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <other-meningitis-cases.sql
+                			#INCLUDE <other-meningitis-cases.sql>
 >
              </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="NT" disaggregation="OzshuDqmXQI">
              <annotation>
-                			#INCLUDE <neonatal-tetanus-cases.sql
+                			#INCLUDE <neonatal-tetanus-cases.sql>
 >
              </annotation>
              </dataValueTemplate>				 
