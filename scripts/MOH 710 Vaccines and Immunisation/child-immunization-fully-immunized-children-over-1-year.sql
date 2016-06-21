@@ -9,7 +9,7 @@ SELECT COUNT(*)
 	INNER JOIN person p ON pp.patient_id = p.person_id
 
 	WHERE birthdate IS NOT NULL 
-	AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1
+	AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
 
 	GROUP BY patient_id
 	HAVING COUNT(DISTINCT state)=(
