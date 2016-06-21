@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     <dataElements>
+		 <dataElement uid="tovFNTW5b9K" code="DH"  name="Diarrhoea" type="int"/>
+		 <dataElement uid="e09lZ1Fw97l" code="TB"  name="Tuberculosis" type="int"/>
+	     <dataElement uid="V6AhoeTTClY" code="BDH"  name="Dysentery (Bloody diarrhoea)" type="int"/>
+		 <dataElement uid="NF4v45pwFCW" code="CH"  name="Cholera" type="int"/>
+         <dataElement uid="IVfyP8yAazg" code="MM"  name="Meningococcal Meningitis" type="int"/>
+		 <dataElement uid="ad9sUgPPQgl" code="OM"  name="Other Meningitis" type="int"/>
+		 <dataElement uid="pDCorm17eRG" code="NT"  name="Neonatal Tetanus" type="int"/>
+		 <dataElement uid="w4b50UCz14b" code="PM"  name="Poliomyelitis AFP" type="int"/>
+		 <dataElement uid="FW3WUJbzhEG" code="CP"  name="Chicken Pox" type="int"/>
+		 <dataElement uid="VuXfcCV7RtR" code="ME"  name="Measles" type="int"/>
+		 <dataElement uid="QUA6XTNIaNH" code="HP"  name="Hepatitis" type="int"/>
+		 <dataElement uid="vmzl4T728PC" code="MU"  name="Mumps" type="int"/>
+		 <dataElement uid="JpzfpB5zN4k" code="FV"  name="Fevers" type="int"/>
+		 <dataElement uid="Lt0FqtnHraW" code="SM"  name="Suspected Malaria" type="int"/>
+		 <dataElement uid="OoakJhWiyZp" code="CM"  name="Confirmed Malaria (only Positive cases)" type="int"/>
+		 <dataElement uid="WvOlW7FmLiq" code="UTI"  name="Urinary Tract Infection" type="int"/>
+		 <dataElement uid="NGUR6mazihN" code="TF"  name="Typhoid fever" type="int"/>
+		 <dataElement uid="ojFSHMwbkHK" code="BiL"  name="Bilharzia" type="int"/>
+		 <dataElement uid="UIG9ROMuecP" code="IW"  name="Intestinal Worms" type="int"/>
+		 <dataElement uid="WXSCo6wvs74" code="MaL"  name="Malnutrition" type="int"/>
+		 <dataElement uid="kkUHOwGMawD" code="AnM"  name="Aneamia" type="int"/>
+		 <dataElement uid="mzcuI8nQYpW" code="EI"  name="Eye Infections" type="int"/>
+		 <dataElement uid="T7rAVczsYe4" code="OEC"  name="Other Eye Conditions" type="int"/>
+		 <dataElement uid="Rmp6V00K85F" code="EIC"  name="Ear Infections (Conditions)" type="int"/>
+		 <dataElement uid="wGK0P9twEkx" code="URTI"  name="Upper Respiratory Tract Infections" type="int"/>
+		 <dataElement uid="L82lvvxVaqt" code="AT"  name="Asthma" type="int"/>
+		 <dataElement uid="SZ8Krtxc2XB" code="TOS"  name="Tonsolitis" type="int"/>
+		 <dataElement uid="PHXPCqYlS5v" code="PNE"  name="Pneumonia" type="int"/>
+		 <dataElement uid="T2tgkrJ2Mkw" code="ODORS"  name="Other Dis. Of Respiratory System" type="int"/>
+		 <dataElement uid="HmgfJSVUOOr" code="MD"  name="Mental Disorders" type="int"/>
+		 <dataElement uid="MRYnOLO78oa" code="DD"  name="Dental Disorders" type="int"/>
+		 <dataElement uid="W4Hz8qcZHLC" code="JI"  name="Jiggers Infestation" type="int"/>
+		 <dataElement uid="yoqQDZq28Vk" code="DOTS"  name="Diseases of the skin" type="int"/>
+		 <dataElement uid="WouiPTMfuBi" code="CAS"  name="Chromosomal Abnormalities" type="int"/>
+		 <dataElement uid="uVBWKrnxXTJ" code="CA"  name="Congenital Anomalies" type="int"/>
+		 <dataElement uid="qlCRXb7XPuW" code="POS"  name="Poisoning" type="int"/>
+		 <dataElement uid="I5611kWZgh8" code="RTI"  name="Road Traffic Injuries" type="int"/>
+		 <dataElement uid="PiwEyf7dVC9" code="OIJ"  name="Other Injuries" type="int"/>
+		 <dataElement uid="vp0neVlUNfU" code="SA"  name="Sexual Assault (Violence)" type="int"/>
+		 <dataElement uid="dkEYL9Sous9" code="BN"  name="Burns" type="int"/>
+		 <dataElement uid="WcDWC41StU4" code="SB"  name="Snake Bites" type="int"/>
+		 <dataElement uid="egePEON9p3V" code="DB"  name="Dog Bites" type="int"/>
+		 <dataElement uid="Inct3WT9StF" code="OB"  name="Other Bites" type="int"/>	
+		 <dataElement uid="D923dTnerdk" code="DIA"  name="Diabetes" type="int"/>
+		 <dataElement uid="FiiYdxMrqzs" code="EPI"  name="Epilepsy" type="int"/>
+		 <dataElement uid="VUGxFGzFcZX" code="OCD"  name="Other Convulsive Disorders" type="int"/>
+		 <dataElement uid="YbMwZWHJLca" code="NDHIV"  name="Newly Diagnosed HIV" type="int"/>	
+		 <dataElement uid="nb9cfWgxYFc" code="BRU"  name="Brucellosis" type="int"/>
+		 <dataElement uid="KbTbZVtZIPv" code="RIC"  name="Rickets" type="int"/>
+		 <dataElement uid="sZETzNe1To8" code="CC"  name="Cardiovascular conditions" type="int"/>
+		 <dataElement uid="IJcsSSeoIok" code="VRI"  name="Violence related injuries" type="int"/>
+		 <dataElement uid="nwMuDW4tTdA" code="CePa"  name="Cerebral Palsy" type="int"/>
+		 <dataElement uid="L529r3Wvtcf" code="AUT"  name="Autism" type="int"/>
+		 <dataElement uid="fJx0ovTVjua" code="OCNSC"  name="Other Central Nervous System Conditions" type="int"/>
+		 <dataElement uid="zCOc8HOzP2u" code="TRY"  name="Tryponosomiasis" type="int"/>
+		 <dataElement uid="FD93RcbEm3Y" code="KL"  name="Kalazar (Leishmaniaisis)" type="int"/>
+		 <dataElement uid="k7P5QUlyJfg" code="DGW"  name="Dracunculosis (Guinea Worm)" type="int"/>
+		 <dataElement uid="P3Yvm3iber7" code="YW"  name="Yellow Fever" type="int"/>
+		 <dataElement uid="EM3rikEV3Bu" code="VHF"  name="Viral Haemorrhagic Fever" type="int"/>
+		 <dataElement uid="OzMbHhg9zZO" code="PLG"  name="Plague" type="int"/>
+		 <dataElement uid="HRCgiAVAyfP" code="DDTRTI"  name="Deaths due to Road Traffic Injuries" type="int"/>
+		 <dataElement uid="KxT47tbKHsd" code="AOD"  name="ALL OTHER DISEASES" type="int"/>
+		 <dataElement uid="IxhbkNwhcvE" code="NOFA"  name="NO OF FIRST ATTENDANCES" type="int"/>
+		 <dataElement uid="BwROYFIiXKG" code="REAT"  name="RE-ATTENDANCES" type="int"/>
+		 <dataElement uid="OOTyIyTXnDi" code="RFOHF"  name="Referrals from other health facility" type="int"/>
+		 <dataElement uid="s4yI7oKQ8A6" code="RTOHF"  name="Referrals to other health facility" type="int"/>
+		 <dataElement uid="n6Y9V941Fgz" code="RFCU"  name="Referrals from Community Unit" type="int"/>
+		 <dataElement uid="yEAuh5Cyrsn" code="RTCU"  name="Referrals to Community Unit" type="int"/>	
+		
+		 
+     </dataElements>
+     <disaggregations>
+         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+     </disaggregations>
+     <reportTemplate>
+         <name>MOH 705 B Outpatient Summary over 5 years</name>
+         <uid>oEfGJAQaARj</uid>
+         <code>oEfGJAQaARj</code>
+         <periodType>Monthly</periodType>
+         <dataValueTemplates>
+		 <dataValueTemplate dataElement="DH" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <diarrhea-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			<dataValueTemplate dataElement="TB" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <tuberculosis-cases.sql>
+		             </annotation>
+             </dataValueTemplate>
+		 
+		 
+		 <dataValueTemplate dataElement="BDH" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <dysentery-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="CH" disaggregation="OzshuDqmXQI">
+             <annotation>
+					 #INCLUDE <cholera-cases-pending.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+             <dataValueTemplate dataElement="MM" disaggregation="OzshuDqmXQI">
+             <annotation>
+                			#INCLUDE <meningococcal-meningitis-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="OM" disaggregation="OzshuDqmXQI">
+             <annotation>
+                			#INCLUDE <other-meningitis-cases.sql
+>
+             </annotation>
+             </dataValueTemplate>	
+
+			<dataValueTemplate dataElement="NT" disaggregation="OzshuDqmXQI">
+             <annotation>
+                			#INCLUDE <neonatal-tetanus-cases.sql
+>
+             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="PM" disaggregation="OzshuDqmXQI">
+             <annotation>
+                			#INCLUDE <poliomyelitis-cases.sql>
+>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="CP" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <chicken-pox-cases.sql>
+             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="ME" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <measles-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HP" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <hepatitis-cases.sql>
+             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="MU" disaggregation="OzshuDqmXQI">
+             <annotation>
+                			#INCLUDE <mumps-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="FV" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <fever-cases.sql>
+             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="SM" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <suspected-malaria-cases-pending.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="CM" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <confirmed-malaria-cases.sql>
+	     </annotation>
+             </dataValueTemplate> 
+			  <dataValueTemplate dataElement="UTI" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <urinary-tract-infection-cases.sql>
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TF" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <typhoid-fever-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BiL" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <bilharzia-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="IW" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <intestinal-worms-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MaL" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <malnutrition-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="AnM" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <aneamia-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="EI" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+					FROM person p
+					INNER JOIN obs o ON o.person_id = p.person_id
+					WHERE p.voided = 0 AND o.voided = 0
+					AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+					AND o.value_coded IN (1038)
+					AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;= 5 
+             </annotation>
+             </dataValueTemplate>
+			 <dataValueTemplate dataElement="OEC" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <other-eye-conditions-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="EIC" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <ear-infections-conditions-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="URTI" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (1149,1315,4026,4031,4121,4410,4493,4509)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;= 5 
+             </annotation>
+             </dataValueTemplate>
+	
+			<dataValueTemplate dataElement="AT" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <asthma-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="TOS" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <tonsolitis-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PNE" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <pneumonia-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="ODORS" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <other-disorder-of-respiratory-system.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="MD" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <mental-disorders-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="DD" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <dental-disorders-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="JI" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <jiggers-infestation-cases-pending.sql>
+	     </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="DOTS" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <diseases-of-the-skin-cases.sql>
+	     </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="CAS" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <chromosomal-abnormality-case.sql>
+	     </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="CA" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <congenital-anomalies-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="POS" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <poisoning-cases-pending.sql>
+             </annotation>
+             </dataValueTemplate>
+			 <dataValueTemplate dataElement="RTI" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <road-traffic-injury-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 	 
+			 <dataValueTemplate dataElement="OIJ" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <other-injuries-cases.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="SA" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <sexual-assault-violence-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BN" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <burns-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="SB" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <snake-bite-cases.sql>
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="DB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <dog-bites-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			   <dataValueTemplate dataElement="OB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <other-bites-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			  <dataValueTemplate dataElement="DIA" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <diabetes-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="EPI" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <epilepsy-cases.sql>
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OCD" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <other-convulsive-disorders-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="NDHIV" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <newly-diagnosed-HIV-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 <dataValueTemplate dataElement="BRU" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <brucellosis-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RIC" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <rickets-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="CC" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <cardiovascular-conditions-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VRI" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <violent-related-injuries.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="CePa" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <cerebral-palsy-cases.sql>   
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="AUT" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <autism-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OCNSC" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <other-central-nervous-system-conditions.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TRY" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <tryponosomiasis-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="KL" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <kalazar-leishmaniaisis-cases.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="DGW" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <dracunculosis-guinea-worm.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="YW" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <yellow-fever-cases.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VHF" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <viral-haemorrhagic-fever-cases.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="PLG" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <plague-cases.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+		
+			
+         </dataValueTemplates>		 
+    </reportTemplate>
+</reportTemplates>
