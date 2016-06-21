@@ -76,8 +76,10 @@
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="NewANC" disaggregation="OzshuDqmXQI">
              <annotation>
-			#INCLUDE <MOH711 MCH New ANC Clients.sql>																		     </annotation>
-             </dataValueTemplate>
+SELECT count(*)
+FROM patient_program
+WHERE program_id= '1'
+AND date_enrolled between '2016-06-02' and '2016-06-13';             </annotation></dataValueTemplate>
 			<dataValueTemplate dataElement="ReVisitANC" disaggregation="OzshuDqmXQI">
              <annotation>
 				SELECT COUNT(DISTINCT p.person_id) AS 'Count'
@@ -127,7 +129,7 @@ INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
 AND pp.program_id = 1
 AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
 GROUP BY patient_id
-HAVING COUNT(v.patient_id) &ge; 4) as patientvisits )             </annotation>
+HAVING COUNT(v.patient_id) &gt; 3) as patientvisits )             </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">

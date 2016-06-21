@@ -100,7 +100,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE (pws.concept_id = 100126145 OR pws.concept_id = 100126146)
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="BCGAdministeredunder1yr" disaggregation="OzshuDqmXQI">
@@ -116,7 +116,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE (pws.concept_id = 100126145 OR pws.concept_id = 100126146)
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="OPVBirth" disaggregation="OzshuDqmXQI">
@@ -132,7 +132,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126153
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1
              </annotation>
              </dataValueTemplate>
 		 
@@ -150,7 +150,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126150
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OPV1under1yr" disaggregation="OzshuDqmXQI">
@@ -166,7 +166,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126150
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OPV2over1yr" disaggregation="OzshuDqmXQI">
@@ -182,7 +182,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126151
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="OPV2under1yr" disaggregation="OzshuDqmXQI">
@@ -198,7 +198,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126151
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 			 
              <dataValueTemplate dataElement="OPV3over1yr" disaggregation="OzshuDqmXQI">
@@ -214,7 +214,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126152
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="OPV3under1yr" disaggregation="OzshuDqmXQI">
@@ -230,7 +230,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126152
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="IPVover1year" disaggregation="OzshuDqmXQI">
@@ -254,7 +254,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126154
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1	    </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1	    </annotation>
              </dataValueTemplate>
 				
 			<dataValueTemplate dataElement="DPTHepHiB1under1yr" disaggregation="OzshuDqmXQI">
@@ -270,7 +270,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126154
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>	
 			 
 			 <dataValueTemplate dataElement="DPTHepHiB2over1yr" disaggregation="OzshuDqmXQI">
@@ -286,7 +286,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126155
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="DPTHepHiB2under1yr" disaggregation="OzshuDqmXQI">
@@ -302,7 +302,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126155
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate> 
 			 
 			 
@@ -319,7 +319,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126156
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>	
 			
 			<dataValueTemplate dataElement="DPTHepHiB3under1yr" disaggregation="OzshuDqmXQI">
@@ -335,7 +335,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126156
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="Pneumococal1over1yr" disaggregation="OzshuDqmXQI">
@@ -351,7 +351,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126157
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="Pneumococal1under1yr" disaggregation="OzshuDqmXQI">
@@ -367,7 +367,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126157
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1	     </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1	     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="Pneumococal2over1yr" disaggregation="OzshuDqmXQI">
@@ -383,7 +383,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126158
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 
 			 <dataValueTemplate dataElement="Pneumococal2under1yr" disaggregation="OzshuDqmXQI">
@@ -399,7 +399,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126158
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1	     </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1	     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="Pneumococal3over1yr" disaggregation="OzshuDqmXQI">
@@ -415,7 +415,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126159
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="Pneumococal3under1yr" disaggregation="OzshuDqmXQI">
@@ -431,7 +431,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126159
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1	     </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1	     </annotation>
              </dataValueTemplate>
 			 
 			 
@@ -448,7 +448,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126160
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1	     </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1	     </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="Rotavirus1under1yr" disaggregation="OzshuDqmXQI">
@@ -464,7 +464,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126160
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="Rotavirus2under1yr" disaggregation="OzshuDqmXQI">
@@ -480,7 +480,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126161
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="Rotavirus2under1yr" disaggregation="OzshuDqmXQI">
@@ -496,7 +496,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126161
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1	     </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1	     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA6mnths" disaggregation="OzshuDqmXQI">
@@ -524,7 +524,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126162
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) > 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="YellowFeverunder1yr" disaggregation="OzshuDqmXQI">
@@ -540,7 +540,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE pws.concept_id = 100126162
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) <= 1             </annotation>
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &le; 1             </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MeaslesRub1" disaggregation="OzshuDqmXQI">
@@ -580,7 +580,7 @@ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 WHERE  pws.concept_id = 100126165
 AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
-AND (DATEDIFF(CURDATE(),birthdate) / 365) < 1.5
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt; 1.5
              </annotation>
              </dataValueTemplate>
 			 
