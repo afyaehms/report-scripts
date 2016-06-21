@@ -8,4 +8,4 @@ INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
 AND pp.program_id = 1
 AND v.date_started BETWEEN '2016-02-14' AND '2016-06-16'
 GROUP BY patient_id
-HAVING COUNT(v.patient_id) >= 4) as patientvisits )
+HAVING COUNT(v.patient_id) &ge; 4) as patientvisits )

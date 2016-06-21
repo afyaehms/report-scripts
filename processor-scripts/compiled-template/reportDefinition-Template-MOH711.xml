@@ -113,7 +113,7 @@ AND start_date BETWEEN '2012-05-12' and '2016-06-13';
 SELECT count(*)
 FROM obs o
 INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-WHERE o.concept_id = 995 AND value_numeric < 11
+WHERE o.concept_id = 995 AND value_numeric &lt; 11
 AND pp.program_id = 1
 AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -127,7 +127,7 @@ INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
 AND pp.program_id = 1
 AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
 GROUP BY patient_id
-HAVING COUNT(v.patient_id) >= 4) as patientvisits )             </annotation>
+HAVING COUNT(v.patient_id) &ge; 4) as patientvisits )             </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
