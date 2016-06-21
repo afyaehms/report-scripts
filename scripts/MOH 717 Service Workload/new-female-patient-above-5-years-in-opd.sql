@@ -21,7 +21,7 @@ and
 		from 
 			person 
 		where 
-			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) > 5 
+			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) &gt; 5 
 		and 
 			gender = 'F'
 	)

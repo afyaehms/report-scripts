@@ -11,7 +11,7 @@ AND
 		FROM
 			person
 		WHERE
-			birth_date IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) <5
+			birth_date IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) &lt;5
 		AND 	
 			gender = 'M')
 AND
