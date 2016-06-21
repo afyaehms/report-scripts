@@ -1,6 +1,7 @@
 -- Vitamin A 200,000 remaining at the end of the month
 -- Substitute the dates with date placeholders
 
+
 SELECT IFNULL(SUM(closing_balance),0)
 FROM(
 	SELECT closing_balance
