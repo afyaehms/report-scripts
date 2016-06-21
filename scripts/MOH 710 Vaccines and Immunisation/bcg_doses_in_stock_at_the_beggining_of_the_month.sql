@@ -1,6 +1,7 @@
 -- BCG doses in stock at the beginning of the month
 -- Substitute the dates with date placeholders
 
+
 SELECT IFNULL(SUM(current_quantity),0)
 FROM (
 	SELECT current_quantity
