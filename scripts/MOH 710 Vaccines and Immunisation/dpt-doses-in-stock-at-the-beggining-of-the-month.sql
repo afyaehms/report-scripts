@@ -6,8 +6,8 @@ FROM(
 	SELECT current_quantity
 	FROM drug dr
 	INNER JOIN inventory_store_drug isd ON isd.drug_id = dr.drug_id
-	WHERE concept_id= 5498 
-	AND created_on &lt;= '2016-06-01'
+	WHERE concept_id=5498 
+	AND created_on &lt; '2016-06-01'
 	ORDER BY created_on DESC
 	LIMIT 1
 ) AS qnty;

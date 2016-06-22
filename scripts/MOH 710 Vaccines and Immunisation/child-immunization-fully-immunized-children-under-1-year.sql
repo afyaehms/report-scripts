@@ -14,7 +14,8 @@ SELECT COUNT(*)
 	GROUP BY patient_id
 	HAVING COUNT(DISTINCT state)=(
 		SELECT COUNT(program_workflow_state_id)
-		FROM 
-		program_workflow_state
+		FROM program_workflow_state pws
+		INNER JOIN program_workflow pw 
+		ON pw.program_workflow_id = pws.program_workflow_id AND program_id=3
 	)
 ) AS fully_vaccinated;
