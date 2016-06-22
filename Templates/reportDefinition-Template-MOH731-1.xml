@@ -30,7 +30,7 @@
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="HIV1stTest" disaggregation="OzshuDqmXQI">
              <annotation>
-					#INCLUDE <testing-for-hiv-first>
+					#INCLUDE <testing-for-hiv-first.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="HIV2ndTest" disaggregation="OzshuDqmXQI">
