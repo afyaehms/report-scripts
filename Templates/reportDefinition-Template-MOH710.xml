@@ -33,7 +33,8 @@
 		 <dataElement uid="MAGmTkOIZus" code="VitaminA6mnths" name="Vitamin A at 6 months(100,000 IU)" type="int"/>
 		 <dataElement uid="PJCUSyQ6Ahv" code="YellowFeverover1yr" name="Yellow fever doses Administered Over 1 Year" type="int"/>
 		 <dataElement uid="PJCUSyQ6Ahv" code="YellowFeverunder1yr" name="Yellow fever doses Administered Under 1 Year" type="int"/>
-		 <dataElement uid="sRbqc5gBQhI" code="MeaslesRub1" name="Measles-Rubella 1 doses Administered" type="int"/>
+		 <dataElement uid="sRbqc5gBQhI" code="MeaslesRub1Over5yrs" name="Measles-Rubella 1 doses Administered Over 5 Years" type="int"/>
+		 <dataElement uid="sRbqc5gBQhI" code="MeaslesRub1Under5yrser5yrs" name="Measles-Rubella 1 doses Administered Under 5 Years" type="int"/>
          <dataElement uid="tBPGQFhWB7M" code="FICUnder1yr" name="Fully Immunized Children(FIC) under 1 year" type="int"/>
 		 <dataElement uid="tBPGQFhWB7M" code="FICOver1yr" name="Fully Immunized Children(FIC) over 1 year" type="int"/>
 		 <dataElement uid="NB9VuZXtpJK" code="VitaminA1yr" name="Vitamin A at 1 year (200,000 IU)" type="int"/>
@@ -248,13 +249,7 @@
 			 
 			 <dataValueTemplate dataElement="VitaminA6mnths" disaggregation="OzshuDqmXQI">
              <annotation>
-	     			SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				FROM person p
-				INNER JOIN obs o ON o.person_id = p.person_id
-				WHERE p.voided = 0 AND o.voided = 0
-				AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				AND o.value_coded IN (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+	     			#INCLUDE <child-immunization-vitamin-a-100000ui-6-months.sql>
 	     </annotation>
 	     </dataValueTemplate>
 			 
@@ -270,15 +265,15 @@
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="MeaslesRub1" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="MeaslesRub1Over5yrs" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1666,1056)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <child-immunization-measles-rubella1-over-1-year.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MeaslesRub1Under5yrs" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <child-immunization-measles-rubella1-under-1-year.sql>
              </annotation>
              </dataValueTemplate>
 			 
