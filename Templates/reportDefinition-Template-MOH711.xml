@@ -9,7 +9,9 @@
         <dataElement uid="EHGBrVPiG3N" code="IPT2ndDose" name="Clients given IPT 2nd Dose" type="int"/>
         <dataElement uid="T59McmnP4FJ" code="HBReport" name="Clients with Hb less than 11g/dl" type="int"/>
         <dataElement uid="Fz0LzxMT1vV" code="Women4ANCVisits" name="Pregnant women completing 4 ANC visits" type="int"/>
-        <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributed" name="LLITNs distributed to ANC clients " type="int"/>
+        <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributed" name="LLITNs distributed to ANC clients " type="int"/> 
+		<dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributedUnder1yr" name="LLITNs distributed to Under 1 Year " type="int"/>
+		
         <dataElement uid="uvBuzBj0AbL" code="TestedSyphilis" name="ANC clients tested for syphilis" type="int"/>
         <dataElement uid="zIiDTYhg8K5" code="SyphilisPos" name="ANC clients Syphilis +ve" type="int"/>
         <dataElement uid="R6oylU6CF31" code="CounseledIFO" name="Mother counselled on infant feeding options"
@@ -90,7 +92,7 @@
         <dataValueTemplates>
             <dataValueTemplate dataElement="NewANC" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <711-MCH New ANC Clients.sql>
+                    #INCLUDE <new-ANC-clients.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="ReVisitANC" disaggregation="OzshuDqmXQI">
@@ -109,209 +111,117 @@
 
             <dataValueTemplate dataElement="IPT1stDose" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT count(*)
-                    FROM patient_state
-                    WHERE state = '25'
-                    AND start_date BETWEEN '2012-05-12' and '2016-06-13';
+                    #INCLUDE <clients-given-IPD-1st-dose.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="IPT2ndDose" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT count(*)
-                    FROM patient_state
-                    WHERE state = '26'
-                    AND start_date BETWEEN '2012-05-12' and '2016-06-13';
+                    #INCLUDE <count-of-clients-given-IPT-2nd-dose.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="HBReport" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT count(*)
-                    FROM obs o
-                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-                    WHERE o.concept_id = 995 AND value_numeric &lt; 11
-                    AND pp.program_id = 1
-                    AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+                    #INCLUDE <clients-with-Hb-less-than-11g-per-dl.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="Women4ANCVisits" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT count(*) from (
-                    (SELECT v.patient_id, count(v.patient_id)
-                    FROM visit v
-                    INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
-                    AND pp.program_id = 1
-                    AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
-                    GROUP BY patient_id
-                    HAVING COUNT(v.patient_id) &ge; 4) as patientvisits )
+                    #INCLUDE <count-of-clients-completed-4-antenatal-visits.sql>
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="LLITNsDistributedUnder1yr" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT count(*)
-                    FROM obs o
-                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-                    WHERE o.concept_id = 160428 AND o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553'
-                    AND pp.program_id = 1
-                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                    #INCLUDE <LLITNS-distributed-to-children-under-one-year.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <LLITNS-distributed-to-ANC-clients.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="TestedSyphilis" disaggregation="OzshuDqmXQI">
                 <annotation>
-
-                    SELECT count(*)
-                    FROM obs o
-                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-                    WHERE o.concept_id = 2202
-                    AND pp.program_id = 1
-                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+					#INCLUDE <count-ANC-clients-tested-for-syphilis.sql>
                 </annotation>
             </dataValueTemplate>
 
 
             <dataValueTemplate dataElement="SyphilisPos" disaggregation="OzshuDqmXQI">
                 <annotation>
-
-                    SELECT count(*)
-                    FROM obs o
-                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-                    WHERE o.concept_id = 2202 AND o.value_coded = 782
-                    AND pp.program_id = 1
-                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+					#INCLUDE <count-of-ANC-clients-syphilis-positive.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="CounseledIFO" disaggregation="OzshuDqmXQI">
                 <annotation>
+					#INCLUDE <count-of-mothers-counselled-on-infant-feeding-options.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="BreastExamANC" disaggregation="OzshuDqmXQI">
                 <annotation>
-
-                    SELECT COUNT(*)
-                    FROM obs o
-                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-                    WHERE o.concept_id = 5538
-                    AND (pp.program_id = 1 OR pp.program_id = 2)
-                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+					#INCLUDE <count-of-women-done-breast-examination.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ANCExercise" disaggregation="OzshuDqmXQI">
                 <annotation>
-
-                    SELECT COUNT(*)
-                    FROM obs o
-                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-                    WHERE o.concept_id = 100126144 AND o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553'
-                    AND pp.program_id = 1
-                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                    #INCLUDE <ANC-clients-given-exercise.sql>
                 </annotation>
             </dataValueTemplate>
 
 
             <dataValueTemplate dataElement="PregAdolescents1014" disaggregation="OzshuDqmXQI">
                 <annotation>
-
-                    SELECT COUNT(*)
-                    FROM visit v
-                    INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
-                    INNER JOIN patient_search ps ON ps.patient_id = v.patient_id
-                    AND pp.program_id = 1
-                    AND v.visit_type_id = 2
-                    AND ps.age BETWEEN 10 AND 14
-                    AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
+					#INCLUDE <count-of-adolescents10-14-years-presenting-with-pregnancy.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PregAdolescents1519" disaggregation="OzshuDqmXQI">
                 <annotation>
 
-                    SELECT COUNT(*)
-                    FROM visit v
-                    INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
-                    INNER JOIN patient_search ps ON ps.patient_id = v.patient_id
-                    AND pp.program_id = 1
-                    AND v.visit_type_id = 2
-                    AND ps.age BETWEEN 15 AND 19
-                    AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
+                    #INCLUDE <count-of-adolescents15-19-years-presenting-with-pregnancy.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ANCgvnIron" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN
-                    (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <ANC-client-given-iron.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="ANCFolate" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1017,2522,4069,4292,4297,4337,4443,111633,111636,139502)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                   #INCLUDE <ANC-client-given-folate.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ANCgvnCombined" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1666,1056)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <ANC-client-supplemented-with-combine-iron-and-folate.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ANCCounseled" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1104,117152)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                   #INCLUDE <ANC-clients-counselled.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ANCTested" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <ANC-clients-tested-for-HIV.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ANCHIVVe" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1022,1846,4333,160180,160205)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <ANC-clients-tested-positive-for-HIV.sql>
                 </annotation>
             </dataValueTemplate>
 
