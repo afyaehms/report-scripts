@@ -35,11 +35,16 @@
 		 <dataElement uid="PJCUSyQ6Ahv" code="YellowFeverunder1yr" name="Yellow fever doses Administered Under 1 Year" type="int"/>
 		 <dataElement uid="sRbqc5gBQhI" code="MeaslesRub1" name="Measles-Rubella 1 doses Administered" type="int"/>
          <dataElement uid="tBPGQFhWB7M" code="FICUnder1yr" name="Fully Immunized Children(FIC) under 1 year" type="int"/>
+		 <dataElement uid="tBPGQFhWB7M" code="FICOver1yr" name="Fully Immunized Children(FIC) over 1 year" type="int"/>
 		 <dataElement uid="NB9VuZXtpJK" code="VitaminA1yr" name="Vitamin A at 1 year (200,000 IU)" type="int"/>
 		 <dataElement uid="QvQzYi8ik43" code="VitaminA1halfyr" name="Vitamin A at 1 1/2 year (200,000 IU)" type="int"/> 
 		 <dataElement uid="Jw3alL29ZEi" code="MeaslesRub1halfto2" name="Measles-Rubella 2 Dose Adm (at 1 1/2 - 2 years)" type="int"/>
 		 <dataElement uid="ivRgbmpCYTx" code="MeaslesRub2" name="Measles-Rubella 2 Dose Administered greater than 2 yrs" type="int"/>
-		 <dataElement uid="au9lav766rM" code="TT4PregWomen" name="Tetanus Toxoid for Pregnant women" type="int"/>
+		 <dataElement uid="au9lav766rM" code="TT4PregWomenFirst" name="Tetanus Toxoid for Pregnant women First Dosage" type="int"/>
+		 <dataElement uid="au9lav766rM" code="TT4PregWomenSecond" name="Tetanus Toxoid for Pregnant women Second Dosage" type="int"/>
+		 <dataElement uid="au9lav766rM" code="TT4PregWomenThird" name="Tetanus Toxoid for Pregnant women Third Dosage" type="int"/>
+		 <dataElement uid="au9lav766rM" code="TT4PregWomenFourth" name="Tetanus Toxoid for Pregnant women Fourth Dosage" type="int"/>
+		 <dataElement uid="au9lav766rM" code="TT4PregWomenFifth" name="Tetanus Toxoid for Pregnant women Fifth Dosage" type="int"/>
 		 <dataElement uid="cPeaV6caNqJ" code="VitaminA2to5yrs" name="Vitamin A 2 years to 5 years(200,000 IU)" type="int"/>
 		 <dataElement uid="vfyid8wVnVz" code="VitaminLactMothers" name="Vitamin A Supplemental  Lactating Mothers (200,000IU)" type="int"/>
 		 <dataElement uid="d8MsenqQaMv" code="BCGStock" name="BCG doses in stock at the beginning of the Month" type="int"/>
@@ -279,13 +284,13 @@
 			 
 			  <dataValueTemplate dataElement="FICUnder1yr" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1104,117152)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <child-immunization-fully-immunized-children-under-1-year.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="FICOver1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <child-immunization-fully-immunized-children-over-1-year.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -304,131 +309,89 @@
 			 
 			 <dataValueTemplate dataElement="MeaslesRub1halfto2" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1104,117152)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <measles-at-1-and-half-and-two-years.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="MeaslesRub2" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (4038,1083)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <measles-at-two-and-above-years.sql>
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="TT4PregWomen" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="TT4PregWomenFirst" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1022,1846,4333,160180,160205)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <tetanus-toxoid-for-pregnant-women-first-dosage.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TT4PregWomenSecond" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <tetanus-toxoid-for-pregnant-women-second-dosage.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TT4PregWomenThird" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <tetanus-toxoid-for-pregnant-women-third-dosage.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TT4PregWomenFourth" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <tetanus-toxoid-for-pregnant-women-fourth-dosage.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TT4PregWomenFifth" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <tetanus-toxoid-for-pregnant-women-fifth-dosage.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="VitaminA2to5yrs" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin-a-vitamin-a-200000ui-2-years-to-5years.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminLactMothers" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin-a-vitamin-a-suplemental-lactating-mothers-200000ui.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="BCGStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1104,117152)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <bcg_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="BCGDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (4038,1083)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <bcg_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="BCGDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1022,1846,4333,160180,160205)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <bcg_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="OPVStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <opv_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="OPVDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <opv_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="OPVDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <opv_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			
@@ -471,285 +434,141 @@
 			 
 			<dataValueTemplate dataElement="DPTHepHiBStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				#INCLUDE <dpt_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="DPTHepHiBDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <dpt_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="DPTHepHiBDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <dpt_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="PneumococalStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <pneumococcal_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="PneumococalDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <pneumococcal_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="PneumococalDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <pneumococcal_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="RotavirusStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1104,117152)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <rotavirus_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="RotavirusDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (4038,1083)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <rotavirus_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RotavirusDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1022,1846,4333,160180,160205)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <rotavirus_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="MeaslesStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <measles_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="MeaslesDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <measles_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="MeaslesDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <measles_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="YellowFeverStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <yellow_fever_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="YellowFeverDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <yellow_fever_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="YellowFeverDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <yellow_fever_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="TTStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1104,117152)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <tetanus_toxoid_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="TTDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (4038,1083)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <tetanus_toxoid_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1022,1846,4333,160180,160205)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <tetanus_toxoid_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="VitaminA100stock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin_A_100000_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminA100DosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin_A_100000_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="VitaminA100DosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin_A_100000_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA200stock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin_A_200000_doses_in_stock_at_the_beggining_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminA200DosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin_A_200000_doses_received_within_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			<dataValueTemplate dataElement="VitaminA200DosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <vitamin_A_200000_doses_remaining_at_the_end_of_the_month.sql>
              </annotation>
              </dataValueTemplate>
 			
