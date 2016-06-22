@@ -90,10 +90,7 @@
         <dataValueTemplates>
             <dataValueTemplate dataElement="NewANC" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT count(*)
-                    FROM patient_program
-                    WHERE program_id= '1'
-                    AND date_enrolled between '2016-06-02' and '2016-06-13';
+                    #INCLUDE <711-MCH New ANC Clients.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="ReVisitANC" disaggregation="OzshuDqmXQI">
