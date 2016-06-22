@@ -3,5 +3,5 @@
 
 SELECT COUNT(*)
 FROM obs o
-WHERE concept_id=2260
+WHERE (concept_id=3110 OR concept_id=100126141)
 AND date_created BETWEEN '2016-06-01' AND '2016-06-30'
