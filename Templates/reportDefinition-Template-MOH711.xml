@@ -95,7 +95,7 @@
                     #INCLUDE <new-ANC-clients.sql>
                 </annotation>
             </dataValueTemplate>
-            <dataValueTemplate dataElement="ReVisitANC" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="" disaggregation="OzshuDqmXQI">
                 <annotation>
                     SELECT COUNT(DISTINCT p.person_id) AS 'Count'
                     FROM person p
