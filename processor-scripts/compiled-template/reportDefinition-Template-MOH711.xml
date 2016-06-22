@@ -1,0 +1,794 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+    <dataElements>
+
+
+        <dataElement uid="f9vesk5d4IY" code="NewANC" name="New ANC clients" type="int"/>
+        <dataElement uid="hxXwYIgT8rI" code="ReVisitANC" name="Re-Visit ANC Clients" type="int"/>
+        <dataElement uid="gAKCshSgSH3" code="IPT1stDose" name="Clients given IPT 1st Dose" type="int"/>
+        <dataElement uid="EHGBrVPiG3N" code="IPT2ndDose" name="Clients given IPT 2nd Dose" type="int"/>
+        <dataElement uid="T59McmnP4FJ" code="HBReport" name="Clients with Hb less than 11g/dl" type="int"/>
+        <dataElement uid="Fz0LzxMT1vV" code="Women4ANCVisits" name="Pregnant women completing 4 ANC visits" type="int"/>
+        <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributed" name="LLITNs distributed to ANC clients " type="int"/>
+        <dataElement uid="uvBuzBj0AbL" code="TestedSyphilis" name="ANC clients tested for syphilis" type="int"/>
+        <dataElement uid="zIiDTYhg8K5" code="SyphilisPos" name="ANC clients Syphilis +ve" type="int"/>
+        <dataElement uid="R6oylU6CF31" code="CounseledIFO" name="Mother counselled on infant feeding options"
+                     type="int"/>
+        <dataElement uid="COXeamXMWPL" code="BreastExamANC" name="ANC Breast examinated" type="int"/>
+        <dataElement uid="DpdsmRZo587" code="ANCExercise" name="ANC given exercises" type="int"/>
+        <dataElement uid="chMsCa5zcn7" code="PregAdolescents1014"
+                     name="Adolescents (10-14 years) presenting with pregnancy" type="int"/>
+        <dataElement uid="uHBmKxktYk0" code="PregAdolescents1519"
+                     name="Adolescents (15-19 years) presenting with pregnancy" type="int"/>
+        <dataElement uid="QgjmGMoIcGu" code="ANCgvnIron" name="ANC Client given Iron" type="int"/>
+        <dataElement uid="JbcvbCEBnu6" code="ANCFolate" name="ANC Client given folate" type="int"/>
+        <dataElement uid="NTLdyLadTk1" code="ANCgvnCombined"
+                     name="ANC Client Supplemented with Combined Iron and Folate" type="int"/>
+        <dataElement uid="eEpRB9ra4jj" code="ANCCounseled" name="ANC clients counselled" type="int"/>
+        <dataElement uid="nspwXhqQaAz" code="ANCTested" name="ANC clients Tested HIV" type="int"/>
+        <dataElement uid="FCmhDa4kaMp" code="ANCHIVVe" name="ANC clients HIV+ve" type="int"/>
+        <dataElement uid="k8qXy4LyyJj" code="MRFOHF" name="Maternity Referrals From Other Health Facility" type="int"/>
+        <dataElement uid="xNW6Y9Kitok" code="MRFCUnit" name="Maternal Referrals From Community Unit" type="int"/>
+        <dataElement uid="ovJmoErpCRY" code="MRTOHF" name="Maternal Referrals To Other Health Facility" type="int"/>
+        <dataElement uid="ijYBkFVUTMV" code="MRTCUnit" name="Maternal Referrals to Community Unit" type="int"/>
+        <dataElement uid="psN8NM4IguM" code="RapeCasesPEP" name="GSBV rape cases Initiated PEP" type="int"/>
+        <dataElement uid="bmEuZWOFtH6" code="RapeCasesWithin72" name="GSBV cases presenting within 72 hours"
+                     type="int"/>
+        <dataElement uid="AC54kgHb6gP" code="RapeSurvivorsSeen" name="GSBV rape survivors seen" type="int"/>
+        <dataElement uid="uHM6lzLXDBd" code="Progestin" name="Pills progestin only" type="int"/>
+        <dataElement uid="BQmcVE8fex4" code="OralContraceptive" name="Pills Combined oral contraceptive" type="int"/>
+        <dataElement uid="paDQStynGGD" code="EmergContraceptive" name="Emergency contraceptive pill" type="int"/>
+        <dataElement uid="yQFyyQBhXQf" code="FPInjections" name="FP Injections" type="int"/>
+        <dataElement uid="DuBH6qPPdaO" code="IUCDInsertions" name="IUCD insertion" type="int"/>
+        <dataElement uid="otgQMOXuyIn" code="ImpInsertions" name="Implants insertion" type="int"/>
+        <dataElement uid="PggNwT09D3U" code="BTLSteril" name="Sterilization BTL" type="int"/>
+        <dataElement uid="Nqt6rz4tqnm" code="VasecSteril" name="Sterilization Vasectomy" type="int"/>
+        <dataElement uid="cV4qoKSYiBs" code="MaleCDs" name="Client receiving Male condoms" type="int"/>
+        <dataElement uid="Fxb4iVJdw2g" code="FemaleCDs" name="Clients receiving Female Condoms" type="int"/>
+        <dataElement uid="OiuBpHJw4kf" code="NaturalFP" name="Natural Family Planning" type="int"/>
+        <dataElement uid="IjrWNuj9rzt" code="IUCDRem" name="IUCD Removals" type="int"/>
+        <dataElement uid="M4RzpOew1Im" code="ImplantsRem" name="Implants Removals" type="int"/>
+        <dataElement uid="G9COyloYLYa" code="ScreeningDone" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV"
+                     type="int"/>
+        <dataElement uid="dBdw7Inlq2C" code="PositiveVIA" name="Cervical cancer clients with Positive VIA/VILI result"
+                     type="int"/>
+        <dataElement uid="LI2g0vO0xvx" code="PositiveHPV" name="Cervical cancer clients screened for HPV test"
+                     type="int"/>
+        <dataElement uid="xbERCTpWTwi" code="PositiveCytology"
+                     name="Cervical cancer clients with Positive Cytology result" type="int"/>
+        <dataElement uid="kl4RvWOGb7x" code="ScreenedPAPSmear" name="Cervical cancer clients screened for Pap smear"
+                     type="int"/>
+        <dataElement uid="eVukgTGwvaA" code="PNCBreastExam" name="PNC Breast examination" type="int"/>
+        <dataElement uid="XFB5uB0XUK9" code="PNCCounselled" name="PNC women counselled" type="int"/>
+        <dataElement uid="PxhvYOS2emu" code="PNCFistula" name="PNC fistula cases" type="int"/>
+        <dataElement uid="xsiURSENUor" code="PNCExercises" name="PNC exercises" type="int"/>
+        <dataElement uid="nqdOcSiHq3A" code="PNCCancerSuspect" name="PNC Cervical Cancer screening suspect results"
+                     type="int"/>
+        <dataElement uid="wAeGJlvuydG" code="PNCMother23" name="PNC Mothers receiving PNC within 2-3 days" type="int"/>
+        <dataElement uid="wJcotSq1Sb6" code="PNCMother6" name="PNC Mothers receiving PNC within 6 days" type="int"/>
+        <dataElement uid="FFd29UsDovG" code="PNCInfant23" name="PNC Infants receiving Pospartum care within 2-3 days"
+                     type="int"/>
+        <dataElement uid="kgL7R0d7KeN" code="PNCInfant6" name="PNC Infants receiving Pospartum care within 6 days"
+                     type="int"/>
+        <dataElement uid="MhyZy728KkE" code="PNCRFOHF" name="PNC referals From Other Health Facility" type="int"/>
+        <dataElement uid="itfA1doKHSL" code="PNCRFCUnit" name="PNC referals From Community Unit" type="int"/>
+        <dataElement uid="P42723Zyvcq" code="PNCRTOHF" name="PNC referals To Other Health Facilit" type="int"/>
+        <dataElement uid="DrVmz8esUtr" code="PNCRTCUnit" name="PNC referals To Community Unit" type="int"/>
+        <dataElement uid="CuCqki3jbcg" code="PatientsWaived" name="Number of waived patients" type="int"/>
+
+    </dataElements>
+    <disaggregations>
+        <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+    </disaggregations>
+    <reportTemplate>
+        <name>MOH 711 Integrated Summary Report: Reproductive and Child Health, Medical and Rehabilitation Services
+        </name>
+        <uid>UpS2bTVcClZ</uid>
+        <code>UpS2bTVcClZ</code>
+        <timelyDays>15</timelyDays>
+        <periodType>Monthly</periodType>
+        <dataValueTemplates>
+            <dataValueTemplate dataElement="NewANC" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT count(*)
+                    FROM patient_program
+                    WHERE program_id= '1'
+                    AND date_enrolled between '2016-06-02' and '2016-06-13';
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="ReVisitANC" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN
+                    (572,1010,1163,1213,1245,1470,1525,1527,1707,1708,1752,2345,3860,4059,4060,4061,4148,4298,4316,4425,4592,152306,160156)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+
+            <dataValueTemplate dataElement="IPT1stDose" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT count(*)
+                    FROM patient_state
+                    WHERE state = '25'
+                    AND start_date BETWEEN '2012-05-12' and '2016-06-13';
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="IPT2ndDose" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT count(*)
+                    FROM patient_state
+                    WHERE state = '26'
+                    AND start_date BETWEEN '2012-05-12' and '2016-06-13';
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="HBReport" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT count(*)
+                    FROM obs o
+                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+                    WHERE o.concept_id = 995 AND value_numeric &lt; 11
+                    AND pp.program_id = 1
+                    AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="Women4ANCVisits" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT count(*) from (
+                    (SELECT v.patient_id, count(v.patient_id)
+                    FROM visit v
+                    INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
+                    AND pp.program_id = 1
+                    AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
+                    GROUP BY patient_id
+                    HAVING COUNT(v.patient_id) &ge; 4) as patientvisits )
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT count(*)
+                    FROM obs o
+                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+                    WHERE o.concept_id = 160428 AND o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553'
+                    AND pp.program_id = 1
+                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="TestedSyphilis" disaggregation="OzshuDqmXQI">
+                <annotation>
+
+                    SELECT count(*)
+                    FROM obs o
+                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+                    WHERE o.concept_id = 2202
+                    AND pp.program_id = 1
+                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+
+            <dataValueTemplate dataElement="SyphilisPos" disaggregation="OzshuDqmXQI">
+                <annotation>
+
+                    SELECT count(*)
+                    FROM obs o
+                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+                    WHERE o.concept_id = 2202 AND o.value_coded = 782
+                    AND pp.program_id = 1
+                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="CounseledIFO" disaggregation="OzshuDqmXQI">
+                <annotation>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="BreastExamANC" disaggregation="OzshuDqmXQI">
+                <annotation>
+
+                    SELECT COUNT(*)
+                    FROM obs o
+                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+                    WHERE o.concept_id = 5538
+                    AND (pp.program_id = 1 OR pp.program_id = 2)
+                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ANCExercise" disaggregation="OzshuDqmXQI">
+                <annotation>
+
+                    SELECT COUNT(*)
+                    FROM obs o
+                    INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+                    WHERE o.concept_id = 100126144 AND o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553'
+                    AND pp.program_id = 1
+                    AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+
+            <dataValueTemplate dataElement="PregAdolescents1014" disaggregation="OzshuDqmXQI">
+                <annotation>
+
+                    SELECT COUNT(*)
+                    FROM visit v
+                    INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
+                    INNER JOIN patient_search ps ON ps.patient_id = v.patient_id
+                    AND pp.program_id = 1
+                    AND v.visit_type_id = 2
+                    AND ps.age BETWEEN 10 AND 14
+                    AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PregAdolescents1519" disaggregation="OzshuDqmXQI">
+                <annotation>
+
+                    SELECT COUNT(*)
+                    FROM visit v
+                    INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
+                    INNER JOIN patient_search ps ON ps.patient_id = v.patient_id
+                    AND pp.program_id = 1
+                    AND v.visit_type_id = 2
+                    AND ps.age BETWEEN 15 AND 19
+                    AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ANCgvnIron" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN
+                    (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="ANCFolate" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1017,2522,4069,4292,4297,4337,4443,111633,111636,139502)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ANCgvnCombined" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1666,1056)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ANCCounseled" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1104,117152)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ANCTested" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (4038,1083)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ANCHIVVe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1022,1846,4333,160180,160205)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+
+            <dataValueTemplate dataElement="MRFOHF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1104,117152)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MRFCUnit" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (4038,1083)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MRTOHF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1022,1846,4333,160180,160205)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MRTCUnit" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (996,997,998,1175,998,4545,121629)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="RapeCasesPEP" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1038)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="RapeCasesWithin72" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1421,1425,2471,4049,4125,4139,4457,4528,4872,4910,112198,119222,160172)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="RapeSurvivorsSeen" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN
+                    (1137,1345,1493,1820,1822,1823,2116,4113,4115,4119,4122,4152,4154,4155,4156,4157,4160,4266,4295,4320,4343,4345,4402,4563,4917,4918,4919,4920,4563,119240)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="Progestin" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1149,1315,4026,4031,4121,4410,4493,4509)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="OralContraceptive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (999,1000,1281,1926,4067,4081,4272,4463,4464,121372,121375)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="EmergContraceptive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (602,1034,1193,1216,1618,2438,2490,1216,4153,4238,4248,149496)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="FPInjections" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN
+                    (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,1113,4503,5194,5200,5500,114100)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="IUCDInsertions" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1168,3671,1857,4400,4440,160204)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ImpInsertions" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (2044,1845,3659,3660,4586,134337,160200)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="BTLSteril" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="VasecSteril" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1241)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaleCDs" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1155,1825,1828,1934,1138,4949,137293,150555,512,160161,137293)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="FemaleCDs" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (4575)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NaturalFP" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1155,1825,1828,1934,1138,4949,137293,150555,512,160161,137293)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="IUCDRem" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1025,1201)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="ImplantsRem" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1028)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+
+            <dataValueTemplate dataElement="ScreeningDone" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (4038,1083)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PositiveVIA" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1022,1846,4333,160180,160205)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+
+            <dataValueTemplate dataElement="PositiveHPV" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1104,117152)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PositiveCytology" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (4038,1083)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ScreenedPAPSmear" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1022,1846,4333,160180,160205)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCBreastExam" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (996,997,998,1175,998,4545,121629)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCCounselled" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1038)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="PNCFistula" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1421,1425,2471,4049,4125,4139,4457,4528,4872,4910,112198,119222,160172)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCExercises" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN
+                    (1137,1345,1493,1820,1822,1823,2116,4113,4115,4119,4122,4152,4154,4155,4156,4157,4160,4266,4295,4320,4343,4345,4402,4563,4917,4918,4919,4920,4563,119240)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCCancerSuspect" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1149,1315,4026,4031,4121,4410,4493,4509)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCMother23" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (999,1000,1281,1926,4067,4081,4272,4463,4464,121372,121375)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCMother6" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (602,1034,1193,1216,1618,2438,2490,1216,4153,4238,4248,149496)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCInfant23" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN
+                    (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,1113,4503,5194,5200,5500,114100)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCInfant6" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1168,3671,1857,4400,4440,160204)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCRFOHF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (2044,1845,3659,3660,4586,134337,160200)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCRFCUnit" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCRTOHF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1241)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PNCRTCUnit" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (1155,1825,1828,1934,1138,4949,137293,150555,512,160161,137293)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PatientsWaived" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+                    FROM person p
+                    INNER JOIN obs o ON o.person_id = p.person_id
+                    WHERE p.voided = 0 AND o.voided = 0
+                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+                    AND o.value_coded IN (4575)
+                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                </annotation>
+            </dataValueTemplate>
+
+        </dataValueTemplates>
+    </reportTemplate>
+</reportTemplates>

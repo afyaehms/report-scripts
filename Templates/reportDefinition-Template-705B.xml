@@ -87,7 +87,7 @@
              </dataValueTemplate>
 			<dataValueTemplate dataElement="TBB" disaggregation="OzshuDqmXQI">
              <annotation>
-					 #INCLUDE <tuberculosis--over-5.sql>
+					 #INCLUDE <tuberculosis-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
 		 
