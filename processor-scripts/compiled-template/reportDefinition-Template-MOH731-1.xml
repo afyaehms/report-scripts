@@ -6,11 +6,6 @@
         <dataElement uid="Aioi6LxPb3N" code="HIV1stTest" name="First Testing HIV" type="int"/>
         <dataElement uid="jbzrwpsfYMN" code="HIV2ndTest" name="Repeat Testing HIV" type="int"/>
         <dataElement uid="h4pR1wz1JQb" code="TTHIVTest" name="Total Tested HIV" type="int"/>
-        <dataElement uid="jgTfzqHhC3P" code="CoupleTesting" name="Couples Testing" type="int"/>
-        <dataElement uid="AbkaLYJfvho" code="ConcordantCouples"
-                     name="Concordant Couples Receiving Results (Couples Only)" type="int"/>
-        <dataElement uid="ahFBu9QDdwt" code="DiscordantCouples"
-                     name="Discordant Couples Receiving Results (Couples Only)" type="int"/>
         <dataElement uid="DBZH3aC9gwQ" code="MaleUnder15" name="Male under 15yrs Receiving HIV + Results" type="int"/>
         <dataElement uid="QXQFd2JB10B" code="FemaleUnder15" name="Female under 15yrs Receiving HIV + Results"
                      type="int"/>
@@ -80,42 +75,6 @@
                     FROM obs o
                     WHERE (concept_id=3110 OR concept_id=100126141)
                     AND date_created BETWEEN :startOfPeriod AND :endOfPeriod
-                </annotation>
-            </dataValueTemplate>
-
-            <dataValueTemplate dataElement="CoupleTesting" disaggregation="OzshuDqmXQI">
-                <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (138868,1013,1081,2450,1003,3667,1668,5202)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
-                </annotation>
-            </dataValueTemplate>
-
-            <dataValueTemplate dataElement="ConcordantCouples" disaggregation="OzshuDqmXQI">
-                <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1714,1518)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
-                </annotation>
-            </dataValueTemplate>
-
-            <dataValueTemplate dataElement="DiscordantCouples" disaggregation="OzshuDqmXQI">
-                <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1019,1167,1179,1723,3670,5233,5499,115835)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
                 </annotation>
             </dataValueTemplate>
 
