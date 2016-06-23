@@ -95,16 +95,9 @@
                     #INCLUDE <new-ANC-clients.sql>
                 </annotation>
             </dataValueTemplate>
-            <dataValueTemplate dataElement="" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="ReVisitANC" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN
-                    (572,1010,1163,1213,1245,1470,1525,1527,1707,1708,1752,2345,3860,4059,4060,4061,4148,4298,4316,4425,4592,152306,160156)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <count-of-revisit-anc-clients.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -529,13 +522,7 @@
 
             <dataValueTemplate dataElement="PNCBreastExam" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                   #INCLUDE <PNC-breast-examination.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -564,14 +551,7 @@
 
             <dataValueTemplate dataElement="PNCExercises" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN
-                    (1137,1345,1493,1820,1822,1823,2116,4113,4115,4119,4122,4152,4154,4155,4156,4157,4160,4266,4295,4320,4343,4345,4402,4563,4917,4918,4919,4920,4563,119240)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <PNC-excercise-given.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -589,25 +569,13 @@
 
             <dataValueTemplate dataElement="PNCMother23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (999,1000,1281,1926,4067,4081,4272,4463,4464,121372,121375)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <PNC-mothers-receiving-pnc-within-2-to-3-days.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PNCMother6" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (602,1034,1193,1216,1618,2438,2490,1216,4153,4238,4248,149496)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                   #INCLUDE <PNC-mothers-receiving-pnc-within-6-days.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -662,25 +630,13 @@
 
             <dataValueTemplate dataElement="PNCRTOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1241)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <PNC-referals-to-other-health-facility.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PNCRTCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1155,1825,1828,1934,1138,4949,137293,150555,512,160161,137293)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <PNC-referals-to-community-unit.sql>
                 </annotation>
             </dataValueTemplate>
 
