@@ -1,4 +1,5 @@
 -- OPV3 (concept_id: 100126152)
+-- This is thus assumed to be IPV
 -- Substitute the dates with date placeholders
 
 SELECT COUNT(*)
