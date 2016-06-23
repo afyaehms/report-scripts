@@ -184,73 +184,37 @@
 			 
 			 <dataValueTemplate dataElement="OPDDressingDone" disaggregation="OzshuDqmXQI">
              <annotation>
-                SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				FROM person p
-				INNER JOIN obs o ON o.person_id = p.person_id
-				WHERE p.voided = 0 AND o.voided = 0
-				AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				AND o.value_coded IN (1021)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                #INCLUDE <other-services-opd-dressing-done.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 
 			 <dataValueTemplate dataElement="OPDStitchRemoval" disaggregation="OzshuDqmXQI">
              <annotation>
-				SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				FROM person p
-				INNER JOIN obs o ON o.person_id = p.person_id
-				WHERE p.voided = 0 AND o.voided = 0
-				AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				AND o.value_coded IN (1018,1047,1056,1065,1152,1202,1666,1724,1743,1753,1666,1711,3668,3671,4035,4289,1152,1056,4289,4576,4577,113228,113230,127990)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				#INCLUDE <other-services-opd-removal-of-stitches.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="OPDInjections" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (160149,160151,160153)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <other-services-opd-injections-given.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OPDStitching" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <other-services-opd-stitching-done.sql>
              </annotation>
              </dataValueTemplate> 
 			  <dataValueTemplate dataElement="OPDPOP" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1017,2522,4069,4292,4297,4337,4443,111633,111636,139502)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				#INCLUDE <other-services-opd-plaster-of-paris.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="AntibiotsIssued" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1666,1056)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <pharmacy-prescriptions-issued-antibiotics.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -305,49 +269,25 @@
 			 
 			<dataValueTemplate dataElement="NoWaived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (4038,1083)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <finance-number-of-clients-waived.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTWaived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1022,1846,4333,160180,160205)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <finance-amount-of-clients-waived.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="NoExepmted" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <finance-number-of-clients-exempted.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="TTExpemted" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1038)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <finance-amount-of-clients-exempted.sql>
              </annotation>
              </dataValueTemplate>
 			
