@@ -392,37 +392,19 @@
 			
 			<dataValueTemplate dataElement="IPVStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1104,117152)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <ipv-doses-in-stock-at-the-beggining-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="IPVDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (4038,1083)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <ipv-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="IPVDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1022,1846,4333,160180,160205)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+				 #INCLUDE <ipv-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
