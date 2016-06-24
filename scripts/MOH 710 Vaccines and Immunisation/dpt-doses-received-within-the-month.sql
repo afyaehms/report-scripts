@@ -1,8 +1,10 @@
 -- DPT+HIB+HEP B  received within the month
 -- Substitute the dates with date placeholders
 
-SELECT IFNULL(SUM(receipt_quantity),0)
-FROM drug dr
-INNER JOIN inventory_store_drug isd ON isd.drug_id = dr.drug_id
-WHERE concept_id=5498
-AND (created_on BETWEEN '2016-06-01' AND '2016-06-30');
+
+SELECT IFNULL(SUM(quantity), 0)
+FROM inventory_store_drug_transaction_detail isd
+INNER JOIN drug d ON d.drug_id = isd.drug_id
+WHERE opening_balance <> closing_balance
+AND d.concept_id = 5498
+AND DATE(created_on) BETWEEN '2016-06-01' AND '2016-06-30';
