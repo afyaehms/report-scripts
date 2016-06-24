@@ -9,6 +9,6 @@ WHERE o.concept_id = 1854 AND value_coded = '123814'
 AND pp.program_id = 3
 AND o.date_created BETWEEN '2016-06-17' AND '2016-06-18'
 AND p.birthdate IS NOT NULL
-AND (DATEDIFF(CURDATE(),p.birthdate)) / 365 >= 0.5 
-AND (DATEDIFF(CURDATE(),p.birthdate)) / 365 <= 2
+AND (DATEDIFF(CURDATE(),p.birthdate)) / 365 &gt;= 0.5 
+AND (DATEDIFF(CURDATE(),p.birthdate)) / 365 &lt;= 2
 
