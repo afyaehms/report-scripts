@@ -453,25 +453,13 @@
 
             <dataValueTemplate dataElement="ScreenedHPV" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1104,117152)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-clients-screened-for-hpv-test.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PositiveHPV" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                   #INCLUDE <cervical-cancer-clients-with-positive-hpv-result.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -584,13 +572,7 @@
 
             <dataValueTemplate dataElement="PNCCancerSuspect" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1149,1315,4026,4031,4121,4410,4493,4509)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                   #INCLUDE <pnc-cervical-cancer-screening-suspect-results.sql>
                 </annotation>
             </dataValueTemplate>
 
