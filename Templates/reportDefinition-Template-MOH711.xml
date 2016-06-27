@@ -9,9 +9,9 @@
         <dataElement uid="EHGBrVPiG3N" code="IPT2ndDose" name="Clients given IPT 2nd Dose" type="int"/>
         <dataElement uid="T59McmnP4FJ" code="HBReport" name="Clients with Hb less than 11g/dl" type="int"/>
         <dataElement uid="Fz0LzxMT1vV" code="Women4ANCVisits" name="Pregnant women completing 4 ANC visits" type="int"/>
-        <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributed" name="LLITNs distributed to ANC clients " type="int"/>
-        <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributedUnder1yr" name="LLITNs distributed to Under 1 Year " type="int"/>
-
+        <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributed" name="LLITNs distributed to ANC clients " type="int"/> 
+		<dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributedUnder1yr" name="LLITNs distributed to Under 1 Year " type="int"/>
+		
         <dataElement uid="uvBuzBj0AbL" code="TestedSyphilis" name="ANC clients tested for syphilis" type="int"/>
         <dataElement uid="zIiDTYhg8K5" code="SyphilisPos" name="ANC clients Syphilis +ve" type="int"/>
         <dataElement uid="R6oylU6CF31" code="CounseledIFO" name="Mother counselled on infant feeding options"
@@ -52,27 +52,27 @@
         <dataElement uid="M4RzpOew1Im" code="ImplantsRem" name="Implants Removals" type="int"/>
         <dataElement uid="G9COyloYLYa" code="ScreeningDone" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV"
                      type="int"/>
-        <dataElement uid="G9COyloYLYa2549" code="ScreeningDone2549" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV 25-49years"
-                     type="int"/>
-        <dataElement uid="G9COyloYLYa2549greater50" code="ScreeningDoneOver50" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV greater than 50years"
-                     type="int"/>
-        <dataElement uid="G9COyloYLYa2549lessthan25" code="ScreeningDoneUnder25" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV less than 25years"
-                     type="int"/>
+		<dataElement uid="G9COyloYLYa2549" code="ScreeningDone2549" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV 25-49years"
+                    type="int"/>
+		<dataElement uid="G9COyloYLYa2549greater50" code="ScreeningDoneOver50" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV greater than 50years"
+                    type="int"/>
+		<dataElement uid="G9COyloYLYa2549lessthan25" code="ScreeningDoneUnder25" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV less than 25years"
+                    type="int"/>
         <dataElement uid="dBdw7Inlq2C" code="PositiveVIA" name="Cervical cancer clients with Positive VIA/VILI result"
                      type="int"/>
         <dataElement uid="LI2g0vO0xvx" code="ScreenedHPV" name="Cervical cancer clients screened for HPV test"
                      type="int"/>
-        <dataElement uid="LI2g0vO0xvxposHPV" code="PositiveHPV" name="Cervical cancer clients screened with positive HPV result"
+		<dataElement uid="LI2g0vO0xvxposHPV" code="PositiveHPV" name="Cervical cancer clients screened with positive HPV result"
                      type="int"/>
-        <dataElement uid="LI2g0vO0xvxleep" code="TreatLEEP" name="Cervical cancer treated using LEEP"
+		<dataElement uid="LI2g0vO0xvxleep" code="TreatLEEP" name="Cervical cancer treated using LEEP"
                      type="int"/>
-        <dataElement uid="LI2g0vO0xvxposhiv" code="HIVPosCervical" name="HIV positive clients screened for cervical cancer"
-                     type="int"/>
-        <dataElement uid="xbERCTpWTwi" code="PositiveCytology"
-                     name="Cervical cancer clients with Positive Cytology result" type="int"/>
-        <dataElement uid="xbERCTpWTwisuspiciouscancer" code="CancerLesions" name="Cervical cancer clients with suspicious cancer lesions" type="int"/>
-        <dataElement uid="xbERCTpWTwicyrotherapy" code="ScreenedCyrotherapy" name="Cervical cancer clients treated using Cryotherapy	" type="int"/>
-        <dataElement uid="kl4RvWOGb7x" code="ScreenedPAPSmear" name="Cervical cancer clients screened for Pap smear"
+		<dataElement uid="LI2g0vO0xvxposhiv" code="HIVPosCervical" name="HIV positive clients screened for cervical cancer"
+                     type="int"/>			 
+		<dataElement uid="xbERCTpWTwi" code="PositiveCytology"
+		             name="Cervical cancer clients with Positive Cytology result" type="int"/>
+		<dataElement uid="xbERCTpWTwisuspiciouscancer" code="CancerLesions" name="Cervical cancer clients with suspicious cancer lesions" type="int"/>
+		<dataElement uid="xbERCTpWTwicyrotherapy" code="ScreenedCyrotherapy" name="Cervical cancer clients treated using Cryotherapy	" type="int"/>
+		<dataElement uid="kl4RvWOGb7x" code="ScreenedPAPSmear" name="Cervical cancer clients screened for Pap smear"
                      type="int"/>
         <dataElement uid="eVukgTGwvaA" code="PNCBreastExam" name="PNC Breast examination" type="int"/>
         <dataElement uid="XFB5uB0XUK9" code="PNCCounselled" name="PNC women counselled" type="int"/>
@@ -145,8 +145,8 @@
                     #INCLUDE <LLITNS-distributed-to-children-under-one-year.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <LLITNS-distributed-to-ANC-clients.sql>
                 </annotation>
@@ -154,26 +154,26 @@
 
             <dataValueTemplate dataElement="TestedSyphilis" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <count-ANC-clients-tested-for-syphilis.sql>
+					#INCLUDE <count-ANC-clients-tested-for-syphilis.sql>
                 </annotation>
             </dataValueTemplate>
 
 
             <dataValueTemplate dataElement="SyphilisPos" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <count-of-ANC-clients-syphilis-positive.sql>
+					#INCLUDE <count-of-ANC-clients-syphilis-positive.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="CounseledIFO" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <count-of-mothers-counselled-on-infant-feeding-options.sql>
+					#INCLUDE <count-of-mothers-counselled-on-infant-feeding-options.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="BreastExamANC" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <count-of-women-done-breast-examination.sql>
+					#INCLUDE <count-of-women-done-breast-examination.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -186,7 +186,7 @@
 
             <dataValueTemplate dataElement="PregAdolescents1014" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <count-of-adolescents10-14-years-presenting-with-pregnancy.sql>
+					#INCLUDE <count-of-adolescents10-14-years-presenting-with-pregnancy.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -204,7 +204,7 @@
             </dataValueTemplate>
             <dataValueTemplate dataElement="ANCFolate" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <ANC-client-given-folate.sql>
+                   #INCLUDE <ANC-client-given-folate.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -216,7 +216,7 @@
 
             <dataValueTemplate dataElement="ANCCounseled" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <ANC-clients-counselled.sql>
+                   #INCLUDE <ANC-clients-counselled.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -350,14 +350,12 @@
             <dataValueTemplate dataElement="IUCDInsertions" disaggregation="OzshuDqmXQI">
                 <annotation>
                    #INCLUDE <family-planning-iucd-insertions.sql>
-
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ImpInsertions" disaggregation="OzshuDqmXQI">
                 <annotation>
                    #INCLUDE <family-planning-implants-insertions.sql>
-
                 </annotation>
             </dataValueTemplate>
 
@@ -381,7 +379,7 @@
 
             <dataValueTemplate dataElement="FemaleCDs" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-female-condoms.sql>
+                   #INCLUDE <family-planning-female-condoms.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -419,20 +417,20 @@
                     AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="ScreeningDone2549" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="ScreeningDone2549" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-25-to-49years.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="ScreeningDoneOver50" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="ScreeningDoneOver50" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-greater-than-50years.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="ScreeningDoneUnder25" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="ScreeningDoneUnder25" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-less-than-25years.sql>
                 </annotation>
@@ -440,13 +438,7 @@
 
             <dataValueTemplate dataElement="PositiveVIA" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1022,1846,4333,160180,160205)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-clients-with-positive-VIA-VILI.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -456,14 +448,14 @@
                     #INCLUDE <cervical-cancer-clients-screened-for-hpv-test.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="PositiveHPV" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="PositiveHPV" disaggregation="OzshuDqmXQI">
                 <annotation>
                    #INCLUDE <cervical-cancer-clients-with-positive-hpv-result.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="TreatLEEP" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="TreatLEEP" disaggregation="OzshuDqmXQI">
                 <annotation>
                     SELECT COUNT(DISTINCT p.person_id) AS 'Count'
                     FROM person p
@@ -474,8 +466,8 @@
                     AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="HIVPosCervical" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="HIVPosCervical" disaggregation="OzshuDqmXQI">
                 <annotation>
                     SELECT COUNT(DISTINCT p.person_id) AS 'Count'
                     FROM person p
@@ -498,8 +490,8 @@
                     AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="ScreenedCyrotherapy" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="ScreenedCyrotherapy" disaggregation="OzshuDqmXQI">
                 <annotation>
                     SELECT COUNT(DISTINCT p.person_id) AS 'Count'
                     FROM person p
@@ -510,8 +502,8 @@
                     AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="CancerLesions" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="CancerLesions" disaggregation="OzshuDqmXQI">
                 <annotation>
                     SELECT COUNT(DISTINCT p.person_id) AS 'Count'
                     FROM person p
@@ -537,7 +529,7 @@
 
             <dataValueTemplate dataElement="PNCBreastExam" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <PNC-breast-examination.sql>
+                   #INCLUDE <PNC-breast-examination.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -584,7 +576,7 @@
 
             <dataValueTemplate dataElement="PNCMother6" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <PNC-mothers-receiving-pnc-within-6-days.sql>
+                   #INCLUDE <PNC-mothers-receiving-pnc-within-6-days.sql>
                 </annotation>
             </dataValueTemplate>
 
