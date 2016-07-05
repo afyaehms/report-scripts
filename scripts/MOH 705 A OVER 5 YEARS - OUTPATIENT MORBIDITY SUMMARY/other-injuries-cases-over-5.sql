@@ -14,4 +14,4 @@ AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
   AND value_coded IN (1043,1061,1077,1084,1265,1267,1452,1767,1770,2341,2343,3896,112561,125343,125379,158995,160175,1490,160186,160187,160188)
-  AND DATE(obs_datetime) &lt; :startOfPeriod)`
+  AND DATE(obs_datetime) &lt; :startOfPeriod)
