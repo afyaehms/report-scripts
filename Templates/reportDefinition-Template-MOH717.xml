@@ -2,26 +2,26 @@
 <reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
      <dataElements>
 	 
-		 <dataElement uid="rIkD2jIDqPh" code="NewOPDOlderMale" name="New OPD attendance greater than 5yrs Male" type="int"/>
+		<dataElement uid="rIkD2jIDqPh" code="NewOPDOlderMale" name="New OPD attendance greater than 5yrs Male" type="int"/>
 		 <dataElement uid="zXzBILTVJzD" code="NewOPDOlderFeMale" name="New OPD attendance greater than 5yrs Female" type="int"/>
 		 <dataElement uid="F6AwnxbwiK2" code="NewOPDYoungerMale" name="New OPD Attendance less than 5yrs Male"  type="int"/>
-		 <dataElement uid="Ha96SBKI06u" code="NewOPDYoungerFeMale" name="New OPD Attendance <5yrs Female" type="int"/>
+		 <dataElement uid="Ha96SBKI06u" code="NewOPDYoungerFeMale" name="New OPD Attendance greater than 5yrs Female" type="int"/>
 		 <dataElement uid="x13zGZKuxzs" code="NewOPDCasualty" name="New OPD Casualty attendance"   type="int"/>
-		 <dataElement uid="rIkD2jIDqPh" code="RevistOPDOlderMale" name="Revisit OPD attendance greater than 5yrs Male" type="int"/>
-		 <dataElement uid="zXzBILTVJzD" code="OPDOlderFeMale" name="Revisit OPD attendance greater than 5yrs Female" type="int"/>
-		 <dataElement uid="F6AwnxbwiK2" code="OPDYoungerMale" name="Revisit OPD Attendance less than 5yrs Male"  type="int"/>
-		 <dataElement uid="Ha96SBKI06u" code="OPDYoungerFeMale" name="Revisit OPD Attendance <5yrs Female" type="int"/>
-		 <dataElement uid="x13zGZKuxzs" code="OPDCasualty" name="Revisit OPD Casualty attendance"   type="int"/>
+		 <dataElement uid="rIkD2jIDqPhRevisit" code="RevisitOPDOlderMale" name="Revisit OPD attendance greater than 5yrs Male" type="int"/>
+		 <dataElement uid="zXzBILTVJzDRevisit" code="RevisitOPDOlderFeMale" name="Revisit OPD attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="F6AwnxbwiK2Revisit" code="RevisitOPDYoungerMale" name="Revisit OPD Attendance less than 5yrs Male"  type="int"/>
+		 <dataElement uid="Ha96SBKI06uRevisit" code="RevisitOPDYoungerFeMale" name="Revisit OPD Attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="x13zGZKuxzsRevisit" code="RevisitOPDCasualty" name="Revisit OPD Casualty attendance"   type="int"/>
 		 <dataElement uid="EsfvxFcltV0" code="CWCAttNew" name="New CWC Attendance" type="int"/>
-		  <dataElement uid="EsfvxFcltV0" code="CWCAttNRevisit" name="Revisit CWC Attendance" type="int"/>
+		 <dataElement uid="EsfvxFcltV0Revisit" code="CWCAttRevisit" name="Revisit CWC Attendance" type="int"/>
 		 <dataElement uid="uTQOSp7rx5h" code="ANCAttNew" name="New ANC Attendance" type="int"/>
-		 <dataElement uid="uTQOSp7rx5h" code="ANCAttRevisit" name="Revisit ANC Attendance" type="int"/>
+		 <dataElement uid="uTQOSp7rx5hRevisit" code="ANCAttRevisit" name="Revisit ANC Attendance" type="int"/>
 		 <dataElement uid="QStt76mU06X" code="PNCAttNew" name="New PNC Attendance" type="int"/>
-		 <dataElement uid="QStt76mU06X" code="PNCAttRevisit" name="Revisit PNC Attendance" type="int"/>
+		 <dataElement uid="QStt76mU06XRevisit" code="PNCAttRevisit" name="Revisit PNC Attendance" type="int"/>
 		 <dataElement uid="SyUQl638r5P" code="FPAttNew" name="New FP Attendance" type="int"/>
-		 <dataElement uid="SyUQl638r5P" code="FPAttRevisit" name="Revisit FP Attendance" type="int"/>
+		 <dataElement uid="SyUQl638r5PRevisit" code="FPAttRevisit" name="Revisit FP Attendance" type="int"/>
 		 <dataElement uid="Lf9boBQjhn9" code="MEDoneExceptP3" name="Medical Examinations done except P3" type="int"/>
-         <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (incl. P3, compensation, insurance)" type="int"/>
+                 <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (including P3 - compensation - insurance)" type="int"/>
 		 <dataElement uid="yNeFQlrPflq" code="OPDDressingDone" name="OPD Dressing Done" type="int"/>
 		 <dataElement uid="jQBxaAGqV08" code="OPDStitchRemoval" name="OPD Removal of Stitches" type="int"/>
 		 <dataElement uid="GuqtqOUKwch" code="OPDInjections" name="OPD Injections Given" type="int"/>
