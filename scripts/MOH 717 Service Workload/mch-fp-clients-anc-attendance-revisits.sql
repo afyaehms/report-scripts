@@ -10,7 +10,7 @@ FROM(
 	SELECT v.patient_id, v.visit_date, (
 		SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
 		FROM patient_program pa
-		WHERE v.patient_id=pa.patient_id AND v.visit_date&ge;DATE(date_enrolled)
+		WHERE v.patient_id=pa.patient_id AND v.visit_date&gt;=DATE(date_enrolled)
 		ORDER BY date_enrolled DESC
 		LIMIT 1
 	) AS program_idnt
