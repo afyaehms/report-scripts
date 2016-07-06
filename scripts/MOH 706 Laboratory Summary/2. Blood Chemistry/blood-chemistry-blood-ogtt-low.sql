@@ -18,7 +18,7 @@ FROM(
 	LEFT OUTER JOIN concept_numeric c
 	ON obs.concept_id = c.concept_id
 
-	WHERE obs.concept_id<>5128
+	WHERE obs.concept_id IS NOT 5128
 	AND DATE(obs_datetime) BETWEEN '2016-01-01' AND '2016-06-31'
 
 
