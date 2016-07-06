@@ -87,9 +87,9 @@
          <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
      </disaggregations>
      <reportTemplate>
-         <name> MOH 710 Vaccines and Immunisation </name>
-         <uid>cvyzaRp8OlE</uid>
-         <code>cvyzaRp8OlE</code>
+         <name> MOH 710 Vaccines and Immunization </name>
+         <uid>WtgleFiaJqO</uid>
+         <code>WtgleFiaJqO</code>
 		<timelyDays>15</timelyDays>
          <periodType>Monthly</periodType>
          <dataValueTemplates>
