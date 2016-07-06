@@ -114,21 +114,18 @@
 			<dataValueTemplate dataElement="OM" disaggregation="OzshuDqmXQI">
              <annotation>
                 			#INCLUDE <other-meningitis-cases.sql>
->
              </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="NT" disaggregation="OzshuDqmXQI">
              <annotation>
                 			#INCLUDE <neonatal-tetanus-cases.sql>
->
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="PM" disaggregation="OzshuDqmXQI">
              <annotation>
                 			#INCLUDE <poliomyelitis-cases.sql>
->
              </annotation>
              </dataValueTemplate>
 			 
@@ -213,13 +210,7 @@
 			 
 			  <dataValueTemplate dataElement="EI" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-					FROM person p
-					INNER JOIN obs o ON o.person_id = p.person_id
-					WHERE p.voided = 0 AND o.voided = 0
-					AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-					AND o.value_coded IN (1038)
-					AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;= 5 
+				 	#INCLUDE <eye-infection-conditions.pending.sql>
              </annotation>
              </dataValueTemplate>
 			 <dataValueTemplate dataElement="OEC" disaggregation="OzshuDqmXQI">
@@ -236,13 +227,7 @@
 			 
 			<dataValueTemplate dataElement="URTI" disaggregation="OzshuDqmXQI">
              <annotation>
-				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-				 FROM person p
-				 INNER JOIN obs o ON o.person_id = p.person_id
-				 WHERE p.voided = 0 AND o.voided = 0
-				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				 AND o.value_coded IN (1149,1315,4026,4031,4121,4410,4493,4509)
-				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;= 5 
+				 #INCLUDE <upper-respiratory-tract-infections-conditions.pending.sql>
              </annotation>
              </dataValueTemplate>
 	
@@ -308,7 +293,7 @@
 			 
 			 <dataValueTemplate dataElement="POS" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE <poisoning-cases-pending.sql>
+				 	#INCLUDE <poisoning-cases.sql>
              </annotation>
              </dataValueTemplate>
 			 <dataValueTemplate dataElement="RTI" disaggregation="OzshuDqmXQI">

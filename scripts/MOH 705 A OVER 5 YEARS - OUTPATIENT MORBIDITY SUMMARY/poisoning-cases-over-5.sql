@@ -8,11 +8,11 @@ AND o.voided = 0
 AND
   (o.concept_id=5109 OR o.concept_id = 2304)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-AND o.value_coded IN ({{poisoning_concept_id}})
+AND o.value_coded IN (1026, 4014, 4520, 4583,1106,1524,1938)
 AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
 -- get only new cases
 AND p.person_id NOT IN (
   SELECT person_id FROM obs 
   WHERE concept_id = 5109 
-  AND value_coded IN ({{poisoning_concept_id}})
+  AND value_coded IN (1026, 4014, 4520, 4583,1106,1524,1938)
   AND DATE(obs_datetime) &lt; :startOfPeriod)
