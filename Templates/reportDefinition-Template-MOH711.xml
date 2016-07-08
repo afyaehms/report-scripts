@@ -10,7 +10,7 @@
         <dataElement uid="T59McmnP4FJ" code="HBReport" name="Clients with Hb less than 11g/dl" type="int"/>
         <dataElement uid="Fz0LzxMT1vV" code="Women4ANCVisits" name="Pregnant women completing 4 ANC visits" type="int"/>
         <dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributed" name="LLITNs distributed to ANC clients " type="int"/> 
-		<dataElement uid="eIvn8VgI5Zx" code="LLITNsDistributedUnder1yr" name="LLITNs distributed to Under 1 Year " type="int"/>
+		<dataElement uid="eIvn8VgI5Zy" code="LLITNsDistributedUnder1yr" name="LLITNs distributed to Under 1 Year " type="int"/>
 		
         <dataElement uid="uvBuzBj0AbL" code="TestedSyphilis" name="ANC clients tested for syphilis" type="int"/>
         <dataElement uid="zIiDTYhg8K5" code="SyphilisPos" name="ANC clients Syphilis +ve" type="int"/>
@@ -118,7 +118,7 @@
 
             <dataValueTemplate dataElement="IPT1stDose" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <clients-given-IPD-1st-dose.sql>
+                    #INCLUDE <clients-given-IPT-1st-dose.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -235,97 +235,48 @@
 
             <dataValueTemplate dataElement="MRFOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1104,117152)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <anc-referals-from-other-health-facility.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MRFCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <anc-referals-from-community-unit.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MRTOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1022,1846,4333,160180,160205)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <anc-referals-to-other-health-facility.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MRTCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (996,997,998,1175,998,4545,121629)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <anc-referals-to-community-unit.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="RapeCasesPEP" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1038)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <rape-cases-seen.pending.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="RapeCasesWithin72" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1421,1425,2471,4049,4125,4139,4457,4528,4872,4910,112198,119222,160172)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <rape-cases-seen-within-72-hours.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="RapeSurvivorsSeen" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN
-                    (1137,1345,1493,1820,1822,1823,2116,4113,4115,4119,4122,4152,4154,4155,4156,4157,4160,4266,4295,4320,4343,4345,4402,4563,4917,4918,4919,4920,4563,119240)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <rape-survivors-seen.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="Progestin" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1149,1315,4026,4031,4121,4410,4493,4509)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <family-planning-pills-progestin-only.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -395,26 +346,14 @@
             </dataValueTemplate>
             <dataValueTemplate dataElement="ImplantsRem" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1028)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <family-planning-implant-removal.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
 
             <dataValueTemplate dataElement="ScreeningDone" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-screening-done.pending.sql>
                 </annotation>
             </dataValueTemplate>
 			
@@ -445,85 +384,49 @@
 
             <dataValueTemplate dataElement="ScreenedHPV" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-clients-screened-for-hpv-test.sql>
+                    #INCLUDE <cervical-cancer-clients-screened-for-hpv-test.pending.sql>
                 </annotation>
             </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="PositiveHPV" disaggregation="OzshuDqmXQI">
                 <annotation>
-                   #INCLUDE <cervical-cancer-clients-with-positive-hpv-result.sql>
+                   #INCLUDE <cervical-cancer-clients-with-positive-hpv-result.pending.sql>
                 </annotation>
             </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="TreatLEEP" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-treated-using-leep.pending.sql>
                 </annotation>
             </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="HIVPosCervical" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <hiv-pos-clients-screened-for-cervical-cancer.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PositiveCytology" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-with-positive-cytology-result.pending.sql>
                 </annotation>
             </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="ScreenedCyrotherapy" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-treated-using-cyrotherapy.pending.sql>
                 </annotation>
             </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="CancerLesions" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4038,1083)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-clients-with-suspicious-cancer-lesions.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ScreenedPAPSmear" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1022,1846,4333,160180,160205)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <cervical-cancer-clients-screened-using-pap.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -535,24 +438,12 @@
 
             <dataValueTemplate dataElement="PNCCounselled" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1038)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <PNC-clients-counselled.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="PNCFistula" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1421,1425,2471,4049,4125,4139,4457,4528,4872,4910,112198,119222,160172)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <PNC-fistula.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -582,50 +473,25 @@
 
             <dataValueTemplate dataElement="PNCInfant23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN
-                    (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,1113,4503,5194,5200,5500,114100)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <pnc-infants-receiving-care-within-2-3-days.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PNCInfant6" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1168,3671,1857,4400,4440,160204)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <pnc-infants-receiving-care-within-6-days.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PNCRFOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (2044,1845,3659,3660,4586,134337,160200)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <pnc-referals-from-other-health-facility.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PNCRFCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <pnc-referals-from-community-unit.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
@@ -643,13 +509,7 @@
 
             <dataValueTemplate dataElement="PatientsWaived" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-                    FROM person p
-                    INNER JOIN obs o ON o.person_id = p.person_id
-                    WHERE p.voided = 0 AND o.voided = 0
-                    AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-                    AND o.value_coded IN (4575)
-                    AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+                    #INCLUDE <patients-waived.pending.sql>
                 </annotation>
             </dataValueTemplate>
 

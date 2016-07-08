@@ -12,4 +12,4 @@ ON en.encounter_id = obs.encounter_id
 AND encounter_type=20
 
 WHERE obs.concept_id=5538
-AND obs_datetime BETWEEN '2016-06-01' AND '2016-06-30';
+AND obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'
