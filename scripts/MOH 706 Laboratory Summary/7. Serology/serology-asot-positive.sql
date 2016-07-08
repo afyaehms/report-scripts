@@ -1,5 +1,5 @@
---ASO is a blood test used to assist in the diagnosis of a streptococcal infection or indicate a past exposure to streptococci
---Synonyms	:ASO (QUALITATIVE),ASO TEST,ASO,ANTI-STREPTOLYSIN O
+--ASOT is a blood test used to assist in the diagnosis of a streptococcal infection or indicate a past exposure to streptococci
+--Synonyms	:ASOT (QUALITATIVE),ASOT TEST,ASOT,ANTI-STREPTOLYSIN O
 --Substitute the dates with date placeholders
 --Concept id: 2243
 --Concept POSITIVE id: 782
