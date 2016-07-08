@@ -9,5 +9,5 @@ FROM obs
 INNER JOIN orders o
 
 WHERE obs.concept_id=1869 
-AND obs.value_coded IS NOT 781
+AND obs.value_coded<>781
 AND DATE(obs_datetime) BETWEEN '2016-01-01' AND '2016-06-30';
