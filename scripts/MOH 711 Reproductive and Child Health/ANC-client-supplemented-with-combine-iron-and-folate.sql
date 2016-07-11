@@ -1,8 +1,7 @@
---get Total ANC Client given Folate
---substitute the dates with date placeholders
---substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC)
---limit encounter ids to the  ones raised from MCH - 19 is the encounter type for ANC
---include drug ids in a comma separated list for future/yet to be know combinations of iron and folate
+-- get Total ANC Client supplimented with combined iron and folate
+-- substitute the dates with date placeholders
+-- limit encounter ids to the  ones raised from MCH - 19 is the encounter type for ANC
+-- include drug ids in a comma separated list for future/yet to be know combinations of iron and folate
 
 SELECT COUNT(*)
 FROM opd_drug_order odo

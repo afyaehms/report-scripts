@@ -14,4 +14,4 @@ AND encounter_type=20
 
 WHERE obs.concept_id=100126140
 AND value_coded = 803
-AND obs_datetime BETWEEN '2016-06-01' AND '2016-06-30';
+AND obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'

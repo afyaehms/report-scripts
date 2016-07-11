@@ -26,4 +26,4 @@ FROM (
 	WHERE o.concept_id=5599
 	AND DATE(obs_datetime) BETWEEN '2016-06-01' AND '2016-06-30'
 ) AS rcv
-WHERE DATEDIFF(enrol, dod) &lt;= 3
+WHERE DATEDIFF(enrol, dod) BETWEEN 3 AND 6
