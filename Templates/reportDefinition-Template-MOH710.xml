@@ -32,9 +32,8 @@
         <dataElement uid="MAGmTkOIZus" code="VitaminA6mnths" name="Vitamin A at 6 months(100000 IU)" type="int"/>
         <dataElement uid="PJCUSyQ6Ahv" code="YellowFeverover1yr" name="Yellow fever doses Administered Over 1 Year" type="int"/>
         <dataElement uid="PJCUSyQ6AhvU1" code="YellowFeverunder1yr" name="Yellow fever doses Administered Under 1 Year" type="int"/>
-        <dataElement uid="sRbqc5gBQhI" code="MeaslesRub1Over5yrs" name="Measles-Rubella 1 doses Administered Over 5 Years" type="int"/>
-        <dataElement uid="sRbqc5gBQhIU5" code="MeaslesRub1Under5yrs" name="Measles-Rubella 1 doses Administered Under 5 Years" type="int"/>
-        <dataElement uid="tBPGQFhWB7M" code="FICUnder1yr" name="Fully Immunized Children(FIC) under 1 year" type="int"/>
+        <dataElement uid="sRbqc5gBQhI" code="MeaslesRub1Over1yrs" name="Measles-Rubella 1 doses Administered Over 1 Years" type="int"/>
+        <dataElement uid="sRbqc5gBQhIU5" code="MeaslesRub1Under1yrs" name="Measles-Rubella 1 doses Administered Under 1 Years" type="int"/>  <dataElement uid="tBPGQFhWB7M" code="FICUnder1yr" name="Fully Immunized Children(FIC) under 1 year" type="int"/>
         <dataElement uid="usvyHT7z5w4" code="FICOver1yr" name="Fully Immunized Children(FIC) over 1 year" type="int"/>
         <dataElement uid="NB9VuZXtpJK" code="VitaminA1yr" name="Vitamin A at 1 year (200000 IU)" type="int"/>
         <dataElement uid="QvQzYi8ik43" code="VitaminA1halfyr" name="Vitamin A at 1 and a half year (200000 IU)" type="int"/>
@@ -265,13 +264,13 @@
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="MeaslesRub1Over5yrs" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="MeaslesRub1Over1yrs" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <child-immunization-measles-rubella1-over-1-year.sql>
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="MeaslesRub1Under5yrs" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="MeaslesRub1Under1yrs" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <child-immunization-measles-rubella1-under-1-year.sql>
              </annotation>
