@@ -8,8 +8,8 @@ FROM patient_state ps
 INNER JOIN patient_program pp ON ps.patient_program_id=pp.patient_program_id
 INNER JOIN person p ON pp.patient_id = p.person_id
 WHERE birthdate IS NOT NULL 
-AND ((DATEDIFF(:startOfPeriod,birthdate) / 365) &lt;= 1
-OR (DATEDIFF(:endOfPeriod,birthdate) / 365) &lt;= 1)
+AND ((DATEDIFF(:startOfPeriod,birthdate) / 365) &gt; 1
+OR (DATEDIFF(:endOfPeriod,birthdate) / 365) &gt; 1)
 GROUP BY patient_id
 HAVING COUNT(DISTINCT state)=(
 SELECT COUNT(program_workflow_state_id)
