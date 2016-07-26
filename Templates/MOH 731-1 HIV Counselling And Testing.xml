@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     <dataElements>
+
+
+
+		 <dataElement uid="Aioi6LxPb3N" code="HIV1stTest" name="First Testing HIV" type="int"/>
+		 <dataElement uid="jbzrwpsfYMN" code="HIV2ndTest" name="Repeat Testing HIV"  type="int"/>
+		 <dataElement uid="h4pR1wz1JQb" code="TTHIVTest" name="Total Tested HIV" type="int"/>
+		 <dataElement uid="DBZH3aC9gwQ" code="MaleUnder15" name="Male under 15yrs Receiving HIV + Results" type="int"/>
+		 <dataElement uid="QXQFd2JB10B" code="FemaleUnder15" name="Female under 15yrs Receiving HIV + Results" type="int"/>
+		 <dataElement uid="RCFqEXIiqed" code="Male15to24" name="Male 15-24yrs  Receiving HIV + Results" type="int"/>
+		 <dataElement uid="c2pgDecBILP" code="Female15to24" name="Female 15-24yrs  Receiving HIV + Results" type="int"/>
+		 <dataElement uid="xN6GhQGgaoI" code="MaleAbove25" name="Male above 25yrs Receiving HIV + Results" type="int"/>
+		 <dataElement uid="NMWgSKFW6U7" code="FemaleAbove25" name="Female above 25yrs Receiving HIV + Results" type="int"/>
+
+     </dataElements>
+     <disaggregations>
+         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+     </disaggregations>
+     <reportTemplate>
+         <name> MOH 731 - HIV Counselling and Testing program </name>
+         <uid>RvBmbRe53wI</uid>
+         <code>RvBmbRe53wI</code>
+		<timelyDays>15</timelyDays>
+         <periodType>Monthly</periodType>
+         <dataValueTemplates>
+		 <dataValueTemplate dataElement="HIV1stTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <testing-for-hiv-first.sql>
+             </annotation>
+             </dataValueTemplate>
+			<dataValueTemplate dataElement="HIV2ndTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <testing-for-hiv-repeat.sql>
+             </annotation>
+             </dataValueTemplate>
+
+
+		 <dataValueTemplate dataElement="TTHIVTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+					#INCLUDE <testing-for-hiv-total.sql>
+             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="MaleUnder15" disaggregation="OzshuDqmXQI">
+             <annotation>
+                		#INCLUDE <tested-positive-for-hiv-male-below-15-years.sql>
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="FemaleUnder15" disaggregation="OzshuDqmXQI">
+             <annotation>
+                		#INCLUDE <tested-positive-for-hiv-female-below-15-years.sql>
+             </annotation>
+             </dataValueTemplate>
+
+
+			 <dataValueTemplate dataElement="Male15to24" disaggregation="OzshuDqmXQI">
+             <annotation>
+				#INCLUDE <tested-positive-for-hiv-male-between-15-and-24.sql>
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="Female15to24" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <tested-positive-for-hiv-female-between-15-and-24.sql>
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="MaleAbove25" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <tested-positive-for-hiv-male-25-years-and-older.sql>
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="FemaleAbove25" disaggregation="OzshuDqmXQI">
+             <annotation>
+                		#INCLUDE <tested-positive-for-hiv-female-25-years-and-older.sql>
+             </annotation>
+             </dataValueTemplate>
+
+         </dataValueTemplates>
+    </reportTemplate>
+</reportTemplates>
+
