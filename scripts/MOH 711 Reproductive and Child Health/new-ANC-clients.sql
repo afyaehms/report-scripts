@@ -4,4 +4,4 @@
 SELECT count(*)
 FROM patient_program
 WHERE program_id= '1'
-AND date_enrolled between '2016-06-02' and '2016-06-13'
+AND date_enrolled between '2016-06-01' and '2016-06-30'
