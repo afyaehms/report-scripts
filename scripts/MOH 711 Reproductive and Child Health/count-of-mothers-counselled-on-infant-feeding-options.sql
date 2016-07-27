@@ -3,4 +3,4 @@
 -- substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC)
 SELECT COUNT(*) 
 FROM obs
-WHERE obs_datetime BETWEEN '2016-07-01' AND '2016-07-01'
+WHERE obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'

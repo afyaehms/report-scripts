@@ -10,4 +10,4 @@ INNER JOIN patient_program pp ON pp.patient_id = o.person_id
 WHERE o.concept_id = 160428 
 AND (o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553' OR o.value_coded = 803)
 AND pp.program_id = 1
-AND o.obs_datetime BETWEEN '2016-06-14' AND '2016-06-16'
+AND o.obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'

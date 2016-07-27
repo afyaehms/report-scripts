@@ -11,4 +11,4 @@ INNER JOIN encounter e ON e.encounter_id = odo.encounter_id
 WHERE odo.inventory_drug_id = 31
 AND e.encounter_type=19
 AND pp.program_id = 1
-AND odo.created_on BETWEEN '2016-06-16' AND '2016-06-18'
+AND odo.created_on BETWEEN '2016-06-01' AND '2016-06-30'
