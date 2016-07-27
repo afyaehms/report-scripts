@@ -3,7 +3,7 @@
 -- limit encounter ids to the  ones raised from MCH - 19 is the encounter type for ANC
 -- include drug ids in a comma separated list for future/yet to be know combinations of iron and folate
 
-SELECT COUNT(*)
+SELECT COUNT(DISTINCT(odo.patient_id))
 FROM opd_drug_order odo
 INNER JOIN patient_program pp ON pp.patient_id = odo.patient_id
 INNER JOIN encounter e ON e.encounter_id = odo.encounter_id
