@@ -1,2 +1,2 @@
 --
-SELECT 0 FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'
+SELECT COUNT(0) FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'

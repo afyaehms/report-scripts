@@ -10,5 +10,5 @@
 -- AND o.obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'
 
 -- Placeholder script; to be replaced
-SELECT 0 FROM obs
+SELECT COUNT(0) FROM obs
 WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'
