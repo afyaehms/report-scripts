@@ -4,4 +4,4 @@
 SELECT count(*)
 FROM patient_state
 WHERE state = '26'
-AND start_date BETWEEN '2012-05-12' AND '2016-06-13'
+AND start_date BETWEEN '2012-06-01' AND '2016-06-30'

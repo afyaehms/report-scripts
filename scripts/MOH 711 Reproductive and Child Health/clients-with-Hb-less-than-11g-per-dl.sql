@@ -6,4 +6,4 @@ FROM obs o
 INNER JOIN patient_program pp ON pp.patient_id = o.person_id
 WHERE o.concept_id = 995 AND value_numeric &lt; 11
 AND pp.program_id = 1
-AND o.date_created BETWEEN '2016-06-14' AND '2016-06-15'
+AND o.date_created BETWEEN '2016-06-01' AND '2016-06-30'
