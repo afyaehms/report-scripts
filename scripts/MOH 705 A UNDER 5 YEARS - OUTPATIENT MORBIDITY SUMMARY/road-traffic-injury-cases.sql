@@ -16,4 +16,4 @@
 --   WHERE concept_id = 5109 
 --   AND value_coded IN (1028)
 --   AND DATE(obs_datetime) &lt; :startOfPeriod)
-SELECT 0 FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'
+SELECT COUNT(0) FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'
