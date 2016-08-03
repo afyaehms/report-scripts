@@ -9,4 +9,4 @@
 -- AND value_coded = 782
 -- AND o.date_created BETWEEN '2016-06-01' AND '2016-06-30'
 
-SELECT 0 FROM obs o WHERE o.date_created BETWEEN '2016-06-01' AND '2016-06-30'
+SELECT COUNT(0) FROM obs o WHERE o.date_created BETWEEN '2016-06-01' AND '2016-06-30'
