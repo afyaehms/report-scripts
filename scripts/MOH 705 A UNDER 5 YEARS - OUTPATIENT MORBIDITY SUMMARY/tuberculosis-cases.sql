@@ -5,7 +5,7 @@ WHERE
 p.voided = 0 
 AND o.voided = 0
 AND
-  (o.concept_id=5109  OR o.concept_id = 2304)
+  (o.concept_id=5109  )
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
   (572,1010,1163,1213,1245,1470,1525,1527,1707,1708,

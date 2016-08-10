@@ -6,7 +6,7 @@ WHERE
 p.voided = 0
 AND o.voided = 0
 AND
-  (o.concept_id=5109 OR o.concept_id = 2304)
+  (o.concept_id=5109 )
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN (1026, 4014, 4520, 4583,1106,1524,1938)
 AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
