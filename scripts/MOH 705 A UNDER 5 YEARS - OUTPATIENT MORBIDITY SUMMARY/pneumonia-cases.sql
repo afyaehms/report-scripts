@@ -11,7 +11,7 @@ AND
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,4503,
-    5194,5200,5500,114100)
+    5194,5200,114100)
 AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
 -- get only new cases
 AND p.person_id NOT IN (
@@ -19,7 +19,7 @@ AND p.person_id NOT IN (
   WHERE concept_id = 5109 
   AND value_coded IN
     (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,4503,
-      5194,5200,5500,114100)
+      5194,5200,114100)
   AND DATE(obs_datetime) &lt; :startOfPeriod)
 
 group by obs_date
