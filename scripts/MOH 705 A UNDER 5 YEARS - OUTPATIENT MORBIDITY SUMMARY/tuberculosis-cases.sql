@@ -1,9 +1,10 @@
-SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-FROM person p
-INNER JOIN obs o ON o.person_id = p.person_id
-WHERE 
-p.voided = 0 
-AND o.voided = 0
+select count(person_id)
+from
+(
+select o.person_id, date_format(obs_datetime, '%d-%m-%Y') obs_date
+from obs o
+inner join person p on p.person_id = o.person_id
+WHERE o.voided = 0
 AND
   (o.concept_id=5109  )
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
@@ -19,3 +20,6 @@ AND p.person_id NOT IN (
     (572,1010,1163,1213,1245,1470,1525,1527,1707,1708,1752,
       2345,3860,4059,4060,4061,4148,4298,4316,4425,4592,152306,160156,4047,4542)
   AND DATE(obs_datetime) &lt; :startOfPeriod)
+
+  group by obs_date
+) a;

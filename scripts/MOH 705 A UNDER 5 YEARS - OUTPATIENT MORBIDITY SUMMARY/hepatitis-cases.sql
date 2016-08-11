@@ -1,10 +1,11 @@
 -- Get count of new cases of hepatitis
-SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-FROM person p
-INNER JOIN obs o ON o.person_id = p.person_id
-WHERE 
-p.voided = 0 
-AND o.voided = 0
+select count(person_id)
+from
+(
+select o.person_id, date_format(obs_datetime, '%d-%m-%Y') obs_date
+from obs o
+inner join person p on p.person_id = o.person_id
+WHERE o.voided = 0
 AND
   (o.concept_id=5109  )
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
@@ -20,3 +21,6 @@ AND p.person_id NOT IN (
     (1005,1006,1007,1008,1505,1506,1746,1747,1748,2524,2525,2526,
       2527,2528,2587,2590,2604,2617,4436,145131,160143)
   AND DATE(obs_datetime) &lt; :startOfPeriod)
+
+group by obs_date
+) a;

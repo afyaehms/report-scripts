@@ -1,10 +1,11 @@
 -- Get count of new ear infection condition cases
-SELECT COUNT(DISTINCT p.person_id) AS 'Count'
-FROM person p
-INNER JOIN obs o ON o.person_id = p.person_id
-WHERE
-p.voided = 0
-AND o.voided = 0
+select count(person_id)
+from
+(
+select o.person_id, date_format(obs_datetime, '%d-%m-%Y') obs_date
+from obs o
+inner join person p on p.person_id = o.person_id
+WHERE o.voided = 0
 AND
   (o.concept_id=5109 )
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
@@ -23,3 +24,6 @@ AND p.person_id NOT IN (
       4917,4918,4919,4920,4563,119240,4160,4439,1095,114431,1473,
       4123,4411)
   AND DATE(obs_datetime) &lt; :startOfPeriod)
+
+group by obs_date
+) a;
