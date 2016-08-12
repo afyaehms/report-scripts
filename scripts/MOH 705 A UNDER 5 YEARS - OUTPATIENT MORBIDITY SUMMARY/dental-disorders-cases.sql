@@ -10,15 +10,8 @@ AND
   (o.concept_id=5109 )
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN 
-  (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5 
--- get only new cases
-AND p.person_id NOT IN (
-  SELECT person_id FROM obs 
-  WHERE concept_id = 5109 
-  AND value_coded IN
-    (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558)
-  AND DATE(obs_datetime) &lt; :startOfPeriod)
+  (1048,1531,1533,1599,1610,1620,2755,3113,4362,4451,119558,119558,1044,1534,1602,1646,160139,1198,1199,1642,4541,1643,1663,4174,1595,1597,1598)
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
 
 group by obs_date
 ) a;
