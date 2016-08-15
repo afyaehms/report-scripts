@@ -433,6 +433,45 @@
 				 #INCLUDE <plague-cases-over-5.sql>
              </annotation>
              </dataValueTemplate>
+	    <dataValueTemplate dataElement="AOD" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="NOFAB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
+	     <dataValueTemplate dataElement="REATB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+            <dataValueTemplate dataElement="RFOHFB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 	 	 
+		 <dataValueTemplate dataElement="RTOHFB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
+			 
+	    <dataValueTemplate dataElement="RFCUB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
+             <dataValueTemplate dataElement="RTCUB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 	#INCLUDE <xxxxx.sql> 
+             </annotation>
+             </dataValueTemplate>
 
          </dataValueTemplates>		 
     </reportTemplate>
