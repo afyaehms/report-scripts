@@ -16,4 +16,4 @@
 --   WHERE concept_id = 5109 
 --   AND value_coded IN ({{jiggers_infection_concept_id}})
 --   AND DATE(obs_datetime) &lt; :startOfPeriod)
-SELECT COUNT(0) FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'
+SELECT SUM(0) FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'

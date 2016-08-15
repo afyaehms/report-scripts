@@ -3,7 +3,7 @@
 # use alternate search delimiter
 filename=$(basename "$1")
 
-sed -e '\_#INCLUDE <'"$filename"'>_{
+sed -e '/#INCLUDE <'"$filename"'>/{
         r '"$1"'
         d
 }'
