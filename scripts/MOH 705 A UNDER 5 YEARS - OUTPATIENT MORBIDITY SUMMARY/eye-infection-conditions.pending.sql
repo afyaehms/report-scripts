@@ -1,2 +1,16 @@
---
-SELECT COUNT(0) FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'
+-- get count of eye infection
+select count(person_id)
+from
+(
+select o.person_id, date_format(obs_datetime, '%d-%m-%Y') obs_date
+from obs o
+inner join person p on p.person_id = o.person_id
+WHERE o.voided = 0
+AND
+  (o.concept_id=5109 )
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+AND o.value_coded IN (1038)
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+
+group by obs_date
+) a;
