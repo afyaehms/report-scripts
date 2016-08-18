@@ -7,7 +7,7 @@
 		 <dataElement uid="NF4v45pwFCWB" code="CHB"  name="Cholera" type="int"/>
          <dataElement uid="IVfyP8yAazgB" code="MMB"  name="Meningococcal Meningitis" type="int"/>
 		 <dataElement uid="ad9sUgPPQglB" code="OMB"  name="Other Meningitis" type="int"/>
-		 <dataElement uid="pDCorm17eRGB" code="NTB"  name="Neonatal Tetanus" type="int"/>
+		 <dataElement uid="pDCorm17eRGB" code="NTB"  name="Tetanus" type="int"/>
 		 <dataElement uid="w4b50UCz14bB" code="PMB"  name="Poliomyelitis AFP" type="int"/>
 		 <dataElement uid="FW3WUJbzhEGB" code="CPB"  name="Chicken Pox" type="int"/>
 		 <dataElement uid="VuXfcCV7RtRB" code="MEB"  name="Measles" type="int"/>
@@ -16,45 +16,49 @@
 		 <dataElement uid="JpzfpB5zN4kB" code="FVB"  name="Fevers" type="int"/>
 		 <dataElement uid="Lt0FqtnHraWB" code="SMB"  name="Suspected Malaria" type="int"/>
 		 <dataElement uid="OoakJhWiyZpB" code="CMB"  name="Confirmed Malaria (only Positive cases)" type="int"/>
-		 <dataElement uid="WvOlW7FmLiqB" code="UTIB"  name="Urinary Tract Infection" type="int"/>
+		 <dataElement uid="KbTbZVtZIPvB" code="MIPB"  name="Malaria in Pregnancy" type="int"/>
 		 <dataElement uid="NGUR6mazihNB" code="TFB"  name="Typhoid fever" type="int"/>
+		 <dataElement uid="WvOlW7FmLiqB" code="STIB"  name="Sexually Transmitted Infections" type="int"/>
+		 <dataElement uid="WvOlW7FmLiqB" code="UTIB"  name="Urinary Tract Infection" type="int"/>
 		 <dataElement uid="ojFSHMwbkHKB" code="BiLB"  name="Bilharzia" type="int"/>
 		 <dataElement uid="UIG9ROMuecPB" code="IWB"  name="Intestinal Worms" type="int"/>
 		 <dataElement uid="WXSCo6wvs74B" code="MaLB"  name="Malnutrition" type="int"/>
-		 <dataElement uid="kkUHOwGMawDB" code="AnMB"  name="Aneamia" type="int"/>
+		 <dataElement uid="kkUHOwGMawDB" code="AnMB"  name="Anaemia" type="int"/>
 		 <dataElement uid="mzcuI8nQYpWB" code="EIB"  name="Eye Infections" type="int"/>
 		 <dataElement uid="T7rAVczsYe4B" code="OECB"  name="Other Eye Conditions" type="int"/>
 		 <dataElement uid="Rmp6V00K85FB" code="EICB"  name="Ear Infections (Conditions)" type="int"/>
 		 <dataElement uid="wGK0P9twEkxB" code="URTIB"  name="Upper Respiratory Tract Infections" type="int"/>
 		 <dataElement uid="L82lvvxVaqtB" code="ATB"  name="Asthma" type="int"/>
-		 <dataElement uid="SZ8Krtxc2XBB" code="TOSB"  name="Tonsolitis" type="int"/>
 		 <dataElement uid="PHXPCqYlS5vB" code="PNEB"  name="Pneumonia" type="int"/>
 		 <dataElement uid="T2tgkrJ2MkwB" code="ODORSB"  name="Other Dis. Of Respiratory System" type="int"/>
+		 <dataElement uid="SZ8Krtxc2XBB" code="ABOTB"  name="Abortion" type="int"/>
+		 <dataElement uid="SZ8Krtxc2XBB" code="DPCB"  name=" Dis. of Puerperium and Childbirth" type="int"/>
+		 <dataElement uid="SZ8Krtxc2XBB" code="HYPB"  name="Hypertension" type="int"/>
 		 <dataElement uid="HmgfJSVUOOrB" code="MDB"  name="Mental Disorders" type="int"/>
 		 <dataElement uid="MRYnOLO78oaB" code="DDB"  name="Dental Disorders" type="int"/>
 		 <dataElement uid="W4Hz8qcZHLCB" code="JIB"  name="Jiggers Infestation" type="int"/>
 		 <dataElement uid="yoqQDZq28VkB" code="DOTSB"  name="Diseases of the skin" type="int"/>
-		 <dataElement uid="WouiPTMfuBiB" code="CASB"  name="Chromosomal Abnormalities" type="int"/>
-		 <dataElement uid="uVBWKrnxXTJB" code="CAB"  name="Congenital Anomalies" type="int"/>
+		 <dataElement uid="WouiPTMfuBiB" code="AJPB"  name="Anthritis and Joint pains etc." type="int"/>
 		 <dataElement uid="qlCRXb7XPuWB" code="POSB"  name="Poisoning" type="int"/>
 		 <dataElement uid="I5611kWZgh8B" code="RTIB"  name="Road Traffic Injuries" type="int"/>
 		 <dataElement uid="PiwEyf7dVC9B" code="OIJB"  name="Other Injuries" type="int"/>
-		 <dataElement uid="vp0neVlUNfUB" code="SAB"  name="Sexual Assault (Violence)" type="int"/>
+		 <dataElement uid="vp0neVlUNfUB" code="SAB"  name="Sexual Violence" type="int"/>
+		 <dataElement uid="uVBWKrnxXTJB" code="VRIB"  name="Violence related injuries" type="int"/>
 		 <dataElement uid="dkEYL9Sous9B" code="BNB"  name="Burns" type="int"/>
 		 <dataElement uid="WcDWC41StU4B" code="SBB"  name="Snake Bites" type="int"/>
 		 <dataElement uid="egePEON9p3VB" code="DBB"  name="Dog Bites" type="int"/>
 		 <dataElement uid="Inct3WT9StFB" code="OBB"  name="Other Bites" type="int"/>	
 		 <dataElement uid="D923dTnerdkB" code="DIAB"  name="Diabetes" type="int"/>
 		 <dataElement uid="FiiYdxMrqzsB" code="EPIB"  name="Epilepsy" type="int"/>
-		 <dataElement uid="VUGxFGzFcZXB" code="OCDB"  name="Other Convulsive Disorders" type="int"/>
 		 <dataElement uid="YbMwZWHJLcaB" code="NDHIVB"  name="Newly Diagnosed HIV" type="int"/>	
 		 <dataElement uid="nb9cfWgxYFcB" code="BRUB"  name="Brucellosis" type="int"/>
-		 <dataElement uid="KbTbZVtZIPvB" code="RICB"  name="Rickets" type="int"/>
 		 <dataElement uid="sZETzNe1To8B" code="CCB"  name="Cardiovascular conditions" type="int"/>
-		 <dataElement uid="IJcsSSeoIokB" code="VRIB"  name="Violence related injuries" type="int"/>
-		 <dataElement uid="nwMuDW4tTdAB" code="CePaB"  name="Cerebral Palsy" type="int"/>
-		 <dataElement uid="L529r3WvtcfB" code="AUTB"  name="Autism" type="int"/>
-		 <dataElement uid="fJx0ovTVjuaB" code="OCNSCB"  name="Other Central Nervous System Conditions" type="int"/>
+		 <dataElement uid="fJx0ovTVjuaB" code="CNSCB"  name="Central Nervous System Conditions" type="int"/>
+		 <dataElement uid="KbTbZVtZIPvB" code="OVERBMIB"  name="Overweight (BMI greater than 25)" type="int"/>
+		 <dataElement uid="IJcsSSeoIokB" code="MSCB"  name="Muscular skeletal conditions" type="int"/>
+		 <dataElement uid="nwMuDW4tTdAB" code="FIBRB"  name="Fistula (Birth related)" type="int"/>
+		 <dataElement uid="L529r3WvtcfB" code="NEOB"  name="Neoplams" type="int"/>
+		 <dataElement uid="VUGxFGzFcZXB" code="PHYDISB"  name="Physical Disability" type="int"/>
 		 <dataElement uid="zCOc8HOzP2uB" code="TRYB"  name="Tryponosomiasis" type="int"/>
 		 <dataElement uid="FD93RcbEm3YB" code="KLB"  name="Kalazar (Leishmaniaisis)" type="int"/>
 		 <dataElement uid="k7P5QUlyJfgB" code="DGWB"  name="Dracunculosis (Guinea Worm)" type="int"/>
@@ -171,15 +175,27 @@
 				 #INCLUDE <confirmed-malaria-cases.sql>
              </annotation>
              </dataValueTemplate> 
-			  <dataValueTemplate dataElement="UTIB" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="MIPB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <urinary-tract-infection-cases.sql>
+				 #INCLUDE <xxxx.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TFB" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <typhoid-fever-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="STIB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="UTIB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <urinary-tract-infection-cases.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -236,12 +252,6 @@
              </annotation>
              </dataValueTemplate>
 			 
-			<dataValueTemplate dataElement="TOSB" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <tonsolitis-cases.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
 			 <dataValueTemplate dataElement="PNEB" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <pneumonia-cases.sql>
@@ -253,6 +263,25 @@
 				 #INCLUDE <other-disorder-of-respiratory-system.sql>
              </annotation>
              </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ABOTB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="DPCB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HYPB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
 			 
 			  <dataValueTemplate dataElement="MDB" disaggregation="OzshuDqmXQI">
              <annotation>
@@ -278,22 +307,18 @@
              </annotation>
              </dataValueTemplate>
 			 
-			  <dataValueTemplate dataElement="CASB" disaggregation="OzshuDqmXQI">
+			  <dataValueTemplate dataElement="AJPB" disaggregation="OzshuDqmXQI">
              <annotation>
 				  #INCLUDE <chromosomal-abnormality-case.sql>
              </annotation>
              </dataValueTemplate>
-			 
-			<dataValueTemplate dataElement="CAB" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <congenital-anomalies-cases.sql>
-             </annotation>
-             </dataValueTemplate>
+			
 			 <dataValueTemplate dataElement="POSB" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <poisoning-cases.sql>
              </annotation>
              </dataValueTemplate>
+			 
 			 <dataValueTemplate dataElement="RTIB" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <road-traffic-injury-cases.sql>
@@ -309,6 +334,12 @@
 			 <dataValueTemplate dataElement="SAB" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <sexual-assault-violence-cases.sql>
+             </annotation>
+             </dataValueTemplate>
+			  
+			<dataValueTemplate dataElement="VRIB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -363,38 +394,45 @@
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="RICB" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <rickets-cases.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
 			 <dataValueTemplate dataElement="CCB" disaggregation="OzshuDqmXQI">
              <annotation>
 				 #INCLUDE <cardiovascular-conditions-cases.sql>
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="VRIB" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="CNSCB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <violent-related-injuries.sql>
+				 #INCLUDE <xxxx.sql>
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="CePaB" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="OVERBMIB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <cerebral-palsy-cases.sql>
+				 #INCLUDE <xxxx.sql>
              </annotation>
              </dataValueTemplate>
 			 
-			  <dataValueTemplate dataElement="AUTB" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="MSCB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <autism-cases.sql>
+				 #INCLUDE <xxxx.sql>
              </annotation>
              </dataValueTemplate>
-			  <dataValueTemplate dataElement="OCNSCB" disaggregation="OzshuDqmXQI">
+			 
+			 <dataValueTemplate dataElement="FIBRB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <other-central-nervous-system-conditions.sql>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="NEOB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 	 
+			 <dataValueTemplate dataElement="PHYDISB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -433,7 +471,14 @@
 				 #INCLUDE <plague-cases.sql>
              </annotation>
              </dataValueTemplate>
-	    <dataValueTemplate dataElement="AOD" disaggregation="OzshuDqmXQI">
+			 
+			 <dataValueTemplate dataElement="DDTRTIB" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 #INCLUDE <xxxx.sql>
+             </annotation>
+             </dataValueTemplate>
+			 
+	         <dataValueTemplate dataElement="AOD" disaggregation="OzshuDqmXQI">
              <annotation>
 				 	#INCLUDE <xxxxx.sql> 
              </annotation>
@@ -441,7 +486,7 @@
 			 
 			  <dataValueTemplate dataElement="NOFAB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 	#INCLUDE xxxxx.sql> 
+				 	#INCLUDE <xxxx.sql> 
              </annotation>
              </dataValueTemplate>
 	     <dataValueTemplate dataElement="REATB" disaggregation="OzshuDqmXQI">
