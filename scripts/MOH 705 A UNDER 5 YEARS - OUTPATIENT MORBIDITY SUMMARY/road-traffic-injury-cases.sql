@@ -1,19 +1,13 @@
 -- Get count of new road traffic injury cases
--- SELECT COUNT(DISTINCT p.person_id) AS 'Count'
--- FROM person p
--- INNER JOIN obs o ON o.person_id = p.person_id
--- WHERE
--- p.voided = 0
--- AND o.voided = 0
--- AND
---   (o.concept_id=5109 )
--- AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
--- AND o.value_coded IN (1028)
--- AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
--- get only new cases
--- AND p.person_id NOT IN (
---   SELECT person_id FROM obs 
---   WHERE concept_id = 5109 
---   AND value_coded IN (1028)
---   AND DATE(obs_datetime) &lt; :startOfPeriod)
-SELECT SUM(0) FROM obs WHERE obs.obs_datetime BETWEEN '2016-06-01' AND '2016-06-31'
+SELECT COUNT(*)
+
+FROM obs o
+INNER JOIN person p ON o.person_id=p.person_id
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND DATE(death_date)=DATE(obs_datetime)
+INNER JOIN encounter e ON e.encounter_id=o.encounter_id
+AND (e.encounter_type=6 OR e.encounter_type=9)
+
+WHERE concept_id=11
+AND value_coded=1028
+AND obs_datetime BETWEEN '2016-07-01' AND '2016-08-31'

@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     <dataElements>
+
+
+
+		 <dataElement uid="Aioi6LxPb3N" code="HIV1stTest" name="First Testing HIV" type="int"/>
+		 <dataElement uid="jbzrwpsfYMN" code="HIV2ndTest" name="Repeat Testing HIV"  type="int"/>
+		 <dataElement uid="h4pR1wz1JQb" code="TTHIVTest" name="Total Tested HIV" type="int"/>
+		 <dataElement uid="DBZH3aC9gwQ" code="MaleUnder15" name="Male under 15yrs Receiving HIV + Results" type="int"/>
+		 <dataElement uid="QXQFd2JB10B" code="FemaleUnder15" name="Female under 15yrs Receiving HIV + Results" type="int"/>
+		 <dataElement uid="RCFqEXIiqed" code="Male15to24" name="Male 15-24yrs  Receiving HIV + Results" type="int"/>
+		 <dataElement uid="c2pgDecBILP" code="Female15to24" name="Female 15-24yrs  Receiving HIV + Results" type="int"/>
+		 <dataElement uid="xN6GhQGgaoI" code="MaleAbove25" name="Male above 25yrs Receiving HIV + Results" type="int"/>
+		 <dataElement uid="NMWgSKFW6U7" code="FemaleAbove25" name="Female above 25yrs Receiving HIV + Results" type="int"/>
+
+     </dataElements>
+     <disaggregations>
+         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+     </disaggregations>
+     <reportTemplate>
+         <name> MOH 731 - HIV Counselling and Testing program </name>
+         <uid>RvBmbRe53wI</uid>
+         <code>RvBmbRe53wI</code>
+		<timelyDays>15</timelyDays>
+         <periodType>Monthly</periodType>
+         <dataValueTemplates>
+		 <dataValueTemplate dataElement="HIV1stTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+LEFT OUTER JOIN 
+(
+	SELECT MIN(date_created) AS createdon, MIN(obs_id) AS first_time_idnt, person_id
+	FROM obs ob
+	WHERE (concept_id=3110 OR concept_id=100126141)
+	GROUP BY person_id
+	ORDER BY MIN(obs_id)
+) AS ob ON ob.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND date_created BETWEEN :startOfPeriod AND :endOfPeriod
+AND ob.first_time_idnt=o.obs_id             </annotation>
+             </dataValueTemplate>
+			<dataValueTemplate dataElement="HIV2ndTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+LEFT OUTER JOIN 
+(
+	SELECT MIN(date_created) AS createdon, MIN(obs_id) AS first_time_idnt, person_id
+	FROM obs ob
+	WHERE (concept_id=3110 OR concept_id=100126141)
+	GROUP BY person_id
+	ORDER BY MIN(obs_id)
+) AS ob ON ob.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND date_created BETWEEN :startOfPeriod AND :endOfPeriod
+AND ob.first_time_idnt &lt;&gt; o.obs_id             </annotation>
+             </dataValueTemplate>
+
+
+		 <dataValueTemplate dataElement="TTHIVTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND date_created BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="MaleUnder15" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN person p ON p.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND value_coded = 782
+AND p.birthdate IS NOT NULL 
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &lt; 15
+AND gender = 'M'
+AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="FemaleUnder15" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN person p ON p.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND value_coded = 782
+AND p.birthdate IS NOT NULL
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &lt; 15
+AND gender = 'F'
+AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+
+			 <dataValueTemplate dataElement="Male15to24" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN person p ON p.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND value_coded = 782
+AND p.birthdate IS NOT NULL 
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &gt;=15
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &lt;=24
+AND gender = 'M'
+AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="Female15to24" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN person p ON p.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND value_coded = 782
+AND p.birthdate IS NOT NULL 
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &gt;=15
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &lt;=24
+AND gender = 'F'
+AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="MaleAbove25" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN person p ON p.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND value_coded = 782
+AND p.birthdate IS NOT NULL 
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &gt;=25
+AND gender = 'M'
+AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="FemaleAbove25" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN person p ON p.person_id=o.person_id
+
+WHERE (concept_id=3110 OR concept_id=100126141)
+AND value_coded = 782
+AND p.birthdate IS NOT NULL 
+AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &gt;=25
+AND gender = 'F'
+AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+         </dataValueTemplates>
+    </reportTemplate>
+</reportTemplates>
+
