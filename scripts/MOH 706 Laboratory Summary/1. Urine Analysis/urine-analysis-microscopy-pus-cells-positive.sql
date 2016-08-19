@@ -1,13 +1,10 @@
---get count of new clients PUS Cells (concept_id: 1869) that are positive within a time period
---substitute the dates with date placeholders
---Pus Cells accepts values: Negative, One Plus, two Plus, Three Plus and Four Plus
---Therefore, any results that is not Negative (concept_id: 781) is assumed positive
+-- get count of new clients PUS Cells (concept_id: 1869) that are positive within a time period
+-- POSITVE results are +, ++, +++, ++++ (694, 695, 696, 697)
+-- Substitute the dates with date placeholders
 
 SELECT COUNT(*)
-
 FROM obs
-INNER JOIN orders o
 
 WHERE obs.concept_id=1869 
-AND obs.value_coded<>781
-AND DATE(obs_datetime) BETWEEN '2016-01-01' AND '2016-06-30';
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

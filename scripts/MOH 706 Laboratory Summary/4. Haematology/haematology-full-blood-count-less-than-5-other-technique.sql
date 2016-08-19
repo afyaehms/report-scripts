@@ -8,3 +8,6 @@ WHERE o.concept_id = 995
 AND o.obs_group_id IS NULL
 AND o.value_numeric &lt; 5
 AND DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31';
+
+#consider other tests 2921.
+#Subject to confirmation

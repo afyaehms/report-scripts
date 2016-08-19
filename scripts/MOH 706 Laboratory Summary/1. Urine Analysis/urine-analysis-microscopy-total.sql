@@ -6,7 +6,6 @@
 
 SELECT COUNT(*) 
 FROM obs o
-LEFT OUTER JOIN obs ob ON o.obs_id=ob.obs_group_id AND ob.concept_id=5655
 
-WHERE o.concept_id IN (1869, 5247, 5248, 613, 623)
-AND DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31';
+WHERE concept_id IN (1869, 5247, 5248, 613, 623)
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';
