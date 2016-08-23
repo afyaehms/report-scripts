@@ -9,4 +9,4 @@ AND o.concept_id=2509
 
 
 WHERE o.value_numeric >= cn.hi_normal
-AND DATE(obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31';
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

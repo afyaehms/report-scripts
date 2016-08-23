@@ -5,23 +5,19 @@
 --All the four tests are group as 1 test and assumption made that if any of them is greater than it limit, then thats a positive as over
 --Substitute the dates with date placeholders
 
-SELECT COUNT(*) 
-FROM(
-	SELECT obs.encounter_id,
-	obs.person_id
+SELECT COUNT(*)
+FROM (
+	SELECT o.obs_group_id
+	FROM obs o
 
-	FROM obs
-	INNER JOIN orders o 
-	ON obs.order_id=o.order_id
-	AND o.concept_id=2404
+	INNER JOIN obs og 
+	ON o.obs_group_id=og.obs_id AND og.concept_id=2404
 
-	LEFT OUTER JOIN concept_numeric c
-	ON obs.concept_id = c.concept_id
+	INNER JOIN concept_numeric cn
+	ON o.concept_id=cn.concept_id
 
-	WHERE obs.concept_id<>5128
-	AND DATE(obs_datetime) BETWEEN '2016-01-01' AND '2016-06-31'
+	WHERE DATE(o.obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31'
+	AND o.value_numeric < cn.low_normal
 
-
-	GROUP BY obs.person_id, obs.encounter_id
-	HAVING MAX(CASE WHEN value_numeric<=low_normal THEN 1 ELSE 0 END)=1
-) AS oggt_low
+	GROUP BY o.obs_group_id
+) AS grouped_test;

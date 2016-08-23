@@ -4,9 +4,7 @@
 
 SELECT COUNT(*)
 FROM obs o
-INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
-AND o.concept_id=2944
 
-
-WHERE o.value_numeric >= cn.hi_normal
-AND DATE(obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31';
+WHERE o.concept_id = 2944
+AND o.value_numeric > 0
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

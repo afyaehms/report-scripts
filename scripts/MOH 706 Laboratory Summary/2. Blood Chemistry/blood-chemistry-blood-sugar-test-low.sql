@@ -1,12 +1,11 @@
---Blood Sugar test are two: 
---Random Blood Sugar (concept_id: 2223) has a high of 7.8 and a low of 2.5
---Fasting Blood Sugar (concept_id: 2291) has a high of 6.1 and a low of 2.0
---I am combining both and testing using the different Levels
---Substitute the dates with date placeholders
+-- Blood Sugar, also known as Random Blood Sugar (concept_id: 2223)
+-- The Table concept_numeric stores the Normal acceptable ranges
+-- Substitute the dates with date placeholders
 
 SELECT COUNT(*)
-FROM obs
+FROM obs o
+INNER JOIN concept_numeric cn
+ON cn.concept_id=o.concept_id AND o.concept_id=2223
 
-WHERE obs.concept_id=2223
-AND value_numeric <= 2.5
-AND DATE(obs_datetime) BETWEEN '2016-01-01' AND '2016-06-30';
+WHERE o.value_numeric < cn.low_normal
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

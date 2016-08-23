@@ -7,4 +7,4 @@ FROM obs o
 
 WHERE o.concept_id=5682
 AND value_coded=5659
-AND DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31';
+AND DATE(o.obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

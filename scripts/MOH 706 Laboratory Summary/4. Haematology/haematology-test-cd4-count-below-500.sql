@@ -9,4 +9,4 @@ AND o.concept_id = 4004
 AND ob.concept_id = 5152
 AND ob.value_numeric < 500
 
-WHERE DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31'
+WHERE DATE(o.obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31'

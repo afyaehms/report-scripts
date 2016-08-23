@@ -4,7 +4,7 @@
 --Substitute the dates with date placeholders
 
 SELECT COUNT(*)
-FROM obs o
-WHERE o.concept_id IN (2221, 2505, 2504, 2215, 2501)
+FROM obs
+WHERE concept_id IN (2215, 2221, 2505, 2504, 2501)
 
-AND DATE(obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31';
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

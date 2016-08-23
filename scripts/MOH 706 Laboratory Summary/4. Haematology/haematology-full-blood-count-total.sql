@@ -1,0 +1,6 @@
+--COMPLETE BLOOD COUNT (concept_id: 2410)
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id=2410
+AND DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31'
