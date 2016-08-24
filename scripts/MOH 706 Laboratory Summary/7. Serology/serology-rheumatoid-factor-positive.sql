@@ -1,10 +1,11 @@
--- Get count of 	RHEUMATOID FACTOR VALUE within a time period
+-- Get count of RHEUMATOID FACTOR VALUE(concept_id: 5140) within a time period
+-- It uses RHEUMATOID FACTOR VALUE (concept_id:2248) to store the result
+-- Positive Value is concept_id: 782
 -- Substitute the dates with date placeholders
 
 SELECT COUNT(*)
 FROM obs o
-INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
-AND o.concept_id = 5140
-AND ob.concept_id = 2248
-AND ob.value_coded = 782
-WHERE DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31'
+
+WHERE concept_id = 2248
+AND value_coded = 782
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';

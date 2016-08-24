@@ -4,7 +4,5 @@
 
 SELECT COUNT(*) 
 FROM obs o
-INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
-AND o.concept_id = 3693
-AND ob.concept_id = 5139
-WHERE DATE(o.obs_datetime) BETWEEN '2016-07-01' AND '2016-07-31'
+WHERE o.concept_id = 3693
+AND DATE(o.obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31'
