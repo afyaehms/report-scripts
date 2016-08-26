@@ -1,16 +1,13 @@
 -- get count of violent related injuries cases
-select count(person_id)
-from
-(
-select o.person_id, date_format(obs_datetime, '%d-%m-%Y') obs_date
-from obs o
-inner join person p on p.person_id = o.person_id
-WHERE o.voided = 0
-AND
-  (o.concept_id=5109 )
-AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-AND o.value_coded IN (1452)
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+SELECT COUNT(*)
 
-  group by obs_date
-) a;
+FROM obs o
+INNER JOIN person p ON o.person_id=p.person_id
+AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+AND DATE(death_date)=DATE(obs_datetime)
+INNER JOIN encounter e ON e.encounter_id=o.encounter_id
+AND (e.encounter_type=6 OR e.encounter_type=9)
+
+WHERE concept_id=11
+AND value_coded=4021
+AND obs_datetime BETWEEN '2016-07-01' AND '2016-08-31'

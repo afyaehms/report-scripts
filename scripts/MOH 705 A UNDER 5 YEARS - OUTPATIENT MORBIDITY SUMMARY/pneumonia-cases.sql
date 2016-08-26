@@ -7,12 +7,11 @@ from obs o
 inner join person p on p.person_id = o.person_id
 WHERE o.voided = 0
 AND
-  (o.concept_id=5109 )
+  (o.concept_id=5109 or o.concept_id = 2304 or o.concept_id = 160249)
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
 AND o.value_coded IN
   (1011,1080,1113,1141,1285,1796,1866,4159,4291,4372,4503,
     5194,5200,114100)
 AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
-
-group by obs_date
+group by o.person_id, obs_date
 ) a;

@@ -10,6 +10,6 @@
 -- WHERE o.concept_id = 374
 -- AND o.value_coded = 907
 -- AND pp.program_id = 2
-SELECT COUNT(0)
+SELECT SUM(0)
 FROM obs o
 WHERE o.obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'
