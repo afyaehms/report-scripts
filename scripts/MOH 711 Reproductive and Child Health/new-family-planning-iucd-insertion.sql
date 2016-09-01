@@ -3,15 +3,18 @@
 
 select count(*) from
 (
+#get iucd insertions
 select a.person_id, min(a.obs_date) min_obs_date
 from
 (
+#get iucd
 select person_id, value_coded, date_format(obs_datetime, '%m-%d-%Y') obs_date from obs 
 where concept_id = 374
-and value_coded = 1472
+and value_coded = 136452
 ) a
 inner join
 (
+#get insertions
 select person_id, value_coded, date_format(obs_datetime, '%m-%d-%Y') obs_date from obs 
 where concept_id = 100126257
 and value_coded = 100126255
