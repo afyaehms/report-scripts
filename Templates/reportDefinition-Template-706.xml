@@ -1245,7 +1245,7 @@
 
 			<dataValueTemplate dataElement="NoOfPosTBSmears" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-total-tb-smears-positive.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1257,7 +1257,7 @@
 
              <dataValueTemplate dataElement="NoOfPosTBnewsuspects" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-tb-new-suspects-positive.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1269,7 +1269,7 @@
 
              <dataValueTemplate dataElement="NoOfPosTBFollowup" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-tb-follow-up-positive.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1281,7 +1281,7 @@
 
 			<dataValueTemplate dataElement="NoOfPosRifampicinResistantTB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-rifampicin-resistant-tb-positive.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1293,7 +1293,7 @@
 
              <dataValueTemplate dataElement="NoOfPosMDRTB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-mbr-tb-positive.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1435,13 +1435,13 @@
 
   			<dataValueTemplate dataElement="TTFCUrine" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-urine-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantFCUrine" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-urine-malignant.sql>
              </annotation>
              </dataValueTemplate>
              
