@@ -34,47 +34,216 @@
         <dataElement uid="ovJmoErpCRY" code="MRTOHF" name="Maternal Referrals To Other Health Facility" type="int"/>
         <dataElement uid="ijYBkFVUTMV" code="MRTCUnit" name="Maternal Referrals to Community Unit" type="int"/>
         <dataElement uid="psN8NM4IguM" code="RapeCasesPEP" name="GSBV rape cases Initiated PEP" type="int"/>
-        <dataElement uid="bmEuZWOFtH6" code="RapeCasesWithin72" name="GSBV cases presenting within 72 hours"
-                     type="int"/>
+        <dataElement uid="bmEuZWOFtH6" code="RapeCasesWithin72" name="GSBV cases presenting within 72 hours" type="int"/>
         <dataElement uid="AC54kgHb6gP" code="RapeSurvivorsSeen" name="GSBV rape survivors seen" type="int"/>
-        <dataElement uid="uHM6lzLXDBd" code="Progestin" name="Pills progestin only" type="int"/>
+        <!-- Maternity Data Elements
+		<dataElement uid="jaPrPmor6WV" code="NormalDel" name="Normal Deliveries" type="int"/>
+        <dataElement uid="rAZBTMa7Jy3" code="CSection" name="Caesarian Sections" type="int"/>
+        <dataElement uid="sMqM8DwiAaj" code="BreachDel" name="Breach Delivery" type="int"/>
+        <dataElement uid="Kx64gGqaFVq" code="AVagDel" name="Assisted Vaginal Deliveries (Vacuum Extraction)" type="int"/>
+        <dataElement uid="UqKC1DJnymn" code="LiveBirth" name="Live birth" type="int"/>
+        <dataElement uid="rYn8RCcHJg1" code="FreshStillBirth" name="Fresh Still Birth" type="int"/>
+        <dataElement uid="wZtDYVBa41h" code="MaceratedStillBirth" name="Macerated Still Births" type="int"/>
+        <dataElement uid="HoSs9vjU8di" code="BirthWithDef" name="Birth with Deformities" type="int"/>
+        <dataElement uid="BkzYqWdGikV" code="NoWithLowScore" name="No. with Low APGAR Score" type="int"/>
+        <dataElement uid="syjjPqXbjTm" code="NoOfBabiesWith2500gramsOrLower" name="No. of Low birth weight Babies (below 2500 grams)" type="int"/>
+        <dataElement uid="xCFQ0pftS2u" code="NoofBabiesGiventetracycline" name="No. of babies given tetracycline at birth" type="int"/>
+        <dataElement uid="Hh4daYAcb49" code="PreTermBabies" name="Pre-Term babies" type="int"/>
+        <dataElement uid="zVTIzkATPDS" code="NoOfBabiesDischargedAlive" name="No. of babies discharged alive" type="int"/>
+        <dataElement uid="UiGlnkNmCut" code="NoOfInfantsInitiatedOnBF" name="No. of Infants intiatied on breastfeeding within 1 hour after birth" type="int"/>
+        <dataElement uid="KuMX8VqCejs" code="TTDelHIVPosWomen" name="Total Deliveries from HIV +ve women" type="int"/>
+        <dataElement uid="GAr6xu6f1n7" code="NeonatalDeaths" name="Neonatal Deaths" type="int"/>
+        <dataElement uid="CoAXLBxR0Ik" code="NoOfAdoleMaternalDeath" name="No. of adolescents (10-19YRS) Maternal Deaths" type="int"/>
+        <dataElement uid="eBHhfupqMHz" code="MaternalDeaths" name="Maternal Deaths" type="int"/>
+        <dataElement uid="kAp7ViUXEKh" code="MaternalDeathAudits" name="Maternal deaths audited" type="int"/>
+        <dataElement uid="JzM8Q9sIc9i" code="APHAlive" name="Alive - A.P.H. (Ante Partum Haemorrhage)" type="int"/>
+        <dataElement uid="JzM8Q9sIc9iDead" code="APHADeaths" name="Deaths - A.P.H. (Ante Partum Haemorrhage)" type="int"/>
+        <dataElement uid="xAAEwRrU8EH" code="PPHAlive" name="Alive - P.P.H. (Post Partum Haemorrhage)" type="int"/>
+        <dataElement uid="xAAEwRrU8EHDead" code="PPHADeaths" name="Deaths - P.P.H. (Post Partum Haemorrhage)" type="int"/>
+        <dataElement uid="d4KC4RIwpKH" code="EclampsiaAlive" name="Alive - Eclampsia" type="int"/>
+        <dataElement uid="d4KC4RIwpKHDead" code="EclampsiaDeaths" name=" Deaths - Eclampsia" type="int"/>
+        <dataElement uid="jF2Uk71SaYC" code="RupturedUterusAlive" name="Alive - Ruptured Uterus" type="int"/>
+        <dataElement uid="jF2Uk71SaYCDead" code="RupturedUterusDeaths" name="Deaths - Ruptured Uterus" type="int"/>
+        <dataElement uid="FwsTJpdxT4C" code="ObstructedLabourAlive" name="Alive - Obstructed labour" type="int"/>
+        <dataElement uid="FwsTJpdxT4CDead" code="ObstructedLabourDeaths" name="Deaths - Obstructed labour" type="int"/>
+        <dataElement uid="qrTk1w6Y5Bk" code="SepsisAlive" name="Alive - Sepsis" type="int"/>
+        <dataElement uid="qrTk1w6Y5BkDead" code="SepsisDeaths" name="Deaths - Sepsis" type="int"/>
+        <dataElement uid="k8qXy4LyyJj" code="MaternalRFOHF" name="Maternal referals From Other Health Facility" type="int"/>
+        <dataElement uid="xNW6Y9Kitok" code="MaternalRFCUnit" name="Maternal referals From Community Unit" type="int"/>
+        <dataElement uid="ovJmoErpCRY" code="MaternalRTOHF" name="Maternal referals To Other Health Facilit" type="int"/>
+        <dataElement uid="ijYBkFVUTMV" code="MaternalRTCUnit" name="Maternal referals To Community Unit" type="int"/> -->
+		
+		<!-- Child Health and Nutrition Information System 
+		<dataElement uid="twpy25QKLk9" code="Female0to6Normal" name="0 to less than 6 months Female Normal Weight for Age" type="int"/>
+		<dataElement uid="twpy25QKLk9Male" code="Male0to6Normal" name="0 to less than 6 months Male Normal Weight for Age" type="int"/>
+		<dataElement uid="twpy25QKLk9Total" code="Total0to6Normal" name="0 to less than 6 months both Male and Female Normal Weight for Age" type="int"/>
+		<dataElement uid="qoEPwxCNrll" code="Female0to6Underweight" name="0 to less than 6months Female underweight" type="int"/>
+		<dataElement uid="qoEPwxCNrllMale" code="Male0to6Underweight" name="0 to less than 6months Male underweight" type="int"/>
+		<dataElement uid="qoEPwxCNrllTotal" code="Total0to6Underweight" name="0 to less than 6months both Male and Female underweight" type="int"/>
+		<dataElement uid="ENjll6PbaI8" code="Female0to6SeverUnderweight" name="0 to less than 6 months Female severe underweight" type="int"/>
+		<dataElement uid="ENjll6PbaI8Male" code="Male0to6SeverUnderweight" name="0 to less than 6 months Male severe underweight" type="int"/>
+		<dataElement uid="ENjll6PbaI8Total" code="Total0to6SeverUnderweight" name="0 to less than 6 months both Male and Female severe underweight" type="int"/> 
+		<dataElement uid="QCNHvzgxurQ" code="Female0to6Overweight" name="0 to less than 6 months Female overweight" type="int"/>
+		<dataElement uid="QCNHvzgxurQMale" code="Male0to6Overweight" name="0 to less than 6 months Male overweight" type="int"/>
+		<dataElement uid="QCNHvzgxurQTotal" code="Female0to6Overweight" name="0 to less than 6 months both Male and Female overweight" type="int"/>
+		<dataElement uid="lvyOQjZaXZ3" code="Female0to6Obese" name="0 to less than 6 months Female Obese" type="int"/>
+		<dataElement uid="lvyOQjZaXZ3Male" code="Male0to6Obese" name="0 to less than 6 months Male Obese" type="int"/>
+		<dataElement uid="lvyOQjZaXZ3Total" code="Total0to6Obese" name="0 to less than 6 months both Male and Female Obese" type="int"/> 
+		<dataElement uid="ikI4r8YuZZ0" code="Female6to23Normal" name="6 to 23 months Female Normal Weight for Age" type="int"/>
+		<dataElement uid="ikI4r8YuZZ0Male" code="Male6to23Normal" name="6 to 23 months Male Normal Weight for Age" type="int"/>
+		<dataElement uid="ikI4r8YuZZ0Total" code="Total6to23Normal" name="6 to 23 months both Male and Female Normal Weight for Age" type="int"/>
+		<dataElement uid="uYBa6RU8wUZ" code="Female6to23Underweight" name="6 to 23months Female underweight" type="int"/>
+		<dataElement uid="uYBa6RU8wUZMale" code="Male6to23Underweight" name="6 to 23months Male underweight" type="int"/>
+		<dataElement uid="uYBa6RU8wUZTotal" code="Total6to23Underweight" name="6 to 23months both Male and Female underweight" type="int"/>
+		<dataElement uid="Ype6qUApdlR" code="Female6to23SeverlyUnderweight" name="6 to 23 months Female severely underweight" type="int"/>
+		<dataElement uid="Ype6qUApdlRMale" code="Male6to23SeverlyUnderweight" name="6 to 23 months Male severely underweight" type="int"/>
+		<dataElement uid="Ype6qUApdlRTotal" code="Total6to23SeverlyUnderweight" name="6 to 23 months both Male and Female severely underweight" type="int"/>
+		<dataElement uid="k3xX4NKJaaY" code="Female6to23Overweight" name="6 to 23 months Female overweight" type="int"/>
+		<dataElement uid="k3xX4NKJaaYMale" code="Male6to23Overweight" name="6 to 23 months Male overweight" type="int"/>
+		<dataElement uid="k3xX4NKJaaYTotal" code="Total6to23Overweight" name="6 to 23 months both Male and Female overweight" type="int"/>
+		<dataElement uid="PW4W1Fa7b5b" code="Female6to23Obese" name="6 to 23 months Female Obese" type="int"/>
+		<dataElement uid="PW4W1Fa7b5bMale" code="Male6to23Obese" name="6 to 23 months Male Obese" type="int"/>
+		<dataElement uid="PW4W1Fa7b5bTotal" code="Total6to23Obese" name="6 to 23 months both Male and Female Obese" type="int"/>
+		<dataElement uid="qoEPwxCNrll" code="Female24to59Normal" name="24 to 59 months Female Normal Weight for Age" type="int"/>
+		<dataElement uid="qoEPwxCNrllMale" code="Male24to59Normal" name="24 to 59 months Male Normal Weight for Age" type="int"/>
+		<dataElement uid="qoEPwxCNrllTotal" code="Total24to59Normal" name="24 to 59 months both Male and Female Normal Weight for Age" type="int"/>
+		<dataElement uid="AYT1IPxFRZx" code="Female24to59Underweight" name="24 to 59 months Female underweight" type="int"/>
+		<dataElement uid="AYT1IPxFRZxMale" code="Male24to59Underweight" name="24 to 59 months Male underweight" type="int"/>
+		<dataElement uid="AYT1IPxFRZxTotal" code="Total24to59Underweight" name="24 to 59 months both Male and Female underweight" type="int"/>
+		<dataElement uid="HlZXTFN2B61" code="Female24to59SeverUnderweight" name="24 to 59 months Female severe underweight" type="int"/>
+		<dataElement uid="HlZXTFN2B61Male" code="Male24to59SeverUnderweight" name="24 to 59months Male severe underweight" type="int"/>
+		<dataElement uid="HlZXTFN2B61Total" code="Female24to59SeverUnderweight" name="24 to 59months both Male and Female severe underweight" type="int"/>
+		<dataElement uid="mv0ICssqScK" code="Female24to59Overweight" name="24 to 59 months Female overweight" type="int"/>
+		<dataElement uid="mv0ICssqScKMale" code="Male24to59Overweight" name="24 to 59 months Male overweight" type="int"/>
+		<dataElement uid="mv0ICssqScKTotal" code="Total24to59Overweight" name="24 to 59 months both Male and Female overweight" type="int"/>
+		<dataElement uid="zels3jARvGQ" code="Female24to59Obese" name="24 to 59 months Female Obese" type="int"/>
+		<dataElement uid="zels3jARvGQMale" code="Male24to59Obese" name="24 to 59 months Male Obese" type="int"/>
+		<dataElement uid="zels3jARvGQTotal" code="Total24to59Obese" name="24 to 59 months both Male and Female Obese" type="int"/>
+		<dataElement uid="BZbUjXynxfr" code="NormalFemaleMUAC6to59" name="6 to 59 months Normal Female MUAC" type="int"/>
+		<dataElement uid="BZbUjXynxfrMale" code="NormalMaleMUAC6to59" name="6 to 59 months Normal Male MUAC" type="int"/>
+		<dataElement uid="BZbUjXynxfrTotal" code="TotalNormalMUAC6to59" name="6 to 59 months Normal MUAC for both Male and Female" type="int"/>
+		<dataElement uid="i2eE15DhmMB" code="ModerateFemaleMUAC6to59" name="6 to 59 months Moderate Female MUAC" type="int"/>
+		<dataElement uid="i2eE15DhmMBMale" code="ModerateMaleMUAC6to59" name="6 to 59 months Moderate Male MUAC" type="int"/>
+		<dataElement uid="i2eE15DhmMBTotal" code="TotalModerateMUAC6to59" name="6 to 59 months Moderate MUAC for both Male and Female" type="int"/>
+		<dataElement uid="sTjfhcH5iXK" code="SevereFemaleMUAC6to59" name="6 to 59 months Severe Female MUAC" type="int"/>
+		<dataElement uid="sTjfhcH5iXKMale" code="SevereMaleMUAC6to59" name="6 to 59 months Severe Male MUAC" type="int"/>
+		<dataElement uid="sTjfhcH5iXKTotal" code="TotalSevereMUAC6to59" name="6 to 59 months Severe MUAC for both Male and Female" type="int"/>
+		<dataElement uid="BKq0EhyLtyd" code="NormalFemaleHeight6to23" name="6 to 23 months Normal Female height" type="int"/>
+		<dataElement uid="BKq0EhyLtydMale" code="NormalMaleHeight6to23" name="6 to 23 months Normal Male height" type="int"/>
+		<dataElement uid="BKq0EhyLtydTotal" code="TotalNormalHeight6to23" name="6 to 23 months Total Normal height" type="int"/>
+		<dataElement uid="f0SJMmqh8un" code="StuntingFemaleHeight6to23" name="6 to 23 months Stunting Female height" type="int"/>
+		<dataElement uid="f0SJMmqh8unMale" code="StuntingMaleHeight6to23" name="6 to 23 months Stunting Male height" type="int"/>
+		<dataElement uid="f0SJMmqh8unTotal" code="StuntingTotalHeight6to23" name="6 to 23 months Total Stunting height" type="int"/>	
+		<dataElement uid="YloG1P6jXSR" code="SeverelyStuntedFemaleHeight6to23" name="6 to 23 months Severely Stunted Female height" type="int"/>
+		<dataElement uid="YloG1P6jXSRMale" code="SeverelyStuntedMaleHeight6to23" name="6 to 23 months Severely Stunted Male height" type="int"/>
+		<dataElement uid="YloG1P6jXSRTotal" code="TotalSeverelyStuntedHeight6to23" name="6 to 23 months Total Severely Stunted height for both Male and Female" type="int"/>
+		<dataElement uid="PM29pHKJGep" code="NormalFemaleHeight24to59" name="24 to 59 months Normal Female height" type="int"/>
+		<dataElement uid="PM29pHKJGepMale" code="NormalMaleHeight24to59" name="24 to 59 months Normal Male height" type="int"/>
+		<dataElement uid="PM29pHKJGepTotal" code="TotalNormalHeight24to59" name="24 to 59 months Total Normal height for both Male and Female" type="int"/>
+		<dataElement uid="madOGCuPg8q" code="StuntedFemaleHeight24to59" name="24 to 59 months Stunted Female height" type="int"/>
+		<dataElement uid="madOGCuPg8qMale" code="StuntedMaleHeight24to59" name="24 to 59 months Stunted Male height" type="int"/>
+		<dataElement uid="madOGCuPg8qTotal" code="StuntedFemaleHeight24to59" name="24 to 59 months Total Stunted height for both Male and Female" type="int"/>
+		<dataElement uid="mnsOAdOfXSi" code="SeverelyStuntedFemaleHeight24to59" name="24 to 59 months Severely Stunted Female height" type="int"/>
+		<dataElement uid="mnsOAdOfXSiMale" code="SeverelyStuntedFemaleHeight24to59" name="24 to 59 months Severely Stunted Male height" type="int"/>
+		<dataElement uid="mnsOAdOfXSiTotal" code="TotalSeverelyStuntedHeight24to59" name="24 to 59 months Total Severely Stunted height for both Male and Female" type="int"/>
+		<dataElement uid="YvAmz4L0a1d" code="OtherFemaleNewCWCVisit0to59" name="0 to 59 months New female visit" type="int"/>
+		<dataElement uid="YvAmz4L0a1dMale" code="OtherMaleNewCWCVisit0to59" name="0 to 59 months New Male visit" type="int"/>
+		<dataElement uid="YvAmz4L0a1dTotal" code="TotalOtherNewCWCVisit0to59" name="0 to 59 months Total New visit for both Male and Female" type="int"/>
+		<dataElement uid="TkwjrwghYVF" code="OtherKwashiorkorFemale" name="Female with Kwashiorkor" type="int"/>
+		<dataElement uid="TkwjrwghYVFMale" code="OtherKwashiorkorMale" name="Male with Kwashiorkor" type="int"/>
+		<dataElement uid="TkwjrwghYVFTotal" code="TotalOtherKwashiorkor" name="Total with Kwashiorkor both Male and Female" type="int"/>
+		<dataElement uid="IV9vOoO4Mo4" code="OtherMarasmusFemale" name="Female with Marasmus" type="int"/>
+		<dataElement uid="IV9vOoO4Mo4Male" code="OtherMarasmusMale" name="Male with Marasmus" type="int"/>
+		<dataElement uid="IV9vOoO4Mo4Total" code="TotalOtherMarasmus" name="months Total with Marasmus both male and female" type="int"/>
+		<dataElement uid="QDD62ZsbVnT" code="OtherFemaleFalteringWeight" name="Female with Faltering growth" type="int"/>
+		<datataElement uid="QDD62ZsbVnTMale" code="OtherMaleFalteringWeight" name="Male with Faltering growth" type="int"/>
+		<datataElement uid="QDD62ZsbVnTTotal" code="TotalOtherFalteringWeight" name="Total with Faltering growth both Male and Female" type="int"/>
+		<dataElement uid="QUueF25THDC" code="OtherFemaleEB0to6" name="0 to less than 6 months Female Exclusive  breast fed" type="int"/>
+		<dataElement uid="QUueF25THDCMale" code="OtherMaleEB0to6" name="0 to less than 6 months Male Exclusive  breast fed" type="int"/>
+		<dataElement uid="QUueF25THDCTotal" code="TotalOtherEB0to6" name="0 to less than 6 months Total Exclusive  breast fed both Male and Female" type="int"/>
+		<dataElement uid="NXl959cFhDr" code="OtherDewormedFemale12to59" name="12 to 59 months Dewormed Female" type="int"/>
+		<dataElement uid="NXl959cFhDrMale" code="OtherDewormedMale12to59" name="12 to 59 months Dewormed Male" type="int"/>
+		<dataElement uid="NXl959cFhDrTotal" code="OtherTotalDewormed12to59" name="12 to 59 months Total Dewormed both Male and Female" type="int"/>
+		<dataElement uid="z3kr3nMK3RI" code="OtherFemaleMNP6to23" name="6 to 23 months Female given MNPs Supplimentation" type="int"/>
+		<dataElement uid="z3kr3nMK3RIMale" code="OtherMaleMNP6to23" name="6 to 23 months Male given MNPs Supplimentation" type="int"/>
+		<dataElement uid="z3kr3nMK3RITotal" code="TotalOtherMNP6to23" name="6 to 23 months Total given MNPs Supplimentation both Male and Female" type="int"/>
+		<dataElement uid="xOHOlJimwwt" code="OtherFemaleDisability0to59" name="0 to 59 months Female with any disability" type="int"/>
+		<dataElement uid="xOHOlJimwwtMale" code="OtherMaleDisability0to59" name="0 to 59 months Male with any disability" type="int"/>
+		<dataElement uid="xOHOlJimwwtTotal" code="TotalOtherDisability0to59" name="0 to 59 months Total with any disability both Male and Female" type="int"/>-->
+
+	<!--Family Planning (Number of clients Issued with contraceptives)-->
+		
+        <dataElement uid="uHM6lzLXDBd" code="Progestin" name="New Client Pills progestin only" type="int"/>
+		<dataElement uid="uHM6lzLXDBdRe" code="ProgestinRe" name="Revisit Pills progestin only" type="int"/>
         <dataElement uid="BQmcVE8fex4" code="OralContraceptive" name="Pills Combined oral contraceptive" type="int"/>
+		<dataElement uid="BQmcVE8fex4Re" code="OralContraceptiveRe" name="Revisit Pills Combined oral contraceptive" type="int"/>
         <dataElement uid="paDQStynGGD" code="EmergContraceptive" name="Emergency contraceptive pill" type="int"/>
+		<dataElement uid="paDQStynGGDRe" code="EmergContraceptiveRe" name="Revisit Emergency contraceptive pill" type="int"/>
         <dataElement uid="yQFyyQBhXQf" code="FPInjections" name="FP Injections" type="int"/>
+		<dataElement uid="yQFyyQBhXQfRe" code="FPInjectionsRe" name="Revisit FP Injections" type="int"/>
         <dataElement uid="DuBH6qPPdaO" code="IUCDInsertions" name="IUCD insertion" type="int"/>
+		<dataElement uid="DuBH6qPPdaORe" code="IUCDInsertionsRe" name="Revisit IUCD insertion" type="int"/>
         <dataElement uid="otgQMOXuyIn" code="ImpInsertions" name="Implants insertion" type="int"/>
+		<dataElement uid="otgQMOXuyInRe" code="ImpInsertionsRe" name="Revisit Implants insertion" type="int"/>
         <dataElement uid="PggNwT09D3U" code="BTLSteril" name="Sterilization BTL" type="int"/>
+		<dataElement uid="PggNwT09D3URe" code="BTLSterilRe" name="Revisit Sterilization BTL" type="int"/>
         <dataElement uid="Nqt6rz4tqnm" code="VasecSteril" name="Sterilization Vasectomy" type="int"/>
+		<dataElement uid="Nqt6rz4tqnmRe" code="VasecSterilRe" name="Revisit Sterilization Vasectomy" type="int"/>
         <dataElement uid="cV4qoKSYiBs" code="MaleCDs" name="Client receiving Male condoms" type="int"/>
-        <dataElement uid="Fxb4iVJdw2g" code="FemaleCDs" name="Clients receiving Female Condoms" type="int"/>
+		<dataElement uid="Fxb4iVJdw2g" code="FemaleCDs" name="Clients receiving Female Condoms" type="int"/>
         <dataElement uid="OiuBpHJw4kf" code="NaturalFP" name="Natural Family Planning" type="int"/>
-        <dataElement uid="IjrWNuj9rzt" code="IUCDRem" name="IUCD Removals" type="int"/>
-        <dataElement uid="M4RzpOew1Im" code="ImplantsRem" name="Implants Removals" type="int"/>
-        <dataElement uid="G9COyloYLYa" code="ScreeningDone" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV"
-                     type="int"/>
+		<dataElement uid="OiuBpHJw4kfRe" code="NaturalFPRe" name="Revist Natural Family Planning" type="int"/>
+		 <dataElement uid="B2Pfs8oAuiy" code="TTAdolescents1014" name="New Total adolescent clients (10-14YRS) receiving FP Services" type="int"/>
+        <dataElement uid="B2Pfs8oAuiyRe" code="TTAdolescents1014Re" name="Revisit Total adolescent clients (10-14YRS) receiving FP Services" type="int"/>
+        <dataElement uid="YD9L08SeDPE" code="TTAdolescents1519" name="New Total adolescent clients (15-19YRS) receiving FP Services" type="int"/>
+        <dataElement uid="YD9L08SeDPERe" code="TTAdolescents1519Re" name="Revisit Total adolescent clients (15-19YRS) receiving FP Services" type="int"/>
+        <dataElement uid="kfuGsBdD3rp" code="TTYouthFPUpdate" name="Total youth clients (20-24YRS) receiving FP Services" type="int"/>
+        <dataElement uid="kfuGsBdD3rpRe" code="TTYouthFPUpdateRe" name="Total youth clients (20-24YRS) receiving FP Services" type="int"/>
+		<dataElement uid="IjrWNuj9rzt" code="IUCDRem" name="IUCD Removals" type="int"/>
+		        <dataElement uid="M4RzpOew1Im" code="ImplantsRem" name="Implants Removals" type="int"/>
+		<dataElement uid="G9COyloYLYa2549lessthan25" code="ScreeningDoneUnder25" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV less than 25years"
+                    type="int"/>
 		<dataElement uid="G9COyloYLYa2549" code="ScreeningDone2549" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV 25-49years"
                     type="int"/>
 		<dataElement uid="G9COyloYLYa2549greater50" code="ScreeningDoneOver50" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV greater than 50years"
                     type="int"/>
-		<dataElement uid="G9COyloYLYa2549lessthan25" code="ScreeningDoneUnder25" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV less than 25years"
-                    type="int"/>
-        <dataElement uid="dBdw7Inlq2C" code="PositiveVIA" name="Cervical cancer clients with Positive VIA/VILI result"
+		<dataElement uid="kl4RvWOGb7x2549" code="ScreenedPAPSmear2549" name="Cervical cancer clients screened for Pap smear 25-49years"
                      type="int"/>
-        <dataElement uid="LI2g0vO0xvx" code="ScreenedHPV" name="Cervical cancer clients screened for HPV test"
+		<dataElement uid="kl4RvWOGb7x50" code="ScreenedPAPSmearOver50" name="Cervical cancer clients screened for Pap smear 50+years"
                      type="int"/>
-		<dataElement uid="LI2g0vO0xvxposHPV" code="PositiveHPV" name="Cervical cancer clients screened with positive HPV result"
+        <dataElement uid="LI2g0vO0xvx25" code="ScreenedHPV25" name="Cervical cancer clients screened for HPV test under 25years"
                      type="int"/>
-		<dataElement uid="LI2g0vO0xvxleep" code="TreatLEEP" name="Cervical cancer treated using LEEP"
+		<dataElement uid="LI2g0vO0xvx2549" code="ScreenedHPV2549" name="Cervical cancer clients screened for HPV test 25-49years"
                      type="int"/>
-		<dataElement uid="LI2g0vO0xvxposhiv" code="HIVPosCervical" name="HIV positive clients screened for cervical cancer"
-                     type="int"/>			 
-		<dataElement uid="xbERCTpWTwi" code="PositiveCytology"
-		             name="Cervical cancer clients with Positive Cytology result" type="int"/>
-		<dataElement uid="xbERCTpWTwisuspiciouscancer" code="CancerLesions" name="Cervical cancer clients with suspicious cancer lesions" type="int"/>
-		<dataElement uid="xbERCTpWTwicyrotherapy" code="ScreenedCyrotherapy" name="Cervical cancer clients treated using Cryotherapy	" type="int"/>
-		<dataElement uid="kl4RvWOGb7x" code="ScreenedPAPSmear" name="Cervical cancer clients screened for Pap smear"
+		<dataElement uid="LI2g0vO0xvx50" code="ScreenedHPVOver50" name="Cervical cancer clients screened for HPV test 50+years"
                      type="int"/>
-        <dataElement uid="eVukgTGwvaA" code="PNCBreastExam" name="PNC Breast examination" type="int"/>
+		<dataElement uid="dBdw7Inlq2C25" code="PositiveVIA25" name="Cervical cancer clients with Positive VIA/VILI result less than 25years"
+                     type="int"/>
+		<dataElement uid="dBdw7Inlq2C2549" code="PositiveVIA2549" name="Cervical cancer clients with Positive VIA/VILI result 25-49years"
+                     type="int"/>
+		<dataElement uid="dBdw7Inlq2C50" code="PositiveVIAOver50" name="Cervical cancer clients with Positive VIA/VILI result 50+years"
+                     type="int"/>
+		<dataElement uid="xbERCTpWTwi25" code="PositiveCytology25" name="Cervical cancer clients with Positive Cytology result less than 25years" type="int"/>
+		<dataElement uid="xbERCTpWTwi2549" code="PositiveCytology2549" name="Cervical cancer clients with Positive Cytology result 25-49years" type="int"/>
+		<dataElement uid="xbERCTpWTwi50" code="PositiveCytologyOver50" name="Cervical cancer clients with Positive Cytology result 50+years" type="int"/>
+		
+		<dataElement uid="LI2g0vO0xvxposHPV25" code="PositiveHPV25" name="Cervical cancer clients screened with positive HPV result less than 25years" type="int"/>
+		<dataElement uid="LI2g0vO0xvxposHPV2549" code="PositiveHPV2549" name="Cervical cancer clients screened with positive HPV result 25-49years" type="int"/>
+		<dataElement uid="LI2g0vO0xvxposHPV50" code="PositiveHPVOver50" name="Cervical cancer clients screened with positive HPV result 50+years" type="int"/>
+		<!-- Not handled in system
+        <dataElement uid="xbERCTpWTwisuspiciouscancer25" code="CancerLesions25" name="Cervical cancer clients with suspicious cancer lesions less than 25years" type="int"/>
+		<dataElement uid="xbERCTpWTwisuspiciouscancer2549" code="CancerLesions2549" name="Cervical cancer clients with suspicious cancer lesions 25-49years" type="int"/>
+		<dataElement uid="xbERCTpWTwisuspiciouscancer50" code="CancerLesionsOver50" name="Cervical cancer clients with suspicious cancer lesions 50+years" type="int"/>
+		<dataElement uid="xbERCTpWTwicyrotherapy25" code="ScreenedCyrotherapy25" name="Cervical cancer clients treated using Cryotherapy less than 25years" type="int"/>
+		<dataElement uid="xbERCTpWTwicyrotherapy2549" code="ScreenedCyrotherapy2549" name="Cervical cancer clients treated using Cryotherapy 25-49years" type="int"/>
+		<dataElement uid="xbERCTpWTwicyrotherapy50" code="ScreenedCyrotherapyOver50" name="Cervical cancer clients treated using Cryotherapy 50+years" type="int"/>
+		<dataElement uid="LI2g0vO0xvxleep25" code="TreatLEEP25" name="Cervical cancer treated using LEEP less than 25years" type="int"/>
+		<dataElement uid="LI2g0vO0xvxleep2549" code="TreatLEEP2549" name="Cervical cancer treated using LEEP 25-49years" type="int"/>
+		<dataElement uid="LI2g0vO0xvxleep50" code="TreatLEEPOver50" name="Cervical cancer treated using LEEP 50+years" type="int"/>-->
+		<dataElement uid="LI2g0vO0xvxposhiv25" code="HIVPosCervical25" name="HIV positive clients screened for cervical cancer less than 25years" type="int"/>			 
+		<dataElement uid="LI2g0vO0xvxposhiv2549" code="HIVPosCervical2549" name="HIV positive clients screened for cervical cancer 25-49" type="int"/>
+		<dataElement uid="LI2g0vO0xvxposhiv50" code="HIVPosCervicalOver50" name="HIV positive clients screened for cervical cancer 50+years" type="int"/>
+		<dataElement uid="eVukgTGwvaA" code="PNCBreastExam" name="PNC Breast examination" type="int"/>
         <dataElement uid="XFB5uB0XUK9" code="PNCCounselled" name="PNC women counselled" type="int"/>
         <dataElement uid="PxhvYOS2emu" code="PNCFistula" name="PNC fistula cases" type="int"/>
         <dataElement uid="xsiURSENUor" code="PNCExercises" name="PNC exercises" type="int"/>
@@ -273,54 +442,895 @@
                     #INCLUDE <rape-survivors-seen.pending.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<!-- Maternity Elements
+			<dataValueTemplate dataElement="NormalDel" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
 
+            <dataValueTemplate dataElement="CSection" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="BreachDel" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="AVagDel" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="LiveBirth" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="FreshStillBirth" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaceratedStillBirth" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="BirthWithDef" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NoWithLowScore" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NoOfBabiesWith2500gramsOrLower" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NoofBabiesGiventetracycline" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PreTermBabies" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NoOfBabiesDischargedAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NoOfInfantsInitiatedOnBF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+        <dataValueTemplate dataElement="TTDelHIVPosWomen" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NeonatalDeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="NoOfAdoleMaternalDeath" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaternalDeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaternalDeathAudits" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="APHAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="APHADeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="PPHAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="PPHADeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="EclampsiaAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="EclampsiaDeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="RupturedUterusAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="RupturedUterusDeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="ObstructedLabourAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+            <dataValueTemplate dataElement="ObstructedLabourDeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="SepsisAlive" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="SepsisDeaths" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaternalRFOHF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaternalRFCUnit" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaternalRTOHF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+            <dataValueTemplate dataElement="MaternalRTCUnit" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate> -->
+			
+			<!-- Child Health and Nutrition Information System
+			    <dataValueTemplate dataElement="twpy25QKLk9" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="twpy25QKLk9Male" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="twpy25QKLk9Total" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="qoEPwxCNrll" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="qoEPwxCNrllMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="qoEPwxCNrllTotalqoEPwxCNrllTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="ENjll6PbaI8" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="ENjll6PbaI8Male" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="ENjll6PbaI8Total" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="QCNHvzgxurQ" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="QCNHvzgxurQMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="QCNHvzgxurQTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="lvyOQjZaXZ3" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="lvyOQjZaXZ3Male" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="lvyOQjZaXZ3Total" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="ikI4r8YuZZ0" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="ikI4r8YuZZ0Male" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="ikI4r8YuZZ0Total" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="uYBa6RU8wUZ" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="uYBa6RU8wUZMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="uYBa6RU8wUZTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+    
+    <dataValueTemplate dataElement="Ype6qUApdlR" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="Ype6qUApdlRMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="Ype6qUApdlRTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="k3xX4NKJaaY" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="k3xX4NKJaaYMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="k3xX4NKJaaYTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="PW4W1Fa7b5b" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+    <dataValueTemplate dataElement="PW4W1Fa7b5bMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="PW4W1Fa7b5bTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="qoEPwxCNrll" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="qoEPwxCNrllMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="qoEPwxCNrllTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="AYT1IPxFRZx" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="AYT1IPxFRZxMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+    <dataValueTemplate dataElement="AYT1IPxFRZxTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="HlZXTFN2B61" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="HlZXTFN2B61Male" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="HlZXTFN2B61Total" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>		
+			
+	<dataValueTemplate dataElement="mv0ICssqScK" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="mv0ICssqScKMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="mv0ICssqScKTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+   
+    <dataValueTemplate dataElement="zels3jARvGQ" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="zels3jARvGQMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="zels3jARvGQTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="BZbUjXynxfr" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="BZbUjXynxfrMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="BZbUjXynxfrTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="i2eE15DhmMB" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+    <dataValueTemplate dataElement="i2eE15DhmMBMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="i2eE15DhmMBTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="sTjfhcH5iXK" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="sTjfhcH5iXKMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+				
+	<dataValueTemplate dataElement="sTjfhcH5iXKTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="BKq0EhyLtyd" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="BKq0EhyLtydMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+    <dataValueTemplate dataElement="BKq0EhyLtydTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="f0SJMmqh8un" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="f0SJMmqh8unMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="f0SJMmqh8unTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="YloG1P6jXSR" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="YloG1P6jXSRMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="YloG1P6jXSRTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>			
+			
+	<dataValueTemplate dataElement="PM29pHKJGep" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="PM29pHKJGepMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="PM29pHKJGepTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="madOGCuPg8q" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="madOGCuPg8qMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="madOGCuPg8qTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+   
+    <dataValueTemplate dataElement="mnsOAdOfXSi" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="mnsOAdOfXSiMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="mnsOAdOfXSiTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="YvAmz4L0a1d" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="YvAmz4L0a1dMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="YvAmz4L0a1dTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="TkwjrwghYVF" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+    <dataValueTemplate dataElement="TkwjrwghYVFMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="TkwjrwghYVFTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="IV9vOoO4Mo4" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="IV9vOoO4Mo4Male" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+	<dataValueTemplate dataElement="IV9vOoO4Mo4Total" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="QDD62ZsbVnT" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="QDD62ZsbVnTMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+
+    <dataValueTemplate dataElement="QDD62ZsbVnTTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="QUueF25THDC" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="QUueF25THDCMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="QUueF25THDCTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			
+	<dataValueTemplate dataElement="NXl959cFhDr" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="NXl959cFhDrMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="NXl959cFhDrTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>			
+ 
+    <dataValueTemplate dataElement="z3kr3nMK3RI" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="z3kr3nMK3RIMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="z3kr3nMK3RITotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="xOHOlJimwwt" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+	
+	<dataValueTemplate dataElement="xOHOlJimwwtMale" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+	<dataValueTemplate dataElement="xOHOlJimwwtTotal" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>-->
+   
+    <!--Family Planning (Number of clients Issued with contraceptives)-->
             <dataValueTemplate dataElement="Progestin" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-pills-progestin-only.pending.sql>
+                    #INCLUDE <new-family-planning-progestin-pills-only.sql>
                 </annotation>
             </dataValueTemplate>
-
+			<dataValueTemplate dataElement="ProgestinRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-progestin-only-pills.sql>
+                </annotation>
+            </dataValueTemplate>
+			
             <dataValueTemplate dataElement="OralContraceptive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-pills-combined-with-oral-contraceptives.sql>
+                    #INCLUDE <new-family-planning-combined-oral-contraceptive-pills.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="OralContraceptiveRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-combined-oral-contraceptive-pills.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="EmergContraceptive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-emergency-contraceptive-pills.sql>
+                    #INCLUDE <new-family-planning-emergency-contraceptive-pills.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="EmergContraceptiveRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-emergency-contraceptive-pills.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="FPInjections" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-fp-injections.sql>
+                    #INCLUDE <new-family-planning-injectibles.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="FPInjectionsRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-injectibles.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="IUCDInsertions" disaggregation="OzshuDqmXQI">
                 <annotation>
-                   #INCLUDE <family-planning-iucd-insertions.sql>
+                   #INCLUDE <new-family-planning-iucd-insertion.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="IUCDInsertionsRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                   #INCLUDE <revisit-family-planning-iucd-insertion.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="ImpInsertions" disaggregation="OzshuDqmXQI">
                 <annotation>
-                   #INCLUDE <family-planning-implants-insertions.sql>
+                   #INCLUDE <new-family-planning-implant-insertion.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="ImpInsertionsRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                   #INCLUDE <revisit-family-planning-implant-insertion.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="BTLSteril" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-sterilization-btl.sql>
+                    #INCLUDE <new-family-planning-sterilization-btl.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="BTLSterilRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-sterilization-btl.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="VasecSteril" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-sterilization-vasectomy.sql>
+                    #INCLUDE <new-family-planning-sterilization-vasectomy.sql>
                 </annotation>
             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="VasecSterilRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-sterilization-vasectomy.sql>
+                </annotation>
+            </dataValueTemplate>
+			
 
             <dataValueTemplate dataElement="MaleCDs" disaggregation="OzshuDqmXQI">
                 <annotation>
@@ -336,24 +1346,67 @@
 
             <dataValueTemplate dataElement="NaturalFP" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-natural-family-planning.sql>
+                    #INCLUDE <new-family-planning-natural.sql>
                 </annotation>
             </dataValueTemplate>
-            <dataValueTemplate dataElement="IUCDRem" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="NaturalFPRe" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-iucd-removal.sql>
+                    #INCLUDE <revisit-family-planning-natural.sql>
                 </annotation>
             </dataValueTemplate>
-            <dataValueTemplate dataElement="ImplantsRem" disaggregation="OzshuDqmXQI">
+			
+            <dataValueTemplate dataElement="TTAdolescents1014" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <family-planning-implant-removal.pending.sql>
+                    #INCLUDE <new-family-planning-total-number-of-patients-between-10-and-14-years.sql>
                 </annotation>
             </dataValueTemplate>
-
-
-            <dataValueTemplate dataElement="ScreeningDone" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="TTAdolescents1014Re" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-screening-done.pending.sql>
+                    #INCLUDE <revisit-family-planning-total-number-of-patients-between-10-and-14-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="TTAdolescents1519" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <new-family-planning-total-number-of-patients-between-15-and-19-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+            <dataValueTemplate dataElement="TTAdolescents1519Re" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-total-number-of-patients-between-15-and-19-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="TTYouthFPUpdate" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <new-family-planning-total-number-of-patients-between-20-and-24-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="TTYouthFPUpdateRe" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <revisit-family-planning-total-number-of-patients-between-20-and-24-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="IUCDRem" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <new-family-planning-iucd-removal.sql>
+                </annotation>
+            </dataValueTemplate>
+            
+			<dataValueTemplate dataElement="ImplantsRem" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <new-family-planning-implant-removal.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+            <dataValueTemplate dataElement="ScreeningDoneUnder25" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-less-than-25years.sql>
                 </annotation>
             </dataValueTemplate>
 			
@@ -363,74 +1416,178 @@
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="ScreeningDoneOver50" disaggregation="OzshuDqmXQI">
-                <annotation>
+			<dataValueTemplate dataElement="ScreeningDoneover50" disaggregation="OzshuDqmXQI">
+                <annotation>	
                     #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-greater-than-50years.sql>
                 </annotation>
             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="ScreenedPAPSmear2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-screened-using-pap-25-to-49-years.sql>
+                </annotation>
+            </dataValueTemplate>
+				
 			
-			<dataValueTemplate dataElement="ScreeningDoneUnder25" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="ScreenedPAPSmearOver50" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-less-than-25years.sql>
-                </annotation>
-            </dataValueTemplate>
-
-            <dataValueTemplate dataElement="PositiveVIA" disaggregation="OzshuDqmXQI">
-                <annotation>
-                    #INCLUDE <cervical-cancer-clients-with-positive-VIA-VILI.sql>
-                </annotation>
-            </dataValueTemplate>
-
-
-            <dataValueTemplate dataElement="ScreenedHPV" disaggregation="OzshuDqmXQI">
-                <annotation>
-                    #INCLUDE <cervical-cancer-clients-screened-for-hpv-test.pending.sql>
+                    #INCLUDE <cervical-cancer-clients-screened-using-pap-above-50-years.sql>
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="PositiveHPV" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="ScreenedHPV25" disaggregation="OzshuDqmXQI">
                 <annotation>
-                   #INCLUDE <cervical-cancer-clients-with-positive-hpv-result.pending.sql>
+                    #INCLUDE <cervical-cancer-clients-screened-using-hpv-below-25-years.sql>
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="TreatLEEP" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="ScreenedHPV2549" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-treated-using-leep.pending.sql>
+                    #INCLUDE <cervical-cancer-clients-screened-using-hpv-25-to-49-years.sql>
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="HIVPosCervical" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="ScreenedHPVOver50" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <hiv-pos-clients-screened-for-cervical-cancer.pending.sql>
+                    #INCLUDE <cervical-cancer-clients-screened-using-hpv-above-50-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveVIA25" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-via-result-below-25-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveVIA2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-via-result-between-25-and-49-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveVIAOver50" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-via-result-above-50-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveCytology25" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-pap-result-below-25-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveCytology2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-pap-result-between-25-and-49-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveCytologyOver50" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-pap-result-above-50-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveHPV25" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-hpv-result-below-25-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveHPV2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-hpv-result-between-25-and-49-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="PositiveHPVOver50" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-positive-hpv-result-above-50-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			<!--
+			<dataValueTemplate dataElement="CancerLesions25" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="CancerLesions2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="CancerLesionsOver50" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="PositiveCytology" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="ScreenedCyrotherapy25" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-with-positive-cytology-result.pending.sql>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>	
+			
+			<dataValueTemplate dataElement="ScreenedCyrotherapy2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="ScreenedCyrotherapy" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="ScreenedCyrotherapyOver50" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-treated-using-cyrotherapy.pending.sql>
+                    #INCLUDE <xxx.sql>
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="CancerLesions" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="TreatLEEP25" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-clients-with-suspicious-cancer-lesions.pending.sql>
+                    #INCLUDE <xxx.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="ScreenedPAPSmear" disaggregation="OzshuDqmXQI">
+			
+			
+			<dataValueTemplate dataElement="TreatLEEP2549" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <cervical-cancer-clients-screened-using-pap.pending.sql>
+                    #INCLUDE <xxx.sql>
                 </annotation>
             </dataValueTemplate>
-
-            <dataValueTemplate dataElement="PNCBreastExam" disaggregation="OzshuDqmXQI">
+			
+			<dataValueTemplate dataElement="TreatLEEPOver50" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <xxx.sql>
+                </annotation>
+            </dataValueTemplate>-->
+			
+			
+			<dataValueTemplate dataElement="HIVPosCervical25" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-hiv-screened-below-25-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="HIVPosCervical2549" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-hiv-screened-between-25-and-49-years.sql>
+                </annotation>
+            </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="HIVPosCervicalOver50" disaggregation="OzshuDqmXQI">
+                <annotation>
+                    #INCLUDE <cervical-cancer-clients-with-hiv-screened-above-50-years.sql>
+                </annotation>
+            </dataValueTemplate>
+		      
+			<dataValueTemplate dataElement="PNCBreastExam" disaggregation="OzshuDqmXQI">
                 <annotation>
                    #INCLUDE <PNC-breast-examination.sql>
                 </annotation>
