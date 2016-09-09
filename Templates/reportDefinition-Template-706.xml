@@ -268,674 +268,674 @@
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="UrineChemTT" disaggregation="OzshuDqmXQI">
              <annotation>
-             	#INCLUDE <xxx.sql>
+             	#INCLUDE <urine-analysis-chemistry-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="NoPosGlucose" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-chemistry-glucose-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="NoPosKetones" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-chemistry-ketones-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="NoPosProteins" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-chemistry-proteins-positive.sql>
              </annotation>
              </dataValueTemplate>
 		 	<dataValueTemplate dataElement="UrineMicroscopyTT" disaggregation="OzshuDqmXQI">
              <annotation>
-             	#INCLUDE <xxx.sql>
+             	#INCLUDE <urine-analysis-microscopy-total.sql>
            </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="PusCells" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-microscopy-pus-cells-positive.sql>
 		     </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="SHaematobium" disaggregation="OzshuDqmXQI">
              <annotation>
-             	#INCLUDE <xxx.sql>          
+             	#INCLUDE <urine-analysis-microscopy-haematobium-positive.sql>          
              </annotation>
              </dataValueTemplate>
 
 			 <dataValueTemplate dataElement="TVaginalis" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-microscopy-vaginalis-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
              <dataValueTemplate dataElement="YeastCells" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-microscopy-yeast-cells-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="Bacteria" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <urine-analysis-microscopy-bacteria-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="BldSugarTT" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>           
+				#INCLUDE <blood-chemistry-blood-sugar-test-total.sql>           
 			</annotation>
              </dataValueTemplate>	
 			 
 			 <dataValueTemplate dataElement="BldSugarLow" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <blood-chemistry-blood-sugar-test-low.sql>
             </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="BldSugarHigh" disaggregation="OzshuDqmXQI">
              <annotation>
-			#INCLUDE <xxx.sql>
+			#INCLUDE <blood-chemistry-blood-sugar-test-high.sql>
         </annotation>
              </dataValueTemplate>	
 
 			<dataValueTemplate dataElement="OGTTTT" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <blood-chemistry-blood-ogtt-total.sql>
             </annotation>
              </dataValueTemplate>			 
 			 
 			 <dataValueTemplate dataElement="OGTTLow" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <blood-chemistry-blood-ogtt-low.sql>
            </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OGTTHigh" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <blood-chemistry-blood-ogtt-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 
 			 <dataValueTemplate dataElement="RenalTestTT" disaggregation="OzshuDqmXQI">
              <annotation>
-             	#INCLUDE <xxx.sql>
+             	#INCLUDE <renal-function-total.sql>
              </annotation>
              </dataValueTemplate>	
 			 
 			  <dataValueTemplate dataElement="LowCreatinine" disaggregation="OzshuDqmXQI">
              <annotation>
-             	#INCLUDE <xxx.sql>
+             	#INCLUDE <renal-function-creatinine-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="HighCreatinine" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <renal-function-creatinine-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowUrea" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <renal-function-urea-low.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="HighUrea" disaggregation="OzshuDqmXQI">
              <annotation>
-                #INCLUDE <xxx.sql>
+                #INCLUDE <renal-function-urea-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 
 			 <dataValueTemplate dataElement="LowSodium" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <renal-function-sodium-low.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="HighSodium" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <renal-function-sodium-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowPotassium" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <renal-function-potassium-low.sql>
              </annotation>
              </dataValueTemplate> 
 
 			  <dataValueTemplate dataElement="HighPotassium" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <renal-function-potassium-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowChlorides" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <renal-function-chlorides-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="HighChlorides" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <renal-function-chlorides-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="LiverTest" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <liver-function-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowDirectBilirubin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-direct-bilirubin-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="HighDirectBilirubin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-direct-bilirubin-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="LowTotalBilirubin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-total-bilirubin-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="HighTotalBilirubin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-total-bilirubin-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="LowASAT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-asat-sgot-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="HighASAT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-asat-sgot-high.sql>
              </annotation>
              </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="LowSerumProtein" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-serum-protein-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="HighSerumProtein" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-serum-protein-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowAlbumin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-albumin-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="HighAlbumin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-albumin-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="LowAlkalinePhosphatase" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-alkaline-phosphatase-low.sql>
              </annotation>
              </dataValueTemplate>
 
               <dataValueTemplate dataElement="HighAlkalinePhosphatase" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <liver-function-alkaline-phosphatase-high.sql>
              </annotation>
              </dataValueTemplate>
 
  			<dataValueTemplate dataElement="TTTotalCholestrol" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <lipid-profile-total-cholestral-total.sql>
              </annotation>
              </dataValueTemplate>				 
 			 
 			 <dataValueTemplate dataElement="LowTotalCholestrol" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <lipid-profile-total-cholestral-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="HighTotalCholestrol" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <lipid-profile-total-cholestral-high.sql>
              </annotation>
              </dataValueTemplate> 
 
 			  <dataValueTemplate dataElement="TTTriglycerides" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <lipid-profile-triglycerides-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowTriglycerides" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <lipid-profile-triglycerides-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="HighTriglycerides" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <lipid-profile-triglycerides-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="TTLDL" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <xxx.sql>
+				#INCLUDE <lipid-profile-ldl-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowLDL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <lipid-profile-ldl-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="HighLDL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <lipid-profile-ldl-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="TTT3" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-t3-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="LowT3" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-t3-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="HighT3" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-t3-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="TTT4" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-t4-total.sql>
              </annotation>
              </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="LowT4" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-t4-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="HighT4" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-t4-high.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTTSH" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-tsh-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="LowTSH" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-tsh-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="HighTSH" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-tsh-high.sql>
              </annotation>
              </dataValueTemplate>
 
               <dataValueTemplate dataElement="TTPSA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-psa-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="LowPSA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-psa-low.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="HighPSA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <hormonal-test-psa-high.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTCEA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tumor-markers-cea-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="PosCEA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tumor-markers-cea-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="TTC153" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tumor-markers-c15-3-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="PosC153" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tumor-markers-c15-3-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTCSFChemProteins" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <csf-chemistry-protein-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="LowCSFChemProteins" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <csf-chemistry-protein-low.sql>
              </annotation>
              </dataValueTemplate>
 
 
              <dataValueTemplate dataElement="HighCSFChemProteins" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <csf-chemistry-protein-high.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTCSFChemGlucose" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <csf-chemistry-glucose-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="LowCSFChemGlucose" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <csf-chemistry-glucose-low.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="HighCSFChemGlucose" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <csf-chemistry-glucose-high.sql>
              </annotation>
              </dataValueTemplate>
 
 			  <dataValueTemplate dataElement="TTMalariaBSLessthan5" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <malaria-test-bs-under-five-years-total.sql>
              </annotation>
              </dataValueTemplate>
 
               <dataValueTemplate dataElement="PosMalariaBSLessthan5" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <malaria-test-bs-under-five-years-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTMalariaBS5yrsAbove" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <malaria-test-bs-over-five-years-total.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="PosMalariaBS5yrsAbove" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <malaria-test-bs-over-five-years-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTMalariaRapidTests" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <malaria-test-rapid-diagnostic-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="PosMalariaRapidTests" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <malaria-test-rapid-diagnostic-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="StoolExaminationTSpp" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-taenia-spp-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="StoolExaminationHNana" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-hymenolepis-nana-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="StoolExaminationHookWorms" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-hookworm-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="StoolExaminationRoundWorms" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-roundworm-positive.sql>
              </annotation>
              </dataValueTemplate>
              <dataValueTemplate dataElement="StoolExaminationSMansoni" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-s-mansoni-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="StoolExaminationTTrichura" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-trichuris-trichura-positive.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="StoolExaminationAmoeba" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-examination-amoeba-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTFullBldCount" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-full-blood-count-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTFullBldCountLessthan5" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-full-blood-count-less-than-5.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTFullBldCountBetween5and10" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-full-blood-count-between-five-and-ten.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTHBEstimation" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-hb-estimation-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTHBEstimationLessthan5" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-hb-estimation-less-than-5.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTHBEstimationBetween5and10" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-hb-estimation-between-five-and-ten.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTCD4Count" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-test-cd4-count-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="CD4CountLessthan500" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <haematology-test-cd4-count-below-500.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTSicklingtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-sickling-test-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="PosSicklingtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-sickling-test-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTPBloodFilms" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-peripheral-blood-films-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTBMA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-bma-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTCoagulateProfile" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-coagulation-profile-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTRetCount" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-reticulocyte-total.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTESRate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-erythrocyte-sedimentation-rate-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="HighESRate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <other-haematology-erythrocyte-sedimentation-rate-high.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoOfTTBGrpTests" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-grouping-total-blood-group-tests.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoOfBldUnitsGrp" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-grouping-blood-units-grouped.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoOfBLDUnitsReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-safety-blood-units-received-from-transfusion-centres.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoOfBldUnitsCollected" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-safety-blood-units-collected-at-facility.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoOfBldUnitsTransfused" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-safety-blood-units-transfused.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoOfTransReactionsReported" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-safety-transfusion-reactions-reported-and-investigated.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoOfBldGrpMatched" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-safety-blood-grouping-and-cross-matched.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoOfBldUnitsDiscarded" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-safety-blood-units-discarded.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoOfBldUnitsScreened4HIV" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-screening-at-facility-hiv-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoOfBldUnitsScreened4HepB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-screening-at-facility-hepatitis-b-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoOfBldUnitsScreened4HepC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-screening-at-facility-hepatitis-c-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoOfBldUnitsScreened4Syphillis" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <blood-screening-at-facility-syphillis-positive.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -945,301 +945,301 @@
 
              <dataValueTemplate dataElement="TTUrine" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-urine-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTUrineCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-urine-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosUrineCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-urine-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTPusswabs" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-pus-swabs-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTPusswabsCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-pus-swabs-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosPusswabsCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-pus-swabs-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTHighVaginalSwabs" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-igh-vaginal-swabs-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTHighVaginalSwabsCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-igh-vaginal-swabs-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoHighVaginalSwabsPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-high-vaginal-swabs-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTThroatswab" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-throat-swab-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTThroatswabCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-throat-swab-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoThroatswabPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-throat-swab-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTRectalSwab" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-rectal-swab-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTRectalSwabCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-rectal-swab-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoRectalSwabPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-rectal-swab-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTBlood" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-blood-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTBloodCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-blood-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoBloodPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-blood-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTWater" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-water-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTWaterCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-water-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoWaterPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-water-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTFood" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-food-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTFoodCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-food-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoFoodPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-food-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTUrethralSwabs" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-urethral-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTUrethralSwabsCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-urethral-total-cultures.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoUrethralSwabsPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacteriologal-sample-urethral-no-culture-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTStoolCultures" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-enteric-pathogens-stool-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTStoolPosCulture" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-enteric-pathogens-stool-number-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosSTyphi" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-isolates-salmonella-typhi-number-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoPosSDType1" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-isolates-shigella-dysenteriae-type1-number-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosEcoli" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-isolates-e.coli-number-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosCholerae01" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-isolates-v.cholerae-O1-number-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosCholerae02" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <stool-isolates-v.cholerae-O139-number-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="CSFTTExam" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-csf-culture-total-exam.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="CSFNoPositive" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-csf-culture-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="CSFNoContaminated" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-csf-culture-no-contaminated.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosNMA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-neisseria-meningitidis.a-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosNMB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-neisseria-meningitidis.b-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosNMC" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-neisseria-meningitidis.c-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoPosNMW135" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-neisseria-meningitidis.w135-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosNMX" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-neisseria-meningitidis.x-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoPosNMY" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-neisseria-meningitidis.y-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosNMIndeterminate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-n.meningitidis-indeterminate-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="NoPosNSP" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-streptococcus-pneumoniae-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosHITypeB" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-haemophilus-influenzae-type.b-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoPosCM" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-meningitis-serotypes-cryptococcal-meningitis-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="NoPosBA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-pathogens-b.anthracis-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="NoPosNPYP" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bacterial-pathogens-y.pestis-no-positive.sql>
              </annotation>
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTTBSmearsExam" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-total-tb-smears.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1251,7 +1251,7 @@
 
   			<dataValueTemplate dataElement="TTTBnewsuspectsExam" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-tb-new-suspects.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1263,7 +1263,7 @@
 
   			<dataValueTemplate dataElement="TTTBFollowupExam" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-tb-follow-up.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1275,7 +1275,7 @@
 
 			<dataValueTemplate dataElement="TTRifampicinResistantTBExam" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-rifampicin-resistant-tb.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1287,7 +1287,7 @@
 
   			<dataValueTemplate dataElement="TTMDRTBExam" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <sputum-mbr-tb.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1303,133 +1303,133 @@
 
   			<dataValueTemplate dataElement="TTPAPSmear" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <smears-pap-smear-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantPAPSmear" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <smears-pap-smear-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTTouchPrep" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <smears-tissue-touch-preparation-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantTouchPrep" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <smears-tissue-touch-preparation-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTTissueImpressions" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <smears-tissue-impressions-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="MalignantTissueImpressions" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <smears-tissue-impressions-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTFANThyroid" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-thyroid-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="MalignantFANThyroid" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-thyroid-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTFANLymphNodes" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-lymph-node-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="MalignantFANLymphNodes" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-lymph-nodes-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTFANLiver" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-liver-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantFANLiver" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-liver-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTFANBreast" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-breast-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantFANBreast" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-breast-malignant.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="TTFANSTMasses" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-soft-tissue-masses-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="MalignantFANSTMasses" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fnac-soft-tissue-masses-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTFCAsciticFluid" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-ascitic-fluid-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="MalignantFCAsciticFluid" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-ascitic-fluid-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTFCCSF" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-csf-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="MalignantFCCSF" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-csf-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTFCPleuralfluid" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-pleural-fluid-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantFCPleuralfluid" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <fluid-cytology-pleural-fluid-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
@@ -1447,277 +1447,277 @@
              
              <dataValueTemplate dataElement="TTTHCervix" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-cervix-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="MalignantTHCervix" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-cervix-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTTHProstrate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-prostrate-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="MalignantTHProstrate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-prostrate-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTTHBreasttissue" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-breast-tissue-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="MalignantTHBreasttissue" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-breast-tissue-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTTHOvary" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-ovary-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantTHOvary" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-ovary-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTTHUterus" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-uterus-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantTHUterus" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-uterus-malignant.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="TTTHSkin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-skin-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="MalignantTHSkin" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-skin-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTTHHeadandNeck" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-head-and-neck-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="MalignantTHHeadandNeck" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-head-and-neck-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTTHDental" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-dental-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="MalignantTHDental" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-dental-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTTHGIT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-git-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantTHGIT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-git-malignant.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTTHLNTissue" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-lymph-nodes-tissue-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="MalignantTHLNTissue" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <tissue-histology-lymph-nodes-tissue-malignant.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="TTBonemarrowaspirate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bone-marrow-study-bone-marrow-aspirate-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="MalignantBonemarrowaspirate" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bone-marrow-study-bone-marrow-aspirate-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTTrephinebiopsy" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bone-marrow-study-trephine-biopsy-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="MalignantTrephinebiopsy" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <bone-marrow-study-trephine-biopsy-malignant.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTVDRL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-vdrl-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="PosVDRL" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-vdrl-positive.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="TTTPHA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-tpha-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="PosTPHA" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-tpha-positive.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTASOT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-asot-total.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="PosASOT" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-asot-positive.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="TTHIV" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hiv-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="PosHIV" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hiv-positive.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTBrucella" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-brucella-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="PosBrucella" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-brucella-positive.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTRheumatoidfactor" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-rheumatoid-factor-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="PosRheumatoidfactor" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-rheumatoid-factor-positive.sql>
              </annotation>
              </dataValueTemplate>
 
  			<dataValueTemplate dataElement="TTHelicobacterpylori" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-helicobacter-pylori-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="PosHelicobacterpylori" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-helicobacter-pylori-positive.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTHepatitisAtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hepatitis-a-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="PosHepatitisAtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hepatitis-a-positive.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTHepatitisBtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hepatitis-b-total.sql>
              </annotation>
              </dataValueTemplate>
              
              <dataValueTemplate dataElement="PosHepatitisBtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hepatitis-b-positive.sql>
              </annotation>
              </dataValueTemplate>
 
             <dataValueTemplate dataElement="TTHepatitisCtest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hepatitis-c-total.sql>
              </annotation>
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="PosHCG" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-hcg-positive.sql>
              </annotation>
              </dataValueTemplate>	
 
   			<dataValueTemplate dataElement="TTCRAGTest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-crag-test-total.sql>
              </annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="PosCRAGTest" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <xxx.sql>
+				 #INCLUDE <serology-crag-test-positive.sql>
              </annotation>
              </dataValueTemplate>	
 
