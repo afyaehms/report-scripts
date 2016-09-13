@@ -13,7 +13,7 @@ FROM (
 		FROM patient_program pg
 		WHERE pg.program_id=2
 		AND o.person_id = pg.patient_id
-		AND DATE(pg.date_enrolled) >= DATE(o.obs_datetime)
+		AND DATE(pg.date_enrolled) &gt;= DATE(o.obs_datetime)
 		ORDER BY pg.date_enrolled DESC
 		LIMIT 1
 	) AS enrol

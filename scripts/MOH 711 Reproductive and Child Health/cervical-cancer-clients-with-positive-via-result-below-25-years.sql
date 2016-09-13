@@ -2,7 +2,7 @@ SELECT *
 FROM obs
 INNER JOIN person p ON p.person_id=o.person_id
 
-WHERE concept_id=310012613
+WHERE concept_id=100126138
 AND value_coded=5286
 AND encounter_id IN (
     SELECT encounter_id

@@ -1,6 +1,6 @@
 --get count of new clients registered to a program (ANC/PNC/CWC)
 --substitute the dates with date placeholders
---substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC, 3=>CWC
+--substitute the program_id with the appropriate program id(1=&gt;ANC, 2=>PNC, 3=>CWC
 SELECT count(*)
 FROM patient_program
 WHERE program_id= '1'

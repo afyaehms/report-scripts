@@ -1,6 +1,6 @@
 -- get Total ANC Client given Folate
 -- substitute the dates with date placeholders
--- substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC)
+-- substitute the program_id with the appropriate program id(1=&gt;ANC, 2=>PNC)
 -- limit encounter ids to the  ones raised from MCH - 19 is the encounter type for ANC
 -- 31 is the inventory drug id for FOLIC ACID
 

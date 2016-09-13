@@ -1,6 +1,6 @@
 --get count of MCH(ANC/PNC/CWC) clients with revisits
 --substitute the dates with date placeholders
---substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC, 3=>CWC
+--substitute the program_id with the appropriate program id(1=&gt;ANC, 2=>PNC, 3=>CWC
 --visit type id 3 is for Return ANC Clinic Visit
 
 SELECT count(*) from (

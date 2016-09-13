@@ -1,6 +1,6 @@
---get count of MCH(ANC/PNC/CWC) clients with Hb < 11 g/dl
+--get count of MCH(ANC/PNC/CWC) clients with Hb &lt; 11 g/dl
 --substitute the dates with date placeholders
---substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC, 3=>CWC
+--substitute the program_id with the appropriate program id(1=&gt;ANC, 2=>PNC, 3=>CWC
 SELECT count(*)
 FROM obs o
 INNER JOIN patient_program pp ON pp.patient_id = o.person_id

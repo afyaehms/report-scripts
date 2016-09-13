@@ -201,11 +201,11 @@
         <dataElement uid="kfuGsBdD3rpRe" code="TTYouthFPUpdateRe" name="Total youth clients (20-24YRS) receiving FP Services" type="int"/>
 		<dataElement uid="IjrWNuj9rzt" code="IUCDRem" name="IUCD Removals" type="int"/>
 		        <dataElement uid="M4RzpOew1Im" code="ImplantsRem" name="Implants Removals" type="int"/>
-		<dataElement uid="G9COyloYLYa2549lessthan25" code="ScreeningDoneUnder25" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV less than 25years"
+		<dataElement uid="G9COyloYLYaBlw25" code="ScreeningDoneUnder25" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV less than 25years"
                     type="int"/>
-		<dataElement uid="G9COyloYLYa2549" code="ScreeningDone2549" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV 25-49years"
+		<dataElement uid="G9COyloYLYa25T49" code="ScreeningDone2549" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV 25-49years"
                     type="int"/>
-		<dataElement uid="G9COyloYLYa2549greater50" code="ScreeningDoneOver50" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV greater than 50years"
+		<dataElement uid="G9COyloYLYaOvr50" code="ScreeningDoneOver50" name="Cervical cancer receiving VIA /VILI /HPV VILI / HPV greater than 50years"
                     type="int"/>
 		<dataElement uid="kl4RvWOGb7x2549" code="ScreenedPAPSmear2549" name="Cervical cancer clients screened for Pap smear 25-49years"
                      type="int"/>
@@ -1416,7 +1416,7 @@
                 </annotation>
             </dataValueTemplate>
 			
-			<dataValueTemplate dataElement="ScreeningDoneover50" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="ScreeningDoneOver50" disaggregation="OzshuDqmXQI">
                 <annotation>	
                     #INCLUDE <cervical-cancer-receiving-VIA-VILI-HPV-VILI-HPV-greater-than-50years.sql>
                 </annotation>

@@ -1,8 +1,8 @@
-SELECT *
+SELECT COUNT(*)
 FROM obs
 INNER JOIN person p ON p.person_id=o.person_id
 
-WHERE concept_id=310012613
+WHERE concept_id=100126138
 AND value_coded=2222
 AND encounter_id IN (
     SELECT encounter_id

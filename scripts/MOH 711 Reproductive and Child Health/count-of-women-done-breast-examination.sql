@@ -1,6 +1,6 @@
 -- get Total women done breast examination
 -- substitute the dates with date placeholders
--- substitute the program_id with the appropriate program id(1=>ANC, 2=>PNC)
+-- substitute the program_id with the appropriate program id(1=&gt;ANC, 2=>PNC)
 
 SELECT COUNT(*)
 FROM obs o

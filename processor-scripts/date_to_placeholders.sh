@@ -6,6 +6,8 @@ filename=$(basename "$FILE")
 sed "{ 
   s|\('[0-9][0-9][0-9][0-9]-[0-9][0-9]*-[0-9][0-9]*'\)\(\sAND\)|:startOfPeriod\2|I
   s|\(AND\s\)\('[0-9][0-9][0-9][0-9]-[0-9][0-9]*-[0-9][0-9]*'\)|\1:endOfPeriod|I
+  s|\(\&lt;\s\)\('[0-9][0-9][0-9][0-9]-[0-9][0-9]*-[0-9][0-9]*'\)|\1:startOfPeriod|I
+  s|\(\&gt;\s\)\('[0-9][0-9][0-9][0-9]-[0-9][0-9]*-[0-9][0-9]*'\)|\1:endOfPeriod|I
 }" "$FILE"  > "compiled/$filename"
 
 echo "$filename"

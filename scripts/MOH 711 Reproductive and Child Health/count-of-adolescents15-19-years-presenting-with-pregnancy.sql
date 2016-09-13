@@ -1,7 +1,7 @@
 --get count of Adolescents(10-14 years) presenting with pregnancy
 --substitute the dates with date placeholders
---substitute the program_id with the appropriate program id(1=>ANC)
---limit visit type to id 2  ==> 'Initial MCH Clinic Visit' for new enrolments only
+--substitute the program_id with the appropriate program id(1=&gt;ANC)
+--limit visit type to id 2  ==&gt; 'Initial MCH Clinic Visit' for new enrolments only
 --limit age range between 15 and 19
 
 SELECT Count(*) FROM (

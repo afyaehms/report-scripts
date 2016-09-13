@@ -4,7 +4,7 @@
 SELECT COUNT(*)
 FROM obs o
 INNER JOIN person p ON p.person_id=o.person_id
-WHERE concept_id=100126199
+WHERE concept_id=100126138
 AND value_coded = 1858
 AND p.birthdate IS NOT NULL
 AND FLOOR(DATEDIFF(CURDATE(),p.birthdate) / 365) &gt;= 50
