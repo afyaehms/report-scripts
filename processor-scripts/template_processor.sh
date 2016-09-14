@@ -5,23 +5,16 @@ templatelocations="../Templates/*"
 
 for template in $templatelocations
 do
-  echo "$template"
-  templatename=$(basename "$template")
-  SEDCOM=""
+  echo "Making a copy of $template"
+  templateName=$(basename "$template")
+  cp $template "compiled-template/$templateName"
   for script in $SCRIPTS
   do
-    if [[ -z "$SEDCOM" ]]; then
-      SEDCOM="./sed_include.sh \"$script\"<$template|"
-    else
-      SEDCOM="$SEDCOM./sed_include.sh \"$script\"|"
-    fi
+    echo "Filtering $script in $templateName"
+    scriptName=$(basename "$script")
+    sed -i -e '/#INCLUDE <'"$scriptName"'>/{
+      r '"$script"'
+      d
+    }' "compiled-template/$templateName"
   done
-  # echo $SEDCOM
-  SEDCOMLENGTH="${#SEDCOM}"
-  SUBSTRINGLENGTH=$(expr $SEDCOMLENGTH - 1)
-  echo "command length $SUBSTRINGLENGTH"
-  SEDCOM="${SEDCOM:0:$SUBSTRINGLENGTH}|sed '/^\s*--/
-  d'>compiled-template/$templatename"
-  eval $SEDCOM
-  SEDCOM=""
 done
