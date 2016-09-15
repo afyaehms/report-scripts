@@ -4,5 +4,5 @@
 
 SELECT COUNT(*) 
 FROM obs
-AND concept_id = 5187
-WHERE DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';
+WHERE concept_id = 5187
+AND DATE(obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';
