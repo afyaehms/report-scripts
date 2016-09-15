@@ -73,7 +73,6 @@
         <dataElement uid="ovJmoErpCRY" code="MaternalRTOHF" name="Maternal referals To Other Health Facilit" type="int"/>
         <dataElement uid="ijYBkFVUTMV" code="MaternalRTCUnit" name="Maternal referals To Community Unit" type="int"/> -->
 		
-		<!-- Child Health and Nutrition Information System 
 		<dataElement uid="twpy25QKLk9" code="Female0to6Normal" name="0 to less than 6 months Female Normal Weight for Age" type="int"/>
 		<dataElement uid="twpy25QKLk9Male" code="Male0to6Normal" name="0 to less than 6 months Male Normal Weight for Age" type="int"/>
 		<dataElement uid="twpy25QKLk9Total" code="Total0to6Normal" name="0 to less than 6 months both Male and Female Normal Weight for Age" type="int"/>
@@ -85,7 +84,7 @@
 		<dataElement uid="ENjll6PbaI8Total" code="Total0to6SeverUnderweight" name="0 to less than 6 months both Male and Female severe underweight" type="int"/> 
 		<dataElement uid="QCNHvzgxurQ" code="Female0to6Overweight" name="0 to less than 6 months Female overweight" type="int"/>
 		<dataElement uid="QCNHvzgxurQMale" code="Male0to6Overweight" name="0 to less than 6 months Male overweight" type="int"/>
-		<dataElement uid="QCNHvzgxurQTotal" code="Female0to6Overweight" name="0 to less than 6 months both Male and Female overweight" type="int"/>
+		<dataElement uid="QCNHvzgxurQTotal" code="Total0to6Overweight" name="0 to less than 6 months both Male and Female overweight" type="int"/>
 		<dataElement uid="lvyOQjZaXZ3" code="Female0to6Obese" name="0 to less than 6 months Female Obese" type="int"/>
 		<dataElement uid="lvyOQjZaXZ3Male" code="Male0to6Obese" name="0 to less than 6 months Male Obese" type="int"/>
 		<dataElement uid="lvyOQjZaXZ3Total" code="Total0to6Obese" name="0 to less than 6 months both Male and Female Obese" type="int"/> 
@@ -104,15 +103,15 @@
 		<dataElement uid="PW4W1Fa7b5b" code="Female6to23Obese" name="6 to 23 months Female Obese" type="int"/>
 		<dataElement uid="PW4W1Fa7b5bMale" code="Male6to23Obese" name="6 to 23 months Male Obese" type="int"/>
 		<dataElement uid="PW4W1Fa7b5bTotal" code="Total6to23Obese" name="6 to 23 months both Male and Female Obese" type="int"/>
-		<dataElement uid="qoEPwxCNrll" code="Female24to59Normal" name="24 to 59 months Female Normal Weight for Age" type="int"/>
-		<dataElement uid="qoEPwxCNrllMale" code="Male24to59Normal" name="24 to 59 months Male Normal Weight for Age" type="int"/>
-		<dataElement uid="qoEPwxCNrllTotal" code="Total24to59Normal" name="24 to 59 months both Male and Female Normal Weight for Age" type="int"/>
+		<dataElement uid="qoEPwxCNrll24" code="Female24to59Normal" name="24 to 59 months Female Normal Weight for Age" type="int"/>
+		<dataElement uid="qoEPwxCNrll24Male" code="Male24to59Normal" name="24 to 59 months Male Normal Weight for Age" type="int"/>
+		<dataElement uid="qoEPwxCNrll24Total" code="Total24to59Normal" name="24 to 59 months both Male and Female Normal Weight for Age" type="int"/>
 		<dataElement uid="AYT1IPxFRZx" code="Female24to59Underweight" name="24 to 59 months Female underweight" type="int"/>
 		<dataElement uid="AYT1IPxFRZxMale" code="Male24to59Underweight" name="24 to 59 months Male underweight" type="int"/>
 		<dataElement uid="AYT1IPxFRZxTotal" code="Total24to59Underweight" name="24 to 59 months both Male and Female underweight" type="int"/>
 		<dataElement uid="HlZXTFN2B61" code="Female24to59SeverUnderweight" name="24 to 59 months Female severe underweight" type="int"/>
 		<dataElement uid="HlZXTFN2B61Male" code="Male24to59SeverUnderweight" name="24 to 59months Male severe underweight" type="int"/>
-		<dataElement uid="HlZXTFN2B61Total" code="Female24to59SeverUnderweight" name="24 to 59months both Male and Female severe underweight" type="int"/>
+		<dataElement uid="HlZXTFN2B61Total" code="Total24to59SeverUnderweight" name="24 to 59months both Male and Female severe underweight" type="int"/>
 		<dataElement uid="mv0ICssqScK" code="Female24to59Overweight" name="24 to 59 months Female overweight" type="int"/>
 		<dataElement uid="mv0ICssqScKMale" code="Male24to59Overweight" name="24 to 59 months Male overweight" type="int"/>
 		<dataElement uid="mv0ICssqScKTotal" code="Total24to59Overweight" name="24 to 59 months both Male and Female overweight" type="int"/>
@@ -142,9 +141,9 @@
 		<dataElement uid="PM29pHKJGepTotal" code="TotalNormalHeight24to59" name="24 to 59 months Total Normal height for both Male and Female" type="int"/>
 		<dataElement uid="madOGCuPg8q" code="StuntedFemaleHeight24to59" name="24 to 59 months Stunted Female height" type="int"/>
 		<dataElement uid="madOGCuPg8qMale" code="StuntedMaleHeight24to59" name="24 to 59 months Stunted Male height" type="int"/>
-		<dataElement uid="madOGCuPg8qTotal" code="StuntedFemaleHeight24to59" name="24 to 59 months Total Stunted height for both Male and Female" type="int"/>
+		<dataElement uid="madOGCuPg8qTotal" code="TotalStuntedHeight24to59" name="24 to 59 months Total Stunted height for both Male and Female" type="int"/>
 		<dataElement uid="mnsOAdOfXSi" code="SeverelyStuntedFemaleHeight24to59" name="24 to 59 months Severely Stunted Female height" type="int"/>
-		<dataElement uid="mnsOAdOfXSiMale" code="SeverelyStuntedFemaleHeight24to59" name="24 to 59 months Severely Stunted Male height" type="int"/>
+		<dataElement uid="mnsOAdOfXSiMale" code="SeverelyStuntedMaleHeight24to59" name="24 to 59 months Severely Stunted Male height" type="int"/>
 		<dataElement uid="mnsOAdOfXSiTotal" code="TotalSeverelyStuntedHeight24to59" name="24 to 59 months Total Severely Stunted height for both Male and Female" type="int"/>
 		<dataElement uid="YvAmz4L0a1d" code="OtherFemaleNewCWCVisit0to59" name="0 to 59 months New female visit" type="int"/>
 		<dataElement uid="YvAmz4L0a1dMale" code="OtherMaleNewCWCVisit0to59" name="0 to 59 months New Male visit" type="int"/>
@@ -156,8 +155,8 @@
 		<dataElement uid="IV9vOoO4Mo4Male" code="OtherMarasmusMale" name="Male with Marasmus" type="int"/>
 		<dataElement uid="IV9vOoO4Mo4Total" code="TotalOtherMarasmus" name="months Total with Marasmus both male and female" type="int"/>
 		<dataElement uid="QDD62ZsbVnT" code="OtherFemaleFalteringWeight" name="Female with Faltering growth" type="int"/>
-		<datataElement uid="QDD62ZsbVnTMale" code="OtherMaleFalteringWeight" name="Male with Faltering growth" type="int"/>
-		<datataElement uid="QDD62ZsbVnTTotal" code="TotalOtherFalteringWeight" name="Total with Faltering growth both Male and Female" type="int"/>
+		<dataElement uid="QDD62ZsbVnTMale" code="OtherMaleFalteringWeight" name="Male with Faltering growth" type="int"/>
+		<dataElement uid="QDD62ZsbVnTTotal" code="TotalOtherFalteringWeight" name="Total with Faltering growth both Male and Female" type="int"/>
 		<dataElement uid="QUueF25THDC" code="OtherFemaleEB0to6" name="0 to less than 6 months Female Exclusive  breast fed" type="int"/>
 		<dataElement uid="QUueF25THDCMale" code="OtherMaleEB0to6" name="0 to less than 6 months Male Exclusive  breast fed" type="int"/>
 		<dataElement uid="QUueF25THDCTotal" code="TotalOtherEB0to6" name="0 to less than 6 months Total Exclusive  breast fed both Male and Female" type="int"/>
@@ -169,7 +168,7 @@
 		<dataElement uid="z3kr3nMK3RITotal" code="TotalOtherMNP6to23" name="6 to 23 months Total given MNPs Supplimentation both Male and Female" type="int"/>
 		<dataElement uid="xOHOlJimwwt" code="OtherFemaleDisability0to59" name="0 to 59 months Female with any disability" type="int"/>
 		<dataElement uid="xOHOlJimwwtMale" code="OtherMaleDisability0to59" name="0 to 59 months Male with any disability" type="int"/>
-		<dataElement uid="xOHOlJimwwtTotal" code="TotalOtherDisability0to59" name="0 to 59 months Total with any disability both Male and Female" type="int"/>-->
+		<dataElement uid="xOHOlJimwwtTotal" code="TotalOtherDisability0to59" name="0 to 59 months Total with any disability both Male and Female" type="int"/>
 
 	<!--Family Planning (Number of clients Issued with contraceptives)-->
 		
@@ -651,583 +650,583 @@
                 </annotation>
             </dataValueTemplate> -->
 			
-			<!-- Child Health and Nutrition Information System
-			    <dataValueTemplate dataElement="twpy25QKLk9" disaggregation="OzshuDqmXQI">
+			<!-- Child Health and Nutrition Information System -->
+			<dataValueTemplate dataElement="Female0to6Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-normal-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="twpy25QKLk9Male" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male0to6Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-normal-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="twpy25QKLk9Total" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total0to6Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-normal-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="qoEPwxCNrll" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female0to6Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-underweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="qoEPwxCNrllMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male0to6Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-underweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="qoEPwxCNrllTotalqoEPwxCNrllTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total0to6Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-underweight-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="ENjll6PbaI8" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female0to6SeverUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-severe-underweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="ENjll6PbaI8Male" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male0to6SeverUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-severe-underweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="ENjll6PbaI8Total" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total0to6SeverUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-severe-underweight-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="QCNHvzgxurQ" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female0to6Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-overweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="QCNHvzgxurQMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male0to6Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-overweight-male.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="QCNHvzgxurQTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total0to6Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-overweight-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="lvyOQjZaXZ3" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female0to6Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-obese-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="lvyOQjZaXZ3Male" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male0to6Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-obese-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="lvyOQjZaXZ3Total" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total0to6Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-0-6mnths-obese-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="ikI4r8YuZZ0" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female6to23Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-normal-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="ikI4r8YuZZ0Male" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male6to23Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-normal-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="ikI4r8YuZZ0Total" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total6to23Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-normal-total.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="uYBa6RU8wUZ" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female6to23Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-underweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="uYBa6RU8wUZMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male6to23Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-underweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="uYBa6RU8wUZTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total6to23Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-underweight-total.sql>
                 </annotation>
             </dataValueTemplate>
     
-    <dataValueTemplate dataElement="Ype6qUApdlR" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="Female6to23SeverlyUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-severe-underweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="Ype6qUApdlRMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male6to23SeverlyUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-severe-underweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="Ype6qUApdlRTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total6to23SeverlyUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-severe-underweight-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="k3xX4NKJaaY" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female6to23Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-overweight-female.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="k3xX4NKJaaYMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male6to23Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-overweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="k3xX4NKJaaYTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total6to23Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-overweight-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="PW4W1Fa7b5b" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female6to23Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-obese-female.sql>
                 </annotation>
             </dataValueTemplate>
 
-    <dataValueTemplate dataElement="PW4W1Fa7b5bMale" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="Male6to23Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-obese-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="PW4W1Fa7b5bTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total6to23Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-6-23mnths-obese-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="qoEPwxCNrll" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female24to59Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-normal-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="qoEPwxCNrllMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male24to59Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-normal-male.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="qoEPwxCNrllTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total24to59Normal" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-normal-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="AYT1IPxFRZx" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female24to59Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-underweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="AYT1IPxFRZxMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male24to59Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-underweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 
-    <dataValueTemplate dataElement="AYT1IPxFRZxTotal" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="Total24to59Underweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-underweight-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="HlZXTFN2B61" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female24to59SeverUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-severe-underweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="HlZXTFN2B61Male" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male24to59SeverUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-severe-underweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="HlZXTFN2B61Total" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total24to59SeverUnderweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-severe-underweight-total.sql>
                 </annotation>
             </dataValueTemplate>		
 			
-	<dataValueTemplate dataElement="mv0ICssqScK" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Female24to59Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-overweight-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="mv0ICssqScKMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male24to59Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-overweight-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="mv0ICssqScKTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total24to59Overweight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-overweight-total.sql>
                 </annotation>
             </dataValueTemplate>
    
-    <dataValueTemplate dataElement="zels3jARvGQ" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="Female24to59Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-obese-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="zels3jARvGQMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Male24to59Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-obese-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="zels3jARvGQTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="Total24to59Obese" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-weight-for-age-24-59mnths-obese-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="BZbUjXynxfr" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="NormalFemaleMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-normal-female.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="BZbUjXynxfrMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="NormalMaleMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-normal-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="BZbUjXynxfrTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalNormalMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-normal-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="i2eE15DhmMB" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="ModerateFemaleMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-moderate-female.sql>
                 </annotation>
             </dataValueTemplate>
 
-    <dataValueTemplate dataElement="i2eE15DhmMBMale" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="ModerateMaleMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-moderate-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="i2eE15DhmMBTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalModerateMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-moderate-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="sTjfhcH5iXK" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="SevereFemaleMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-severe-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="sTjfhcH5iXKMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="SevereMaleMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-severe-male.sql>
                 </annotation>
             </dataValueTemplate>
 				
-	<dataValueTemplate dataElement="sTjfhcH5iXKTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalSevereMUAC6to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-muac-6-59mnths-severe-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="BKq0EhyLtyd" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="NormalFemaleHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-normal-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="BKq0EhyLtydMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="NormalMaleHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-normal-male.sql>
                 </annotation>
             </dataValueTemplate>
 
-    <dataValueTemplate dataElement="BKq0EhyLtydTotal" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="TotalNormalHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-normal-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="f0SJMmqh8un" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="StuntingFemaleHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-stunted-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="f0SJMmqh8unMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="StuntingMaleHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-stunted-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="f0SJMmqh8unTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="StuntingTotalHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-stunted-total.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="YloG1P6jXSR" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="SeverelyStuntedFemaleHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-severe-stunted-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="YloG1P6jXSRMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="SeverelyStuntedMaleHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-severe-stunted-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="YloG1P6jXSRTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalSeverelyStuntedHeight6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-6-23mnths-severe-stunted-total.sql>
                 </annotation>
             </dataValueTemplate>			
 			
-	<dataValueTemplate dataElement="PM29pHKJGep" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="NormalFemaleHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-normal-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="PM29pHKJGepMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="NormalMaleHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-normal-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="PM29pHKJGepTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalNormalHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-normal-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="madOGCuPg8q" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="StuntedFemaleHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-stunted-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="madOGCuPg8qMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="StuntedMaleHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-stunted-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="madOGCuPg8qTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalStuntedHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-stunted-total.sql>
                 </annotation>
             </dataValueTemplate>
    
-    <dataValueTemplate dataElement="mnsOAdOfXSi" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="SeverelyStuntedFemaleHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-severe-stunted-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="mnsOAdOfXSiMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="SeverelyStuntedMaleHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-severe-stunted-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="mnsOAdOfXSiTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalSeverelyStuntedHeight24to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-height-for-age-24-59mnths-severe-stunted-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="YvAmz4L0a1d" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherFemaleNewCWCVisit0to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-new-visit-0-59mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="YvAmz4L0a1dMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMaleNewCWCVisit0to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-new-visit-0-59mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="YvAmz4L0a1dTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalOtherNewCWCVisit0to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-new-visit-0-59mnths-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="TkwjrwghYVF" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherKwashiorkorFemale" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-kwashiokor-0-59mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 
-    <dataValueTemplate dataElement="TkwjrwghYVFMale" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="OtherKwashiorkorMale" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-kwashiokor-0-59mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="TkwjrwghYVFTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalOtherKwashiorkor" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-kwashiokor-0-59mnths-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="IV9vOoO4Mo4" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMarasmusFemale" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-marasmus-0-59mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="IV9vOoO4Mo4Male" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMarasmusMale" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-marasmus-0-59mnths-male.sql>
                 </annotation>
             </dataValueTemplate>	
 			
-	<dataValueTemplate dataElement="IV9vOoO4Mo4Total" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalOtherMarasmus" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-marasmus-0-59mnths-total.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="QDD62ZsbVnT" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherFemaleFalteringWeight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-faltering-growth-0-59mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="QDD62ZsbVnTMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMaleFalteringWeight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-faltering-growth-0-59mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 
-    <dataValueTemplate dataElement="QDD62ZsbVnTTotal" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="TotalOtherFalteringWeight" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-faltering-growth-0-59mnths-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="QUueF25THDC" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherFemaleEB0to6" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-exclusive-breast-feeding-0-6mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="QUueF25THDCMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMaleEB0to6" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-exclusive-breast-feeding-0-6mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="QUueF25THDCTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalOtherEB0to6" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-exclusive-breast-feeding-0-6mnths-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
 			
-	<dataValueTemplate dataElement="NXl959cFhDr" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherDewormedFemale12to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-dewormed-0-6mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="NXl959cFhDrMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherDewormedMale12to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-dewormed-0-6mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="NXl959cFhDrTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherTotalDewormed12to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-dewormed-0-6mnths-total.sql>
                 </annotation>
             </dataValueTemplate>			
  
-    <dataValueTemplate dataElement="z3kr3nMK3RI" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="OtherFemaleMNP6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-mnp-0-6mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="z3kr3nMK3RIMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMaleMNP6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-mnp-0-6mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="z3kr3nMK3RITotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalOtherMNP6to23" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-mnp-0-6mnths-total.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="xOHOlJimwwt" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherFemaleDisability0to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-disability-0-6mnths-female.sql>
                 </annotation>
             </dataValueTemplate>
 	
-	<dataValueTemplate dataElement="xOHOlJimwwtMale" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="OtherMaleDisability0to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-disability-0-6mnths-male.sql>
                 </annotation>
             </dataValueTemplate>
 			
-	<dataValueTemplate dataElement="xOHOlJimwwtTotal" disaggregation="OzshuDqmXQI">
+	        <dataValueTemplate dataElement="TotalOtherDisability0to59" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <chanis-other-disability-0-6mnths-total.sql>
                 </annotation>
-            </dataValueTemplate>-->
+            </dataValueTemplate>
    
     <!--Family Planning (Number of clients Issued with contraceptives)-->
             <dataValueTemplate dataElement="Progestin" disaggregation="OzshuDqmXQI">
