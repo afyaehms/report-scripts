@@ -4,7 +4,7 @@
 
 SELECT COUNT(*)
 FROM obs o
-INNER JOIN patient_program pp ON pp.patient_id = o.patient_id
+INNER JOIN patient_program pp ON pp.patient_id = o.person_id
 WHERE o.concept_id=100126199
 AND o.value_coded=803
 AND o.obs_datetime BETWEEN '2016-06-01' AND '2016-06-30'

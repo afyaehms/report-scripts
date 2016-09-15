@@ -3,7 +3,7 @@
 -- Age 0-59mnths
 -- replace date placeholders
 
-SELECT *
+SELECT COUNT(*)
 
 FROM obs o
 INNER JOIN person p ON p.person_id=o.person_id
