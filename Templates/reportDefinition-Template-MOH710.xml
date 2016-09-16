@@ -142,7 +142,7 @@
 		
         <dataElement uid="OKXUzudHulV" code="VitaminA100stock" name="Vitamin A 100000 IU caps in stock the beginning of the Month" type="int"/>
         <dataElement uid="IWndZVZ3KqT" code="VitaminA100DosesReceived" name="Vitamin A 100000 IU caps received within  the Month" type="int"/>
-		<<dataElement uid="TotalVitaminA100Stocked" code="TotalVitaminA100Stocked" name="Total Vitamin A 100000 IU capsules stocked in the month" type="int"/>
+		<dataElement uid="TotalVitaminA100Stocked" code="TotalVitaminA100Stocked" name="Total Vitamin A 100000 IU capsules stocked in the month" type="int"/>
         <dataElement uid="vOaRpiWvl2K" code="VitaminA100DosesRemaining" name="Vitamin A 100000 IU caps remaining at the end Month" type="int"/>
 		<dataElement uid="VitaminA100Used" code="VitaminA100Used" name="Vitamin A 100000 IU capsules used in the month" type="int"/>
 		<dataElement uid="ChildrenReceivedVitaminA100" code="ChildrenReceivedVitaminA100" name="No. of children supplemented with Vitamin A 100000 IU during the month" type="int"/>
@@ -367,81 +367,7 @@
 				 #INCLUDE <child-immunization-fully-immunized-children-over-1-year.sql>
              </annotation>
              </dataValueTemplate>
-			 
-			<dataValueTemplate dataElement="VitaminA1yr" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 	#INCLUDE <vitamin-A-at-1-years-200,000IU.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="VitaminA1halfyr" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 	#INCLUDE <vitamin-A-at-1-and-half-years-200,000IU.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 
-			 <dataValueTemplate dataElement="MeaslesRub1halfto2" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <measles-at-1-and-half-and-two-years.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			<dataValueTemplate dataElement="MeaslesRub2" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <measles-at-two-and-above-years.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="TT4PregWomenFirst" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <tetanus-toxoid-for-pregnant-women-first-dosage.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="TT4PregWomenSecond" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <tetanus-toxoid-for-pregnant-women-second-dosage.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="TT4PregWomenThird" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <tetanus-toxoid-for-pregnant-women-third-dosage.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="TT4PregWomenFourth" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <tetanus-toxoid-for-pregnant-women-fourth-dosage.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="TT4PregWomenFifth" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <tetanus-toxoid-for-pregnant-women-fifth-dosage.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			<dataValueTemplate dataElement="VitaminA2to5yrs" disaggregation="OzshuDqmXQI">
-             <annotation>
-				 #INCLUDE <vitamin-a-vitamin-a-200000ui-2-years-to-5years.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
-			  <dataValueTemplate dataElement="VitaminLactMothers" disaggregation="OzshuDqmXQI">
-             <annotation>
-                                #INCLUDE <vitamin-a-vitamin-a-suplemental-lactating-mothers-200000ui.sql>
-	     </annotation>
-             </dataValueTemplate>
-	 		
-
-			 <dataValueTemplate dataElement="SquintWhiteEyeReflection" disaggregation="OzshuDqmXQI">
-             <annotation>
-					#INCLUDE <vitamin-a-squint-white-eye-reflection-under-1-year.sql>
-             </annotation>
-             </dataValueTemplate>
-			 
+			 			
 			 <dataValueTemplate dataElement="FridgeType" disaggregation="OzshuDqmXQI">
              <annotation>
 					#INCLUDE <immunization-logistics-type.sql>
@@ -483,20 +409,16 @@
 					#INCLUDE <vaccines-stockout-no-of-days.sql>
              </annotation>
              </dataValueTemplate>
-			 
-			 
-				 #INCLUDE <vitamin-a-vitamin-a-suplemental-lactating-mothers-200000ui.sql>
-             </annotation>
-             </dataValueTemplate>
+
 			<dataValueTemplate dataElement="BCGStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <bcg-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-bcg-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="BCGDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <bcg-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-bcg-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -509,7 +431,7 @@
 			 
 			 <dataValueTemplate dataElement="BCGRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <bcg-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-bcg-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -539,13 +461,13 @@
 			 
 			<dataValueTemplate dataElement="OPVStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <opv-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-opv-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="OPVDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <opv-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-opv-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -557,7 +479,7 @@
 			 
 			<dataValueTemplate dataElement="OPVDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <opv-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-opv-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -588,13 +510,13 @@
 			
 			<dataValueTemplate dataElement="IPVStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <ipv-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-ipv-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="IPVDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <ipv-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-ipv-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -606,7 +528,7 @@
 			 
 			 <dataValueTemplate dataElement="IPVRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <ipv-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-ipv-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -637,13 +559,13 @@
 			 			 
 			<dataValueTemplate dataElement="DPTHepHiBStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				#INCLUDE <dpt-doses-in-stock-at-the-beggining-of-the-month.sql>
+				#INCLUDE <antigen-dtp-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="DPTHepHiBReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <dpt-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-dtp-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -656,7 +578,7 @@
 			 			 
 			<dataValueTemplate dataElement="DPTHepHiBRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <dpt-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-dtp-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -687,13 +609,13 @@
 			
 			<dataValueTemplate dataElement="PneumococalStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <pneumococcal-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-pcv-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="PneumococalReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <pneumococcal-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-pcv-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -705,7 +627,7 @@
 			 
 			<dataValueTemplate dataElement="PneumococalRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <pneumococcal-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-pcv-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -736,13 +658,13 @@
 			
 			<dataValueTemplate dataElement="RotavirusStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <rotavirus-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-rota-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="RotavirusDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <rotavirus-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-rota-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -754,7 +676,7 @@
 			 
 			 <dataValueTemplate dataElement="RotavirusDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <rotavirus-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-rota-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -784,13 +706,13 @@
 			 
 			<dataValueTemplate dataElement="MeaslesStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <measles-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-measles-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="MeaslesDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <measles-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-measles-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -802,7 +724,7 @@
 			 
 			<dataValueTemplate dataElement="MeaslesDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <measles-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-measles-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -832,13 +754,13 @@
 			 
 			<dataValueTemplate dataElement="YellowFeverStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <yellow-fever-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-yellow-fever-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="YellowFeverDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <yellow-fever-doses-received-within-the-month .sql>
+				 #INCLUDE <antigen-yellow-fever-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -850,7 +772,7 @@
 			 
 			<dataValueTemplate dataElement="YellowFeverDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <yellow-fever-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-yellow-fever-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -881,13 +803,13 @@
 			
 			<dataValueTemplate dataElement="TTStock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <tetanus-toxoid-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-tetanus-toxoid-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="TTDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <tetanus-toxoid-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-tetanus-toxoid-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -899,7 +821,7 @@
 			 
 			 <dataValueTemplate dataElement="TTDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <tetanus-toxoid-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-tetanus-toxoid-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -929,13 +851,13 @@
 			 
 			<dataValueTemplate dataElement="VitaminA100stock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <vitamin-A-100000-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-vitamin-100000ui-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminA100DosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <vitamin-A-100000-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-vitamin-100000ui-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -947,7 +869,7 @@
 			 
 			<dataValueTemplate dataElement="VitaminA100DosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <vitamin-A-100000-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-vitamin-100000ui-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -977,13 +899,13 @@
 			 
 			 <dataValueTemplate dataElement="VitaminA200stock" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <vitamin-A-200000-doses-in-stock-at-the-beggining-of-the-month.sql>
+				 #INCLUDE <antigen-vitamin-200000ui-a-doses-in-stock-at-the-beginning-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminA200DosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <vitamin-A-200000-doses-received-within-the-month.sql>
+				 #INCLUDE <antigen-vitamin-200000ui-b-doses-received-within-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
@@ -995,7 +917,7 @@
 			 
 			<dataValueTemplate dataElement="VitaminA200DosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-				 #INCLUDE <vitamin-A-200000-doses-remaining-at-the-end-of-the-month.sql>
+				 #INCLUDE <antigen-vitamin-200000ui-d-doses-remaining-at-the-end-of-the-month.sql>
              </annotation>
              </dataValueTemplate>
 			 
