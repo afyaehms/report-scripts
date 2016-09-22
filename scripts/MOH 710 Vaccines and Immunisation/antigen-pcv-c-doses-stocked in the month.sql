@@ -3,7 +3,7 @@
 -- Get A & B, Union and get the sum
 -- Substitute the dates with date placeholders
 
-SELECT SUM(closing_balance)
+SELECT IFNULL(SUM(closing_balance),0)
 FROM (
 	SELECT * FROM (
 	  SELECT closing_balance
