@@ -10,4 +10,4 @@ INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
 AND e.encounter_type=19
 
 WHERE drug_id=188
-AND DATE(isdtd.created_on) BETWEEN '2016-09-01' AND '2016-09-30'
+AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod

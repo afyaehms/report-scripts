@@ -12,8 +12,8 @@ FROM (
 	ON isdtd.immunization_store_drug_id = drug.id
 	AND drug.inventory_drug_id=188
 
-	WHERE DATE(isdtd.created_on) >= '2016-09-01'
-	AND DATE(isdtd.created_on) <= '2016-09-30'
+	WHERE DATE(isdtd.created_on) >= :startOfPeriod
+	AND DATE(isdtd.created_on) <= :endOfPeriod
 	AND isdtd.transaction_type = 2
 
 	UNION ALL
@@ -24,5 +24,5 @@ FROM (
 	AND e.encounter_type=19
 
 	WHERE drug_id=188
-	AND DATE(isdtd.created_on) BETWEEN '2016-09-01' AND '2016-09-30'
+	AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 ) AS WASTAGE;

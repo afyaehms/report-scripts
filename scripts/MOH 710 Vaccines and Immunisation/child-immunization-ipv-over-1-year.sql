@@ -9,6 +9,6 @@ INNER JOIN person p ON pg.patient_id = p.person_id
 INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
 
 WHERE pws.concept_id = 100126152
-AND start_date BETWEEN '2016-01-01' AND '2016-06-30'
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 AND birthdate IS NOT NULL 
 AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1

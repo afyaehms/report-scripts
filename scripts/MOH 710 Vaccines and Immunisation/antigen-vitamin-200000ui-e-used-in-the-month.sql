@@ -10,6 +10,7 @@ INNER JOIN immunization_store_drug drug
 ON isdtd.immunization_store_drug_id = drug.id
 AND drug.inventory_drug_id=355
 
-WHERE DATE(isdtd.created_on) >= '2016-09-01'
-AND DATE(isdtd.created_on) <= '2016-09-30'
+WHERE DATE(isdtd.created_on) >= :startOfPeriod
+AND DATE(isdtd.created_on) <= :endOfPeriod
 AND isdtd.transaction_type = 2
+

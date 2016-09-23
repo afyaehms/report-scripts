@@ -6,5 +6,5 @@
 
 SELECT COUNT(*)
 FROM patient_state
-WHERE state BETWEEN 37 AND 39
-AND start_date BETWEEN '2016-09-01' AND '2016-09-30';
+WHERE (state BETWEEN 37 AND 39)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod;

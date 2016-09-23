@@ -12,9 +12,10 @@ FROM (
 	ON isdtd.immunization_store_drug_id = drug.id
 	AND drug.inventory_drug_id=343
 
-	WHERE DATE(isdtd.created_on) <= '2016-09-31'
-	OR DATE(isdtd.created_on) <= '2016-09-01'
+	WHERE DATE(isdtd.created_on) <= :startOfPeriod
+	OR DATE(isdtd.created_on) <= :endOfPeriod
 
 	ORDER BY isdtd.id DESC
 	LIMIT 1
 ) AS CL
+
