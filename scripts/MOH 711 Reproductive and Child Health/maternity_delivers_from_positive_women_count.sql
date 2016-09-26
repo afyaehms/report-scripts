@@ -9,4 +9,5 @@ AND encounter_id IN
   SELECT encounter_id FROM
   encounter 
   WHERE encounter_type = 27
+  AND DATE(encounter_datetime) BETWEEN '2016-08-01' AND '2016-08-31'
 );

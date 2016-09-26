@@ -8,7 +8,7 @@ select count(*) from
     (
       select encounter_id from
       encounter
-      where encounter_id = 27
+      where encounter_type = 27
       and date(encounter_datetime) between '2016-09-01' and '2016-09-31'
     )
     group by o.person_id, obs_date

@@ -29,14 +29,14 @@
         <dataElement uid="eEpRB9ra4jj" code="ANCCounseled" name="ANC clients counselled" type="int"/>
         <dataElement uid="nspwXhqQaAz" code="ANCTested" name="ANC clients Tested HIV" type="int"/>
         <dataElement uid="FCmhDa4kaMp" code="ANCHIVVe" name="ANC clients HIV+ve" type="int"/>
-        <dataElement uid="k8qXy4LyyJj" code="MRFOHF" name="Maternity Referrals From Other Health Facility" type="int"/>
-        <dataElement uid="xNW6Y9Kitok" code="MRFCUnit" name="Maternal Referrals From Community Unit" type="int"/>
-        <dataElement uid="ovJmoErpCRY" code="MRTOHF" name="Maternal Referrals To Other Health Facility" type="int"/>
-        <dataElement uid="ijYBkFVUTMV" code="MRTCUnit" name="Maternal Referrals to Community Unit" type="int"/>
+        <dataElement uid="k8qXy4LyyJj" code="ANCRFOHF" name="ANC Referrals From Other Health Facility" type="int"/>
+        <dataElement uid="xNW6Y9Kitok" code="ANCRFCUnit" name="ANC Referrals From Community Unit" type="int"/>
+        <dataElement uid="ovJmoErpCRY" code="ANCRTOHF" name="ANC Referrals To Other Health Facility" type="int"/>
+        <dataElement uid="ijYBkFVUTMV" code="ANCRTCUnit" name="ANC Maternal Referrals to Community Unit" type="int"/>
         <dataElement uid="psN8NM4IguM" code="RapeCasesPEP" name="GSBV rape cases Initiated PEP" type="int"/>
         <dataElement uid="bmEuZWOFtH6" code="RapeCasesWithin72" name="GSBV cases presenting within 72 hours" type="int"/>
         <dataElement uid="AC54kgHb6gP" code="RapeSurvivorsSeen" name="GSBV rape survivors seen" type="int"/>
-        <!-- Maternity Data Elements
+        <!-- Maternity Data Elements -->
 		<dataElement uid="jaPrPmor6WV" code="NormalDel" name="Normal Deliveries" type="int"/>
         <dataElement uid="rAZBTMa7Jy3" code="CSection" name="Caesarian Sections" type="int"/>
         <dataElement uid="sMqM8DwiAaj" code="BreachDel" name="Breach Delivery" type="int"/>
@@ -46,16 +46,20 @@
         <dataElement uid="wZtDYVBa41h" code="MaceratedStillBirth" name="Macerated Still Births" type="int"/>
         <dataElement uid="HoSs9vjU8di" code="BirthWithDef" name="Birth with Deformities" type="int"/>
         <dataElement uid="BkzYqWdGikV" code="NoWithLowScore" name="No. with Low APGAR Score" type="int"/>
-        <dataElement uid="syjjPqXbjTm" code="NoOfBabiesWith2500gramsOrLower" name="No. of Low birth weight Babies (below 2500 grams)" type="int"/>
+        <!-- No script yet
+        <dataElement uid="syjjPqXbjTm" code="NoOfBabiesWith2500gramsOrLower" name="No. of Low birth weight Babies (below 2500 grams)" type="int"/> -->
         <dataElement uid="xCFQ0pftS2u" code="NoofBabiesGiventetracycline" name="No. of babies given tetracycline at birth" type="int"/>
-        <dataElement uid="Hh4daYAcb49" code="PreTermBabies" name="Pre-Term babies" type="int"/>
+        <!-- Not implemented
+        <dataElement uid="Hh4daYAcb49" code="PreTermBabies" name="Pre-Term babies" type="int"/> -->
         <dataElement uid="zVTIzkATPDS" code="NoOfBabiesDischargedAlive" name="No. of babies discharged alive" type="int"/>
         <dataElement uid="UiGlnkNmCut" code="NoOfInfantsInitiatedOnBF" name="No. of Infants intiatied on breastfeeding within 1 hour after birth" type="int"/>
         <dataElement uid="KuMX8VqCejs" code="TTDelHIVPosWomen" name="Total Deliveries from HIV +ve women" type="int"/>
-        <dataElement uid="GAr6xu6f1n7" code="NeonatalDeaths" name="Neonatal Deaths" type="int"/>
+        <!-- Needs time to implement since Neonatal deaths means babies who've only lived for 20 days
+        <dataElement uid="GAr6xu6f1n7" code="NeonatalDeaths" name="Neonatal Deaths" type="int"/> -->
         <dataElement uid="CoAXLBxR0Ik" code="NoOfAdoleMaternalDeath" name="No. of adolescents (10-19YRS) Maternal Deaths" type="int"/>
         <dataElement uid="eBHhfupqMHz" code="MaternalDeaths" name="Maternal Deaths" type="int"/>
-        <dataElement uid="kAp7ViUXEKh" code="MaternalDeathAudits" name="Maternal deaths audited" type="int"/>
+        <!-- More information required to implement this
+        <dataElement uid="kAp7ViUXEKh" code="MaternalDeathAudits" name="Maternal deaths audited" type="int"/> -->
         <dataElement uid="JzM8Q9sIc9i" code="APHAlive" name="Alive - A.P.H. (Ante Partum Haemorrhage)" type="int"/>
         <dataElement uid="JzM8Q9sIc9iDead" code="APHADeaths" name="Deaths - A.P.H. (Ante Partum Haemorrhage)" type="int"/>
         <dataElement uid="xAAEwRrU8EH" code="PPHAlive" name="Alive - P.P.H. (Post Partum Haemorrhage)" type="int"/>
@@ -68,10 +72,10 @@
         <dataElement uid="FwsTJpdxT4CDead" code="ObstructedLabourDeaths" name="Deaths - Obstructed labour" type="int"/>
         <dataElement uid="qrTk1w6Y5Bk" code="SepsisAlive" name="Alive - Sepsis" type="int"/>
         <dataElement uid="qrTk1w6Y5BkDead" code="SepsisDeaths" name="Deaths - Sepsis" type="int"/>
-        <dataElement uid="k8qXy4LyyJj" code="MaternalRFOHF" name="Maternal referals From Other Health Facility" type="int"/>
-        <dataElement uid="xNW6Y9Kitok" code="MaternalRFCUnit" name="Maternal referals From Community Unit" type="int"/>
-        <dataElement uid="ovJmoErpCRY" code="MaternalRTOHF" name="Maternal referals To Other Health Facilit" type="int"/>
-        <dataElement uid="ijYBkFVUTMV" code="MaternalRTCUnit" name="Maternal referals To Community Unit" type="int"/> -->
+        <dataElement uid="k8qXy4LyyJjMd" code="MaternalRFOHF" name="Maternal referals From Other Health Facility" type="int"/>
+        <dataElement uid="xNW6Y9KitokMd" code="MaternalRFCUnit" name="Maternal referals From Community Unit" type="int"/>
+        <dataElement uid="ovJmoErpCRYMd" code="MaternalRTOHF" name="Maternal referals To Other Health Facilit" type="int"/>
+        <dataElement uid="ijYBkFVUTMVMd" code="MaternalRTCUnit" name="Maternal referals To Community Unit" type="int"/>
 		
 		<dataElement uid="twpy25QKLk9" code="Female0to6Normal" name="0 to less than 6 months Female Normal Weight for Age" type="int"/>
 		<dataElement uid="twpy25QKLk9Male" code="Male0to6Normal" name="0 to less than 6 months Male Normal Weight for Age" type="int"/>
@@ -401,25 +405,25 @@
             </dataValueTemplate>
 
 
-            <dataValueTemplate dataElement="MRFOHF" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="ANCRFOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <anc-referals-from-other-health-facility.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="MRFCUnit" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="ANCRFCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <anc-referals-from-community-unit.pending.sql>
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="MRTOHF" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="ANCRTOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <anc-referals-to-other-health-facility.sql>
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="MRTCUnit" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="ANCRTCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <anc-referals-to-community-unit.sql>
                 </annotation>
@@ -442,213 +446,217 @@
                 </annotation>
             </dataValueTemplate>
 			
-			<!-- Maternity Elements
+			<!-- Maternity Elements -->
 			<dataValueTemplate dataElement="NormalDel" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_normal_deliveries_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="CSection" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_cesarean_section_deliveries_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="BreachDel" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_breech_deliveries_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="AVagDel" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_assisted_deliveries_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="LiveBirth" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_live_births_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="FreshStillBirth" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_fresh_still_births_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MaceratedStillBirth" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_macerated_still_births_count.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="BirthWithDef" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_birth_with_deformities_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="NoWithLowScore" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_low_apgar_score_count.sql>
                 </annotation>
             </dataValueTemplate>
 
+            <!-- See note above
             <dataValueTemplate dataElement="NoOfBabiesWith2500gramsOrLower" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <xxx.sql>
                 </annotation>
-            </dataValueTemplate>
+            </dataValueTemplate> -->
 
             <dataValueTemplate dataElement="NoofBabiesGiventetracycline" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_infants_given_tetracycline_at_birth_count.sql>
                 </annotation>
             </dataValueTemplate>
 
+            <!-- See note above
             <dataValueTemplate dataElement="PreTermBabies" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <xxx.sql>
                 </annotation>
-            </dataValueTemplate>
+            </dataValueTemplate> -->
 
             <dataValueTemplate dataElement="NoOfBabiesDischargedAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_babies_discharged_alive_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="NoOfInfantsInitiatedOnBF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_initiated_on_breastfeeding_with_one_hour_count.sql>
                 </annotation>
             </dataValueTemplate>
 
         <dataValueTemplate dataElement="TTDelHIVPosWomen" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_delivers_from_positive_women_count.sql>
                 </annotation>
             </dataValueTemplate>
 
+            <!-- See note above
             <dataValueTemplate dataElement="NeonatalDeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <xxx.sql>
                 </annotation>
-            </dataValueTemplate>
+            </dataValueTemplate> -->
 
             <dataValueTemplate dataElement="NoOfAdoleMaternalDeath" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_adolescents_maternal_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MaternalDeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_maternal_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
+            <!-- See note above
             <dataValueTemplate dataElement="MaternalDeathAudits" disaggregation="OzshuDqmXQI">
                 <annotation>
                     #INCLUDE <xxx.sql>
                 </annotation>
-            </dataValueTemplate>
+            </dataValueTemplate> -->
 
             <dataValueTemplate dataElement="APHAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_antepartum_haemorrhage_survivors_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="APHADeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_antepartum_haemorrhage_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="PPHAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_postpartum_haemorrhage_survivors_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="PPHADeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_postpartum_haemorrhage_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="EclampsiaAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_eclampsia_survivors_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="EclampsiaDeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_eclampsia_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="RupturedUterusAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_ruptured_uterus_survivors_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="RupturedUterusDeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_ruptured_uterus_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="ObstructedLabourAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_obstructed_labour_survivor_count.sql>
                 </annotation>
             </dataValueTemplate>
             <dataValueTemplate dataElement="ObstructedLabourDeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_obstructed_labour_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="SepsisAlive" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_sepsis_survivor_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="SepsisDeaths" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_sepsis_deaths_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MaternalRFOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_from_health_facility_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MaternalRFCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_from_community_unit_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MaternalRTOHF" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_to_health_facility_count.sql>
                 </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="MaternalRTCUnit" disaggregation="OzshuDqmXQI">
                 <annotation>
-                    #INCLUDE <xxx.sql>
+                    #INCLUDE <maternity_to_community_unit_count.sql>
                 </annotation>
-            </dataValueTemplate> -->
+            </dataValueTemplate>
 			
 			<!-- Child Health and Nutrition Information System -->
 			<dataValueTemplate dataElement="Female0to6Normal" disaggregation="OzshuDqmXQI">
