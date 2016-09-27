@@ -8,4 +8,4 @@ INNER JOIN person p ON o.person_id=p.person_id
 AND (DATEDIFF(CURDATE(),birthdate) / 365) >= 5
 
 WHERE concept_id = 2260
-AND DATE(o.obs_datetime) BETWEEN '2016-08-01' AND '2016-08-31';
+AND DATE(o.obs_datetime) BETWEEN '2016-098-01' AND '2016-09-30';
