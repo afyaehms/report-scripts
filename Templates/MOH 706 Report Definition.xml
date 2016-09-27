@@ -1,0 +1,2740 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     <dataElements>
+	 
+		 <dataElement uid="WvMokqxlTZx" code="UrineChemTT" name="Urine Chemistry Total" type="int"/>
+		 <dataElement uid="vi9W8cThS6M" code="NoPosGlucose" name="Number Positive for Glucose" type="int"/>
+		 <dataElement uid="ib4VoJ8THa2" code="NoPosKetones" name="Number Positive for Ketones" type="int"/>
+		 <dataElement uid="N5wopWFWGB6" code="NoPosProteins" name="Number Positive for Proteins" type="int"/>	 
+		 <dataElement uid="SsF6U7IMsbO" code="UrineMicroscopyTT" name="Urine Microscopy Total" type="int"/>
+		 <dataElement uid="jlrtFpAy6D7" code="PusCells" name="Pus cells (less than 5hpf)"  type="int"/>
+		 <dataElement uid="Da9tH6tUP4g" code="SHaematobium" name="S haematobium" type="int"/>
+		 <dataElement uid="u7dpFqi7OtB" code="TVaginalis" name="T vaginalis"   type="int"/>
+		 <dataElement uid="En5DePENNkL" code="YeastCells" name="Yeast cells" type="int"/>
+		 <dataElement uid="Gav2ZKciu2H" code="Bacteria" name="Bacteria" type="int"/>
+		 <dataElement uid="gTK8kZgOQ1e" code="BldSugarTT" name="Blood Sugar Total"  type="int"/>
+		 <dataElement uid="QJUync5DZoy" code="BldSugarLow" name="Blood Sugar low" type="int"/>
+		 <dataElement uid="tgbDsXUj2I0" code="BldSugarHigh" name="Blood Sugar high"   type="int"/>
+	 	 <dataElement uid="iurCetYzazS" code="OGTTTT" name="OGTT Total"  type="int"/>
+		 <dataElement uid="wFnVa14Gbvb" code="OGTTLow" name="OGTT Low" type="int"/>
+		 <dataElement uid="KbuPt8F5BL9" code="OGTTHigh" name="OGTT high"   type="int"/>
+ 		 <dataElement uid="RWaIkHHPeEQ" code="RenalTestTT" name="Renal Function Test" type="int"/>
+		 <dataElement uid="MsjjUAr5DJgLow" code="LowCreatinine" name="Low Creatinine" type="int"/>
+		 <dataElement uid="MsjjUAr5DJgHigh" code="HighCreatinine" name="High Creatinine" type="int"/>
+		 <dataElement uid="Z4hQ6P94cO0Low" code="LowUrea" name="Low Urea" type="int"/>
+		 <dataElement uid="Z4hQ6P94cO0High" code="HighUrea" name="High Urea" type="int"/>
+		 <dataElement uid="ukqcXNp5trZLow" code="LowSodium" name="Low Sodium" type="int"/>
+		 <dataElement uid="ukqcXNp5trZHigh" code="HighSodium" name="High Sodium" type="int"/>
+		 <dataElement uid="NCyBGTtLyaOLow" code="LowPotassium" name="Low Potassium" type="int"/>
+		 <dataElement uid="NCyBGTtLyaOHigh" code="HighPotassium" name="High Potassium" type="int"/>
+		 <dataElement uid="yGTElNkH5SCLow" code="LowChlorides" name="Low Chlorides" type="int"/> 
+		 <dataElement uid="yGTElNkH5SCHigh" code="HighChlorides" name="High Chlorides"  type="int"/>
+		 <dataElement uid="M6vHzDWAp88" code="LiverTest" name="Liver Function Test" type="int"/>
+		 <dataElement uid="fBMteDRw6GDLow" code="LowDirectBilirubin" name="Low Direct bilirubin" type="int"/>
+		 <dataElement uid="fBMteDRw6GDigh" code="HighDirectBilirubin" name="High Direct bilirubin" type="int"/>
+		 <dataElement uid="fVpzEzUYIa6rLow" code="LowTotalBilirubin" name="Low Total bilirubin" type="int"/>
+		 <dataElement uid="VpzEzUYIa6rHigh" code="HighTotalBilirubin" name="High Total bilirubin" type="int"/>
+		 <dataElement uid="l6QTnruqSB6Low" code="LowASAT" name="Low ASAT (SGOT)" type="int"/>
+		 <dataElement uid="l6QTnruqSB6High" code="HighASAT" name="High ASAT (SGOT)" type="int"/>
+		 <dataElement uid="tdiOfqulAszLow" code="LowALAT" name="Low ALAT (SGPT)" type="int"/>
+		 <dataElement uid="tdiOfqulAszHigh" code="HighALAT" name="High ALAT (SGPT)"  type="int"/>
+		 <dataElement uid="rU5cMrgKmBELow" code="LowSerumProtein" name="Low Serum Protein" type="int"/>
+		 <dataElement uid="rU5cMrgKmBEHigh" code="HighSerumProtein" name="High Serum Protein" type="int"/> 
+		 <dataElement uid="pNQJ9M9xNx8Low" code="LowAlbumin" name="Low Albumin" type="int"/>
+		 <dataElement uid="pNQJ9M9xNx8High" code="HighAlbumin" name="High Albumin" type="int"/>
+		 <dataElement uid="i1iC6ljROVvLow" code="LowAlkalinePhosphatase" name="Low Alkaline Phosphatase"  type="int"/>
+		 <dataElement uid="i1iC6ljROVvHigh" code="HighAlkalinePhosphatase" name="High Alkaline Phosphatase" type="int"/>
+		 <dataElement uid="h8JGqkfZhdMTT" code="TTTotalCholestrol" name="TTTotal cholesterol" type="int"/>
+		 <dataElement uid="h8JGqkfZhdMLow" code="LowTotalCholestrol" name="Low Total cholesterol"  type="int"/>
+		 <dataElement uid="h8JGqkfZhdMHigh" code="HighTotalCholestrol" name="High Total cholesterol"  type="int"/>
+		 <dataElement uid="c6JgpoTUQlbTT" code="TTTriglycerides" name="Total Triglycerides" type="int"/>
+		 <dataElement uid="c6JgpoTUQlbLow" code="LowTriglycerides" name="Low Triglycerides" type="int"/>
+		 <dataElement uid="c6JgpoTUQlbHigh" code="HighTriglycerides" name="High Triglycerides"  type="int"/>
+		 <dataElement uid="toAKwgINMsYTT" code="TTLDL" name="Total LDL" type="int"/>
+		 <dataElement uid="toAKwgINMsYLow" code="LowLDL" name="Low LDL" type="int"/>
+		 <dataElement uid="toAKwgINMsYHigh" code="HighLDL" name="High LDL"  type="int"/>
+		 <dataElement uid="PZbYSEb0DSLTT" code="TTT3" name="Total T3" type="int"/>
+		 <dataElement uid="PZbYSEb0DSLLow" code="LowT3" name="Low T3" type="int"/>
+		 <dataElement uid="PZbYSEb0DSLHigh" code="HighT3" name="High T3"  type="int"/>
+		 <dataElement uid="uiYynGhddkQTT" code="TTT4" name="Total T4" type="int"/>
+		 <dataElement uid="uiYynGhddkQLow" code="LowT4" name="Low T4" type="int"/>
+		 <dataElement uid="uiYynGhddkQHigh" code="HighT4" name="High T4"  type="int"/>
+		 <dataElement uid="hhmUJ532F9hTT" code="TTTSH" name="Total TSH" type="int"/>
+		 <dataElement uid="hhmUJ532F9hLow" code="LowTSH" name="Low TSH" type="int"/>
+		 <dataElement uid="hhmUJ532F9hHigh" code="HighTSH" name="High TSH"  type="int"/>
+		 <dataElement uid="yfEYaW5zdgXTT" code="TTPSA" name="Total PSA" type="int"/>
+		 <dataElement uid="yfEYaW5zdgXLow" code="LowPSA" name="Low PSA" type="int"/>
+		 <dataElement uid="yfEYaW5zdgXHigh" code="HighPSA" name="High PSA"  type="int"/>
+		 <dataElement uid="b71H7hdDLYb" code="TTCEA" name="Total CEA"  type="int"/>
+		 <dataElement uid="xdsfAzdjMrZ" code="PosCEA" name="Number Positive CEA" type="int"/>
+		 <dataElement uid="hWNVOGyJ7Ju" code="TTC153" name="Total C153"  type="int"/>
+		 <dataElement uid="hWNVOGyJ7JuPos" code="PosC153" name="Number Positive C153" type="int"/>
+		 <dataElement uid="nfWKlvPsUzs" code="TTCSFChemProteins" name="Total CSF Chemistry Proteins"  type="int"/>
+		 <dataElement uid="Ilkm9Q9u2tw" code="LowCSFChemProteins" name="Low CSF Chemistry Proteins" type="int"/>
+		 <dataElement uid="xeAupmsYdzn" code="HighCSFChemProteins" name="High CSF Chemistry Proteins" type="int"/>
+		 <dataElement uid="H1TzvJxEiP1" code="TTCSFChemGlucose" name="Total CSF Chemistry Glucose"  type="int"/>
+		 <dataElement uid="AvQXdkPtFCD" code="LowCSFChemGlucose" name="Low CSF Chemistry Glucose" type="int"/>
+		 <dataElement uid="lNDA2TNOzNK" code="HighCSFChemGlucose" name="High CSF Chemistry Glucose" type="int"/>
+		 <dataElement uid="qi4TilPOx6o" code="TTMalariaBSLessthan5" name="Total Malaria BS (Under five years)"  type="int"/>
+		 <dataElement uid="qi4TilPOx6oPos" code="PosMalariaBSLessthan5" name="Positive Malaria BS (Under five years)" type="int"/>
+		 <dataElement uid="pacXvg8XEYT" code="TTMalariaBS5yrsAbove" name="Total Malaria BS (5 years and above)"  type="int"/>
+		 <dataElement uid="pacXvg8XEYTPos" code="PosMalariaBS5yrsAbove" name="Positive Malaria BS (5 years and above)" type="int"/>
+		 <dataElement uid="vORT3FUaS6P" code="TTMalariaRapidTests" name="Total Malaria Rapid Diagnostic Tests"  type="int"/>
+		 <dataElement uid="vORT3FUaS6PPos" code="PosMalariaRapidTests" name="Positive Malaria Rapid Diagnostic Tests" type="int"/>
+		 <dataElement uid="QcAldRqUg3G" code="StoolExaminationTSpp" name="Stool Examination Taenia spp" type="int"/>
+	     <dataElement uid="Lyg041arjWC" code="StoolExaminationHNana" name="Stool Examination Hymenolepis nana"  type="int"/>
+		 <dataElement uid="v4tmYFRahDQ" code="StoolExaminationHookWorms" name="Stool Examination Hookworm" type="int"/>
+		 <dataElement uid="a9TJvCqqIR1" code="StoolExaminationRoundWorms" name="Stool Examination Roundworms" type="int"/>
+		 <dataElement uid="DUAQP8J0eA1" code="StoolExaminationSMansoni" name="Stool Examination S mansoni"  type="int"/>
+		 <dataElement uid="r9WJUlTQpWf" code="StoolExaminationTTrichura" name="Stool Examination Trichuris trichura" type="int"/>
+		 <dataElement uid="T7eaRDUj8b8" code="StoolExaminationAmoeba" name="Stool Examination Amoeba" type="int"/>
+
+		 <dataElement uid="P9D2LoWDfrI" code="TTFullBldCount" name="Total Exams Full blood count" type="int"/> 
+		 <dataElement uid="P9D2LoWDfrIHBLessthan5" code="TTFullBldCountLessthan5" name="Full blood count HB less than 5"  type="int"/>
+		 <dataElement uid="P9D2LoWDfrIHBBtwn5and10" code="TTFullBldCountBetween5and10" name="Full blood count HB between 5 and 10" type="int"/>
+		 <dataElement uid="e9gtb2GpGzH" code="TTHBEstimation" name="Total Exams HB estimation tests(other techniques)" type="int"/> 
+		 <dataElement uid="zO8CAkNhC7f" code="TTHBEstimationLessthan5" name="HB estimation tests(other techniques) HB less than 5"  type="int"/>
+	<dataElement uid="zO8CAkNhC7f5and10" code="TTHBEstimationBetween5and10" name="HB estimation tests(other techniques) HB between 5 and 10" type="int"/>
+		 <dataElement uid="cv2JYPIp9eX" code="TTCD4Count" name="Total Exam CD4 count" type="int"/>
+		 <dataElement uid="yWibzEveSoa" code="CD4CountLessthan500" name="CD4 count Less than 500" type="int"/>
+		 <dataElement uid="UevukTUPV2C" code="TTSicklingtest" name="Total Exam Sickling test" type="int"/>
+		 <dataElement uid="IUL92Ks3edF" code="PosSicklingtest" name="Number Positive Sickling test" type="int"/>
+ 		 <dataElement uid="AS08DwREBIh" code="TTPBloodFilms" name="Total Exam Peripheral blood films" type="int"/>
+ 		 <dataElement uid="rWVsvVeyIGo" code="TTBMA" name="Total Exam BMA" type="int"/>
+ 		 <dataElement uid="aO0vnJd98P2" code="TTCoagulateProfile" name="Total Exam Coagulation profile" type="int"/>
+ 		 <dataElement uid="gco53u6A5iX" code="TTRetCount" name="Total Exam Reticulocyte Count" type="int"/>
+ 		 <dataElement uid="HeecBdEvzqa" code="TTESRate" name="Total Exam Erythrocyte Sedimentation rate" type="int"/>
+ 		 <dataElement uid="ZPmQ8R3VaK8" code="HighESRate" name="High Erythrocyte Sedimentation rate" type="int"/>
+		 <dataElement uid="nAmzXhpdkay" code="NoOfTTBGrpTests" name="Number of Total blood group tests" type="int"/>
+		 <dataElement uid="ItlSH4kC75U" code="NoOfBldUnitsGrp" name="Number of Blood units grouped" type="int"/>
+		 <dataElement uid="rssKrwooHde" code="NoOfBLDUnitsReceived" name="Number of Blood units received from blood transfusion centres" type="int"/>
+		 <dataElement uid="ZGny6uSJkeO" code="NoOfBldUnitsCollected" name="Number of Blood units collected at facility" type="int"/>
+		 <dataElement uid="XnysCfoHpAh" code="NoOfBldUnitsTransfused" name="Number of Blood units transfused" type="int"/>
+		 <dataElement uid="peRJQRi5Wxm" code="NoOfTransReactionsReported" name="Number of Transfusion reactions reported and investigated" type="int"/>
+		 <dataElement uid="lCX37ch4P1y" code="NoOfBldGrpMatched" name="Number of Blood grouping and cross matched" type="int"/>
+		 <dataElement uid="so0Pzryheee" code="NoOfBldUnitsDiscarded" name="Number of Blood units discarded" type="int"/>
+		 <dataElement uid="FqdZ54jGbKT" code="NoOfBldUnitsScreened4HIV" name="Number of Blood Screened for HIV" type="int"/>
+		 <dataElement uid="WiybLjeBZkG" code="NoOfBldUnitsScreened4HepB" name="Number of Blood Screened for Hepatitis B" type="int"/>
+		 <dataElement uid="JeA8Tc3tHIA" code="NoOfBldUnitsScreened4HepC" name="Number of Blood Screened for Hepatitis C" type="int"/>
+		 <dataElement uid="WFkgkRy935c" code="NoOfBldUnitsScreened4Syphillis" name="Number of Blood Screened for Syphillis" type="int"/>
+
+
+        
+         <dataElement uid="RkTC6GOM7aU" code="TTUrine" name="Total Exam Urine" type="int"/>
+		 <dataElement uid="RkTC6GOM7aUCultures" code="TTUrineCulture" name="Total Cultures Urine" type="int"/>
+		 <dataElement uid="RkTC6GOM7aUPosCulture" code="NoPosUrineCultures" name="Number of Urine Positive Cultures" type="int"/>
+         <dataElement uid="u7nLiVb27BO" code="TTPusswabs" name="Total Exam Pus swabs" type="int"/>
+		 <dataElement uid="u7nLiVb27BOCultures" code="TTPusswabsCulture" name="Total Pus swabs Cultures" type="int"/>
+		 <dataElement uid="u7nLiVb27BOPosCulture" code="NoPosPusswabsCultures" name="Number of Pus swabs Positive Cultures" type="int"/>
+         <dataElement uid="YYpi7MzY3hr" code="TTHighVaginalSwabs" name="Total Exam High Vaginal Swabs" type="int"/>
+		 <dataElement uid="YYpi7MzY3hrCultures" code="TTHighVaginalSwabsCulture" name="Total High Vaginal Swabs Cultures" type="int"/>
+		 <dataElement uid="YYpi7MzY3hrPosCulture" code="NoHighVaginalSwabsPosCultures" name="Number of High Vaginal Swabs Positive Cultures" type="int"/>
+         <dataElement uid="OOMcFtBtHSW" code="TTThroatswab" name="Total Exam Throat swab" type="int"/>
+		 <dataElement uid="OOMcFtBtHSWCultures" code="TTThroatswabCulture" name="Total Throat swab Cultures" type="int"/>
+		 <dataElement uid="OOMcFtBtHSWPosCulture" code="NoThroatswabPosCultures" name="Number of Throat swab Positive Cultures" type="int"/>
+		 <dataElement uid="wUYwPJAilPT" code="TTRectalSwab" name="Total Exam Rectal swab" type="int"/>
+		 <dataElement uid="wUYwPJAilPTCultures" code="TTRectalSwabCulture" name="Total Rectal swab Cultures" type="int"/>
+		 <dataElement uid="wUYwPJAilPTPosCulture" code="NoRectalSwabPosCultures" name="Number of Rectal swab Positive Cultures" type="int"/>
+		 <dataElement uid="PFOSkScKm31" code="TTBlood" name="Total Exam Blood" type="int"/>
+		 <dataElement uid="PFOSkScKm31Cultures" code="TTBloodCulture" name="Total Blood Cultures" type="int"/>
+		 <dataElement uid="PFOSkScKm31PosCulture" code="NoBloodPosCultures" name="Total Blood Positive Cultures" type="int"/>
+		 <dataElement uid="MaKU05tsY6R" code="TTWater" name="Total Exam Water" type="int"/>
+		 <dataElement uid="MaKU05tsY6RCultures" code="TTWaterCulture" name="Total Water Cultures" type="int"/>
+		 <dataElement uid="MaKU05tsY6RPosCulture" code="NoWaterPosCultures" name="Total Water Positive Cultures" type="int"/>
+		 <dataElement uid="O4WZoyydp64" code="TTFood" name="Total Exam Food" type="int"/>
+		 <dataElement uid="O4WZoyydp64Cultures" code="TTFoodCulture" name="Total Food Cultures" type="int"/>
+		 <dataElement uid="O4WZoyydp64PosCulture" code="NoFoodPosCultures" name="Total Food Positive Cultures" type="int"/>        
+         <dataElement uid="ADv8ctM7160" code="TTUrethralSwabs" name="Total Exam Urethral swabs" type="int"/>
+		 <dataElement uid="ADv8ctM7160Cultures" code="TTUrethralSwabsCulture" name="Total Urethral swabs Cultures" type="int"/>
+		 <dataElement uid="ADv8ctM7160PosCulture" code="NoUrethralSwabsPosCultures" name="Total Urethral swabs Positive Cultures" type="int"/>
+ 		 <dataElement uid="gXIY2cWN83R" code="TTStoolCultures" name="Total Exam Stool Cultures" type="int"/>
+		 <dataElement uid="gXIY2cWN83RCultures" code="TTStoolPosCulture" name="Total Positive Stool Cultures" type="int"/>3
+ 		 <dataElement uid="xl1ajW4xCL2" code="NoPosSTyphi" name="Number Positive Salmonella typhi" type="int"/>
+		 <dataElement uid="EV9UPEdgRCS" code="NoPosSDType1" name="Number Positive Shigella - dysenteriae type1" type="int"/>
+		 <dataElement uid="rahTxuDq6bZ" code="NoPosEcoli" name="Number Positive Ecoli O 157 H7" type="int"/>
+ 		 <dataElement uid="Po4SKIVj5UE" code="NoPosCholerae01" name="Number Positive V cholerae O1" type="int"/>
+		 <dataElement uid="dBSaoCQqktB" code="NoPosCholerae02" name="Number Positive V cholerae O1" type="int"/>
+		 <dataElement uid="RcArQDcl675" code="CSFTTExam" name="CSF total exam" type="int"/>
+         <dataElement uid="RcArQDcl675Pos" code="CSFNoPositive" name="CSF Number positive" type="int"/>
+		 <dataElement uid="RcArQDcl675Contaminated" code="CSFNoContaminated" name="CSF Number Contaminated" type="int"/>
+		 <dataElement uid="auZh9Io85R2" code="NoPosNMA" name="Number Positive Neisseria meningitidis A" type="int"/>
+		 <dataElement uid="bpPPBtT922O" code="NoPosNMB" name="Number Positive Neisseria meningitidis B" type="int"/>
+		 <dataElement uid="XvgHYZDV226" code="NoPosNMC" name="Number Positive Neisseria meningitidis C" type="int"/>
+		 <dataElement uid="eUGYPOXr0fT" code="NoPosNMW135" name="Number Positive Neisseria meningitidis W135" type="int"/>
+		 <dataElement uid="YnwrVFYX2yB" code="NoPosNMX" name="Number Positive Neisseria meningitidis X" type="int"/>
+		 <dataElement uid="VRFxSzIMS2W" code="NoPosNMY" name="Number Positive Neisseria meningitidis Y" type="int"/>
+		 <dataElement uid="DcSJwvTcmwc" code="NoPosNMIndeterminate" name="Number Positive Nmeningitidis (indeterminate)" type="int"/>
+		 <dataElement uid="JyYKUNbcDqI" code="NoPosNSP" name="Number Positive Streptococcus pneumoniae" type="int"/>
+		 <dataElement uid="IuPBsSjfyDx" code="NoPosHITypeB" name="Number Positive Haemophilus influenzae (type b)" type="int"/>
+		 <dataElement uid="HHoPrCyYb9c" code="NoPosCM" name="Number Positive Cryptococcal Meningitis" type="int"/>
+         <dataElement uid="zbdSrnLPEkO" code="NoPosBA" name="Number Positive B anthracis" type="int"/>
+		 <dataElement uid="G13l2JFjhwa" code="NoPosNPYP" name="Number Positive Y pestis" type="int"/>
+		 <dataElement uid="RNMgeJEtH55" code="TTTBSmearsExam" name="Total TB smears Exams" type="int"/>
+		 <dataElement uid="S06lWBUglhF" code="NoOfPosTBSmears" name="Number of TB Smears Positive" type="int"/>
+		 <dataElement uid="h7RNS3Smlqj" code="TTTBnewsuspectsExam" name="Total TB new suspects Exams" type="int"/>
+		 <dataElement uid="NqUw358xqCF" code="NoOfPosTBnewsuspects" name="Number of TB new suspects Positive" type="int"/>
+		 <dataElement uid="PbEWnVTsnFQ" code="TTTBFollowupExam" name="Total TB Follow up Exams" type="int"/>
+		 <dataElement uid="D5mNPb7h06x" code="NoOfPosTBFollowup" name="Number of TB Follow up Positive" type="int"/>
+		 <dataElement uid="PpqqfY34Dvi" code="TTRifampicinResistantTBExam" name="Total Rifampicin Resistant TB Exams" type="int"/>
+		 <dataElement uid="kL7L0e8HsKy" code="NoOfPosRifampicinResistantTB" name="Number of Rifampicin Resistant TB Positive" type="int"/>
+		 <dataElement uid="qysaTmTEMcl" code="TTMDRTBExam" name="Total MDR TB Exams" type="int"/>
+		 <dataElement uid="mKRW0hA2qdj" code="NoOfPosMDRTB" name="Number of MDR TB Positive" type="int"/>
+
+
+		 <dataElement uid="OZXN2rx0yks" code="TTPAPSmear" name="Total Exam PAP smear" type="int"/>
+		 <dataElement uid="OZXN2rx0yksMalignant" code="MalignantPAPSmear" name="Malignant PAP smear" type="int"/>
+		 <dataElement uid="ENd9rOFnrFK" code="TTTouchPrep" name="Total Exam Touch preparations" type="int"/>
+		 <dataElement uid="ENd9rOFnrFKMalignant" code="MalignantTouchPrep" name="Malignant Touch preparations" type="int"/>
+		 <dataElement uid="yovDbqQmVzR" code="TTTissueImpressions" name="Total Exam Tissue impressions" type="int"/>
+		 <dataElement uid="yovDbqQmVzRMalignant" code="MalignantTissueImpressions" name="Malignant Tissue impressions" type="int"/>
+         <dataElement uid="X62FqsceLwy" code="TTFANThyroid" name="Total Exam FAN Thyroid" type="int"/>
+		 <dataElement uid="X62FqsceLwyMalignant" code="MalignantFANThyroid" name="Malignant FAN Thyroid" type="int"/>
+		 <dataElement uid="a5Cl882MiWW" code="TTFANLymphNodes" name="Total Exam FAN Lymph Nodes" type="int"/>
+		 <dataElement uid="a5Cl882MiWWMalignant" code="MalignantFANLymphNodes" name="Malignant FAN Lymph Nodes" type="int"/>
+		 <dataElement uid="cxuDVZB2isV" code="TTFANLiver" name="Total Exam FAN Liver" type="int"/>
+		 <dataElement uid="cxuDVZB2isVMalignant" code="MalignantFANLiver" name="Malignant FAN Liver" type="int"/>
+         <dataElement uid="WqDWu1qvPBy" code="TTFANBreast" name="Total Exam FAN Breast" type="int"/>
+		 <dataElement uid="WqDWu1qvPByMalignant" code="MalignantFANBreast" name="Malignant FAN Breast" type="int"/>
+		 <dataElement uid="EBgOiaKwudj" code="TTFANSTMasses" name="Total Exam FAN Soft tissue masses" type="int"/>
+		 <dataElement uid="EBgOiaKwudjMalignant" code="MalignantFANSTMasses" name="Malignant FAN Soft tissue masses" type="int"/>
+		 <dataElement uid="XpRDEf5Qdsu" code="TTFCAsciticFluid" name="Total Exam FC Ascitic fluid" type="int"/>
+		 <dataElement uid="XpRDEf5QdsuMalignant" code="MalignantFCAsciticFluid" name="Malignant FC Ascitic fluid" type="int"/>
+		 <dataElement uid="yHkftZnekcx" code="TTFCCSF" name="Total Exam FC CSF" type="int"/>
+		 <dataElement uid="yHkftZnekcxMalignant" code="MalignantFCCSF" name="Malignant FC CSF" type="int"/>
+		 <dataElement uid="Lk9KZvx3xkW" code="TTFCPleuralfluid" name="Total Exam FC Pleural fluid" type="int"/>
+		 <dataElement uid="Lk9KZvx3xkWMalignant" code="MalignantFCPleuralfluid" name="Malignant FC Pleural fluid" type="int"/>
+         <dataElement uid="ZIgUukxYsBF" code="TTFCUrine" name="Total Exam FC Urine" type="int"/>
+		 <dataElement uid="ZIgUukxYsBFMalignant" code="MalignantFCUrine" name="Malignant FC Urine" type="int"/>
+		 <dataElement uid="fpNwZrYYfne" code="TTTHCervix" name="Total Exam TH Cervix" type="int"/>
+		 <dataElement uid="fpNwZrYYfneMalignant" code="MalignantTHCervix" name="Malignant TH Cervix" type="int"/>
+		 <dataElement uid="xNLjSKPueTT" code="TTTHProstrate" name="Total Exam TH Prostrate" type="int"/>
+		 <dataElement uid="xNLjSKPueTTMalignant" code="MalignantTHProstrate" name="Malignant TH Prostrate" type="int"/>
+		 <dataElement uid="nMgx5gnpVTv" code="TTTHBreasttissue" name="Total Exam TH Breast tissue" type="int"/>
+		 <dataElement uid="nMgx5gnpVTvMalignant" code="MalignantTHBreasttissue" name="Malignant TH Breast tissue" type="int"/>
+         <dataElement uid="BXeNqX4jxkv" code="TTTHOvary" name="Total Exam TH Ovary" type="int"/>
+		 <dataElement uid="BXeNqX4jxkvMalignant" code="MalignantTHOvary" name="Malignant TH Ovary" type="int"/>
+		 <dataElement uid="L91UeqA1aLa" code="TTTHUterus" name="Total Exam TH Uterus" type="int"/>
+		 <dataElement uid="L91UeqA1aLaMalignant" code="MalignantTHUterus" name="Malignant TH Uterus" type="int"/>
+		 <dataElement uid="uNXC0MKJAnd" code="TTTHSkin" name="Total Exam TH Skin" type="int"/>
+		 <dataElement uid="uNXC0MKJAndMalignant" code="MalignantTHSkin" name="Malignant TH Skin" type="int"/>
+	     <dataElement uid="MRST1BTPfDb" code="TTTHHeadandNeck" name="Total Exam TH Head and Neck" type="int"/>
+		 <dataElement uid="MRST1BTPfDbMalignant" code="MalignantTHHeadandNeck" name="Malignant TH Head and Neck" type="int"/>
+         <dataElement uid="W7cjtNQQBd7" code="TTTHDental" name="Total Exam TH Dental" type="int"/>
+		 <dataElement uid="W7cjtNQQBd7Malignant" code="MalignantTHDental" name="Malignant TH Dental" type="int"/>
+		 <dataElement uid="kqVFEluRilY" code="TTTHGIT" name="Total Exam TH GIT" type="int"/>
+		 <dataElement uid="kqVFEluRilYMalignant" code="MalignantTHGIT" name="Malignant TH GIT" type="int"/>
+		 <dataElement uid="WVs5eaEkMSO" code="TTTHLNTissue" name="Total Exam TH Lymph nodes tissue" type="int"/>
+		 <dataElement uid="WVs5eaEkMSOMalignant" code="MalignantTHLNTissue" name="Malignant TH Lymph nodes tissue" type="int"/>
+         <dataElement uid="v9ijehI8xrH" code="TTBonemarrowaspirate" name="Total Exam Bone marrow aspirate" type="int"/>
+		 <dataElement uid="v9ijehI8xrHMalignant" code="MalignantBonemarrowaspirate" name="Malignant Bone marrow aspirate" type="int"/>
+		 <dataElement uid="F667EB6ixiF" code="TTTrephinebiopsy" name="Total Exam Trephine biopsy" type="int"/>
+		 <dataElement uid="F667EB6ixiFMalignant" code="MalignantTrephinebiopsy" name="Malignant Trephine biopsy" type="int"/>
+		 <dataElement uid="cBwG3LENZoo" code="TTVDRL" name="Total Exam VDRL" type="int"/>
+		 <dataElement uid="cBwG3LENZooPos" code="PosVDRL" name="Number Positive VDRL" type="int"/>
+		 <dataElement uid="ZVf6gJ24rHx" code="TTTPHA" name="Total Exam TPHA" type="int"/>
+		 <dataElement uid="ZVf6gJ24rHxPos" code="PosTPHA" name="Number Positive TPHA" type="int"/>
+		 <dataElement uid="MsRYxIQORab" code="TTASOT" name="Total Exam ASOT" type="int"/>
+		 <dataElement uid="MsRYxIQORabPos" code="PosASOT" name="Number Positive ASOT" type="int"/>
+         <dataElement uid="AL0dzl1zuc8" code="TTHIV" name="Total Exam HIV" type="int"/>
+		 <dataElement uid="AL0dzl1zuc8Pos" code="PosHIV" name="Number Positive HIV" type="int"/>
+		 <dataElement uid="AGzzhiuPrkR" code="TTBrucella" name="Total Exam Brucella" type="int"/>
+		 <dataElement uid="AGzzhiuPrkRPos" code="PosBrucella" name="Number Positive Brucella" type="int"/>
+		 <dataElement uid="nwFlCYS6SZk" code="TTRheumatoidfactor" name="Total Exam Rheumatoid factor" type="int"/>
+		 <dataElement uid="nwFlCYS6SZkPos" code="PosRheumatoidfactor" name="Number Positive Rheumatoid factor" type="int"/>
+		 <dataElement uid="btLze8KHB7u" code="TTHelicobacterpylori" name="Total Exam Helicobacter pylori" type="int"/>
+		 <dataElement uid="btLze8KHB7uPos" code="PosHelicobacterpylori" name="Number Positive Helicobacter pylori" type="int"/>
+         <dataElement uid="MjuX8GeVqTV" code="TTHepatitisAtest" name="Total Exam Hepatitis A test" type="int"/>
+		 <dataElement uid="MjuX8GeVqTVPos" code="PosHepatitisAtest" name="Number Positive Hepatitis A test" type="int"/>
+         <dataElement uid="oDfGdAcQW0f" code="TTHepatitisBtest" name="Total Exam Hepatitis B test" type="int"/>
+		 <dataElement uid="oDfGdAcQW0fPos" code="PosHepatitisBtest" name="Number Positive Hepatitis B test" type="int"/>
+		 <dataElement uid="w36YhAdDJAz" code="TTHepatitisCtest" name="Total Exam Hepatitis C test" type="int"/>
+		 <dataElement uid="w36YhAdDJAzPos" code="PosHepatitisCtest" name="Number Positive Hepatitis C test" type="int"/>
+		 <dataElement uid="PtnBoYdXAKj" code="TTHCG" name="Total Exam HCG" type="int"/>
+		 <dataElement uid="PtnBoYdXAKjPos" code="PosHCG" name="Number Positive HCG" type="int"/>
+		 <dataElement uid="jhTv6AHnmVE" code="TTCRAGTest" name="Total Exam CRAG Test" type="int"/>
+		 <dataElement uid="jhTv6AHnmVEPos" code="PosCRAGTest" name="Number Positive CRAG Test" type="int"/>
+
+
+
+     </dataElements>
+     <disaggregations>
+         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+     </disaggregations>
+     <reportTemplate>
+         <name> MOH 706 Laboratory Summary Report </name>
+         <uid>sfiNZ7atsK8</uid>
+         <code>sfiNZ7atsK8</code>
+         <periodType>Monthly</periodType>
+         <dataValueTemplates>
+		 <dataValueTemplate dataElement="UrineChemTT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE concept_id IN (5244, 2276, 5656, 2987, 5243)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="NoPosGlucose" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 5244
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="NoPosKetones" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs
+WHERE (concept_id = 5656 OR concept_id = 2276)
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="NoPosProteins" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE (concept_id = 2987 OR concept_id = 5243)
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+		 	<dataValueTemplate dataElement="UrineMicroscopyTT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE concept_id IN (1869, 5247, 5248, 613, 623)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod           </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PusCells" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE obs.concept_id=1869 
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod		     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="SHaematobium" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE obs.concept_id=5247 
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="TVaginalis" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE obs.concept_id=5248 
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+             <dataValueTemplate dataElement="YeastCells" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE obs.concept_id=613 
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="Bacteria" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE obs.concept_id=623 
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="BldSugarTT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=2223
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod			</annotation>
+             </dataValueTemplate>	
+			 
+			 <dataValueTemplate dataElement="BldSugarLow" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn
+ON cn.concept_id=o.concept_id AND o.concept_id=2223
+
+WHERE o.value_numeric &lt; cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod            </annotation>
+             </dataValueTemplate>	
+
+			<dataValueTemplate dataElement="BldSugarHigh" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN concept_numeric cn
+ON cn.concept_id=o.concept_id AND o.concept_id=2223
+
+WHERE o.value_numeric &gt; cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod        </annotation>
+             </dataValueTemplate>	
+
+			<dataValueTemplate dataElement="OGTTTT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id=2404
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod            </annotation>
+             </dataValueTemplate>			 
+			 
+			 <dataValueTemplate dataElement="OGTTLow" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM (
+	SELECT o.obs_group_id
+	FROM obs o
+
+	INNER JOIN obs og 
+	ON o.obs_group_id=og.obs_id AND og.concept_id=2404
+
+	INNER JOIN concept_numeric cn
+	ON o.concept_id=cn.concept_id
+
+	WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+	AND o.value_numeric &lt; cn.low_normal
+
+	GROUP BY o.obs_group_id
+) AS grouped_test           </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OGTTHigh" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM (
+	SELECT o.*
+	FROM obs o
+
+	INNER JOIN obs og 
+	ON o.obs_group_id=og.obs_id AND og.concept_id=2404
+
+	INNER JOIN concept_numeric cn
+	ON o.concept_id=cn.concept_id
+
+	WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+	AND o.value_numeric &gt; cn.hi_normal
+
+	GROUP BY o.obs_group_id
+) AS grouped_test             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="RenalTestTT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id IN (2215, 2221, 2505, 2504, 2501)
+
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+			 
+			  <dataValueTemplate dataElement="LowCreatinine" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2215
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HighCreatinine" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2215
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowUrea" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2221
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="HighUrea" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2221
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="LowSodium" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2505
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="HighSodium" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2505
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowPotassium" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2504
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate> 
+
+			  <dataValueTemplate dataElement="HighPotassium" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2504
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowChlorides" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2501
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="HighChlorides" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2501
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="LiverTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id IN (2208, 2209, 2210, 2212, 2214, 2217, 2232)
+
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowDirectBilirubin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2232
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HighDirectBilirubin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2232
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="LowTotalBilirubin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2210
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HighTotalBilirubin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2210
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="LowASAT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2208
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="HighASAT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2208
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="LowSerumProtein" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2212
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="HighSerumProtein" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2212
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowAlbumin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2217
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="HighAlbumin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2217
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="LowAlkalinePhosphatase" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2214
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+              <dataValueTemplate dataElement="HighAlkalinePhosphatase" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2214
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+ 			<dataValueTemplate dataElement="TTTotalCholestrol" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2224
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="LowTotalCholestrol" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2224
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HighTotalCholestrol" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2224
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate> 
+
+			  <dataValueTemplate dataElement="TTTriglycerides" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2227
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowTriglycerides" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2227
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="HighTriglycerides" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2227
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="TTLDL" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2226
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowLDL" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2226
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="HighLDL" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2226
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="TTT3" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2509
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="LowT3" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2509
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="HighT3" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2509
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="TTT4" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2510
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="LowT4" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2510
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="HighT4" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2510
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TTTSH" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2518
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="LowTSH" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2518
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="HighTSH" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2518
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+              <dataValueTemplate dataElement="TTPSA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2570
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="LowPSA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2570
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="HighPSA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=2570
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTCEA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2944
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="PosCEA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id = 2944
+AND o.value_numeric &gt; 0
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="TTC153" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2939
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="PosC153" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2939
+AND o.value_numeric&gt;0
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTCSFChemProteins" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5125
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="LowCSFChemProteins" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=5125
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+
+             <dataValueTemplate dataElement="HighCSFChemProteins" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=5125
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTCSFChemGlucose" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5126
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="LowCSFChemGlucose" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=5126
+
+
+WHERE o.value_numeric &lt;= cn.low_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="HighCSFChemGlucose" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_numeric cn ON cn.concept_id=o.concept_id
+AND o.concept_id=5126
+
+
+WHERE o.value_numeric &gt;= cn.hi_normal
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			  <dataValueTemplate dataElement="TTMalariaBSLessthan5" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+INNER JOIN person p ON o.person_id=p.person_id
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt; 5
+
+WHERE concept_id = 2260
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+              <dataValueTemplate dataElement="PosMalariaBSLessthan5" disaggregation="OzshuDqmXQI">
+				<annotation>
+
+SELECT COUNT(*) FROM
+obs o
+
+INNER JOIN person p ON o.person_id=p.person_id
+AND TIMESTAMPDIFF(YEAR, p.birthdate, o.obs_datetime) &lt; 5
+
+LEFT OUTER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND ob.concept_id = 5655
+
+WHERE o.concept_id=2260
+AND (o.value_coded IN (694, 695, 696, 697) OR ob.value_coded=782)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod  </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTMalariaBS5yrsAbove" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+INNER JOIN person p ON o.person_id=p.person_id
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt;= 5
+
+WHERE concept_id = 2260
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="PosMalariaBS5yrsAbove" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) FROM
+obs o
+
+INNER JOIN person p ON o.person_id=p.person_id
+AND TIMESTAMPDIFF(YEAR, p.birthdate, o.obs_datetime) &gt;= 5
+
+LEFT OUTER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND ob.concept_id = 5655
+
+WHERE o.concept_id=2260
+AND (o.value_coded IN (694, 695, 696, 697) OR ob.value_coded=782)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod	</annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTMalariaRapidTests" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2584
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="PosMalariaRapidTests" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2584
+AND value_coded=782
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="StoolExaminationTSpp" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5681
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="StoolExaminationHNana" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5679
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="StoolExaminationHookWorms" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5683
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="StoolExaminationRoundWorms" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5686
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             <dataValueTemplate dataElement="StoolExaminationSMansoni" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5678
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="StoolExaminationTTrichura" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=5682
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="StoolExaminationAmoeba" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id=2923
+AND value_coded=5659
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTFullBldCount" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE concept_id=2410
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTFullBldCountLessthan5" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 2410
+AND ob.concept_id = 995
+AND ob.value_numeric &lt; 5
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTFullBldCountBetween5and10" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 2410
+AND ob.concept_id = 995
+AND ob.value_numeric BETWEEN 5 AND 10
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTHBEstimation" disaggregation="OzshuDqmXQI">
+             <annotation>
+ 
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id = 2921
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTHBEstimationLessthan5" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id = 2921
+AND o.value_numeric &lt; 5
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTHBEstimationBetween5and10" disaggregation="OzshuDqmXQI">
+             <annotation>
+ 
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id = 2921
+AND o.value_numeric BETWEEN 5 AND 10
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTCD4Count" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 4004
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="CD4CountLessthan500" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 4004
+AND ob.concept_id = 5152
+AND ob.value_numeric &lt; 500
+
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTSicklingtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 3319
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="PosSicklingtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 3319
+AND ob.concept_id = 5136
+AND ob.value_numeric = 782
+
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTPBloodFilms" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 2572
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTBMA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 2573
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTCoagulateProfile" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 3013
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTRetCount" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 2578
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTESRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+
+WHERE o.concept_id = 2220
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="HighESRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+
+FROM obs o
+INNER JOIN concept_numeric cn 
+ON cn.concept_id=o.concept_id
+AND o.concept_id = 2220
+AND value_numeric &gt;= hi_normal
+
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoOfTTBGrpTests" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfBldUnitsGrp" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfBLDUnitsReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoOfBldUnitsCollected" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoOfBldUnitsTransfused" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfTransReactionsReported" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfBldGrpMatched" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoOfBldUnitsDiscarded" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoOfBldUnitsScreened4HIV" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfBldUnitsScreened4HepB" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfBldUnitsScreened4HepC" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoOfBldUnitsScreened4Syphillis" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+
+
+
+
+             <dataValueTemplate dataElement="TTUrine" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=2596
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTUrineCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosUrineCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTPusswabs" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=5019
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTPusswabsCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosPusswabsCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTHighVaginalSwabs" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=4998
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTHighVaginalSwabsCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoHighVaginalSwabsPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTThroatswab" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=2752
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTThroatswabCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoThroatswabPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTRectalSwab" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=5161
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTRectalSwabCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoRectalSwabPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTBlood" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=2591
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTBloodCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoBloodPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTWater" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=100126249
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTWaterCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoWaterPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTFood" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=100126250
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTFoodCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoFoodPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTUrethralSwabs" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=2418
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTUrethralSwabsCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoUrethralSwabsPosCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTStoolCultures" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+
+WHERE concept_id=3125
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTStoolPosCulture" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosSTyphi" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoPosSDType1" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosEcoli" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosCholerae01" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosCholerae02" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="CSFTTExam" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id = 2598
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="CSFNoPositive" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="CSFNoContaminated" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosNMA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosNMB" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosNMC" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoPosNMW135" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosNMX" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoPosNMY" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosNMIndeterminate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoPosNSP" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosHITypeB" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoPosCM" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="NoPosBA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoPosNPYP" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTTBSmearsExam" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id = 3324
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfPosTBSmears" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE concept_id=2259
+AND value_coded IN (694, 695, 696, 697)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTTBnewsuspectsExam" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id = 3324 
+AND CONCAT(person_id, '-', obs_id) IN (
+	SELECT CONCAT(person_id, '-', MIN(obs_id)) first_encounter
+	FROM obs o
+
+	WHERE o.concept_id = 3324
+	GROUP BY person_id
+)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoOfPosTBnewsuspects" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE concept_id=2259
+AND value_coded IN (694, 695, 696, 697)
+AND CONCAT(person_id, '-', obs_id) IN (
+	SELECT CONCAT(person_id, '-', MIN(obs_id)) first_encounter
+	FROM obs o
+
+	WHERE o.concept_id = 3324
+	GROUP BY person_id
+)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTTBFollowupExam" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE o.concept_id = 3324 
+AND CONCAT(person_id, '-', obs_id) NOT IN (
+	SELECT CONCAT(person_id, '-', MIN(obs_id)) first_encounter
+	FROM obs o
+
+	WHERE o.concept_id = 3324
+	GROUP BY person_id
+)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoOfPosTBFollowup" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE concept_id=2259
+AND value_coded IN (694, 695, 696, 697)
+AND CONCAT(person_id, '-', obs_id) IN (
+	SELECT CONCAT(person_id, '-', MIN(obs_id)) first_encounter
+	FROM obs o
+
+	WHERE o.concept_id = 3324
+	GROUP BY person_id
+)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="TTRifampicinResistantTBExam" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="NoOfPosRifampicinResistantTB" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTMDRTBExam" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="NoOfPosMDRTB" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+
+
+
+
+  			<dataValueTemplate dataElement="TTPAPSmear" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id = 100126138 AND o.value_coded=2222
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantPAPSmear" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+WHERE o.concept_id = 100126138 AND o.value_coded=2222
+AND obs_group_id IN (
+	SELECT o.obs_group_id
+	FROM obs o
+	INNER JOIN obs ob ON o.obs_group_id=ob.obs_id AND ob.concept_id=100126139
+	WHERE o.concept_id=5655 AND o.value_coded=782
+	AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+)
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTTouchPrep" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantTouchPrep" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTTissueImpressions" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+WHERE o.concept_id = 5669
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="MalignantTissueImpressions" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+
+FROM obs o
+INNER JOIN obs ob ON o.obs_group_id=ob.obs_id
+AND ob.concept_id=5669
+
+WHERE o.concept_id = 5655
+AND o.value_coded=782
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTFANThyroid" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="MalignantFANThyroid" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTFANLymphNodes" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="MalignantFANLymphNodes" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTFANLiver" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantFANLiver" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTFANBreast" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantFANBreast" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="TTFANSTMasses" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="MalignantFANSTMasses" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTFCAsciticFluid" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+WHERE o.concept_id = 2250
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="MalignantFCAsciticFluid" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 2250
+AND ob.concept_id = 5655
+AND ob.value_coded = 782
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTFCCSF" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+WHERE o.concept_id = 2251
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="MalignantFCCSF" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 2251
+AND ob.concept_id = 5655
+AND ob.value_coded = 782
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTFCPleuralfluid" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+WHERE o.concept_id = 2252
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantFCPleuralfluid" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 2252
+AND ob.concept_id = 5655
+AND ob.value_coded = 782
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTFCUrine" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantFCUrine" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="TTTHCervix" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="MalignantTHCervix" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTTHProstrate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="MalignantTHProstrate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTTHBreasttissue" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="MalignantTHBreasttissue" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTTHOvary" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantTHOvary" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTTHUterus" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantTHUterus" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="TTTHSkin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="MalignantTHSkin" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTTHHeadandNeck" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="MalignantTHHeadandNeck" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTTHDental" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="MalignantTHDental" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTTHGIT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantTHGIT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTTHLNTissue" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="MalignantTHLNTissue" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="TTBonemarrowaspirate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="MalignantBonemarrowaspirate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTTrephinebiopsy" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="MalignantTrephinebiopsy" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(0)
+FROM obs
+WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTVDRL" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE obs.concept_id = 2202
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="PosVDRL" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+
+FROM obs o
+INNER JOIN obs ob ON o.obs_group_id=ob.obs_id
+AND ob.concept_id = 2202
+
+WHERE o.concept_id = 5655
+AND o.value_coded = 782
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="TTTPHA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 2561
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="PosTPHA" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 2561
+AND value_coded = 850
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="TTASOT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE obs.concept_id = 2243
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="PosASOT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE obs.concept_id = 2243
+AND obs.value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="TTHIV" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE (concept_id = 3110 OR concept_id = 100126141)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="PosHIV" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE (concept_id = 3110 OR concept_id = 100126141)
+AND value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTBrucella" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 4992
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="PosBrucella" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 4992
+AND value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTRheumatoidfactor" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+WHERE o.concept_id = 5140
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="PosRheumatoidfactor" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs o
+
+WHERE concept_id = 2248
+AND value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+ 			<dataValueTemplate dataElement="TTHelicobacterpylori" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 5670
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="PosHelicobacterpylori" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 5670
+AND value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTHepatitisAtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE obs.concept_id = 2587
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="PosHepatitisAtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE obs.concept_id = 2587
+AND obs.value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTHepatitisBtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+WHERE o.concept_id = 3693
+AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+             
+             <dataValueTemplate dataElement="PosHepatitisBtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 3693
+AND ob.concept_id = 5139
+AND ob.value_coded = 782
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+            <dataValueTemplate dataElement="TTHepatitisCtest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id IN (2617,2604,5138)
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+             <dataValueTemplate dataElement="PosHCG" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id = 2523
+AND value_coded = 782
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+  			<dataValueTemplate dataElement="TTCRAGTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs
+WHERE concept_id = 5187
+AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+  			<dataValueTemplate dataElement="PosCRAGTest" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*) 
+FROM obs o
+INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
+AND o.concept_id = 5187
+AND ob.concept_id = 5186
+AND ob.value_coded = 782
+WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+         </dataValueTemplates>	
+    </reportTemplate>
+</reportTemplates>
