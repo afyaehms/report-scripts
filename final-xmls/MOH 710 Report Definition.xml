@@ -1,0 +1,2631 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+	<dataElements>
+
+	<dataElement uid="O3qECFGrzeF" code="BCGAdministeredover1yr" name="BCG doses Administered Over 1 Year"  type="int"/>
+        <dataElement uid="O3qECFGrzeFU1" code="BCGAdministeredunder1yr" name="BCG doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="iX5pEjcJowF" code="OPVBirth" name="OPV Birth doses Administered" type="int"/>
+        <dataElement uid="t3QKFZbCf2B" code="OPV1over1yr" name="OPV1 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="OLlWZUfLtsR" code="OPV2over1yr" name="OPV2 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="c2Gm5hW3I4i" code="OPV3over1yr" name="OPV3 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="t3QKFZbCf2BU1" code="OPV1under1yr" name="OPV1 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="OLlWZUfLtsRU1" code="OPV2under1yr" name="OPV2 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="c2Gm5hW3I4i3U1" code="OPV3under1yr" name="OPV3 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="gw4Zog5qvBy" code="IPVover1year" name="IPV doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="gw4Zog5qvByU1" code="IPVunder1yr" name="IPV doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="ku80YRejJPg" code="DPTHepHiB1over1yr" name="DPTHepHiB1 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="K1Zzhafeukq" code="DPTHepHiB2over1yr" name="DPTHepHiB2 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="OyddF1qflzP" code="DPTHepHiB3over1yr" name="DPTHepHiB3 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="ku80YRejJPgU1" code="DPTHepHiB1under1yr" name="DPTHepHiB1 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="K1ZzhafeukqU1" code="DPTHepHiB2under1yr" name="DPTHepHiB2 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="OyddF1qflzPU1" code="DPTHepHiB3under1yr" name="DPTHepHiB3 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="L2dPeH9VkBc" code="Pneumococal1over1yr" name="Pneumococal 1 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="xiaJWeXNYif" code="Pneumococal2over1yr" name="Pneumococal 2 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="h1GlCYbIQvU" code="Pneumococal3over1yr" name="Pneumococal 3 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="L2dPeH9VkBcU1" code="Pneumococal1under1yr" name="Pneumococal 1 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="xiaJWeXNYifU1" code="Pneumococal2under1yr" name="Pneumococal 2 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="h1GlCYbIQvUU1" code="Pneumococal3under1yr" name="Pneumococal 3 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="KLmFbdqADgn" code="Rotavirus1over1yr" name="Rotavirus 1 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="ZbGbUEnRxs1" code="Rotavirus2over1yr" name="Rotavirus 2 doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="KLmFbdqADgn1U1" code="Rotavirus1under1yr" name="Rotavirus 1 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="ZbGbUEnRxs12U1" code="Rotavirus2under1yr" name="Rotavirus 2 doses Administered Under 1 Year" type="int"/>
+        <dataElement uid="MAGmTkOIZus" code="VitaminA6mnths" name="Vitamin A at 6 months(100000 IU)" type="int"/>
+        <dataElement uid="PJCUSyQ6Ahv" code="YellowFeverover1yr" name="Yellow fever doses Administered Over 1 Year" type="int"/>
+        <dataElement uid="PJCUSyQ6AhvU1" code="YellowFeverunder1yr" name="Yellow fever doses Administered Under 1 Year" type="int"/>
+        
+		<dataElement uid="sRbqc5gBQhI" code="MeaslesRub1Over1yrs" name="Measles-Rubella 1 doses Administered Over 1 Years" type="int"/>
+        <dataElement uid="sRbqc5gBQhIU5" code="MeaslesRub1Under1yrs" name="Measles-Rubella 1 doses Administered Under 1 Years" type="int"/>  <dataElement uid="tBPGQFhWB7M" code="FICUnder1yr" name="Fully Immunized Children(FIC) under 1 year" type="int"/>
+        
+		<dataElement uid="usvyHT7z5w4" code="FICOver1yr" name="Fully Immunized Children(FIC) over 1 year" type="int"/>
+        <dataElement uid="NB9VuZXtpJK" code="VitaminA1yr" name="Vitamin A at 1 year (200000 IU)" type="int"/>
+        <dataElement uid="QvQzYi8ik43" code="VitaminA1halfyr" name="Vitamin A at 1 and a half year (200000 IU)" type="int"/>		
+        <dataElement uid="au9lav766rM" code="TT4PregWomenFirst" name="Tetanus Toxoid for Pregnant women First Dosage" type="int"/>
+        <dataElement uid="au9lav766rM2nd" code="TT4PregWomenSecond" name="Tetanus Toxoid for Pregnant women Second Dosage" type="int"/>
+        <dataElement uid="au9lav766rM3rd" code="TT4PregWomenThird" name="Tetanus Toxoid for Pregnant women Third Dosage" type="int"/>
+        <dataElement uid="au9lav766rM4th" code="TT4PregWomenFourth" name="Tetanus Toxoid for Pregnant women Fourth Dosage" type="int"/>
+        <dataElement uid="au9lav766rM5th" code="TT4PregWomenFifth" name="Tetanus Toxoid for Pregnant women Fifth Dosage" type="int"/>
+        <dataElement uid="cPeaV6caNqJ" code="VitaminA2to5yrs" name="Vitamin A 2 years to 5 years(200000 IU)" type="int"/>
+        <dataElement uid="vfyid8wVnVz" code="VitaminLactMothers" name="Vitamin A Supplemental Lactating Mothers (200000IU)" type="int"/>
+		<dataElement uid="zxBXktocimn" code="SquintWhiteEyeReflection" name="Squint/White Eye reflection (Under 1 Year) " type="int"/>
+		
+		<!--SECTION B Immunization Logistics-->
+		<dataElement uid="FridgeTypeUID" code="FridgeType" name="Type (Freezer or Refrigerator)" type="String"/>
+        <dataElement uid="ModelUID" code="Model" name="Model" type="string"/>
+        <dataElement uid="WorkingStatusUID" code="WorkingStatus" name="Working Status (Y/N)" type="String"/>
+        <dataElement uid="EnergySourceUID" code="EnergySource" name="Energy Source (E/G/S)" type="String"/>
+        <dataElement uid="EquipAgeInYrsUID" code="EquipAgeInYrs" name="Equipment age in Years" type="String"/>
+        <dataElement uid="VaccineTypeUID" code="VaccineType" name="Type (Vaccine)" type="String"/>
+		<dataElement uid="VaccineDaysUID" code="VaccineDays" name="Vaccine No. of days" type="String"/>
+        
+		
+		
+        <dataElement uid="d8MsenqQaMv" code="BCGStock" name="BCG doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="mRVVnw1KKSL" code="BCGDosesReceived" name="BCG doses received within the Month" type="int"/>
+        <dataElement uid="TotalBCGStocked" code="TotalBCGStocked" name="Total BCG doses stocked in the month" type="int"/>
+		<dataElement uid="iIlheePZjCc" code="BCGRemaining" name="BCG doses remaining at the end Month" type="int"/>
+		<dataElement uid="BCGDosesUsed" code="BCGDosesUsed" name="BCG Doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedBCG" code="ChildrenReceivedBCG" name="No. of children vaccinated during the month with BCG dose" type="int"/>
+		<dataElement uid="BCGWasted" code="BCGWasted" name="BCG doses wasted in the month" type="int"/>
+		<dataElement uid="BCGWastageRate" code="BCGWastageRate" name="BCG Wastage rate in the month" type="int"/>
+		 		
+        <dataElement uid="kuxcnLoB85c" code="OPVStock" name="OPV doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="BhPzqSAoc9Y" code="OPVDosesReceived" name="OPV doses received with the Month" type="int"/>
+		<dataElement uid="TotalOPVStocked" code="TotalOPVStocked" name="Total OPV doses stocked in the month" type="int"/>
+		<dataElement uid="g2ZhqF3DKMx" code="OPVDosesRemaining" name="OPV doses remaining at the end of the month" type="int"/>
+		<dataElement uid="OPVDosesUsed" code="OPVDosesUsed" name="OPV doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedOPV" code="ChildrenReceivedOPV" name="No. of children vaccinated with OPV during the month" type="int"/>
+		<dataElement uid="OPVDosesWasted" code="OPVDosesWasted" name="OPV doses wasted in the month" type="int"/>
+		<dataElement uid="OPVWastageRate" code="OPVWastageRate" name="Wastage rate of OPV doses in the month" type="int"/>
+		
+        <dataElement uid="MJQFsY7Dp8G" code="IPVStock" name="IPV doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="KUNmx9W9U2D" code="IPVDosesReceived" name="IPV doses received within the Month" type="int"/>
+		<dataElement uid="TotalIPVStocked" code="TotalIPVStocked" name="Total IPV doses stocked in the month" type="int"/>
+        <dataElement uid="IFQwJq7fgld" code="IPVRemaining" name="IPV doses remaining at  the end Month" type="int"/>
+		<dataElement uid="IPVDosesUsed" code="IPVDosesUsed" name="IPV doses used in the month" type="int"/>
+		<dataElement uid="ChilrenReceivedIPV" code="ChilrenReceivedIPV" name="No. of children vaccinated with IPV during the month" type="int"/>
+		<dataElement uid="IPVDosesWasted" code="IPVDosesWasted" name="IPV doses wasted in the month" type="int"/>
+		<dataElement uid="IPVWastageRate" code="IPVWastageRate" name="Wastage rate in the month" type="int"/>		
+				
+        <dataElement uid="s5PaJNvYa6i" code="DPTHepHiBStock" name="DPTHIBHEP B doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="byrpD40AkQG" code="DPTHepHiBReceived" name="DPTHIBHEP B doses received within the Month" type="int"/>
+		<dataElement uid="TotalDPTHIBHEPBDosesStocked" code="TotalDPTHIBHEPBDosesStocked" name="Total DPTHIBHEP B doses stocked in the month" type="int"/>
+        <dataElement uid="BkGKNzv3Vn6" code="DPTHepHiBRemaining" name="DPTHIBHEP B doses remaining at the end Month" type="int"/>
+		<dataElement uid="DPTHIBHEPBDosesUsed" code="DPTHIBHEPBDosesUsed" name="DPTHIBHEP B doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedDPTHIBHEPB" code="ChildrenReceivedDPTHIBHEPB" name="No. of children vaccinated with DPTHIBHEP B during the month" type="int"/>
+		<dataElement uid="DPTHIBHEPBDosesWasted" code="DPTHIBHEPBDosesWasted" name="DPTHIBHEP B doses wasted in the month" type="int"/>
+		<dataElement uid="DPTHIBHEPBWastageRate" code="DPTHIBHEPBWastageRate" name="Wastage rate for DPTHIBHEP B in the month" type="int"/>
+				
+        <dataElement uid="BQeaCpVaUYB" code="PneumococalStock" name="Pneumococal doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="XkemTADiLv4" code="PneumococalReceived" name="Pneumococal doses received within the Month" type="int"/>
+		<dataElement uid="TotalPneumococalDosesStocked" code="TotalPneumococalDosesStocked" name="Total doses stocked in the month" type="int"/>
+        <dataElement uid="VRD05emEwOF" code="PneumococalRemaining" name="Pneumococal doses remaining at the end Month" type="int"/>
+		<dataElement uid="PneumococalDosesUsed" code="PneumococalDosesUsed" name="Pneumococal doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedPneumococal" code="ChildrenReceivedPneumococal" name="No. of children vaccinated with Pneumococal vaccine during the month" type="int"/>
+		<dataElement uid="PneumococalWasted" code="PneumococalWasted" name="Doses wasted in the month" type="int"/>
+		<dataElement uid="PneumococalWastageRate" code="PneumococalWastageRate" name="Wastage rate in the month" type="int"/>
+		
+        <dataElement uid="K03lJM8oTmo" code="RotavirusStock" name="Rotavirus doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="LH3k9HY4JwN" code="RotavirusDosesReceived" name="Rotavirus doses received within the Month" type="int"/>
+		<dataElement uid="TotalRotavirusStocked" code="TotalRotavirusStocked" name="Total Rotavirus doses stocked in the month" type="int"/>
+        <dataElement uid="ZlK7QRicOsQ" code="RotavirusDosesRemaining" name="Rotavirus doses remaining at the end Month" type="int"/>
+		<dataElement uid="RotavirusDosesUsed" code="RotavirusDosesUsed" name="Doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedRotavirus" code="ChildrenReceivedRotavirus" name="No. of children vaccinated during the month" type="int"/>
+		<dataElement uid="RotavirusWasted" code="RotavirusWasted" name="Doses wasted in the month" type="int"/>
+		<dataElement uid="RotavirusWastageRate" code="RotavirusWastageRate" name="Wastage rate in the month" type="int"/>
+				
+        <dataElement uid="AMVejJGpKI9" code="MeaslesStock" name="Measles doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="smag5V5gz0s" code="MeaslesDosesReceived" name="Measles doses received within the Month" type="int"/>
+		<dataElement uid="TotalMeaslesDosesStocked" code="TotalMeaslesDosesStocked" name="Total Measles doses stocked in the month" type="int"/>
+        <dataElement uid="Gk6WlfVitbC" code="MeaslesDosesRemaining" name="Measles doses remaining  at the end Month" type="int"/>
+		<dataElement uid="MeaslesDosesUsed" code="MeaslesDosesUsed" name="Measles doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedMeasles" code="ChildrenReceivedMeasles" name="No. of children vaccinated with Measles vaccine during the month" type="int"/>
+		<dataElement uid="MeaslesDosesWasted" code="MeaslesDosesWasted" name="Measles doses wasted in the month" type="int"/>
+		<dataElement uid="MeaslesWastageRate" code="MeaslesWastageRate" name="Measles wastage rate in the month" type="int"/>
+
+        <dataElement uid="qEWi8LlojkO" code="YellowFeverStock" name="Yellow Fever doses in stock at the beginning of the Month" type="int"/>
+        <dataElement uid="Rk1XnSRNZdC" code="YellowFeverDosesReceived" name="Yellow Fever doses received within the Month" type="int"/>
+		<dataElement uid="YellowFeverDosesStocked" code="YellowFeverDosesStocked" name="Total Yellow Fever doses stocked in the month" type="int"/>
+        <dataElement uid="fN2IogSWRPi" code="YellowFeverDosesRemaining" name="Yellow Fever doses remaining at  the end Month" type="int"/>
+		<dataElement uid="YellowFeverDosesUsed" code="YellowFeverDosesUsed" name="Yellow Fever doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedYellowFever" code="ChildrenReceivedYellowFever" name="No. of children vaccinated with Yellow Fever during the month" type="int"/>
+		<dataElement uid="YellowFeverDosesWasted" code="YellowFeverDosesWasted" name="Yellow Fever doses wasted in the month" type="int"/>
+		<dataElement uid="YellowFeverWastageRate" code="YellowFeverWastageRate" name="Yellow Fever doses wastage rate in the month" type="int"/>
+			
+        <dataElement uid="HIfJ6JvWQmQ" code="TTStock" name="Tetanus Toxiod doses in stock at beginning of the Month" type="int"/>
+        <dataElement uid="siS80Yt4ul4" code="TTDosesReceived" name="Tetanus Toxiod doses received  within  the Month" type="int"/>
+		<dataElement uid="TotalTTStocked" code="TotalTTStocked" name="Total Tetanus Toxiod doses stocked in the month" type="int"/>
+        <dataElement uid="odmSZSezPsY" code="TTDosesRemaining" name="Tetanus Toxiod doses remaining at the end Month" type="int"/>
+		<dataElement uid="TTUsed" code="TTUsed" name="Tetanus Toxiod doses used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedTT" code="ChildrenReceivedTT" name="No. of children vaccinated with Tetanus Toxiod during the month" type="int"/>
+		<dataElement uid="TTWasted" code="TTWasted" name="Tetanus Toxiod doses wasted in the month" type="int"/>
+		<dataElement uid="TTWastageRate" code="TTWastageRate" name="Tetanus Toxiod wastage rate in the month" type="int"/>
+		
+        <dataElement uid="OKXUzudHulV" code="VitaminA100stock" name="Vitamin A 100000 IU caps in stock the beginning of the Month" type="int"/>
+        <dataElement uid="IWndZVZ3KqT" code="VitaminA100DosesReceived" name="Vitamin A 100000 IU caps received within  the Month" type="int"/>
+		<dataElement uid="TotalVitaminA100Stocked" code="TotalVitaminA100Stocked" name="Total Vitamin A 100000 IU capsules stocked in the month" type="int"/>
+        <dataElement uid="vOaRpiWvl2K" code="VitaminA100DosesRemaining" name="Vitamin A 100000 IU caps remaining at the end Month" type="int"/>
+		<dataElement uid="VitaminA100Used" code="VitaminA100Used" name="Vitamin A 100000 IU capsules used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedVitaminA100" code="ChildrenReceivedVitaminA100" name="No. of children supplemented with Vitamin A 100000 IU during the month" type="int"/>
+		<dataElement uid="VitaminA100Wasted" code="VitaminA100Wasted" name="Vitamin A 100000 IU capsules wasted in the month" type="int"/>
+		<dataElement uid="VitaminA100WastageRate" code="VitaminA100WastageRate" name="Vitamin A 100000 IU capsules wastage rate in the month" type="int"/>
+		
+        <dataElement uid="whXQzFlRT37" code="VitaminA200stock" name="Vitamin A 200000 IU caps in stock the beginning of the Month" type="int"/>
+        <dataElement uid="BBD2ipNt4Ro" code="VitaminA200DosesReceived" name="Vitamin A 200000 IU caps received within  the Month" type="int"/>
+		<dataElement uid="TotalVitaminA200DosesStocked" code="TotalVitaminA200DosesStocked" name="Total Vitamin A 200000 IU caps stocked in the month" type="int"/>
+        <dataElement uid="oACe0uiAmnT" code="VitaminA200DosesRemaining" name="Vitamin A 200000 IU caps remaining at the end Month" type="int"/>
+		<dataElement uid="VitaminA200DosesUsed" code="VitaminA200DosesUsed" name="Vitamin A 200000 IU caps used in the month" type="int"/>
+		<dataElement uid="ChildrenReceivedVitaminA200" code="ChildrenReceivedVitaminA200" name="No. of children supplemented with Vitamin A 200000 IU caps during the month" type="int"/>
+		<dataElement uid="VitaminA200DosesWasted" code="VitaminA200DosesWasted" name="Vitamin A 200000 IU capsules wasted in the month" type="int"/>
+		<dataElement uid="VitaminA200WastageRate" code="VitaminA200WastageRate" name="Vitamin A 200000 IU caps wastage rate in the month" type="int"/>
+
+
+		
+        
+	</dataElements>
+     <disaggregations>
+         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+     </disaggregations>
+     <reportTemplate>
+         <name> MOH 710 Vaccines and Immunization </name>
+         <uid>WtgleFiaJqO</uid>
+         <code>WtgleFiaJqO</code>
+		<timelyDays>15</timelyDays>
+         <periodType>Monthly</periodType>
+         <dataValueTemplates>
+		 <dataValueTemplate dataElement="BCGAdministeredover1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE (pws.concept_id = 100126145 OR pws.concept_id = 100126146)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BCGAdministeredunder1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE (pws.concept_id = 100126145 OR pws.concept_id = 100126146)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="OPVBirth" disaggregation="OzshuDqmXQI">
+            <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126153
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+
+             </annotation>
+             </dataValueTemplate>
+		 
+		 
+		 <dataValueTemplate dataElement="OPV1over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126150
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OPV1under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126150
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OPV2over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+ SELECT COUNT(*)
+ FROM patient_state ps
+ INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+ INNER JOIN person p ON pg.patient_id = p.person_id
+ INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+ WHERE pws.concept_id = 100126151
+ AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+ AND birthdate IS NOT NULL
+ AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="OPV2under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126151
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+             <dataValueTemplate dataElement="OPV3over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126152
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="OPV3under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126152
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="DPTHepHiB1over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126154
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+	    </annotation>
+             </dataValueTemplate>
+				
+			<dataValueTemplate dataElement="DPTHepHiB1under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126154
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>	
+			 
+			 <dataValueTemplate dataElement="DPTHepHiB2over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126155
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="DPTHepHiB2under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126155
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate> 
+			 
+			 
+			 <dataValueTemplate dataElement="DPTHepHiB3over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126156
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>	
+			
+			<dataValueTemplate dataElement="DPTHepHiB3under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126156
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="Pneumococal1over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126157
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="Pneumococal1under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126157
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="Pneumococal2over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126158
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="Pneumococal2under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126158
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="Pneumococal3over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126159
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			
+			<dataValueTemplate dataElement="Pneumococal3under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126159
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="Rotavirus1over1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126160
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+	     </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="Rotavirus1under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126160
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="Rotavirus2under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126161
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+ AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="Rotavirus2under1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126161
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA6mnths" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126164
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt; 1
+	     </annotation>
+	     </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="YellowFeverover1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126162
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="YellowFeverunder1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id = 100126162
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MeaslesRub1Over1yrs" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id IN (100126194, 100126195)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &gt; 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MeaslesRub1Under1yrs" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_state ps
+INNER JOIN patient_program pg ON pg.patient_program_id=ps.patient_program_id
+INNER JOIN person p ON pg.patient_id = p.person_id
+INNER JOIN program_workflow_state pws ON pws.program_workflow_state_id=ps.state
+WHERE pws.concept_id IN (100126194, 100126195)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+AND birthdate IS NOT NULL
+AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="FICUnder1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM(
+SELECT patient_id
+FROM patient_state ps
+INNER JOIN patient_program pp ON ps.patient_program_id=pp.patient_program_id
+INNER JOIN person p ON pp.patient_id = p.person_id
+WHERE birthdate IS NOT NULL 
+AND ((DATEDIFF(:startOfPeriod,birthdate) / 365) &lt;= 1
+OR (DATEDIFF(:endOfPeriod,birthdate) / 365) &lt;= 1)
+GROUP BY patient_id
+HAVING COUNT(DISTINCT state)=(
+SELECT COUNT(program_workflow_state_id)
+FROM program_workflow_state pws
+INNER JOIN program_workflow pw 
+ON pw.program_workflow_id = pws.program_workflow_id AND program_id=3)
+) AS fully_vaccinated 
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="FICOver1yr" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM(
+SELECT patient_id
+FROM patient_state ps
+INNER JOIN patient_program pp ON ps.patient_program_id=pp.patient_program_id
+INNER JOIN person p ON pp.patient_id = p.person_id
+WHERE birthdate IS NOT NULL 
+AND ((DATEDIFF(:startOfPeriod,birthdate) / 365) &gt; 1
+OR (DATEDIFF(:endOfPeriod,birthdate) / 365) &gt; 1)
+GROUP BY patient_id
+HAVING COUNT(DISTINCT state)=(
+SELECT COUNT(program_workflow_state_id)
+FROM program_workflow_state pws
+INNER JOIN program_workflow pw 
+ON pw.program_workflow_id = pws.program_workflow_id AND program_id=3)
+) AS fully_vaccinated  
+             </annotation>
+             </dataValueTemplate>
+            			 			
+
+			<dataValueTemplate dataElement="BCGStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=346
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="BCGDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=346
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalBCGStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=346
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=346
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="BCGRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=346
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BCGDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=346
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedBCG" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE (state=1 OR state=2)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BCGWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=346
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE (state=1 OR state=2)
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BCGWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=346
+
+	WHERE DATE(isdtd.created_on) &gt;= '2016-09-01'
+	AND DATE(isdtd.created_on) &lt;= '2016-09-30'
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE (state=1 OR state=2)
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="OPVStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=351
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="OPVDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=351
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalOPVStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=351
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=351
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="OPVDosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=351
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OPVDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=351
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedOPV" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state BETWEEN 4 AND 7
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OPVDosesWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=351
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state BETWEEN 4 AND 7
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OPVWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=351
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state BETWEEN 4 AND 7
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="IPVStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=347
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="IPVDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=347
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalIPVStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=347
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=347
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="IPVRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=347
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="IPVDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=347
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChilrenReceivedIPV" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state=41
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="IPVDosesWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=347
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state=41
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="IPVWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=347
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state=41
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 			 
+			<dataValueTemplate dataElement="DPTHepHiBStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=348
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="DPTHepHiBReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=348
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalDPTHIBHEPBDosesStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=348
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=348
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+             </annotation>
+             </dataValueTemplate>
+			 
+			 			 
+			<dataValueTemplate dataElement="DPTHepHiBRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=348
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="DPTHIBHEPBDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=348
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedDPTHIBHEPB" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state BETWEEN 8 AND 10
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="DPTHIBHEPBDosesWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=348
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state BETWEEN 8 AND 10
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="DPTHIBHEPBWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=348
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state BETWEEN 8 AND 10
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="PneumococalStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=343
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="PneumococalReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=343
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalPneumococalDosesStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=343
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=343
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="PneumococalRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=343
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PneumococalDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=343
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedPneumococal" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state BETWEEN 11 AND 13
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PneumococalWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=343
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state BETWEEN 11 AND 13
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PneumococalWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=343
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state BETWEEN 11 AND 13
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="RotavirusStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=349
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="RotavirusDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=349
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalRotavirusStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=349
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=349
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RotavirusDosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=349
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RotavirusDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=349
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedRotavirus" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state BETWEEN 18 AND 19
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RotavirusWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=349
+
+	WHERE DATE(isdtd.created_on) &gt;= '2016-09-08'
+	AND DATE(isdtd.created_on) &lt;= '2016-09-30'
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state BETWEEN 18 AND 19
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RotavirusWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=349
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state BETWEEN 18 AND 19
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="MeaslesStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=352
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="MeaslesDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=352
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalMeaslesDosesStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=352
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=352
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="MeaslesDosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=352
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MeaslesDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=352
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedMeasles" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE (state BETWEEN 37 AND 39)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MeaslesDosesWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=352
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE (state BETWEEN 37 AND 39)
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MeaslesWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=352
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE (state BETWEEN 37 AND 39)
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="YellowFeverStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=350
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="YellowFeverDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=350
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="YellowFeverDosesStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=350
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=350
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="YellowFeverDosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=350
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="YellowFeverDosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=350
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedYellowFever" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state = 14
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="YellowFeverDosesWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=350
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state = 14
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="YellowFeverWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=350
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state = 14
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			
+			
+			<dataValueTemplate dataElement="TTStock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=188
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="TTDosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=188
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalTTStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=188
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=188
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TTDosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=188
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TTUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=188
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedTT" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM inventory_store_drug_transaction_detail isdtd
+INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
+AND e.encounter_type=19
+
+WHERE drug_id=188
+AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TTWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=188
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM inventory_store_drug_transaction_detail isdtd
+	INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
+	AND e.encounter_type=19
+
+	WHERE drug_id=188
+	AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TTWastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=188
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM inventory_store_drug_transaction_detail isdtd
+	INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
+	AND e.encounter_type=19
+
+	WHERE drug_id=188
+	AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="VitaminA100stock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=354
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="VitaminA100DosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=354
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalVitaminA100Stocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=354
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=354
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="VitaminA100DosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=354
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA100Used" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=354
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedVitaminA100" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state = 16
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA100Wasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=354
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state = 16
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA100WastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=354
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state = 16
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA200stock" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=355
+
+	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	AND DATE(isdtd.created_on) &lt; :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS OP
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="VitaminA200DosesReceived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=355
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 1
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TotalVitaminA200DosesStocked" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT * FROM (
+	  SELECT closing_balance
+	  FROM immunization_store_drug_transaction_detail isdtd
+
+	  INNER JOIN immunization_store_drug drug
+	  ON isdtd.immunization_store_drug_id = drug.id
+	  AND drug.inventory_drug_id=355
+
+	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
+	  AND DATE(isdtd.created_on) &lt; :startOfPeriod
+	  ORDER BY isdtd.id DESC
+	  LIMIT 1
+	) AS OP
+
+	UNION ALL
+
+	SELECT quantity
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=355
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 1
+) STOCKED
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="VitaminA200DosesRemaining" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(closing_balance),0)
+FROM (
+	SELECT closing_balance
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=355
+
+	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
+	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
+
+	ORDER BY isdtd.id DESC
+	LIMIT 1
+) AS CL
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA200DosesUsed" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT IFNULL(SUM(quantity),0)
+FROM immunization_store_drug_transaction_detail isdtd
+
+INNER JOIN immunization_store_drug drug
+ON isdtd.immunization_store_drug_id = drug.id
+AND drug.inventory_drug_id=355
+
+WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+AND isdtd.transaction_type = 2
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="ChildrenReceivedVitaminA200" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT COUNT(*)
+FROM patient_state
+WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
+AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA200DosesWasted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT GREATEST(SUM(qt),0)
+FROM (
+	SELECT SUM(quantity) qt
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=355
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT (0-COUNT(*))
+	FROM patient_state
+	WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="VitaminA200WastageRate" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
+FROM (
+	SELECT SUM(quantity) qt_used, 0 qt_immunized
+	FROM immunization_store_drug_transaction_detail isdtd
+
+	INNER JOIN immunization_store_drug drug
+	ON isdtd.immunization_store_drug_id = drug.id
+	AND drug.inventory_drug_id=355
+
+	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
+	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
+	AND isdtd.transaction_type = 2
+
+	UNION ALL
+
+	SELECT 0, COUNT(*)
+	FROM patient_state
+	WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
+	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS WASTAGE
+             </annotation>
+             </dataValueTemplate>
+			
+         </dataValueTemplates>		 
+    </reportTemplate>
+</reportTemplates>

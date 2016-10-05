@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     <dataElements>
+	 
+		<dataElement uid="rIkD2jIDqPh" code="NewOPDOlderMale" name="New OPD attendance greater than 5yrs Male" type="int"/>
+		 <dataElement uid="zXzBILTVJzD" code="NewOPDOlderFeMale" name="New OPD attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="F6AwnxbwiK2" code="NewOPDYoungerMale" name="New OPD Attendance less than 5yrs Male"  type="int"/>
+		 <dataElement uid="Ha96SBKI06u" code="NewOPDYoungerFeMale" name="New OPD Attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="x13zGZKuxzs" code="NewOPDCasualty" name="New OPD Casualty attendance"   type="int"/>
+		 <dataElement uid="rIkD2jIDqPhRevisit" code="RevisitOPDOlderMale" name="Revisit OPD attendance greater than 5yrs Male" type="int"/>
+		 <dataElement uid="zXzBILTVJzDRevisit" code="RevisitOPDOlderFeMale" name="Revisit OPD attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="F6AwnxbwiK2Revisit" code="RevisitOPDYoungerMale" name="Revisit OPD Attendance less than 5yrs Male"  type="int"/>
+		 <dataElement uid="Ha96SBKI06uRevisit" code="RevisitOPDYoungerFeMale" name="Revisit OPD Attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="x13zGZKuxzsRevisit" code="RevisitOPDCasualty" name="Revisit OPD Casualty attendance"   type="int"/>
+		 <dataElement uid="EsfvxFcltV0" code="CWCAttNew" name="New CWC Attendance" type="int"/>
+		 <dataElement uid="EsfvxFcltV0Revisit" code="CWCAttRevisit" name="Revisit CWC Attendance" type="int"/>
+		 <dataElement uid="uTQOSp7rx5h" code="ANCAttNew" name="New ANC Attendance" type="int"/>
+		 <dataElement uid="uTQOSp7rx5hRevisit" code="ANCAttRevisit" name="Revisit ANC Attendance" type="int"/>
+		 <dataElement uid="QStt76mU06X" code="PNCAttNew" name="New PNC Attendance" type="int"/>
+		 <dataElement uid="QStt76mU06XRevisit" code="PNCAttRevisit" name="Revisit PNC Attendance" type="int"/>
+		 <dataElement uid="SyUQl638r5P" code="FPAttNew" name="New FP Attendance" type="int"/>
+		 <dataElement uid="SyUQl638r5PRevisit" code="FPAttRevisit" name="Revisit FP Attendance" type="int"/>
+		 <dataElement uid="Lf9boBQjhn9" code="MEDoneExceptP3" name="Medical Examinations done except P3" type="int"/>
+                 <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (including P3 - compensation - insurance)" type="int"/>
+		 <dataElement uid="yNeFQlrPflq" code="OPDDressingDone" name="OPD Dressing Done" type="int"/>
+		 <dataElement uid="jQBxaAGqV08" code="OPDStitchRemoval" name="OPD Removal of Stitches" type="int"/>
+		 <dataElement uid="GuqtqOUKwch" code="OPDInjections" name="OPD Injections Given" type="int"/>
+		 <dataElement uid="NQAVJqp70md" code="OPDStitching" name="OPD Stitching Done" type="int"/> 
+		 <dataElement uid="dQYmmECUxYl" code="OPDPOP" name="OPD Plaster of Paris (POP) Done"  type="int"/>
+		 <dataElement uid="K9zlgTTptWN" code="AntibiotsIssued" name="Prescriptions Issued - Antibiotics" type="int"/>
+		 <dataElement uid="jaPrPmor6WV" code="NormalDel" name="Normal Deliveries" type="int"/>
+		 <dataElement uid="rAZBTMa7Jy3" code="CSections" name="Caesarian Sections" type="int"/>
+		 <dataElement uid="sMqM8DwiAaj" code="BreechDel" name="Breach Delivery"  type="int"/>
+		 <dataElement uid="QpZs40xRj5K" code="TTFinancing" name="Total available financing (kshs)"  type="int"/>
+		 <dataElement uid="F9Jckipi2Fk" code="NoWaived" name="Number of clients waived" type="int"/>
+		 <dataElement uid="MQXbAxGO0Cs" code="TTWaived" name="Amount for clients waived (Kshs)" type="int"/>
+		 <dataElement uid="g5bTVuKKwJs" code="NoExepmted" name="Number of clients exempted" type="int"/>
+		 <dataElement uid="X3VvPqb5wcb" code="TTExpemted" name="Amount for clients exempted (Kshs)" type="int"/>
+		 
+     </dataElements>
+     <disaggregations>
+         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+     </disaggregations>
+     <reportTemplate>
+         <name> MOH 717 Service Workload </name>
+         <uid>cvyzaRp8OlE</uid>
+         <code>cvyzaRp8OlE</code>
+		<timelyDays>15</timelyDays>
+         <periodType>Monthly</periodType>
+         <dataValueTemplates>
+		 <dataValueTemplate dataElement="NewOPDOlderMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+select 
+	count(patient_id) 
+from 
+	opd_patient_queue_log 
+where 
+	opd_concept_id = 5113 
+and 
+	visit_status like 'New Patient' 
+and 
+	patient_id in (
+		select 
+			person_id 
+		from 
+			person 
+		where 
+			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) &gt; 5 
+		and 
+			gender = 'M'
+	)
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RevisitOPDOlderMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+select 
+	count(patient_id) 
+from 
+	opd_patient_queue_log 
+where 
+	opd_concept_id = 5113 
+and 
+	visit_status like 'Revisit' 
+and 
+	patient_id in (
+		select 
+			person_id 
+		from 
+			person 
+		where 
+			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) &gt; 5 
+		and 
+			gender = 'M'
+	)
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="NewOPDOlderFeMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+select 
+	count(patient_id) 
+from 
+	opd_patient_queue_log 
+where 
+	opd_concept_id = 5113 
+and 
+	visit_status like 'New Patient' 
+and 
+	patient_id in (
+		select 
+			person_id 
+		from 
+			person 
+		where 
+			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) &gt; 5 
+		and 
+			gender = 'F'
+	)
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RevisitOPDOlderFeMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+select 
+	count(patient_id) 
+from 
+	opd_patient_queue_log 
+where 
+	opd_concept_id = 5113 
+and 
+	visit_status like 'Revisit' 
+and 
+	patient_id in (
+		select 
+			person_id 
+		from 
+			person 
+		where 
+			birthdate is not null and floor(datediff(curdate(),birthdate) / 365) &gt; 5 
+		and 
+			gender = 'F'
+	)
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+		 
+		 
+		 <dataValueTemplate dataElement="NewOPDYoungerMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT 
+	COUNT(patient_id) 
+FROM 
+	opd_patient_queue_log 
+WHERE 
+	opd_concept_id = 5113 
+AND 
+	visit_status LIKE 'New Patient' 
+AND 
+	patient_id IN (
+		SELECT 
+			person_id 
+		FROM 
+			person 
+		WHERE 
+			birthdate IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) &lt; 5 
+		AND 
+			gender = 'F'
+	)
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RevisitOPDYoungerMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT 
+	COUNT(patient_id)
+FROM 
+	opd_patient_queue_log
+WHERE
+	visit_status LIKE 'Revisit'
+AND 
+	patient_id IN (
+		SELECT
+			patient_id
+		FROM
+			person
+		WHERE
+			birth_date IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) &lt;5
+		AND 	
+			gender = 'M')
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod	     </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="NewOPDYoungerFeMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT 
+	COUNT(patient_id) 
+FROM 
+	opd_patient_queue_log 
+WHERE 
+	opd_concept_id = 5113 
+AND 
+	visit_status LIKE 'New Patient' 
+AND 
+	patient_id IN (
+		SELECT 
+			person_id 
+		FROM 
+			person 
+		WHERE 
+			birthdate IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) &lt; 5 
+		AND 
+			gender = 'F'
+	)
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+
+			 <dataValueTemplate dataElement="RevisitOPDYoungerFeMale" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT 
+	COUNT(patient_id)
+FROM 
+	opd_patient_queue_log
+WHERE
+	visit_status LIKE 'Revisit'
+AND 
+	patient_id IN (
+		SELECT
+			patient_id
+		FROM
+			person
+		WHERE
+			birth_date IS NOT NULL AND FLOOR(DATEDIFF(CURDATE(),birthdate) / 365) &lt;5
+		AND 	
+			gender = 'f')
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+             <dataValueTemplate dataElement="NewOPDCasualty" disaggregation="OzshuDqmXQI">
+             <annotation>
+select 
+	count(patient_id) 
+from 
+	opd_patient_queue_log 
+where 
+	opd_concept_id = 5114 
+and 
+	visit_status like 'New Patient' 
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="RevisitOPDCasualty" disaggregation="OzshuDqmXQI">
+             <annotation>
+select 
+	count(patient_id) 
+from 
+	opd_patient_queue_log 
+where 
+	opd_concept_id = 5114 
+and 
+	visit_status like 'New Patient'
+AND
+	created_on BETWEEN :startOfPeriod AND :endOfPeriod;	
+             </annotation>
+             </dataValueTemplate>
+
+			<dataValueTemplate dataElement="CWCAttNew" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_program
+WHERE program_id= '3'
+AND date_enrolled BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+			 
+			 <dataValueTemplate dataElement="CWCAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM(
+	SELECT v.patient_id, v.visit_date, (
+		SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
+		FROM patient_program pa
+		WHERE v.patient_id=pa.patient_id AND v.visit_date&gt;=DATE(date_enrolled)
+		ORDER BY date_enrolled DESC
+		LIMIT 1
+	) AS program_idnt
+
+	FROM (
+		SELECT patient_id, DATE(created_on) visit_date
+		FROM opd_patient_queue_log
+		WHERE opd_concept_id=5704
+
+		UNION ALL
+
+		SELECT patient_id, DATE(created_on)
+		FROM triage_patient_queue_log
+		WHERE triage_concept_id=5123
+	) AS v
+
+	GROUP BY v.patient_id, v.visit_date
+) AS pv
+
+WHERE SUBSTRING(program_idnt, 1, 3) = '003'
+AND program_idnt NOT IN (
+	SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
+	FROM patient_program
+)
+AND pv.visit_date BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+			<dataValueTemplate dataElement="ANCAttNew" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_program
+WHERE program_id = 1
+AND date_enrolled between :startOfPeriod and :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+
+			<dataValueTemplate dataElement="ANCAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM(
+	SELECT v.patient_id, v.visit_date, (
+		SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
+		FROM patient_program pa
+		WHERE v.patient_id=pa.patient_id AND v.visit_date&gt;=DATE(date_enrolled)
+		ORDER BY date_enrolled DESC
+		LIMIT 1
+	) AS program_idnt
+
+	FROM (
+		SELECT patient_id, DATE(created_on) visit_date
+		FROM opd_patient_queue_log
+		WHERE opd_concept_id=5704
+
+		UNION ALL
+
+		SELECT patient_id, DATE(created_on)
+		FROM triage_patient_queue_log
+		WHERE triage_concept_id=5123
+	) AS v
+
+	GROUP BY v.patient_id, v.visit_date
+) AS pv
+
+WHERE SUBSTRING(program_idnt, 1, 3) = '001'
+AND program_idnt NOT IN (
+	SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
+	FROM patient_program
+)
+AND pv.visit_date BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>			 
+			 
+			 <dataValueTemplate dataElement="PNCAttNew" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM patient_program
+WHERE program_id= '2'
+AND date_enrolled between :startOfPeriod and :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="PNCAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM(
+	SELECT v.patient_id, v.visit_date, (
+		SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
+		FROM patient_program pa
+		WHERE v.patient_id=pa.patient_id AND v.visit_date&gt;=DATE(date_enrolled)
+		ORDER BY date_enrolled DESC
+		LIMIT 1
+	) AS program_idnt
+
+	FROM (
+		SELECT patient_id, DATE(created_on) visit_date
+		FROM opd_patient_queue_log
+		WHERE opd_concept_id=5704
+
+		UNION ALL
+
+		SELECT patient_id, DATE(created_on)
+		FROM triage_patient_queue_log
+		WHERE triage_concept_id=5123
+	) AS v
+
+	GROUP BY v.patient_id, v.visit_date
+) AS pv
+
+WHERE SUBSTRING(program_idnt, 1, 3) = '002'
+AND program_idnt NOT IN (
+	SELECT CONCAT(LPAD(program_id, 3, '0'), '-', patient_program_id)
+	FROM patient_program
+)
+AND pv.visit_date BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="FPAttNew" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM (
+	SELECT MIN(DATE(obs_datetime)) fp_regdate
+	FROM obs o
+	WHERE concept_id = 374
+	GROUP BY person_id
+	ORDER BY obs_datetime ASC
+) AS fp
+WHERE fp_regdate BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>	
+			 
+			  <dataValueTemplate dataElement="FPAttRevisit" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+
+SELECT COUNT(*)
+FROM (
+	SELECT person_id, DATE(obs_datetime) obs_date
+	FROM obs o
+	WHERE concept_id = 374
+	AND CONCAT(DATE(obs_datetime),'-',person_id) NOT IN (
+		SELECT CONCAT(MIN(DATE(obs_datetime)),'-',person_id) fp_regdate
+		FROM obs o
+		WHERE concept_id = 374
+		GROUP BY person_id
+		ORDER BY obs_datetime ASC
+	)
+	GROUP BY person_id, DATE(obs_datetime)
+) AS z1
+WHERE obs_date BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MEDoneExceptP3" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (1020,1744,4458,5529,134561)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="MEReportsIssued" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (1005,1006,1007,1008,1505,1506,1746,1747,1748,2524,2525,2526,2527,2528,2587,2590,2604,2617,4436,145131,160143)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="OPDDressingDone" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_answer ca
+ON ca.answer_concept = o.concept_id
+AND ca.concept_id=4197
+             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="OPDStitchRemoval" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT COUNT(*)
+FROM obs
+WHERE concept_id=3460
+             </annotation>
+             </dataValueTemplate>				 
+			 
+			 <dataValueTemplate dataElement="OPDInjections" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_answer ca
+ON ca.answer_concept = o.concept_id
+AND ca.concept_id=5321
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="OPDStitching" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT COUNT(*)
+FROM obs o
+INNER JOIN concept_answer ca
+ON ca.answer_concept = o.concept_id
+AND ca.concept_id=2661
+             </annotation>
+             </dataValueTemplate> 
+			  <dataValueTemplate dataElement="OPDPOP" disaggregation="OzshuDqmXQI">
+             <annotation>
+SELECT COUNT(*)
+FROM obs 
+WHERE concept_id=2657
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="AntibiotsIssued" disaggregation="OzshuDqmXQI">
+             <annotation>
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="NormalDel" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (1104,117152)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="CSections" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (4038,1083)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="BreechDel" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (1022,1846,4333,160180,160205)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+             </annotation>
+             </dataValueTemplate>
+			 
+			 
+			 <dataValueTemplate dataElement="TTFinancing" disaggregation="OzshuDqmXQI">
+             <annotation>
+				 SELECT COUNT(DISTINCT p.person_id) AS 'Count'
+				 FROM person p
+				 INNER JOIN obs o ON o.person_id = p.person_id
+				 WHERE p.voided = 0 AND o.voided = 0
+				 AND o.concept_id=5109 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				 AND o.value_coded IN (1104,117152)
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt;5
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="NoWaived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT 	COUNT(*) FROM billing_patient_service_bill 
+WHERE free_bill &lt;&gt; 0
+AND created_date BETWEEN :startOfPeriod AND :endOfPeriod
+             </annotation>
+             </dataValueTemplate>
+			 
+			 <dataValueTemplate dataElement="TTWaived" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(amount)
+FROM (
+    SELECT SUM(waiver_amount) amount FROM inventory_store_drug_patient 
+	WHERE waiver_amount IS NOT NULL 
+	AND waiver_amount &gt; 0
+	AND created_on BETWEEN :startOfPeriod AND :endOfPeriod
+    UNION ALL
+    SELECT SUM(waiver_amount) FROM billing_patient_service_bill 
+	WHERE waiver_amount IS NOT NULL 
+	AND waiver_amount &gt; 0
+	AND created_date BETWEEN :startOfPeriod AND :endOfPeriod
+    UNION ALL
+    SELECT SUM(waiver_amount) 
+	FROM indoor_patient_service_bill 
+	WHERE waiver_amount IS NOT NULL 
+	AND waiver_amount &gt; 0
+	AND created_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS total_waived
+             </annotation>
+             </dataValueTemplate>
+			 
+			<dataValueTemplate dataElement="NoExepmted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT SUM(counter)
+FROM (
+    SELECT COUNT(*) counter FROM inventory_store_drug_patient 
+	WHERE waiver_amount IS NOT NULL 
+	AND waiver_amount &gt; 0
+	AND created_on BETWEEN :startOfPeriod AND :endOfPeriod
+    UNION ALL
+    SELECT COUNT(*) FROM billing_patient_service_bill 
+	WHERE waiver_amount IS NOT NULL 
+	AND waiver_amount &gt; 0
+	AND created_date BETWEEN :startOfPeriod AND :endOfPeriod
+    UNION ALL
+    SELECT COUNT(*) 
+	FROM indoor_patient_service_bill 
+	WHERE waiver_amount IS NOT NULL 
+	AND waiver_amount &gt; 0
+	AND created_date BETWEEN :startOfPeriod AND :endOfPeriod
+) AS union_records
+             </annotation>
+             </dataValueTemplate>
+			 
+			  <dataValueTemplate dataElement="TTExpemted" disaggregation="OzshuDqmXQI">
+             <annotation>
+
+SELECT 	SUM(free_bill) FROM billing_patient_service_bill 
+WHERE free_bill &lt;&gt; 0
+AND created_date BETWEEN :startOfPeriod AND :endOfPeriod
+
+             </annotation>
+             </dataValueTemplate>
+			
+         </dataValueTemplates>		 
+    </reportTemplate>
+</reportTemplates>
