@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+	<dataElements>
+
+	<!--Diseases, Conditions or Events-->
+	    <dataElement uid="AyO5TjcPFNaCasesUnder5" code="AEFICasesUnder5" name="AEFI* cases under 5Years"  type="int"/>
+		<dataElement uid="AyO5TjcPFNaDeathsDeathUnder5" code="AEFIDeathsUnder5" name="AEFI* deaths under 5Years"  type="int"/>
+		<dataElement uid="AyO5TjcPFNaCasesOver5" code="AEFICasesOver5" name="AEFI* cases over 5Years"  type="int"/>
+		<dataElement uid="AyO5TjcPFNaDeathsOver5" code="AEFIDeathsOver5" name="AEFI* deaths over 5Years"  type="int"/>
+		<dataElement uid="RGozddXpuwICasesUnder5" code="AcuteJaundiveCasesUnder5" name="Acute Jaundice cases under 5Years"  type="int"/>
+        <dataElement uid="RGozddXpuwIDeathsUnder5" code="AcuteJaundiveDeathsUnder5" name="Acute Jaundice deaths under 5Years"  type="int"/>
+		<dataElement uid="RGozddXpuwICasesOver5" code="AcuteJaundiveCasesOver5" name="Acute Jaundice cases over 5Years"  type="int"/>
+		<dataElement uid="RGozddXpuwIDeathsOver5" code="AcuteJaundiveDeathsOver5" name="Acute Jaundice deaths over 5Years"  type="int"/>
+		<dataElement uid="ycHTiTrGfHiCasesUnder5" code="Acute MalnutritionCasesUnder5" name="Acute Malnutrition cases under 5Years"  type="int"/>
+        <dataElement uid="ycHTiTrGfHiDeathsUnder5" code="Acute MalnutritionDeathsUnder5" name="Acute Malnutrition deaths under 5Years"  type="int"/>
+		<dataElement uid="ycHTiTrGfHiCasesOver5" code="Acute MalnutritionCasesOver5" name="Acute Malnutrition cases over 5Years"  type="int"/>
+		<dataElement uid="ycHTiTrGfHiDeathsOver5" code="Acute MalnutritionDeathsOver5" name="Acute Malnutrition deaths over 5Years"  type="int"/>
+		<dataElement uid="ZQiG8Aidl8JCasesUnder5" code="AFPPoliomyelitisCasesUnder5" name="AFP Poliomyelitis cases under 5Years"  type="int"/>
+        <dataElement uid="ZQiG8Aidl8JDeathsUnder5" code="AFPPoliomyelitisDeathsUnder5" name="AFP Poliomyelitis deaths under 5Years"  type="int"/>
+		<dataElement uid="ZQiG8Aidl8JCasesOver5" code="AFPPoliomyelitisCasesOver5" name="AFP Poliomyelitis case over 5Years"  type="int"/>
+		<dataElement uid="ZQiG8Aidl8JDeathsOver5" code="AFPPoliomyelitisDeathsOver5" name="AFP Poliomyelitis deaths over 5Years"  type="int"/>
+		<dataElement uid="YjkS8YBwtM3CasesUnder5" code="AnthraxCasesUnder5" name="Anthrax cases under 5Years"  type="int"/>
+        <dataElement uid="YjkS8YBwtM3DeathsUnder5" code="AnthraxDeathsUnder5" name="Anthrax deaths under 5Years"  type="int"/>
+		<dataElement uid="YjkS8YBwtM3CasesOver5" code="AnthraxCasesOver5" name="Anthrax case over 5Years"  type="int"/>
+		<dataElement uid="YjkS8YBwtM3DeathsOver5" code="AnthraxDeathsOver5" name="Anthrax deaths over 5Years"  type="int"/>
+		<dataElement uid="wajkorhT4I5CasesUnder5" code="CholeraCasesUnder5" name="Cholera cases under 5Years"  type="int"/>
+        <dataElement uid="wajkorhT4I5DeathsUnder5" code="CholeraDeathsUnder5" name="Cholera deaths under 5Years"  type="int"/>
+		<dataElement uid="wajkorhT4I5CasesOver5" code="CholeraCasesOver5" name="Cholera case over 5Years"  type="int"/>
+		<dataElement uid="wajkorhT4I5DeathsOver5" code="CholeraDeathsOver5" name="Cholera deaths over 5Years"  type="int"/>
+		<dataElement uid="TVbSuL9AdcICasesUnder5" code="DengueCasesUnder5" name="Dengue cases under 5Years"  type="int"/>
+        <dataElement uid="TVbSuL9AdcIDeathsUnder5" code="DengueDeathsUnder5" name="Dengue deaths under 5Years"  type="int"/>
+		<dataElement uid="TVbSuL9AdcICasesOver5" code="DengueCasesOver5" name="Dengue case over 5Years"  type="int"/>
+		<dataElement uid="TVbSuL9AdcIDeathsOver5" code="DengueDeathsOver5" name="Dengue deaths over 5Years"  type="int"/>		
+		<dataElement uid="tn0o15uvfgPCasesUnder5" code="DysenteryCasesUnder5" name="Dysentery cases under 5Years"  type="int"/>
+        <dataElement uid="tn0o15uvfgPDeathsUnder5" code="DysenteryDeathsUnder5" name="Dysentery deaths under 5Years"  type="int"/>
+		<dataElement uid="tn0o15uvfgPCasesOver5" code="DysenteryCasesOver5" name="Dysentery case over 5Years"  type="int"/>
+		<dataElement uid="tn0o15uvfgPDeathsOver5" code="DysenteryDeathsOver5" name="Dysentery deaths over 5Years"  type="int"/>
+		<dataElement uid="tn0o15uvfgPCasesTT" code="DysenteryCasesTT" name="Total Dysentery Cases"  type="int"/>
+		<dataElement uid="tn0o15uvfgPDeathsTT" code="DysenteryDeathsTT" name="Total Dysentery Deaths"  type="int"/>		
+		<dataElement uid="sL7vw21TOKwCasesUnder5" code="GWDCasesUnder5" name="Guinea Worm Disease  cases under 5Years"  type="int"/>
+        <dataElement uid="sL7vw21TOKwDeathsUnder5" code="GWDDeathsUnder5" name="Guinea Worm Disease  deaths under 5Years"  type="int"/>
+		<dataElement uid="sL7vw21TOKwPCasesOver5" code="GWDCasesOver5" name="Guinea Worm Disease  case over 5Years"  type="int"/>
+		<dataElement uid="sL7vw21TOKwDeathsOver5" code="GWDDeathsOver5" name="Guinea Worm Disease  deaths over 5Years"  type="int"/>
+		<dataElement uid="GJDppyWOYYMCasesUnder5" code="MalariaCasesUnder5" name="Malaria  cases under 5Years"  type="int"/>
+        <dataElement uid="GJDppyWOYYMDeathsUnder5" code="MalariaDeathsUnder5" name="Malaria  deaths under 5Years"  type="int"/>
+		<dataElement uid="GJDppyWOYYMCasesOver5" code="MalariaCasesOver5" name="Malaria  case over 5Years"  type="int"/>
+		<dataElement uid="GJDppyWOYYMDeathsOver5" code="MalariaDeathsOver5" name="Malaria  deaths over 5Years"  type="int"/>
+		<dataElement uid="MaternalDeathCasesUnder5" code="MaternalDeathCasesUnder5" name="Maternal Death cases under 5Years"  type="int"/>
+        <dataElement uid="MaternalDeathDeathsUnder5" code="MaternalDeathDeathsUnder5" name="Maternal Death deaths under 5Years"  type="int"/>
+		<dataElement uid="MaternalDeathCasesOver5" code="MaternalDeathCasesOver5" name="Maternal Death case over 5Years"  type="int"/>
+		<dataElement uid="MaternalDeathDeathsOver5" code="MaternalDeathDeathsOver5" name="Maternal Death  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="Tz0tiCQ8o6XCasesUnder5" code="MeaslesCasesUnder5" name="Measles  cases under 5Years"  type="int"/>
+        <dataElement uid="Tz0tiCQ8o6XDeathsUnder5" code="MeaslesDeathsUnder5" name="Measles deaths under 5Years"  type="int"/>
+		<dataElement uid="Tz0tiCQ8o6XCasesOver5" code="MeaslesCasesOver5" name="Measles  case over 5Years"  type="int"/>
+		<dataElement uid="Tz0tiCQ8o6XDeathsOver5" code="MeaslesDeathsOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="IVT5avXg4CCCasesUnder5" code="MMeningitisCasesUnder5" name="Meningococcal Meningitis  cases under 5Years"  type="int"/>
+        <dataElement uid="IVT5avXg4CCDeathsUnder5" code="MMeningitisDeathsUnder5" name="Meningococcal Meningitis deaths under 5Years"  type="int"/>
+		<dataElement uid="IVT5avXg4CCCasesOver5" code="MMeningitisCasesOver5" name="Meningococcal Meningitis  case over 5Years"  type="int"/>
+		<dataElement uid="IVT5avXg4CCDeathsOver5" code="MMeningitisDeathsOver5" name="Meningococcal Meningitis  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="eH7m94f1MrvCasesUnder5" code="NeonatalDeathCasesUnder5" name="Neonatal deaths  cases under 5Years"  type="int"/>
+        <dataElement uid="eH7m94f1MrvDeathsUnder5" code="NeonatalDeathDeathsUnder5" name="Neonatal death deaths under 5Years"  type="int"/>
+		<dataElement uid="eH7m94f1MrvCasesOver5" code="NeonatalDeathCasesOver5" name="Neonatal deaths  case over 5Years"  type="int"/>
+		<dataElement uid="eH7m94f1MrvDeathsOver5" code="NeonatalDeathDeathsOver5" name="Neonatal death  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="SLnpLPVE4RICasesUnder5" code="NeonatalTetanusCasesUnder5" name="Neonatal Tetanus  cases under 5Years"  type="int"/>
+        <dataElement uid="SLnpLPVE4RIDeathsUnder5" code="NeonatalTetanusDeathsUnder5" name="Neonatal Tetanus deaths under 5Years"  type="int"/>
+		<dataElement uid="SLnpLPVE4RICasesOver5" code="NeonatalTetanusCasesOver5" name="Neonatal Tetanus  case over 5Years"  type="int"/>
+		<dataElement uid="SLnpLPVE4RIDeathsOver5" code="NeonatalTetanusDeathsOver5" name="Neonatal Tetanus  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="WXmC1SmmY8jCasesUnder5" code="PlagueCasesUnder5" name="Plague  cases under 5Years"  type="int"/>
+        <dataElement uid="WXmC1SmmY8jDeathsUnder5" code="PlagueDeathsUnder5" name="Plague deaths under 5Years"  type="int"/>
+		<dataElement uid="WXmC1SmmY8jCasesOver5" code="PlagueCasesOver5" name="Plague  case over 5Years"  type="int"/>
+		<dataElement uid="WXmC1SmmY8jDeathsOver5" code="PlagueDeathsOver5" name="Plague  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="S8DADvgv6GyCasesUnder5" code="RabiesCasesUnder5" name="Rabies  cases under 5Years"  type="int"/>
+        <dataElement uid="S8DADvgv6GyDeathsUnder5" code="RabiesDeathsUnder5" name="Rabies deaths under 5Years"  type="int"/>
+		<dataElement uid="S8DADvgv6GyCasesOver5" code="RabiesCasesOver5" name="Rabies  case over 5Years"  type="int"/>
+		<dataElement uid="S8DADvgv6GyDeathsOver5" code="RabiesDeathsOver5" name="Rabies  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="JVnFrA3WVI5CasesUnder5" code="RVFCasesUnder5" name="Rift Valley Fever  cases under 5Years"  type="int"/>
+        <dataElement uid="JVnFrA3WVI5DeathsUnder5" code="RVFDeathsUnder5" name="Rift Valley Fever deaths under 5Years"  type="int"/>
+		<dataElement uid="JVnFrA3WVI5CasesOver5" code="RVFCasesOver5" name="Rift Valley Fever  case over 5Years"  type="int"/>
+		<dataElement uid="JVnFrA3WVI5DeathsOver5" code="RVFDeathsOver5" name="Rift Valley Fever  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="wU5FlwAagjXCasesUnder5" code="SARICasesUnder5" name="SARI  cases under 5Years"  type="int"/>
+        <dataElement uid="wU5FlwAagjXDeathsUnder5" code="SARIDeathsUnder5" name="SARI deaths under 5Years"  type="int"/>
+		<dataElement uid="wU5FlwAagjXCasesOver5" code="SARICasesOver5" name="SARI  case over 5Years"  type="int"/>
+		<dataElement uid="wU5FlwAagjXDeathsOver5" code="SARIDeathsOver5" name="SARI  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="dvgrSof8WCiCasesUnder5" code="SuspectedMDRXDRTBCasesUnder5" name="Suspected MDR/XDR TB  cases under 5Years"  type="int"/>
+        <dataElement uid="dvgrSof8WCiDeathsUnder5" code="SuspectedMDRXDRTBDeathsUnder5" name="Suspected MDR/XDR TB deaths under 5Years"  type="int"/>
+		<dataElement uid="dvgrSof8WCiCasesOver5" code="SuspectedMDRXDRTBCasesOver5" name="Suspected MDR/XDR TB  case over 5Years"  type="int"/>
+		<dataElement uid="dvgrSof8WCiDeathsOver5" code="SuspectedMDRXDRTBDeathsOver5" name="Suspected MDR/XDR TB  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="LwwVppGxNJkCasesUnder5" code="TyphoidCasesUnder5" name="Typhoid  cases under 5Years"  type="int"/>
+        <dataElement uid="LwwVppGxNJkDeathsUnder5" code="TyphoidDeathsUnder5" name="Typhoid deaths under 5Years"  type="int"/>
+		<dataElement uid="LwwVppGxNJkCasesOver5" code="TyphoidCasesOver5" name="Typhoid  case over 5Years"  type="int"/>
+		<dataElement uid="LwwVppGxNJkDeathsOver5" code="TyphoidDeathsOver5" name="Typhoid  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="rnUg5fAPgxUCasesUnder5" code="VHFCasesUnder5" name="VHF  cases under 5Years"  type="int"/>
+        <dataElement uid="rnUg5fAPgxUDeathsUnder5" code="VHFDeathsUnder5" name="VHF deaths under 5Years"  type="int"/>
+		<dataElement uid="rnUg5fAPgxUCasesOver5" code="VHFCasesOver5" name="VHF  case over 5Years"  type="int"/>
+		<dataElement uid="rnUg5fAPgxUDeathsOver5" code="VHFDeathsOver5" name="VHF  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="NQwgklXIeG2CasesUnder5" code="YellowFeverCasesUnder5" name="Yellow Fever  cases under 5Years"  type="int"/>
+        <dataElement uid="NQwgklXIeG2DeathsUnder5" code="YellowFeverDeathsUnder5" name="Yellow Fever deaths under 5Years"  type="int"/>
+		<dataElement uid="NQwgklXIeG2CasesOver5" code="YellowFeverCasesOver5" name="Yellow Fever  case over 5Years"  type="int"/>
+		<dataElement uid="NQwgklXIeG2DeathsOver5" code="YellowFeverDeathsOver5" name="Yellow Fever  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="LsOkVqvtIrACasesUnder5" code="OthersCasesUnder5" name="Other  cases under 5Years"  type="int"/>
+        <dataElement uid="LsOkVqvtIrADeathsUnder5" code="OthersDeathsUnder5" name="Other deaths under 5Years"  type="int"/>
+		<dataElement uid="LsOkVqvtIrACasesOver5" code="OthersCasesOver5" name="Other  case over 5Years"  type="int"/>
+		<dataElement uid="LsOkVqvtIrADeathsOver5" code="OthersDeathsOver5" name="Other  deaths deaths over 5Years"  type="int"/>
+		
+		<!--Laboratory tested -ve and tested +ve-->
+		
+		<dataElement uid="IYnqoV2vlRqMalariaTestedUnder5" code="MalariaTestedUnder5" name="Measles  cases under 5Years"  type="int"/>
+        <dataElement uid="IYnqoV2vlRqMalariaPositiveUnder5" code="MalariaPositiveUnder5" name="Measles deaths under 5Years"  type="int"/>
+		<dataElement uid="IYnqoV2vlRqMalariaTestedOver5" code="MalariaTestedOver5" name="Measles  case over 5Years"  type="int"/>
+		<dataElement uid="IYnqoV2vlRqMalariaNegativeOver5" code="MalariaNegativeOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
+		
+		<dataElement uid="ODvEuLyeZP5SDysenteryTestedUnder5" code="SDysenteryTestedUnder5" name="Measles  cases under 5Years"  type="int"/>
+        <dataElement uid="ODvEuLyeZP5SDysenteryPositiveUnder5" code="SDysenteryPositiveUnder5" name="Measles deaths under 5Years"  type="int"/>
+		<dataElement uid="ODvEuLyeZP5SDysenteryTestedOver5" code="SDysenteryTestedOver5" name="Measles  case over 5Years"  type="int"/>
+		<dataElement uid="ODvEuLyeZP5SDysenteryNegativeOver5" code="SDysenteryNegativeOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
+		
+		<dataElement uid="jm11FQme3t0TBTestedUnder5" code="TBTestedUnder5" name="Measles  cases under 5Years"  type="int"/>
+        <dataElement uid="jm11FQme3t0TBPositiveUnder5" code="TBPositiveUnder5" name="Measles deaths under 5Years"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBTestedOver5" code="TBTestedOver5" name="Measles  case over 5Years"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBNegativeOver5" code="TBNegativeOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
+		
+		<dataElement uid="HW4qfFRzitHTyphoidtestedUnder5" code="TyphoidTestedUnder5" name="Measles  cases under 5Years"  type="int"/>
+        <dataElement uid="HW4qfFRzitHTyphoidPositiveUnder5" code="TyphoidPositiveUnder5" name="Measles deaths under 5Years"  type="int"/>
+		<dataElement uid="HW4qfFRzitHTyphoidTestedOver5" code="TyphoidTestedOver5" name="Measles  case over 5Years"  type="int"/>
+		<dataElement uid="HW4qfFRzitHTyphoidNegativeOver5" code="TyphoidNegativeOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
+        
+	</dataElements>
+		<disaggregations>
+			<disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
+		</disaggregations>
+		<reportTemplate>
+			<name> MOH 505 IDSR Weekly Epindemic Monitoring </name>
+			<uid>WtgleFiaJqO</uid>
+			<code>WtgleFiaJqO</code>
+			<timelyDays>15</timelyDays>
+			<periodType>Monthly</periodType>         
+		 
+			<dataValueTemplates>
+				<dataValueTemplate dataElement="DysenteryCasesUnder5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&lt;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (138868,2450,1003,3667,1668,5202,1042)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="DysenteryCasesOver5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&ge;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (138868,2450,1003,3667,1668,5202,1042)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				 
+				
+			</dataValueTemplates>		 
+		</reportTemplate>
+</reportTemplates>
