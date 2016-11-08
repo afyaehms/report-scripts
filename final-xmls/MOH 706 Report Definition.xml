@@ -94,7 +94,7 @@
 		 <dataElement uid="P9D2LoWDfrIHBBtwn5and10" code="TTFullBldCountBetween5and10" name="Full blood count HB between 5 and 10" type="int"/>
 		 <dataElement uid="e9gtb2GpGzH" code="TTHBEstimation" name="Total Exams HB estimation tests(other techniques)" type="int"/> 
 		 <dataElement uid="zO8CAkNhC7f" code="TTHBEstimationLessthan5" name="HB estimation tests(other techniques) HB less than 5"  type="int"/>
-	<dataElement uid="zO8CAkNhC7f5and10" code="TTHBEstimationBetween5and10" name="HB estimation tests(other techniques) HB between 5 and 10" type="int"/>
+		 <dataElement uid="zO8CAkNhC7f5and10" code="TTHBEstimationBetween5and10" name="HB estimation tests(other techniques) HB between 5 and 10" type="int"/>
 		 <dataElement uid="cv2JYPIp9eX" code="TTCD4Count" name="Total Exam CD4 count" type="int"/>
 		 <dataElement uid="yWibzEveSoa" code="CD4CountLessthan500" name="CD4 count Less than 500" type="int"/>
 		 <dataElement uid="UevukTUPV2C" code="TTSicklingtest" name="Total Exam Sickling test" type="int"/>
@@ -1282,11 +1282,9 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			 
 			  <dataValueTemplate dataElement="StoolExaminationAmoeba" disaggregation="OzshuDqmXQI">
              <annotation>
-
 SELECT COUNT(*)
 FROM obs o
-
-WHERE o.concept_id=2923
+WHERE o.concept_id IN (2923,5689)
 AND value_coded=5659
 AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
