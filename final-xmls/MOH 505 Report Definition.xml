@@ -182,18 +182,22 @@
 		<dataElement uid="ODvEuLyeZP5SDysenteryTestedOver5" code="SDysenteryTestedOver5" name="Shigella Dysentery Tested over 5Years"  type="int"/>
 		<dataElement uid="ODvEuLyeZP5SDysenteryNegativeOver5" code="SDysenteryNegativeOver5" name="Shigella Dysentery Positive over 5Years"  type="int"/>
 		<dataElement uid="ODvEuLyeZP5SDysenteryTestedTT" code="SDysenteryNegativeOver5" name="Total Shigella Dysentery tested"  type="int"/>
-		<dataElement uid="ODvEuLyeZP5SDysenteryPositiveTT" code="SDysenteryPositiveTT" name="Shigella Dysentery Positive over 5Years"  type="int"/>
+		<dataElement uid="ODvEuLyeZP5SDysenteryPositiveTT" code="SDysenteryPositiveTT" name="Total Shigella Dysentery Positive"  type="int"/>
 		
-		<dataElement uid="jm11FQme3t0TBTestedUnder5" code="TBTestedUnder5" name="Measles  cases under 5Years"  type="int"/>
-        <dataElement uid="jm11FQme3t0TBPositiveUnder5" code="TBPositiveUnder5" name="Measles deaths under 5Years"  type="int"/>
-		<dataElement uid="jm11FQme3t0TBTestedOver5" code="TBTestedOver5" name="Measles  case over 5Years"  type="int"/>
-		<dataElement uid="jm11FQme3t0TBNegativeOver5" code="TBNegativeOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBTestedUnder5" code="TBTestedUnder5" name="TB Tested under 5Years"  type="int"/>
+        <dataElement uid="jm11FQme3t0TBPositiveUnder5" code="TBPositiveUnder5" name="TB Positive under 5Years"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBTestedOver5" code="TBTestedOver5" name="TB Tested over 5Years"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBNegativeOver5" code="TBNegativeOver5" name="TB Positive over 5Years"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBTestedTT" code="TBNTestedTT" name="Total TB tested"  type="int"/>
+		<dataElement uid="jm11FQme3t0TBPositiveTT" code="TBPositiveTT" name="Total TB positive"  type="int"/>
 		
-		<dataElement uid="HW4qfFRzitHTyphoidtestedUnder5" code="TyphoidTestedUnder5" name="Measles  cases under 5Years"  type="int"/>
-        <dataElement uid="HW4qfFRzitHTyphoidPositiveUnder5" code="TyphoidPositiveUnder5" name="Measles deaths under 5Years"  type="int"/>
-		<dataElement uid="HW4qfFRzitHTyphoidTestedOver5" code="TyphoidTestedOver5" name="Measles  case over 5Years"  type="int"/>
-		<dataElement uid="HW4qfFRzitHTyphoidNegativeOver5" code="TyphoidNegativeOver5" name="Measles  deaths deaths over 5Years"  type="int"/>
-        
+		<dataElement uid="HW4qfFRzitHTyphoidtestedUnder5" code="TyphoidTestedUnder5" name="Typhoid Tested under 5Years"  type="int"/>
+        <dataElement uid="HW4qfFRzitHTyphoidPositiveUnder5" code="TyphoidPositiveUnder5" name="Typhoid Positive under 5Years"  type="int"/>
+		<dataElement uid="HW4qfFRzitHTyphoidTestedOver5" code="TyphoidTestedOver5" name="Typhoid Tested over 5Years"  type="int"/>
+		<dataElement uid="HW4qfFRzitHTyphoidNegativeOver5" code="TyphoidNegativeOver5" name="Typhoid Positive over 5Years"  type="int"/>
+        <dataElement uid="HW4qfFRzitHTyphoidTestedTT" code="TyphoidTestedTT" name="Total Typhoid tested"  type="int"/>
+		<dataElement uid="HW4qfFRzitHTyphoidPositiveTT" code="TyphoidPositiveTT" name="Total Typhoid positive"  type="int"/>
+		
 	</dataElements>
 		<disaggregations>
 			<disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
