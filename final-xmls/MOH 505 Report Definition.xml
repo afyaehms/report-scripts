@@ -246,7 +246,161 @@
 							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
 						) AS diagnosed;
 					</annotation>
+				</dataValueTemplate>				
+				
+				<dataValueTemplate dataElement="CholeraCasesUnder5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&lt;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (1082,122604)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
 				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="CholeraCasesOver5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&ge;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (1082,122604)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="MalariaCasesUnder5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&lt;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="MalariaCasesOver5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&ge;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (160154,160155,160152,160150,160148,116128,4516,4515,4492,4055,4314,4293,4290,4267,705,4055,4054,4041,4027,2088,1041,708)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="PlagueCasesUnder5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&lt;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded=1709
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="PlagueCasesOver5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&ge;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded=1709
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="MeaslesCasesUnder5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&lt;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (1020,1744,4458,134561)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				<dataValueTemplate dataElement="MeaslesCasesOver5" disaggregation="OzshuDqmXQI">
+					<annotation>
+						SELECT COUNT(*)
+						FROM
+						(
+							SELECT CONCAT(o.person_id,'-',DATE(obs_datetime)) obs_date
+							FROM obs o
+							INNER JOIN person p ON p.person_id = o.person_id
+							AND TIMESTAMPDIFF(YEAR,p.birthdate,obs_datetime)&ge;5
+							
+							WHERE o.concept_id=5109
+							AND o.value_coded IN (1020,1744,4458,134561)
+							AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+							
+							GROUP BY CONCAT(o.person_id,'-',DATE(obs_datetime))
+						) AS diagnosed;
+					</annotation>
+				</dataValueTemplate>
+				
+				
 				 
 				
 			</dataValueTemplates>		 

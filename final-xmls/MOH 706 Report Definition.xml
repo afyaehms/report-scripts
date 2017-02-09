@@ -1299,27 +1299,23 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTFullBldCountLessthan5" disaggregation="OzshuDqmXQI">
-             <annotation>
-
-SELECT COUNT(*)
-FROM obs o
-INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
-AND o.concept_id = 2410
-AND ob.concept_id = 995
-AND ob.value_numeric &lt; 5
-WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
-             </dataValueTemplate>
+				<annotation>
+					SELECT COUNT(*)
+					FROM obs
+					WHERE concept_id=995
+					AND value_numeric &lt; 5
+					AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             
+				</annotation>
+            </dataValueTemplate>
 
 			<dataValueTemplate dataElement="TTFullBldCountBetween5and10" disaggregation="OzshuDqmXQI">
-             <annotation>
-
-SELECT COUNT(*)
-FROM obs o
-INNER JOIN obs ob ON o.obs_id=ob.obs_group_id
-AND o.concept_id = 2410
-AND ob.concept_id = 995
-AND ob.value_numeric BETWEEN 5 AND 10
-WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+				<annotation>
+					SELECT COUNT(*)
+					FROM obs
+					WHERE concept_id=995
+					AND value_numeric BETWEEN 5 AND 10
+					AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				</annotation>
              </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTHBEstimation" disaggregation="OzshuDqmXQI">
@@ -2703,14 +2699,23 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
              </dataValueTemplate>
 
              <dataValueTemplate dataElement="PosHCG" disaggregation="OzshuDqmXQI">
-             <annotation>
-
-SELECT COUNT(*)
-FROM obs
-WHERE concept_id = 2523
-AND value_coded = 782
-AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+				<annotation>
+					SELECT COUNT(*)
+					FROM obs
+					WHERE concept_id = 2523
+					AND value_coded = 782
+					AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             
+				</annotation>
              </dataValueTemplate>	
+			 
+             <dataValueTemplate dataElement="TTHCG" disaggregation="OzshuDqmXQI">
+				<annotation>
+					SELECT COUNT(*)
+					FROM obs
+					WHERE concept_id=2523
+					AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod 				 
+				</annotation>
+			 </dataValueTemplate>
 
   			<dataValueTemplate dataElement="TTCRAGTest" disaggregation="OzshuDqmXQI">
              <annotation>

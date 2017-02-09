@@ -5,7 +5,7 @@
 		<dataElement uid="rIkD2jIDqPh" code="NewOPDOlderMale" name="New OPD attendance greater than 5yrs Male" type="int"/>
 		 <dataElement uid="zXzBILTVJzD" code="NewOPDOlderFeMale" name="New OPD attendance greater than 5yrs Female" type="int"/>
 		 <dataElement uid="F6AwnxbwiK2" code="NewOPDYoungerMale" name="New OPD Attendance less than 5yrs Male"  type="int"/>
-		 <dataElement uid="Ha96SBKI06u" code="NewOPDYoungerFeMale" name="New OPD Attendance greater than 5yrs Female" type="int"/>
+		 <dataElement uid="Ha96SBKI06u" code="NewOPDYoungerFeMale" name="New OPD Attendance less than 5yrs Female" type="int"/>
 		 <dataElement uid="x13zGZKuxzs" code="NewOPDCasualty" name="New OPD Casualty attendance"   type="int"/>
 		 <dataElement uid="rIkD2jIDqPhRevisit" code="RevisitOPDOlderMale" name="Revisit OPD attendance greater than 5yrs Male" type="int"/>
 		 <dataElement uid="zXzBILTVJzDRevisit" code="RevisitOPDOlderFeMale" name="Revisit OPD attendance greater than 5yrs Female" type="int"/>

@@ -1,0 +1,4 @@
+DELETE FROM dhisreport_datavalue_template;
+DELETE FROM dhisreport_report_definition;
+DELETE FROM dhisreport_disaggregation;
+DELETE FROM dhisreport_dataelement;

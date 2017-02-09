@@ -37,9 +37,9 @@
         <dataElement uid="bmEuZWOFtH6" code="RapeCasesWithin72" name="GSBV cases presenting within 72 hours" type="int"/>
         <dataElement uid="AC54kgHb6gP" code="RapeSurvivorsSeen" name="GSBV rape survivors seen" type="int"/>
         <!-- Maternity Data Elements -->
-		<dataElement uid="jaPrPmor6WV" code="NormalDel" name="Normal Deliveries" type="int"/>
-        <dataElement uid="rAZBTMa7Jy3" code="CSection" name="Caesarian Sections" type="int"/>
-        <dataElement uid="sMqM8DwiAaj" code="BreachDel" name="Breach Delivery" type="int"/>
+		<dataElement uid="jaPrPmor6WVNorm" code="NormalDelivery" name="Normal Deliveries" type="int"/>
+        <dataElement uid="rAZBTMa7Jy3CS" code="CaesarianSection" name="Caesarian Sections" type="int"/>
+        <dataElement uid="sMqM8DwiAajBD" code="BreachDelivery" name="Breach Delivery" type="int"/>
         <dataElement uid="Kx64gGqaFVq" code="AVagDel" name="Assisted Vaginal Deliveries (Vacuum Extraction)" type="int"/>
         <dataElement uid="UqKC1DJnymn" code="LiveBirth" name="Live birth" type="int"/>
         <dataElement uid="rYn8RCcHJg1" code="FreshStillBirth" name="Fresh Still Birth" type="int"/>
@@ -269,7 +269,7 @@
         <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
     </disaggregations>
     <reportTemplate>
-        <name>MOH 711 Integrated Summary Report: Reproductive and Child Health, Medical and Rehabilitation Services
+        <name>MOH 711 Integrated Summary Report
         </name>
         <uid>UpS2bTVcClZ</uid>
         <code>UpS2bTVcClZ</code>
@@ -308,49 +308,43 @@ AND start_date BETWEEN :startOfPeriod and :endOfPeriod                </annotati
 
             <dataValueTemplate dataElement="IPT2ndDose" disaggregation="OzshuDqmXQI">
                 <annotation>
-SELECT count(*)
-FROM patient_state
-WHERE state = '26'
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod                </annotation>
+					SELECT count(*)
+					FROM patient_state
+					WHERE state = '26'
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod                </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="HBReport" disaggregation="OzshuDqmXQI">
                 <annotation>
-SELECT count(*)
-FROM obs o
-INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-WHERE o.concept_id = 995 AND value_numeric &lt; 11
-AND pp.program_id = 1
-AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod                </annotation>
+					SELECT count(*)
+					FROM obs o
+					INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+					WHERE o.concept_id = 995 AND value_numeric &lt; 11
+					AND pp.program_id = 1
+					AND o.date_created BETWEEN :startOfPeriod AND :endOfPeriod                </annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="Women4ANCVisits" disaggregation="OzshuDqmXQI">
                 <annotation>
-SELECT count(*) from (
-(SELECT v.patient_id, count(v.patient_id)
-FROM visit v
-INNER JOIN patient_program pp ON pp.patient_id = v.patient_id
-AND pp.program_id = 1
-AND (
-    pp.date_completed IS NULL OR (pp.date_completed &gt; :startOfPeriod AND :endOfPeriod)
-    AND
-    pp.date_enrolled &gt;= DATE_ADD('2016-02-14', INTERVAL -11 MONTH))
-AND v.date_started BETWEEN :startOfPeriod AND :endOfPeriod
-GROUP BY patient_id
-HAVING COUNT(v.patient_id) &gt;= 4) as patientvisits )                </annotation>
+					SELECT COUNT(*)
+					FROM obs 
+					WHERE concept_id=1425
+					AND value_numeric=4
+					AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				</annotation>
             </dataValueTemplate>
 
             <dataValueTemplate dataElement="LLITNsDistributedUnder1yr" disaggregation="OzshuDqmXQI">
                 <annotation>
-SELECT count(*)
-FROM obs o
-INNER JOIN patient_program pp ON pp.patient_id = o.person_id
-INNER JOIN person p ON p.person_id = o.person_id
-WHERE o.concept_id = 160428 AND o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553'
-AND pp.program_id = 3
-AND (FLOOR(DATEDIFF(:startOfPeriod,p.birthdate) / 365) BETWEEN 10 AND 14
-OR FLOOR(DATEDIFF(:endOfPeriod,p.birthdate) / 365) BETWEEN 10 AND 14)
-AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod                </annotation>
+					SELECT count(*)
+					FROM obs o
+					INNER JOIN patient_program pp ON pp.patient_id = o.person_id
+					INNER JOIN person p ON p.person_id = o.person_id
+					WHERE o.concept_id = 160428 AND o.value_text = '4536f271-5430-4345-b5f7-37ca4cfe1553'
+					AND pp.program_id = 3
+					AND (FLOOR(DATEDIFF(:startOfPeriod,p.birthdate) / 365) BETWEEN 10 AND 14
+					OR FLOOR(DATEDIFF(:endOfPeriod,p.birthdate) / 365) BETWEEN 10 AND 14)
+					AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod                </annotation>
             </dataValueTemplate>
 			
 			<dataValueTemplate dataElement="LLITNsDistributed" disaggregation="OzshuDqmXQI">
@@ -392,7 +386,7 @@ AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod                </anno
 SELECT COUNT(*) 
 FROM obs
 WHERE
-concept_id = 100126197 OR 100126198
+concept_id = 100126197
 AND value_coded = 803
 AND obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
                 </annotation>
@@ -424,7 +418,7 @@ AND o.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod                </anno
             <dataValueTemplate dataElement="PregAdolescents1014" disaggregation="OzshuDqmXQI">
                 <annotation>
 SELECT Count(*) FROM (
-SELECT DISTINCT q.person_id, DATEDIFF('2016-07-31',p.birthdate) / 365 age
+SELECT DISTINCT q.person_id, DATEDIFF(NOW(),p.birthdate) / 365 age
 FROM (
     SELECT DISTINCT o.person_id, DATE(o.obs_datetime) o_date
     FROM obs o
@@ -450,8 +444,9 @@ WHERE age BETWEEN 10 AND 14
                 <annotation>
 
 
-SELECT Count(*) FROM (
-SELECT DISTINCT q.person_id, DATEDIFF('2016-07-31',p.birthdate) / 365 age
+SELECT Count(*) 
+FROM (
+SELECT DISTINCT q.person_id, DATEDIFF(NOW(),p.birthdate) / 365 age
 FROM (
     SELECT DISTINCT o.person_id, DATE(o.obs_datetime) o_date
     FROM obs o
@@ -618,7 +613,7 @@ SELECT SUM(0) FROM obs WHERE obs.obs_datetime BETWEEN :startOfPeriod AND :endOfP
             </dataValueTemplate>
 			
 			<!-- Maternity Elements -->
-			<dataValueTemplate dataElement="NormalDel" disaggregation="OzshuDqmXQI">
+			<dataValueTemplate dataElement="NormalDelivery" disaggregation="OzshuDqmXQI">
                 <annotation>
 #Count of normal deliveries
 
@@ -630,7 +625,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="CSection" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="CaesarianSection" disaggregation="OzshuDqmXQI">
                 <annotation>
 #Count of cesarean section
 
@@ -642,7 +637,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
                 </annotation>
             </dataValueTemplate>
 
-            <dataValueTemplate dataElement="BreachDel" disaggregation="OzshuDqmXQI">
+            <dataValueTemplate dataElement="BreachDelivery" disaggregation="OzshuDqmXQI">
                 <annotation>
 #Count of breech birth
 
@@ -3013,7 +3008,7 @@ select o.person_id
 from obs o
 inner join person p on o.person_id = p.person_id
 where concept_id = 374
-and EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) between 10 and 14
+and EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(obs_datetime,p.birthdate)))) between 10 and 14
 group by o.person_id
 having count(o.person_id) &gt; 1
 )
