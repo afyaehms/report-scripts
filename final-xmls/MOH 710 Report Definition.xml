@@ -663,26 +663,16 @@ AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
              </annotation>
              </dataValueTemplate>
 			 
-			  <dataValueTemplate dataElement="FICUnder1yr" disaggregation="OzshuDqmXQI">
-             <annotation>
-
-SELECT COUNT(*)
-FROM(
-SELECT patient_id
-FROM patient_state ps
-INNER JOIN patient_program pp ON ps.patient_program_id=pp.patient_program_id
-INNER JOIN person p ON pp.patient_id = p.person_id
-WHERE birthdate IS NOT NULL 
-AND ((DATEDIFF(:startOfPeriod,birthdate) / 365) &lt;= 1
-OR (DATEDIFF(:endOfPeriod,birthdate) / 365) &lt;= 1)
-GROUP BY patient_id
-HAVING COUNT(DISTINCT state)=(
-SELECT COUNT(program_workflow_state_id)
-FROM program_workflow_state pws
-INNER JOIN program_workflow pw 
-ON pw.program_workflow_id = pws.program_workflow_id AND program_id=3)
-) AS fully_vaccinated 
-             </annotation>
+			 <dataValueTemplate dataElement="FICUnder1yr" disaggregation="OzshuDqmXQI">
+				 <annotation>
+					SELECT COUNT(*)
+					FROM person_attribute pa
+					INNER JOIN person p ON pa.person_id = p.person_id
+					WHERE person_attribute_type_id=52
+					AND value='true'
+					AND TIMESTAMPDIFF(YEAR,birthdate,pa.date_created)&lt;=1
+					AND DATE(pa.date_created) BETWEEN :startOfPeriod AND :endOfPeriod
+				 </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="FICOver1yr" disaggregation="OzshuDqmXQI">
