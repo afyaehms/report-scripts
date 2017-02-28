@@ -35,9 +35,10 @@
         
 		<dataElement uid="sRbqc5gBQhI" code="MeaslesRub1Over1yrs" name="Measles-Rubella 1 doses Administered Over 1 Years" type="int"/>
         <dataElement uid="sRbqc5gBQhIU5" code="MeaslesRub1Under1yrs" name="Measles-Rubella 1 doses Administered Under 1 Years" type="int"/>
-		<dataElement uid="tBPGQFhWB7M" code="FICUnder1yr" name="Fully Immunized Children(FIC) under 1 year" type="int"/>
-        
+		
+		<dataElement uid="tBPGQFhWB7M" code="FICat1yr" name="Fully Immunized Children(FIC) at 1 year" type="int"/>        
 		<dataElement uid="usvyHT7z5w4" code="FICOver1yr" name="Fully Immunized Children(FIC) over 1 year" type="int"/>
+		
         <dataElement uid="NB9VuZXtpJK" code="VitaminA1yr" name="Vitamin A at 1 year (200000 IU)" type="int"/>
         <dataElement uid="QvQzYi8ik43" code="VitaminA1halfyr" name="Vitamin A at 1 and a half year (200000 IU)" type="int"/>
 		
@@ -663,7 +664,7 @@ AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
              </annotation>
              </dataValueTemplate>
 			 
-			 <dataValueTemplate dataElement="FICUnder1yr" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="FICat1yr" disaggregation="OzshuDqmXQI">
 				 <annotation>
 					SELECT COUNT(*)
 					FROM person_attribute pa
@@ -673,28 +674,6 @@ AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
 					AND TIMESTAMPDIFF(YEAR,birthdate,pa.date_created)&lt;=1
 					AND DATE(pa.date_created) BETWEEN :startOfPeriod AND :endOfPeriod
 				 </annotation>
-             </dataValueTemplate>
-			 
-			 <dataValueTemplate dataElement="FICOver1yr" disaggregation="OzshuDqmXQI">
-             <annotation>
-
-SELECT COUNT(*)
-FROM(
-SELECT patient_id
-FROM patient_state ps
-INNER JOIN patient_program pp ON ps.patient_program_id=pp.patient_program_id
-INNER JOIN person p ON pp.patient_id = p.person_id
-WHERE birthdate IS NOT NULL 
-AND ((DATEDIFF(:startOfPeriod,birthdate) / 365) &gt; 1
-OR (DATEDIFF(:endOfPeriod,birthdate) / 365) &gt; 1)
-GROUP BY patient_id
-HAVING COUNT(DISTINCT state)=(
-SELECT COUNT(program_workflow_state_id)
-FROM program_workflow_state pws
-INNER JOIN program_workflow pw 
-ON pw.program_workflow_id = pws.program_workflow_id AND program_id=3)
-) AS fully_vaccinated  
-             </annotation>
              </dataValueTemplate>
 			 
 			 
@@ -761,1178 +740,877 @@ ON pw.program_workflow_id = pws.program_workflow_id AND program_id=3)
 
 			<dataValueTemplate dataElement="BCGStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=346
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=361
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="BCGDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=346
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=361
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalBCGStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=361
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=346
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=346
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=361
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			 
 			 <dataValueTemplate dataElement="BCGRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=346
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=361
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="BCGDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=346
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
-
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=361
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedBCG" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM patient_state
-WHERE (state=1 OR state=2)
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state BETWEEN 1 AND 2
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod             
+			 </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="BCGWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=361
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=346
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE (state=1 OR state=2)
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 1 AND 2
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="BCGWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=361
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=346
-
-	WHERE DATE(isdtd.created_on) &gt;= '2016-09-01'
-	AND DATE(isdtd.created_on) &lt;= '2016-09-30'
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE (state=1 OR state=2)
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE             </annotation>
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 1 AND 2
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate           
+			 </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="OPVStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=351
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=356
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="OPVDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=351
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=356
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalOPVStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=356
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=351
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=351
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=356
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="OPVDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=351
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=356
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OPVDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=351
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=356
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedOPV" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM patient_state
-WHERE state BETWEEN 4 AND 7
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-
-
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state BETWEEN 4 AND 7
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OPVDosesWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=356
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=351
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state BETWEEN 4 AND 7
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 4 AND 7
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="OPVWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=356
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=351
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state BETWEEN 4 AND 7
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 4 AND 7
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="IPVStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=347
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=352
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="IPVDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=347
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=352
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalIPVStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=352
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=347
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=347
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=352
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="IPVRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=347
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=352
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="IPVDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=347
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
-
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=352
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChilrenReceivedIPV" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM patient_state
-WHERE state=41
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state=40
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="IPVDosesWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=352
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=347
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state=41
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state=40
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="IPVWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=352
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=347
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state=41
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state=40
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			 
 			 			 
 			<dataValueTemplate dataElement="DPTHepHiBStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=348
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=353
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="DPTHepHiBReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=348
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=353
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalDPTHIBHEPBDosesStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=353
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=348
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=348
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=353
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			 			 
 			<dataValueTemplate dataElement="DPTHepHiBRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=348
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=353
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="DPTHIBHEPBDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=348
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
-
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=353
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedDPTHIBHEPB" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM patient_state
-WHERE state BETWEEN 8 AND 10
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state BETWEEN 8 AND 10
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="DPTHIBHEPBDosesWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=353
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=348
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state BETWEEN 8 AND 10
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 8 AND 10
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="DPTHIBHEPBWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=353
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=348
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state BETWEEN 8 AND 10
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 8 AND 10
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="PneumococalStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=343
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=351
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="PneumococalReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=343
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=351
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalPneumococalDosesStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=351
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=343
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=343
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=351
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="PneumococalRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=343
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=351
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="PneumococalDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=343
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
-
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=351
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedPneumococal" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM patient_state
-WHERE state BETWEEN 11 AND 13
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state BETWEEN 11 AND 13
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="PneumococalWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=351
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=343
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state BETWEEN 11 AND 13
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 11 AND 13
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="PneumococalWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=351
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=343
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state BETWEEN 11 AND 13
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 11 AND 13
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="RotavirusStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=349
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=354
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="RotavirusDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=349
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
-
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=354
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalRotavirusStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=354
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=349
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=349
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
-
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=354
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RotavirusDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=349
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=354
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RotavirusDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=349
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
-
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=354
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedRotavirus" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM patient_state
-WHERE state BETWEEN 18 AND 19
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state BETWEEN 18 AND 19
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RotavirusWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=354
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=349
-
-	WHERE DATE(isdtd.created_on) &gt;= '2016-09-08'
-	AND DATE(isdtd.created_on) &lt;= '2016-09-30'
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state BETWEEN 18 AND 19
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 18 AND 19
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="RotavirusWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=354
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=349
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state BETWEEN 18 AND 19
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 18 AND 19
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="MeaslesStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=352
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
-             </annotation>
+			 SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=357
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
+ 
+			</annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="MeaslesDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=352
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=357
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalMeaslesDosesStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=357
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=352
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=352
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=357
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="MeaslesDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=352
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=357
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MeaslesDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=352
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=357
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
              </annotation>
              </dataValueTemplate>
@@ -1940,773 +1618,587 @@ AND isdtd.transaction_type = 2
 			 <dataValueTemplate dataElement="ChildrenReceivedMeasles" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT COUNT(*)
-FROM patient_state
-WHERE (state BETWEEN 37 AND 39)
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE (state BETWEEN 37 AND 39)
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MeaslesDosesWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=357
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=352
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE (state BETWEEN 37 AND 39)
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 37 AND 39
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="MeaslesWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=357
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=352
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE (state BETWEEN 37 AND 39)
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state BETWEEN 37 AND 39
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="YellowFeverStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=350
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=355
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="YellowFeverDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=350
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=355
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="YellowFeverDosesStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=355
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=350
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=350
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=355
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="YellowFeverDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=350
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=355
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="YellowFeverDosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=350
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=355
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedYellowFever" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT COUNT(*)
-FROM patient_state
-WHERE state = 14
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state = 14
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="YellowFeverDosesWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=355
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=350
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state = 14
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state = 14
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="YellowFeverWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=355
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=350
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state = 14
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state = 14
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			
 			
 			<dataValueTemplate dataElement="TTStock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=188
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-             </annotation>
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=188
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
+			</annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="TTDosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=188
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=188
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalTTStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=188
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=188
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=188
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=188
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTDosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=188
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=188
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=188
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=188
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedTT" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT COUNT(*)
-FROM inventory_store_drug_transaction_detail isdtd
-INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
-AND e.encounter_type=19
-
-WHERE drug_id=188
-AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM inventory_store_drug_transaction_detail isdtd
+				INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
+				AND e.encounter_type=19
+				WHERE drug_id=188
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=188
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=188
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM inventory_store_drug_transaction_detail isdtd
-	INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
-	AND e.encounter_type=19
-
-	WHERE drug_id=188
-	AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0-COUNT(*)
+					FROM inventory_store_drug_transaction_detail isdtd
+					INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
+					AND e.encounter_type=19
+					WHERE drug_id=188
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TTWastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=188
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=188
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM inventory_store_drug_transaction_detail isdtd
-	INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
-	AND e.encounter_type=19
-
-	WHERE drug_id=188
-	AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0, COUNT(*)
+					FROM inventory_store_drug_transaction_detail isdtd
+					INNER JOIN encounter e ON e.encounter_id = isdtd.encounter_id
+					AND e.encounter_type=19
+					WHERE drug_id=188
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="VitaminA100stock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=354
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=359
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminA100DosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=354
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=359
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalVitaminA100Stocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=359
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=354
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :endOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=354
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=359
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="VitaminA100DosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=354
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=359
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA100Used" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=354
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=359
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedVitaminA100" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT COUNT(*)
-FROM patient_state
-WHERE state = 16
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state = 16
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA100Wasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=359
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=354
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state = 16
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state = 16
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA100WastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=359
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=354
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state = 16
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state = 16
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA200stock" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=355
-
-	WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	AND DATE(isdtd.created_on) &lt; :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS OP
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=360
+					AND DATE(isdtd.created_on) &lt; :startOfPeriod
+					AND DATE(isdtd.created_on) &lt; :endOfPeriod
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS op
              </annotation>
              </dataValueTemplate>
 			 
 			  <dataValueTemplate dataElement="VitaminA200DosesReceived" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=355
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 1
-
+				SELECT IFNULL(SUM(quantity),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+				WHERE transaction_type=1
+				AND inventory_drug_id=360
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="TotalVitaminA200DosesStocked" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(closing_balance)
+				FROM (
+					SELECT IFNULL(SUM(closing_balance),0) AS closing_balance
+					FROM (
+						SELECT closing_balance
+						FROM immunization_store_drug_transaction_detail isdtd
+						INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+						WHERE inventory_drug_id=360
+						AND DATE(isdtd.created_on) &lt; :startOfPeriod
+						ORDER BY isdtd.id DESC
+						LIMIT 1
+					) AS op
 
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT * FROM (
-	  SELECT closing_balance
-	  FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL
 
-	  INNER JOIN immunization_store_drug drug
-	  ON isdtd.immunization_store_drug_id = drug.id
-	  AND drug.inventory_drug_id=355
-
-	  WHERE DATE(isdtd.created_on) &lt; :startOfPeriod
-	  AND DATE(isdtd.created_on) &lt; :startOfPeriod
-	  ORDER BY isdtd.id DESC
-	  LIMIT 1
-	) AS OP
-
-	UNION ALL
-
-	SELECT quantity
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=355
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 1
-) STOCKED
-
+					SELECT IFNULL(SUM(quantity),0)
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON immunization_store_drug_id=isd.id
+					WHERE transaction_type=1
+					AND inventory_drug_id=360
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS STOCKED
              </annotation>
              </dataValueTemplate>
 			 
 			<dataValueTemplate dataElement="VitaminA200DosesRemaining" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(closing_balance),0)
-FROM (
-	SELECT closing_balance
-	FROM immunization_store_drug_transaction_detail isdtd
-
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=355
-
-	WHERE DATE(isdtd.created_on) &lt;= :startOfPeriod
-	OR DATE(isdtd.created_on) &lt;= :endOfPeriod
-
-	ORDER BY isdtd.id DESC
-	LIMIT 1
-) AS CL
-
+				SELECT IFNULL(SUM(closing_balance),0)
+				FROM (
+					SELECT closing_balance
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=isdtd.immunization_store_drug_id
+					WHERE inventory_drug_id=360
+					AND (DATE(isdtd.created_on) &lt;= :endOfPeriod OR DATE(isdtd.created_on) &lt;= :startOfPeriod )	
+					ORDER BY isdtd.id DESC
+					LIMIT 1
+				) AS CLOSING
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA200DosesUsed" disaggregation="OzshuDqmXQI">
              <annotation>
-
-SELECT IFNULL(SUM(quantity),0)
-FROM immunization_store_drug_transaction_detail isdtd
-
-INNER JOIN immunization_store_drug drug
-ON isdtd.immunization_store_drug_id = drug.id
-AND drug.inventory_drug_id=355
-
-WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-AND isdtd.transaction_type = 2
-
+				SELECT IFNULL(SUM(openning_balance-closing_balance),0)
+				FROM immunization_store_drug_transaction_detail isdtd
+				INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+				WHERE inventory_drug_id=360
+				AND transaction_type IN (2,3)
+				AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedVitaminA200" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT COUNT(*)
-FROM patient_state
-WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
-AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				SELECT COUNT(*)
+				FROM patient_state
+				WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
+				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
 
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA200DosesWasted" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT SUM(vaccines_used)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=360
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT GREATEST(SUM(qt),0)
-FROM (
-	SELECT SUM(quantity) qt
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=355
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT (0-COUNT(*))
-	FROM patient_state
-	WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
-
+					SELECT 0-COUNT(*)
+					FROM patient_state
+					WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage
              </annotation>
              </dataValueTemplate>
 			 
 			 <dataValueTemplate dataElement="VitaminA200WastageRate" disaggregation="OzshuDqmXQI">
              <annotation>
+				SELECT IFNULL(((SUM(vaccines_used)-SUM(vaccines_issued))/SUM(vaccines_used))*100,0)
+				FROM (
+					SELECT IFNULL(SUM(openning_balance-closing_balance),0) AS vaccines_used, 0 vaccines_issued
+					FROM immunization_store_drug_transaction_detail isdtd
+					INNER JOIN immunization_store_drug isd ON isd.id=immunization_store_drug_id
+					WHERE inventory_drug_id=360
+					AND transaction_type IN (2,3)
+					AND DATE(isdtd.created_on) BETWEEN :startOfPeriod AND :endOfPeriod
 
-SELECT (IFNULL(GREATEST(SUM(qt_used)-SUM(qt_immunized),0)/SUM(qt_used),0))*100 qt_perc
-FROM (
-	SELECT SUM(quantity) qt_used, 0 qt_immunized
-	FROM immunization_store_drug_transaction_detail isdtd
+					UNION ALL 
 
-	INNER JOIN immunization_store_drug drug
-	ON isdtd.immunization_store_drug_id = drug.id
-	AND drug.inventory_drug_id=355
-
-	WHERE DATE(isdtd.created_on) &gt;= :startOfPeriod
-	AND DATE(isdtd.created_on) &lt;= :endOfPeriod
-	AND isdtd.transaction_type = 2
-
-	UNION ALL
-
-	SELECT 0, COUNT(*)
-	FROM patient_state
-	WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
-	AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-) AS WASTAGE
+					SELECT 0, COUNT(*)
+					FROM patient_state
+					WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
+					AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS wastage_rate
              </annotation>
              </dataValueTemplate>
 			
