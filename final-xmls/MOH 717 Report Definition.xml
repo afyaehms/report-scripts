@@ -2,7 +2,7 @@
 <reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
      <dataElements>
 	 
-		<dataElement uid="rIkD2jIDqPh" code="NewOPDOlderMale" name="New OPD attendance greater than 5yrs Male" type="int"/>
+		 <dataElement uid="rIkD2jIDqPh" code="NewOPDOlderMale" name="New OPD attendance greater than 5yrs Male" type="int"/>
 		 <dataElement uid="zXzBILTVJzD" code="NewOPDOlderFeMale" name="New OPD attendance greater than 5yrs Female" type="int"/>
 		 <dataElement uid="F6AwnxbwiK2" code="NewOPDYoungerMale" name="New OPD Attendance less than 5yrs Male"  type="int"/>
 		 <dataElement uid="Ha96SBKI06u" code="NewOPDYoungerFeMale" name="New OPD Attendance less than 5yrs Female" type="int"/>
@@ -21,7 +21,7 @@
 		 <dataElement uid="SyUQl638r5P" code="FPAttNew" name="New FP Attendance" type="int"/>
 		 <dataElement uid="SyUQl638r5PRevisit" code="FPAttRevisit" name="Revisit FP Attendance" type="int"/>
 		 <dataElement uid="Lf9boBQjhn9" code="MEDoneExceptP3" name="Medical Examinations done except P3" type="int"/>
-                 <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (including P3 - compensation - insurance)" type="int"/>
+         <dataElement uid="vd80L2BCGTu" code="MEReportsIssued" name="Medical Reports Issued (including P3 - compensation - insurance)" type="int"/>
 		 <dataElement uid="yNeFQlrPflq" code="OPDDressingDone" name="OPD Dressing Done" type="int"/>
 		 <dataElement uid="jQBxaAGqV08" code="OPDStitchRemoval" name="OPD Removal of Stitches" type="int"/>
 		 <dataElement uid="GuqtqOUKwch" code="OPDInjections" name="OPD Injections Given" type="int"/>
@@ -303,13 +303,18 @@
              <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT MIN(DATE(obs_datetime)) fp_regdate
-					FROM obs o
-					WHERE concept_id IN (374,100126267)
-					GROUP BY person_id
-					ORDER BY obs_datetime ASC
-				) AS fp
-				WHERE fp_regdate BETWEEN :startOfPeriod AND :endOfPeriod
+					SELECT patient_id, DATE(created_on) enc_date
+					FROM  opd_patient_queue_log
+					WHERE CONCAT(DATE(created_on),'-',patient_id) IN 
+					(	SELECT CONCAT(MIN(DATE(created_on)),'-',patient_id)dist
+						FROM opd_patient_queue_log
+						WHERE opd_concept_id=100126248
+						GROUP BY patient_id
+					)
+					AND opd_concept_id=100126248
+					GROUP BY patient_id, DATE(created_on)
+				) AS first_visit
+				WHERE enc_date BETWEEN :startOfPeriod AND :endOfPeriod
 			 </annotation>
             </dataValueTemplate>	
 			 
@@ -317,19 +322,18 @@
             <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT person_id, DATE(obs_datetime) obs_date
-					FROM obs o
-					WHERE concept_id = 374
-					AND CONCAT(DATE(obs_datetime),'-',person_id) NOT IN (
-						SELECT CONCAT(MIN(DATE(obs_datetime)),'-',person_id) fp_regdate
-						FROM obs o
-						WHERE concept_id IN (374,100126267)
-						GROUP BY person_id
-						ORDER BY obs_datetime ASC
+					SELECT patient_id, DATE(created_on) enc_date
+					FROM  opd_patient_queue_log
+					WHERE CONCAT(DATE(created_on),'-',patient_id) NOT IN 
+					(	SELECT CONCAT(MIN(DATE(created_on)),'-',patient_id)dist
+						FROM opd_patient_queue_log
+						WHERE opd_concept_id=100126248
+						GROUP BY patient_id
 					)
-					GROUP BY person_id, DATE(obs_datetime)
-				) AS z1
-				WHERE obs_date BETWEEN :startOfPeriod AND :endOfPeriod
+					AND opd_concept_id=100126248
+					GROUP BY patient_id, DATE(created_on)
+				) AS first_visit
+				WHERE enc_date BETWEEN :startOfPeriod AND :endOfPeriod
 			</annotation>
             </dataValueTemplate>
 			 

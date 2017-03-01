@@ -2151,12 +2151,10 @@ AND (DATEDIFF(CURDATE(),birthdate) / 365) &lt;= 1
 			 
 			 <dataValueTemplate dataElement="ChildrenReceivedVitaminA200" disaggregation="OzshuDqmXQI">
              <annotation>
-
 				SELECT COUNT(*)
 				FROM patient_state
 				WHERE state IN (17, 41, 42, 43, 44, 45, 46, 47, 48)
 				AND start_date BETWEEN :startOfPeriod AND :endOfPeriod
-
              </annotation>
              </dataValueTemplate>
 			 
