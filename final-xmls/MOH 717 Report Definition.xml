@@ -186,22 +186,30 @@
              <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT ql.patient_id, DATE(ql.created_on) enc_date
-					FROM  opd_patient_queue_log ql
-					INNER JOIN patient_program pp ON pp.patient_id=ql.patient_id 
+					SELECT *
+					FROM (SELECT patient_id patient, DATE(created_on) visit_date, opd_concept_id
+						FROM  opd_patient_queue_log
+						
+						UNION ALL
+						
+						SELECT patient_id, DATE(created_on) visit_date, triage_concept_id
+						FROM  triage_patient_queue_log
+					) AS ql	
+					
+					INNER JOIN patient_program pp ON pp.patient_id=ql.patient
 					AND program_id=3
 					AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
-					WHERE CONCAT(DATE(created_on),'-',ql.patient_id) NOT IN 
+					WHERE CONCAT(visit_date,'-',ql.patient) NOT IN 
 					(	
-						SELECT CONCAT(DATE(date_enrolled),'-',patient_id)a
-						FROM patient_program
+						SELECT CONCAT(DATE(date_enrolled),'-',p1.patient_id)a
+						FROM patient_program p1
 						WHERE program_id=3
 						AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
 					)
 					AND opd_concept_id=5704
-					GROUP BY ql.patient_id, DATE(ql.created_on)
+					GROUP BY ql.patient, visit_date
 				) AS first_visit
-				WHERE enc_date BETWEEN :startOfPeriod and :endOfPeriod
+				WHERE visit_date BETWEEN :startOfPeriod and :endOfPeriod
 			</annotation>
             </dataValueTemplate>	
 
@@ -218,22 +226,30 @@
              <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT ql.patient_id, DATE(ql.created_on) enc_date
-					FROM  opd_patient_queue_log ql
-					INNER JOIN patient_program pp ON pp.patient_id=ql.patient_id 
+					SELECT *
+					FROM (SELECT patient_id patient, DATE(created_on) visit_date, opd_concept_id
+						FROM  opd_patient_queue_log
+						
+						UNION ALL
+						
+						SELECT patient_id, DATE(created_on) visit_date, triage_concept_id
+						FROM  triage_patient_queue_log
+					) AS ql	
+					
+					INNER JOIN patient_program pp ON pp.patient_id=ql.patient
 					AND program_id=1
 					AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
-					WHERE CONCAT(DATE(created_on),'-',ql.patient_id) NOT IN 
+					WHERE CONCAT(visit_date,'-',ql.patient) NOT IN 
 					(	
-						SELECT CONCAT(DATE(date_enrolled),'-',patient_id)a
-						FROM patient_program
+						SELECT CONCAT(DATE(date_enrolled),'-',p1.patient_id)a
+						FROM patient_program p1
 						WHERE program_id=1
 						AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
 					)
 					AND opd_concept_id=5704
-					GROUP BY ql.patient_id, DATE(ql.created_on)
+					GROUP BY ql.patient, visit_date
 				) AS first_visit
-				WHERE enc_date BETWEEN :startOfPeriod and :endOfPeriod
+				WHERE visit_date BETWEEN :startOfPeriod and :endOfPeriod
 			 </annotation>
             </dataValueTemplate>			 
 			 
@@ -250,22 +266,30 @@
              <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT ql.patient_id, DATE(ql.created_on) enc_date
-					FROM  opd_patient_queue_log ql
-					INNER JOIN patient_program pp ON pp.patient_id=ql.patient_id 
+					SELECT *
+					FROM (SELECT patient_id patient, DATE(created_on) visit_date, opd_concept_id
+						FROM  opd_patient_queue_log
+						
+						UNION ALL
+						
+						SELECT patient_id, DATE(created_on) visit_date, triage_concept_id
+						FROM  triage_patient_queue_log
+					) AS ql	
+					
+					INNER JOIN patient_program pp ON pp.patient_id=ql.patient
 					AND program_id=2
 					AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
-					WHERE CONCAT(DATE(created_on),'-',ql.patient_id) NOT IN 
+					WHERE CONCAT(visit_date,'-',ql.patient) NOT IN 
 					(	
-						SELECT CONCAT(DATE(date_enrolled),'-',patient_id)a
-						FROM patient_program
+						SELECT CONCAT(DATE(date_enrolled),'-',p1.patient_id)a
+						FROM patient_program p1
 						WHERE program_id=2
 						AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
 					)
 					AND opd_concept_id=5704
-					GROUP BY ql.patient_id, DATE(ql.created_on)
+					GROUP BY ql.patient, visit_date
 				) AS first_visit
-				WHERE enc_date BETWEEN :startOfPeriod and :endOfPeriod
+				WHERE visit_date BETWEEN :startOfPeriod and :endOfPeriod
 			 </annotation>
             </dataValueTemplate>
 			
