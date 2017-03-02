@@ -308,7 +308,7 @@
 						WHERE program_id=1
 						AND (date_completed IS NULL OR date_completed BETWEEN :startOfPeriod and :endOfPeriod )
 					)
-					AND opd_concept_id=5704
+					AND opd_concept_id IN (5123,5704)
 					GROUP BY ql.patient, visit_date
 				) AS first_visit
 				WHERE visit_date BETWEEN :startOfPeriod and :endOfPeriod
