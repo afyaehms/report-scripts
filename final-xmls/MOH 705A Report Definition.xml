@@ -1291,38 +1291,41 @@ group by o.person_id, obs_date
              </annotation>
              </dataValueTemplate>
 			 
-			  <dataValueTemplate dataElement="NOFA" disaggregation="OzshuDqmXQI">
+			 <dataValueTemplate dataElement="NOFA" disaggregation="OzshuDqmXQI">
              <annotation>
-SELECT COUNT(*)
-FROM (
-SELECT patient_id, MIN(encounter_datetime) first_encounter_date
-FROM encounter e
-INNER JOIN person p
-ON e.patient_id=p.person_id
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+				SELECT COUNT(*)
+				FROM (
+					SELECT patient_id, MIN(encounter_datetime) first_encounter_date
+					FROM encounter e
+					INNER JOIN person p ON e.patient_id=p.person_id
+					AND TIMESTAMPDIFF(YEAR, p.birthdate, MIN(encounter_datetime)) &lt;= 5
 
-WHERE encounter_type=9
-GROUP BY patient_id
+					WHERE encounter_type IN (9,21)
+					GROUP BY patient_id
 
-HAVING MIN(encounter_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-) AS first_attendants;             </annotation>
+					HAVING MIN(encounter_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS new;             
+			 </annotation>
              </dataValueTemplate>
-	     <dataValueTemplate dataElement="REAT" disaggregation="OzshuDqmXQI">
-             <annotation>
-SELECT COUNT(*) FROM 
-encounter e
-INNER JOIN person p ON e.patient_id=p.person_id
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
-
-WHERE CONCAT(patient_id, '-', encounter_id) NOT IN (
-SELECT CONCAT(patient_id, '-', MIN(encounter_id))first_encounter_id
-FROM encounter e
-
-WHERE encounter_type=9
-GROUP BY patient_id
-)
-AND encounter_datetime BETWEEN :startOfPeriod AND :endOfPeriod
-AND encounter_type=9;             </annotation>
+	         <dataValueTemplate dataElement="REAT" disaggregation="OzshuDqmXQI">
+              <annotation>
+				SELECT COUNT(*)
+				FROM (
+					SELECT DATE(encounter_datetime), patient_id
+					FROM encounter e
+					INNER JOIN person p ON e.patient_id=p.person_id
+					AND TIMESTAMPDIFF(YEAR, p.birthdate, DATE(encounter_datetime)) &lt;= 5
+					WHERE CONCAT(DATE(encounter_datetime),'-',e.patient_id) IN (
+						SELECT CONCAT(MIN(DATE(encounter_datetime)), '-', patient_id)first_date
+						FROM encounter e
+						WHERE encounter_type IN (9,21)
+						GROUP BY patient_id
+					) 
+					AND DATE(encounter_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
+					AND encounter_type IN (9,21)
+					GROUP BY DATE(encounter_datetime), patient_id
+				) AS revisits;
+			  </annotation>
              </dataValueTemplate>
 			 
             <dataValueTemplate dataElement="RFOHF" disaggregation="OzshuDqmXQI">
