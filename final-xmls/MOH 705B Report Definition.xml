@@ -1422,7 +1422,7 @@ group by o.person_id, obs_date
 					SELECT DATE(encounter_datetime), patient_id
 					FROM encounter e
 					INNER JOIN person p ON e.patient_id=p.person_id
-					AND TIMESTAMPDIFF(YEAR, p.birthdate, DATE(encounter_datetime)) &lt;= 5
+					AND TIMESTAMPDIFF(YEAR, p.birthdate, DATE(encounter_datetime)) &gt; 5
 					WHERE CONCAT(DATE(encounter_datetime),'-',e.patient_id) IN (
 						SELECT CONCAT(MIN(DATE(encounter_datetime)), '-', patient_id)first_date
 						FROM encounter e
