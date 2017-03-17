@@ -1294,7 +1294,7 @@ group by o.person_id, obs_date
              <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT patient_id, MIN(encounter_datetime) first_encounter_date
+					SELECT patient_id, MIN(DATE(encounter_datetime)) first_encounter_date
 					FROM encounter e
 					
 					INNER JOIN person p ON e.patient_id=p.person_id
@@ -1303,7 +1303,7 @@ group by o.person_id, obs_date
 					GROUP BY patient_id, birthdate
 					
 					HAVING TIMESTAMPDIFF(YEAR, birthdate, MIN(encounter_datetime)) &lt;= 5
-					AND MIN(first_encounter_date) BETWEEN :startOfPeriod AND :endOfPeriod
+					AND MIN(DATE(encounter_datetime)) BETWEEN :startOfPeriod AND :endOfPeriod
 				) AS new;
 			 </annotation>
              </dataValueTemplate>
@@ -1316,7 +1316,7 @@ group by o.person_id, obs_date
 					FROM encounter e
 					INNER JOIN person p ON e.patient_id=p.person_id
 					AND TIMESTAMPDIFF(YEAR, p.birthdate, DATE(encounter_datetime)) &lt;= 5
-					WHERE CONCAT(DATE(encounter_datetime),'-',e.patient_id) IN (
+					WHERE CONCAT(DATE(encounter_datetime),'-',e.patient_id) NOT IN (
 						SELECT CONCAT(MIN(DATE(encounter_datetime)), '-', patient_id)first_date
 						FROM encounter e
 						WHERE encounter_type IN (9,21)

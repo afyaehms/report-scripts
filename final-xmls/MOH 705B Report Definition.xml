@@ -1403,17 +1403,17 @@ group by o.person_id, obs_date
               <annotation>
 				SELECT COUNT(*)
 				FROM (
-					SELECT patient_id, MIN(encounter_datetime) first_encounter_date
+					SELECT patient_id, MIN(DATE(encounter_datetime)) first_encounter_date
 					FROM encounter e
 					
 					INNER JOIN person p ON e.patient_id=p.person_id
-					AND encounter_type IN (9,21)					
+					AND encounter_type IN (9,19,20)
 					
 					GROUP BY patient_id, birthdate
 					
 					HAVING TIMESTAMPDIFF(YEAR, birthdate, MIN(encounter_datetime)) &gt; 5
-					AND MIN(first_encounter_date) BETWEEN :startOfPeriod AND :endOfPeriod
-				) AS new;            
+					AND MIN(DATE(encounter_datetime)) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS new;
 			  </annotation>
              </dataValueTemplate>
 	         <dataValueTemplate dataElement="REATB" disaggregation="OzshuDqmXQI">
@@ -1424,14 +1424,14 @@ group by o.person_id, obs_date
 					FROM encounter e
 					INNER JOIN person p ON e.patient_id=p.person_id
 					AND TIMESTAMPDIFF(YEAR, p.birthdate, DATE(encounter_datetime)) &gt; 5
-					WHERE CONCAT(DATE(encounter_datetime),'-',e.patient_id) IN (
+					WHERE CONCAT(DATE(encounter_datetime),'-',e.patient_id) NOT IN (
 						SELECT CONCAT(MIN(DATE(encounter_datetime)), '-', patient_id)first_date
 						FROM encounter e
-						WHERE encounter_type IN (9,21)
+						WHERE encounter_type IN (9,19,20)
 						GROUP BY patient_id
 					) 
 					AND DATE(encounter_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-					AND encounter_type IN (9,21)
+					AND encounter_type IN (9,19,20)
 					GROUP BY DATE(encounter_datetime), patient_id
 				) AS revisits;
 			  </annotation>
@@ -1439,16 +1439,16 @@ group by o.person_id, obs_date
 			 
             <dataValueTemplate dataElement="RFOHFB" disaggregation="OzshuDqmXQI">
              <annotation>
-select count(*) from
-(
-    select o.person_id from obs o
-    inner join person p on p.person_id = o.person_id
-    where o.concept_id = 5 
-    and o.value_coded in (4008,4009,4010)
-    and date(o.obs_datetime) between :startOfPeriod and :endOfPeriod
-    and EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
-    group by o.person_id
-) from_health_facility
+				select count(*) from
+				(
+					select o.person_id from obs o
+					inner join person p on p.person_id = o.person_id
+					where o.concept_id = 5 
+					and o.value_coded in (4008,4009,4010)
+					and date(o.obs_datetime) between :startOfPeriod and :endOfPeriod
+					and EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &gt; 5
+					group by o.person_id
+				) from_health_facility
              </annotation>
              </dataValueTemplate>
 			 	 	 
