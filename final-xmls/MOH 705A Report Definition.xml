@@ -693,7 +693,7 @@ group by o.person_id, obs_date
 			 
 			 <dataValueTemplate dataElement="JI" disaggregation="OzshuDqmXQI">
              <annotation>
-SELECT SUM(0) FROM obs WHERE obs.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+SELECT IFNULL(SUM(0),0)zero FROM obs WHERE obs.obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
 	     </annotation>
              </dataValueTemplate>
 			 
@@ -778,18 +778,17 @@ group by o.person_id, obs_date
              </dataValueTemplate>
 			 <dataValueTemplate dataElement="RTI" disaggregation="OzshuDqmXQI">
              <annotation>
-SELECT COUNT(*)
+				SELECT COUNT(*)
+				FROM obs o
+				INNER JOIN person p ON o.person_id=p.person_id
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+				AND DATE(death_date)=DATE(obs_datetime)
+				INNER JOIN encounter e ON e.encounter_id=o.encounter_id
+				AND (e.encounter_type=6 OR e.encounter_type=9)
 
-FROM obs o
-INNER JOIN person p ON o.person_id=p.person_id
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
-AND DATE(death_date)=DATE(obs_datetime)
-INNER JOIN encounter e ON e.encounter_id=o.encounter_id
-AND (e.encounter_type=6 OR e.encounter_type=9)
-
-WHERE concept_id=11
-AND value_coded=1028
-AND obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+				WHERE concept_id=11
+				AND value_coded=1028
+				AND obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 	 
@@ -1044,18 +1043,18 @@ group by o.person_id, obs_date
 			 
 			 <dataValueTemplate dataElement="VRI" disaggregation="OzshuDqmXQI">
              <annotation>
-SELECT COUNT(*)
+				SELECT COUNT(*)
 
-FROM obs o
-INNER JOIN person p ON o.person_id=p.person_id
-AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
-AND DATE(death_date)=DATE(obs_datetime)
-INNER JOIN encounter e ON e.encounter_id=o.encounter_id
-AND (e.encounter_type=6 OR e.encounter_type=9)
+				FROM obs o
+				INNER JOIN person p ON o.person_id=p.person_id
+				AND EXTRACT(YEAR FROM (FROM_DAYS(DATEDIFF(NOW(),p.birthdate)))) &lt;= 5
+				AND DATE(death_date)=DATE(obs_datetime)
+				INNER JOIN encounter e ON e.encounter_id=o.encounter_id
+				AND (e.encounter_type=6 OR e.encounter_type=9)
 
-WHERE concept_id=11
-AND value_coded=4021
-AND obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
+				WHERE concept_id=11
+				AND value_coded=4021
+				AND obs_datetime BETWEEN :startOfPeriod AND :endOfPeriod
              </annotation>
              </dataValueTemplate>
 			 
@@ -1297,16 +1296,18 @@ group by o.person_id, obs_date
 				FROM (
 					SELECT patient_id, MIN(encounter_datetime) first_encounter_date
 					FROM encounter e
+					
 					INNER JOIN person p ON e.patient_id=p.person_id
-					AND TIMESTAMPDIFF(YEAR, p.birthdate, MIN(encounter_datetime)) &lt;= 5
-
-					WHERE encounter_type IN (9,21)
-					GROUP BY patient_id
-
-					HAVING MIN(encounter_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
-				) AS new;             
+					AND encounter_type IN (9,21)					
+					
+					GROUP BY patient_id, birthdate
+					
+					HAVING TIMESTAMPDIFF(YEAR, birthdate, MIN(encounter_datetime)) &lt;= 5
+					AND MIN(first_encounter_date) BETWEEN :startOfPeriod AND :endOfPeriod
+				) AS new;
 			 </annotation>
              </dataValueTemplate>
+			 
 	         <dataValueTemplate dataElement="REAT" disaggregation="OzshuDqmXQI">
               <annotation>
 				SELECT COUNT(*)
