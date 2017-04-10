@@ -79,9 +79,9 @@
          <disaggregation uid="OzshuDqmXQI" code="OzshuDqmXQI" name="(default)"/>
      </disaggregations>
      <reportTemplate>
-         <name>MOH 705 B Outpatient summary greater than 5 years</name>
-         <uid>GVGt4o7VkHk</uid>
-         <code>GVGt4o7VkHk</code>
+         <name>MOH 705 A Outpatient Summary under 5 years</name>
+         <uid>oEfGJAQaARj</uid>
+         <code>oEfGJAQaARj</code>
          <periodType>Monthly</periodType>
          <dataValueTemplates>
 		 <dataValueTemplate dataElement="DHB" disaggregation="OzshuDqmXQI">

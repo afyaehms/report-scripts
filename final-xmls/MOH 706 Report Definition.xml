@@ -1460,7 +1460,7 @@ WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             <
              <dataValueTemplate dataElement="NoOfTTBGrpTests" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1468,7 +1468,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfBldUnitsGrp" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1476,7 +1476,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfBLDUnitsReceived" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1484,7 +1484,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoOfBldUnitsCollected" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1492,7 +1492,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoOfBldUnitsTransfused" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1500,7 +1500,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfTransReactionsReported" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1508,7 +1508,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfBldGrpMatched" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1516,7 +1516,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoOfBldUnitsDiscarded" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1524,7 +1524,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoOfBldUnitsScreened4HIV" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1532,7 +1532,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfBldUnitsScreened4HepB" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1540,7 +1540,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfBldUnitsScreened4HepC" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1548,7 +1548,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoOfBldUnitsScreened4Syphillis" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1570,7 +1570,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
 			<dataValueTemplate dataElement="TTUrineCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1578,7 +1578,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosUrineCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1596,7 +1596,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
              <dataValueTemplate dataElement="TTPusswabsCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1604,7 +1604,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosPusswabsCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1622,7 +1622,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
 			<dataValueTemplate dataElement="TTHighVaginalSwabsCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1630,7 +1630,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoHighVaginalSwabsPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1648,7 +1648,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
              <dataValueTemplate dataElement="TTThroatswabCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1656,7 +1656,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoThroatswabPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1674,7 +1674,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
 			<dataValueTemplate dataElement="TTRectalSwabCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1682,7 +1682,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoRectalSwabPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1700,7 +1700,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
              <dataValueTemplate dataElement="TTBloodCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1708,7 +1708,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoBloodPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1726,7 +1726,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
 			<dataValueTemplate dataElement="TTWaterCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1734,7 +1734,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoWaterPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1752,7 +1752,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
              <dataValueTemplate dataElement="TTFoodCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1760,7 +1760,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoFoodPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1778,7 +1778,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
 			<dataValueTemplate dataElement="TTUrethralSwabsCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1786,7 +1786,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoUrethralSwabsPosCultures" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1804,7 +1804,7 @@ AND DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </ann
              <dataValueTemplate dataElement="TTStoolPosCulture" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1812,7 +1812,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosSTyphi" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1820,7 +1820,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoPosSDType1" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1828,7 +1828,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosEcoli" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1836,7 +1836,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosCholerae01" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1844,7 +1844,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosCholerae02" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1862,7 +1862,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="CSFNoPositive" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1870,7 +1870,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="CSFNoContaminated" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1878,7 +1878,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosNMA" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1886,7 +1886,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosNMB" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1894,7 +1894,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosNMC" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1902,7 +1902,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoPosNMW135" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1910,7 +1910,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosNMX" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1918,7 +1918,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoPosNMY" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1926,7 +1926,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosNMIndeterminate" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1934,7 +1934,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoPosNSP" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1942,7 +1942,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosHITypeB" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1950,7 +1950,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoPosCM" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1958,7 +1958,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="NoPosBA" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -1966,7 +1966,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoPosNPYP" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2062,7 +2062,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="TTRifampicinResistantTBExam" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2070,7 +2070,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
 			<dataValueTemplate dataElement="NoOfPosRifampicinResistantTB" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2078,7 +2078,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTMDRTBExam" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2086,7 +2086,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="NoOfPosMDRTB" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2124,7 +2124,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod
   			<dataValueTemplate dataElement="TTTouchPrep" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2132,7 +2132,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTouchPrep" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2163,7 +2163,7 @@ AND DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTFANThyroid" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2171,7 +2171,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantFANThyroid" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2179,7 +2179,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTFANLymphNodes" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2187,7 +2187,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantFANLymphNodes" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2195,7 +2195,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTFANLiver" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2203,7 +2203,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantFANLiver" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2211,7 +2211,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTFANBreast" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2219,7 +2219,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantFANBreast" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2227,7 +2227,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTFANSTMasses" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2235,7 +2235,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantFANSTMasses" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2306,7 +2306,7 @@ WHERE DATE(o.obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             <
   			<dataValueTemplate dataElement="TTFCUrine" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2314,7 +2314,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantFCUrine" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2322,7 +2322,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTTHCervix" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2330,7 +2330,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantTHCervix" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2338,7 +2338,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTHProstrate" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2346,7 +2346,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTHProstrate" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2354,7 +2354,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTHBreasttissue" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2362,7 +2362,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantTHBreasttissue" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2370,7 +2370,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTTHOvary" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2378,7 +2378,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTHOvary" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2386,7 +2386,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTHUterus" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2394,7 +2394,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTHUterus" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2402,7 +2402,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTTHSkin" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2410,7 +2410,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantTHSkin" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2418,7 +2418,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTHHeadandNeck" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2426,7 +2426,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTHHeadandNeck" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2434,7 +2434,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTHDental" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2442,7 +2442,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantTHDental" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2450,7 +2450,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTTHGIT" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2458,7 +2458,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTHGIT" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2466,7 +2466,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTHLNTissue" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2474,7 +2474,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTHLNTissue" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2482,7 +2482,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="TTBonemarrowaspirate" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2490,7 +2490,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
              <dataValueTemplate dataElement="MalignantBonemarrowaspirate" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
@@ -2498,7 +2498,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="TTTrephinebiopsy" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>
@@ -2506,7 +2506,7 @@ WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </a
   			<dataValueTemplate dataElement="MalignantTrephinebiopsy" disaggregation="OzshuDqmXQI">
              <annotation>
 
-SELECT SUM(0)
+SELECT IFNULL(SUM(0),0)
 FROM obs
 WHERE DATE(obs_datetime) BETWEEN :startOfPeriod AND :endOfPeriod             </annotation>
              </dataValueTemplate>	
